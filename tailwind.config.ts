@@ -4,6 +4,7 @@ export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/Components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -11,6 +12,23 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        white : "#FFF",
+        primary: {
+          10: "#0099FF",
+          20 : "#09F",
+          30 : "#ECF6FE"
+        },
+        secondary: {
+          10: "#FF9900",
+        },
+        neutral: {
+          10: "#333",
+          20 : "#494949",
+          30 : "#2B2B2B",
+        },
+      },
+      fontFamily: {
+        Inter: ['Inter', 'serif'],
       },
     },
   },
