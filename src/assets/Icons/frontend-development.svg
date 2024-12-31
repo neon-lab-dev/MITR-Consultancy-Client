@@ -1,0 +1,13 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 38591">
+<rect id="Rectangle 4695" width="72" height="72" rx="6" fill="#ECF6FE"/>
+<g id="code">
+<mask id="mask0_1_282" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="18" y="18" width="36" height="36">
+<rect id="Bounding box" x="18" y="18" width="36" height="36" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1_282)">
+<path id="code_2" d="M30 45L21 36L30 27L32.1375 29.1375L25.2375 36.0375L32.1 42.9L30 45ZM42 45L39.8625 42.8625L46.7625 35.9625L39.9 29.1L42 27L51 36L42 45Z" fill="#0099FF"/>
+</g>
+</g>
+</g>
+</svg>

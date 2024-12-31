@@ -1,6 +1,14 @@
 import MITRConsoltancyLogo from "../assets/Images/mitr-consultancy.png";
 import heroImg from "../assets/Images/hero-image.png";
 import aboutUs from "../assets/Images/about-us.png";
+import gradientBg from "../assets/Images/gradient-bg.png";
+
+import uiUx from "../assets/Icons/ui-ux.svg";
+import appDevelopment from "../assets/Icons/app-development.svg";
+import backendDevelopment from "../assets/Icons/backend-development.svg";
+import frontendDevelopment from "../assets/Icons/frontend-development.svg";
+import softwareDevelopment from "../assets/Icons/software-development.svg";
+import webDevelopment from "../assets/Icons/web-development.svg";
 
 import abhirami from "../assets/Images/Clients/Mask group.png";
 import ramsun from "../assets/Images/Clients/WhatsApp Image 2024-12-28 at 13.03.05_0d95a6bc 7.png";
@@ -18,6 +26,7 @@ export const IMAGES = {
     MITRConsoltancyLogo,
     heroImg,
     aboutUs,
+    gradientBg,
 
     // Clients
     abhirami,
@@ -34,5 +43,10 @@ export const IMAGES = {
 };
 
 export const ICONS = {
-    // MITRConsoltancyLogo,
+    uiUx,
+    appDevelopment,
+    backendDevelopment,
+    frontendDevelopment,
+    softwareDevelopment,
+    webDevelopment,
 }

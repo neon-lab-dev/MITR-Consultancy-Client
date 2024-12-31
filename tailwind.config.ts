@@ -33,6 +33,9 @@ export default {
       fontFamily: {
         Inter: ['Inter', 'serif'],
       },
+      boxShadow : {
+        'service-card' : ' 0px 0px 65px 0px rgba(0, 153, 255, 0.12)'
+      }
     },
   },
   plugins: [],
