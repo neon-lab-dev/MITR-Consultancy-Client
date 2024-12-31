@@ -16,7 +16,8 @@ export default {
         primary: {
           10: "#0099FF",
           20 : "#09F",
-          30 : "#ECF6FE"
+          30 : "#ECF6FE",
+          40 : '#F5FBFF'
         },
         secondary: {
           10: "#FF9900",
