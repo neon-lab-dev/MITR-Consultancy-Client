@@ -43,13 +43,13 @@ const Navbar = () => {
                 portfolioSection?.scrollIntoView({ behavior: "smooth" });
             },
         },
-    ]
+    ];
     return (
         <div id="home" className="bg-neutral-40 bg-opacity-50">
-            
+
             <Container>
                 <div className="flex justify-between items-center font-Inter py-8">
-                    <Image src={IMAGES.MITRConsoltancyLogo} alt="MITr Consultancy" className="w-[134px] h-[64px]" />
+                    <Image src={IMAGES.MITRConsoltancyLogo} alt="MITR Consultancy" className="w-[134px] h-[64px]" />
 
                     <div className="flex items-center gap-10">
                         {
@@ -59,9 +59,9 @@ const Navbar = () => {
                         }
                     </div>
 
-                    <Button variant="primary" title="Contact Us"/>
+                    <Button variant="primary" title="Contact Us" />
                 </div>
-                
+
             </Container>
         </div>
     );

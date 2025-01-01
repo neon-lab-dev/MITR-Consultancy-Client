@@ -17,7 +17,8 @@ export default {
           10: "#0099FF",
           20 : "#09F",
           30 : "#ECF6FE",
-          40 : '#F5FBFF'
+          40 : '#F5FBFF',
+          50 : "#F7FBFD"
         },
         secondary: {
           10: "#FF9900",

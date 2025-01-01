@@ -16,6 +16,11 @@ import rightArrow from "../assets/Icons/right-arrow.svg";
 import downArrow from "../assets/Icons/down-arrow.svg";
 import avatar from "../assets/Icons/avatar.svg";
 import star from "../assets/Icons/star.svg";
+// Social Icons
+import facebook from "../assets/Icons/facebook logo.svg";
+import twitter from "../assets/Icons/Twitter logo.svg";
+import linkedin from "../assets/Icons/linkedin logo.svg";
+import instagram from "../assets/Icons/instagram logo.svg";
 
 import project1 from "../assets/Images/Instagram post - 1.png";
 import project2 from "../assets/Images/Instagram post - 2.png";
@@ -95,4 +100,10 @@ export const ICONS = {
     downArrow,
     avatar,
     star,
+
+    facebook,
+    twitter,
+    linkedin,
+    instagram,
+    
 }
