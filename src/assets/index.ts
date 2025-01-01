@@ -12,6 +12,8 @@ import softwareDevelopment from "../assets/Icons/software-development.svg";
 import webDevelopment from "../assets/Icons/web-development.svg";
 
 import rightArrow from "../assets/Icons/right-arrow.svg";
+import avatar from "../assets/Icons/avatar.svg";
+import star from "../assets/Icons/star.svg";
 
 import project1 from "../assets/Images/Instagram post - 1.png";
 import project2 from "../assets/Images/Instagram post - 2.png";
@@ -64,4 +66,6 @@ export const ICONS = {
     webDevelopment,
 
     rightArrow,
+    avatar,
+    star,
 }

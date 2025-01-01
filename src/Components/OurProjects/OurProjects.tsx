@@ -45,7 +45,6 @@ const OurProjects = () => {
                     </div>
                 </div>
             </Container>
-
         </div>
     );
 };

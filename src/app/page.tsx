@@ -3,6 +3,7 @@ import Achievements from "@/Components/Achievements/Achievements";
 import Hero from "@/Components/Home/Hero/Hero";
 import OurProjects from "@/Components/OurProjects/OurProjects";
 import OurServices from "@/Components/OurServices/OurServices";
+import Testimonials from "@/Components/Testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutUs/>
       <OurServices/>
       <OurProjects/>
+      <Testimonials/>
     </div>
   );
 }
