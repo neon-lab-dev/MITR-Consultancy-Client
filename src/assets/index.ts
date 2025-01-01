@@ -2,6 +2,7 @@ import MITRConsoltancyLogo from "../assets/Images/mitr-consultancy.png";
 import heroImg from "../assets/Images/hero-image.png";
 import aboutUs from "../assets/Images/about-us.png";
 import gradientBg from "../assets/Images/gradient-bg.png";
+import letsTalkBgImg from "../assets/Images/lets-talk-bg.png";
 
 // Services
 import uiUx from "../assets/Icons/ui-ux.svg";
@@ -38,6 +39,7 @@ export const IMAGES = {
     heroImg,
     aboutUs,
     gradientBg,
+    letsTalkBgImg,
 
     // Clients
     abhirami,
