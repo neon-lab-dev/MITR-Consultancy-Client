@@ -22,6 +22,7 @@ import project2 from "../assets/Images/Instagram post - 2.png";
 import project3 from "../assets/Images/Instagram post - 13.png";
 
 
+// Cleintts
 import abhirami from "../assets/Images/Clients/Mask group.png";
 import ramsun from "../assets/Images/Clients/WhatsApp Image 2024-12-28 at 13.03.05_0d95a6bc 7.png";
 import agriculture from "../assets/Images/Clients/image 1.png";
@@ -33,6 +34,17 @@ import blog from "../assets/Images/Clients/image 7.png";
 import interior from "../assets/Images/Clients/image 8.png";
 import studentTiffin from "../assets/Images/Clients/image 9.png";
 import dentistClinic from "../assets/Images/Clients/image 10.png";
+
+// Technologies
+import reactJs from "../assets/Images/Technologies/image 16.png";
+import reactNative from "../assets/Images/Technologies/image 17.png";
+import flutter from "../assets/Images/Technologies/image 18.png";
+import angular from "../assets/Images/Technologies/image 19.png";
+import nextjs from "../assets/Images/Technologies/image 20.png";
+import nodejs from "../assets/Images/Technologies/image 21.png";
+import java from "../assets/Images/Technologies/image 22.png";
+import aws from "../assets/Images/Technologies/image 23.png";
+import docker from "../assets/Images/Technologies/image 24.png";
 
 export const IMAGES = {
     MITRConsoltancyLogo,
@@ -53,6 +65,17 @@ export const IMAGES = {
     interior,
     studentTiffin,
     dentistClinic,
+
+    // Technologies
+    reactJs,
+    reactNative,
+    flutter,
+    angular,
+    nextjs,
+    nodejs,
+    java,
+    aws,
+    docker,
 
     // Projects
     project1,

@@ -5,6 +5,7 @@ import Hero from "@/Components/Home/Hero/Hero";
 import LetsTalk from "@/Components/LetsTalk/LetsTalk";
 import OurProjects from "@/Components/OurProjects/OurProjects";
 import OurServices from "@/Components/OurServices/OurServices";
+import Technologies from "@/Components/Technologies/Technologies";
 import Testimonials from "@/Components/Testimonials/Testimonials";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutUs/>
       <OurServices/>
       <OurProjects/>
+      <Technologies/>
       <Testimonials/>
       <FAQ/>
       <LetsTalk/>
