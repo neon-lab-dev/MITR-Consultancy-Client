@@ -1,5 +1,6 @@
 import AboutUs from "@/Components/AboutUs/AboutUs";
 import Achievements from "@/Components/Achievements/Achievements";
+import FAQ from "@/Components/FAQ/FAQ";
 import Hero from "@/Components/Home/Hero/Hero";
 import OurProjects from "@/Components/OurProjects/OurProjects";
 import OurServices from "@/Components/OurServices/OurServices";
@@ -14,6 +15,7 @@ export default function Home() {
       <OurServices/>
       <OurProjects/>
       <Testimonials/>
+      <FAQ/>
     </div>
   );
 }

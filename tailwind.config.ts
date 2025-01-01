@@ -35,7 +35,8 @@ export default {
       },
       boxShadow : {
         'service-card' : ' 0px 0px 65px 0px rgba(0, 153, 255, 0.12)',
-        'box-shadow' : '0px 4px 8px 0px rgba(0, 0, 0, 0.10)'
+        'box-shadow' : '0px 4px 8px 0px rgba(0, 0, 0, 0.10)',
+        'faq-box-shadow' : '0px 10px 20px 0px rgba(164, 217, 253, 0.15)',
       }
     },
   },
