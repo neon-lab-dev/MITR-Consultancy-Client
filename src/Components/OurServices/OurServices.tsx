@@ -34,7 +34,7 @@ const OurServices = () => {
         },
         {
             icon: ICONS.webDevelopment,
-            title: "Frontend Development",
+            title: "Wev Development",
             description: "Get a Website Interface to improve user experience , maximize brand awareness, and increase conversions."
         },
     ]

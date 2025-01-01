@@ -3,12 +3,20 @@ import heroImg from "../assets/Images/hero-image.png";
 import aboutUs from "../assets/Images/about-us.png";
 import gradientBg from "../assets/Images/gradient-bg.png";
 
+// Services
 import uiUx from "../assets/Icons/ui-ux.svg";
 import appDevelopment from "../assets/Icons/app-development.svg";
 import backendDevelopment from "../assets/Icons/backend-development.svg";
 import frontendDevelopment from "../assets/Icons/frontend-development.svg";
 import softwareDevelopment from "../assets/Icons/software-development.svg";
 import webDevelopment from "../assets/Icons/web-development.svg";
+
+import rightArrow from "../assets/Icons/right-arrow.svg";
+
+import project1 from "../assets/Images/Instagram post - 1.png";
+import project2 from "../assets/Images/Instagram post - 2.png";
+import project3 from "../assets/Images/Instagram post - 13.png";
+
 
 import abhirami from "../assets/Images/Clients/Mask group.png";
 import ramsun from "../assets/Images/Clients/WhatsApp Image 2024-12-28 at 13.03.05_0d95a6bc 7.png";
@@ -40,6 +48,11 @@ export const IMAGES = {
     interior,
     studentTiffin,
     dentistClinic,
+
+    // Projects
+    project1,
+    project2,
+    project3,
 };
 
 export const ICONS = {
@@ -49,4 +62,6 @@ export const ICONS = {
     frontendDevelopment,
     softwareDevelopment,
     webDevelopment,
+
+    rightArrow,
 }
