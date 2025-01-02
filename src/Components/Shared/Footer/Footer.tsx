@@ -76,12 +76,12 @@ const Footer = () => {
     ];
 
     return (
-        <div className="bg-primary-50 py-[42px] flex flex-col items-center justify-center gap-6 font-Inter mt-[151px]">
+        <div className="bg-primary-50 py-[42px] flex flex-col items-center justify-center gap-6 font-Inter mt-[151px] py-10">
             <div className="flex items-center gap-5">
-                <Image src={IMAGES.MITRConsoltancyLogo} alt="MITR Consultancy" className="w-[134px] h-[64px]" />
+                <Image src={IMAGES.MITRConsoltancyLogo} alt="MITR Consultancy" className="w-[68px] h-[33px]" />
                 <div className="w-[2px] h-[26px] bg-neutral-10/40"></div>
                 {/* Social Links */}
-                <div className="flex items-center gap-7">
+                <div className="flex items-center  gap-4 md:gap-7">
                     {
                         socialLinks?.map((item) =>
                             <a key={item?.name} href={item.link} target="_blank" className="size-8 flex items-center justify-center">
@@ -93,15 +93,15 @@ const Footer = () => {
             </div>
 
             {/* Links */}
-            <div className="flex items-center gap-5 md:gap-16 lg:gap-20">
+            <div className="flex items-center gap-3 md:gap-16 lg:gap-20">
                 {
                     footerLinks.map((link, index) => (
-                        <button key={index} onClick={link.action} className="text-neutral-20 text-lg font-medium hover:text-primary-10 transition duration-300">{link.label}</button>
+                        <button key={index} onClick={link.action} className="text-neutral-20 md:text-lg text-xs font-medium hover:text-primary-10 transition duration-300">{link.label}</button>
                     ))
                 }
             </div>
 
-            <p className="text-neutral-20">© 2024 Mitr Consultancy </p>
+            <p className="text-neutral-20 text-xs md:text-base">© 2024 Mitr Consultancy </p>
         </div>
     );
 };

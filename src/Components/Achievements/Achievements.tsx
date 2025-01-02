@@ -20,13 +20,13 @@ const Achievements = () => {
 
                 <Marquee className="mt-16" speed={70}>
                     {ourAchievements1.map((tech, index) => (
-                        <Image key={index} src={tech} alt='' className='max-w-[170px] mr-20' />
+                        <Image key={index} src={tech} alt='' className='xl:max-w-[170px] md:max-w-[138px] max-w-[98px] mr-20' />
                     ))}
                 </Marquee>
 
                 <Marquee className="mt-14" direction="right">
                     {ourAchievements2.map((tech, index) => (
-                        <Image key={index} src={tech} alt='' className='max-w-[200px] mr-24' />
+                        <Image key={index} src={tech} alt='' className='xl:max-w-[200px] md:max-w-[140px] max-w-[100px] mr-24' />
                     ))}
                 </Marquee>
             </div>

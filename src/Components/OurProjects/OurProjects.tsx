@@ -25,23 +25,23 @@ const OurProjects = () => {
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus mattis nunc aliquam tincidunt est non. Viverra nec eu."
         },
     ];
+
     return (
         <div className="bg-white py-[128px]">
             <Container>
                 <div>
                     <Heading
-                        align='left'
-                        subHeading='Projects'
-                        heading='A collection of our latest works'
-                        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus mattis nunc aliquam tincidunt est non. Viverra nec eu.'
+                        align="left"
+                        subHeading="Projects"
+                        heading="A collection of our latest works"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus mattis nunc aliquam tincidunt est non. Viverra nec eu."
                     />
-
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-[54px]'>
-                        {
-                            ourProjects.map((project) => (
-                                <OurProjectCard key={project?._id} {...project} />
-                            ))
-                        }
+                    <div className="mt-[54px] overflow-x-auto">
+                        <div className="flex gap-6 w-max">
+                            {ourProjects.map((project) => (
+                                <OurProjectCard key={project._id} {...project} />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </Container>

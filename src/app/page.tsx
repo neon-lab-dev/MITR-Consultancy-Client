@@ -14,7 +14,8 @@ export default function Home() {
       <Hero/>
       <Achievements/>
       <AboutUs/>
-      <OurServices/>
+      <div><OurServices/></div>
+      
       <OurProjects/>
       <Technologies/>
       <Testimonials/>

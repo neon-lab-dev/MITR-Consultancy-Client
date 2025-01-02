@@ -37,7 +37,7 @@ const Navbar = () => {
                         <Image
                             src={IMAGES.MITRConsoltancyLogo}
                             alt="MITR Consultancy"
-                            className="w-[134px] h-[64px]"
+                            className="xl:w-[134px] xl:h-[64px] md:w-[90px] md:[45px] h-[36px] w-[72px]"
                         />
                         <div className="hidden xl:flex items-center gap-10">
                             {navlinks.map((link, index) => (
