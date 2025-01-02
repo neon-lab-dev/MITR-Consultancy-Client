@@ -3,6 +3,7 @@ import heroImg from "../assets/Images/hero-image.png";
 import aboutUs from "../assets/Images/about-us.png";
 import gradientBg from "../assets/Images/gradient-bg.png";
 import letsTalkBgImg from "../assets/Images/lets-talk-bg.png";
+import contactUsBgImg from "../assets/Images/contact-us-bg.png";
 
 // Services
 import uiUx from "../assets/Icons/ui-ux.svg";
@@ -16,6 +17,7 @@ import rightArrow from "../assets/Icons/right-arrow.svg";
 import downArrow from "../assets/Icons/down-arrow.svg";
 import avatar from "../assets/Icons/avatar.svg";
 import star from "../assets/Icons/star.svg";
+import hamburgerMenu from "../assets/Icons/hamburgerMenu.svg";
 // Social Icons
 import facebook from "../assets/Icons/facebook logo.svg";
 import twitter from "../assets/Icons/Twitter logo.svg";
@@ -57,6 +59,7 @@ export const IMAGES = {
     aboutUs,
     gradientBg,
     letsTalkBgImg,
+    contactUsBgImg,
 
     // Clients
     abhirami,
@@ -100,10 +103,11 @@ export const ICONS = {
     downArrow,
     avatar,
     star,
+    hamburgerMenu,
 
     facebook,
     twitter,
     linkedin,
     instagram,
-    
+
 }

@@ -1,68 +1,60 @@
-"use client"
+"use client";
+import { useState, useEffect } from "react";
 import { IMAGES } from "@/assets";
 import Image from "next/image";
 import Container from "../Container/Container";
 import Button from "@/Components/Reusable/Button/Button";
-
+import ContactUs from "@/Components/ContactUs/ContactUs";
 
 const Navbar = () => {
+    const [isContactUsModalOpen, setIsContactUsModalOpen] = useState<boolean>(false);
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const heroSectionHeight = document.getElementById("home")?.offsetHeight || 0;
+            setIsScrolled(window.scrollY > heroSectionHeight - 100); // Adjust for better timing
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     const navlinks = [
-        {
-            label: "Home",
-            path: "/",
-            action: () => {
-                // router.push("/");
-                const homeSection = document.getElementById("home");
-                homeSection?.scrollIntoView({ behavior: "smooth" });
-            },
-        },
-        {
-            label: "Services",
-            path: "/",
-            action: () => {
-                // router.push("/");
-                const servicesSection = document.getElementById("services");
-                servicesSection?.scrollIntoView({ behavior: "smooth" });
-            },
-        },
-        {
-            label: "About Us",
-            path: "/",
-            action: () => {
-                // router.push("/");
-                const aboutUsSection = document.getElementById("aboutUs");
-                aboutUsSection?.scrollIntoView({ behavior: "smooth" });
-            },
-        },
-        {
-            label: "Portfolio",
-            path: "/",
-            action: () => {
-                // router.push("/");
-                const portfolioSection = document.getElementById("portfolio");
-                portfolioSection?.scrollIntoView({ behavior: "smooth" });
-            },
-        },
+        { label: "Home", action: () => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" }) },
+        { label: "Services", action: () => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" }) },
+        { label: "About Us", action: () => document.getElementById("aboutUs")?.scrollIntoView({ behavior: "smooth" }) },
+        { label: "Portfolio", action: () => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" }) },
     ];
+
     return (
-        <div id="home" className="bg-neutral-40 bg-opacity-50">
-
-            <Container>
-                <div className="flex justify-between items-center font-Inter py-8">
-                    <Image src={IMAGES.MITRConsoltancyLogo} alt="MITR Consultancy" className="w-[134px] h-[64px]" />
-
-                    <div className="flex items-center gap-10">
-                        {
-                            navlinks.map((link, index) => (
-                                <button key={index} onClick={link.action} className="text-white text-lg font-medium hover:text-primary-10 transition duration-300">{link.label}</button>
-                            ))
-                        }
+        <div>
+            <div id="home"
+        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-neutral-40 bg-opacity-90 shadow-md" : "bg-transparent backdrop-blur-sm"}`}>
+                <Container>
+                    <div className={`flex justify-between items-center font-Inter ${isScrolled ? "py-2" : "py-6"}`}>
+                        <Image
+                            src={IMAGES.MITRConsoltancyLogo}
+                            alt="MITR Consultancy"
+                            className="w-[134px] h-[64px]"
+                        />
+                        <div className="hidden xl:flex items-center gap-10">
+                            {navlinks.map((link, index) => (
+                                <button
+                                    key={index}
+                                    onClick={link.action}
+                                    className="text-white text-lg font-medium hover:text-primary-10 transition duration-300"
+                                >
+                                    {link.label}
+                                </button>
+                            ))}
+                        </div>
+                        <Button handleClick={() => setIsContactUsModalOpen(true)} variant="primary" title="Contact Us" />
                     </div>
-
-                    <Button variant="primary" title="Contact Us" />
-                </div>
-
-            </Container>
+                </Container>
+            </div>
+            <ContactUs isContactUsModalOpen={isContactUsModalOpen} setIsContactUsModalOpen={setIsContactUsModalOpen} />
         </div>
     );
 };

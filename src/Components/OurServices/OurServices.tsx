@@ -39,7 +39,7 @@ const OurServices = () => {
         },
     ]
     return (
-        <div className="bg-white py-[128px] relative">
+        <div className="bg-white py-[128px] relative h-full">
             <Image src={IMAGES.gradientBg} alt="MITR Consultancy Services" className="w-full h-full " />
             <div className='absolute top-0 bottom-0 right-0 left-0 flex flex-col justify-center z-20'>
                 <Container>
@@ -50,7 +50,6 @@ const OurServices = () => {
                             heading='Our List of Best services'
                             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus mattis nunc aliquam tincidunt est non. Viverra nec eu.'
                         />
-
                         <div className='grid grid-cols-1 lg:grid-cols-3 gap-[46px] mt-[62px]'>
                             {
                                 ourServices.map((service, index) => (
@@ -61,7 +60,6 @@ const OurServices = () => {
                     </div>
                 </Container>
             </div>
-
         </div>
     );
 };
