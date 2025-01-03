@@ -54,7 +54,7 @@ const OurServices = () => {
             heading='Our List of Best services'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus mattis nunc aliquam tincidunt est non. Viverra nec eu.'
           />
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-[46px] mt-[62px]'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[46px] mt-[62px]'>
             {ourServices.map((service, index) => (
               <OurServiceCard key={index} {...service} />
             ))}

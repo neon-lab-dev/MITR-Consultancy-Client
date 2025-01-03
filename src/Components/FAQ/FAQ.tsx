@@ -12,7 +12,7 @@ type FAQItem = {
 };
 
 const FAQ = () => {
-  const [isAccordionOpen, setIsAccordionOpen] = useState<number>(0); // First FAQ is open by default
+  const [isAccordionOpen, setIsAccordionOpen] = useState<number>(0);
 
   const faqs: FAQItem[] = [
     {
@@ -58,9 +58,8 @@ const FAQ = () => {
         <div>
           <Heading
             align="center"
-            subHeading="Testimonials"
-            heading="Customer testimonials"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            subHeading="FAQ’S"
+            heading="Find the answers you need"
           />
 
           <div className="flex gap-6 flex-col items-center justify-center w-full mt-20">

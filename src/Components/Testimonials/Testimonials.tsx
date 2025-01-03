@@ -31,7 +31,7 @@ const Testimonials = () => {
         },
     ];
     return (
-        <div className="bg-white py-[128px]">
+        <div className="bg-white py-[60px] md:py-20 xl:py-[98px]">
             <Container>
                 <div>
                     <Heading

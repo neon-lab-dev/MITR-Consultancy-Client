@@ -7,7 +7,7 @@ import Button from "../Reusable/Button/Button";
 
 const AboutUs = () => {
   return (
-    <div className="bg-primary-40 py-[128px]">
+    <div className="bg-primary-40 py-[60px] md:py-20 xl:py-[128px]">
       <Container>
         <div className="flex flex-col lg:flex-row items-center gap-[54px] ">
           
@@ -44,7 +44,7 @@ const AboutUs = () => {
           <Image
             src={IMAGES.aboutUs}
             alt="about -MITR"
-            className="w-full h-full order-2 lg:order-1"
+            className="w-full h-full"
           />
         </div>
       </Container>
