@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client"
 import Image from "next/image";
 import Heading from "../Reusable/Heading/Heading";
@@ -10,7 +11,7 @@ import { useState } from "react";
 const AboutUs = () => {
   const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
   return (
-    <div className="bg-primary-40 py-[60px] md:py-20 xl:py-[128px]">
+    <div id="aboutUs" className="bg-primary-40 py-[60px] md:py-20 xl:py-[128px]">
       <Container>
         <div className="flex flex-col-reverse  lg:flex-row items-center gap-[54px] ">
           

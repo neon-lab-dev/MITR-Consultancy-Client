@@ -15,6 +15,7 @@ import softwareDevelopment from "../assets/Icons/software-development.svg";
 import webDevelopment from "../assets/Icons/web-development.svg";
 
 import profile from "../assets/Icons/profile.svg";
+import cross from "../assets/Icons/cross.svg";
 
 import rightArrow from "../assets/Icons/right-arrow.svg";
 import downArrow from "../assets/Icons/down-arrow.svg";
@@ -28,8 +29,10 @@ import linkedin from "../assets/Icons/linkedin logo.svg";
 import instagram from "../assets/Icons/instagram logo.svg";
 
 import project1 from "../assets/Images/Projects/StudentTiffin.png";
-import project2 from "../assets/Images/Instagram post - 2.png";
-import project3 from "../assets/Images/Instagram post - 13.png";
+import project2 from "../assets/Images/Projects/spacefarm.png";
+import ndeWebsite from "../assets/Images/Projects/nde.png";
+import dental from "../assets/Images/Projects/dental.png";
+import javasports from "../assets/Images/Projects/javasports.png";
 
 
 // Cleintts
@@ -91,7 +94,9 @@ export const IMAGES = {
     // Projects
     project1,
     project2,
-    project3,
+    ndeWebsite,
+    dental,
+    javasports,
 };
 
 export const ICONS = {
@@ -101,8 +106,8 @@ export const ICONS = {
     frontendDevelopment,
     softwareDevelopment,
     webDevelopment,
-
     profile,
+    cross,
 
     rightArrow,
     downArrow,

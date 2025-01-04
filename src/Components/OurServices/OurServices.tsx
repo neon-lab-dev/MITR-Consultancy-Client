@@ -40,7 +40,7 @@ const OurServices = () => {
   ];
   
   return (
-    <div className="relative pb-[128px]  bg-white section">
+    <div id="services" className="relative pb-[128px]  bg-white section">
       <Image
         src={IMAGES.gradientBg}
         alt="MITR Consultancy Services"
