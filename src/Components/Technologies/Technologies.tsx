@@ -8,7 +8,7 @@ const Technologies = () => {
     const technologies1 = [IMAGES.angular, IMAGES.aws, IMAGES.docker, IMAGES.flutter];
     const technologies2 = [IMAGES.nodejs, IMAGES.java, IMAGES.nextjs, IMAGES.reactJs, IMAGES.reactNative];
     return (
-        <div className="bg-white py-[60px] md:py-20 xl:py-[128px]">
+        <div className="bg-white py-5">
             <Container>
                 <Heading
                     align='center'

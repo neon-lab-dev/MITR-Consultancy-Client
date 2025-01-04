@@ -34,10 +34,10 @@ const OurProjects = () => {
                         align="left"
                         subHeading="Projects"
                         heading="A collection of our latest works"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus mattis nunc aliquam tincidunt est non. Viverra nec eu."
+                        description="Explore our curated collection of top-notch projects showcasing innovation and excellence."
                     />
-                    <div className="mt-[54px] overflow-x-auto">
-                        <div className="flex gap-6 w-max">
+                    <div className=" overflow-x-auto ">
+                        <div className="flex gap-6 w-max my-10">
                             {ourProjects.map((project) => (
                                 <OurProjectCard key={project._id} {...project} />
                             ))}

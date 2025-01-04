@@ -73,7 +73,7 @@ const ContactUsForm = () => {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="fullName"
-              className="text-neutral-60 font-medium leading-[22px]"
+              className="text-neutral-60 font-medium leading-[22px] md:text-base text-[10px] leading-[14px]"
             >
               Name
             </label>
@@ -82,7 +82,7 @@ const ContactUsForm = () => {
               type="text"
               id="fullName"
               placeholder="Enter your name"
-              className="py-[22px] px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20"
+              className="md:py-[22px] py-[13px] px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20"
             />
             {errors.fullName && (
               <span className="text-red-500 text-sm">
@@ -94,7 +94,7 @@ const ContactUsForm = () => {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="email"
-              className="text-neutral-60 font-medium leading-[22px]"
+              className="text-neutral-60 font-medium leading-[22px] md:text-base text-[10px] leading-[14px]"
             >
               Email
             </label>
@@ -109,7 +109,7 @@ const ContactUsForm = () => {
               type="text"
               id="email"
               placeholder="Enter your email"
-              className="py-[22px] px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20"
+              className="md:py-[22px] py-[13px] px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20"
             />
             {errors.email && (
               <span className="text-red-500 text-sm">
@@ -121,7 +121,7 @@ const ContactUsForm = () => {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="mobileNumber"
-              className="text-neutral-60 font-medium leading-[22px]"
+              className="text-neutral-60 font-medium leading-[22px] md:text-base text-[10px] leading-[14px]"
             >
               Phone
             </label>
@@ -136,7 +136,7 @@ const ContactUsForm = () => {
               type="text"
               id="mobileNumber"
               placeholder="Enter your phone"
-              className="py-[22px] px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20"
+              className="md:py-[22px] py-[13px] px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20"
             />
             {errors.mobileNumber && (
               <span className="text-red-500 text-sm">
@@ -148,7 +148,7 @@ const ContactUsForm = () => {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="message"
-              className="text-neutral-60 font-medium leading-[22px]"
+              className="text-neutral-60 font-medium leading-[22px] md:text-base text-[10px] leading-[14px] "
             >
               Message
             </label>
@@ -157,7 +157,7 @@ const ContactUsForm = () => {
               id="message"
               rows={4}
               placeholder="Enter your message here"
-              className="py-[22px] px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20"
+              className="md:py-[22px] py-[13px] px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20"
             />
             {errors.message && (
               <span className="text-red-500 text-sm">

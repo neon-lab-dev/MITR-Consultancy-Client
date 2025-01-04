@@ -12,7 +12,7 @@ const Footer = () => {
         },
         {
             name: 'linkedin',
-            link: 'https://www.facebook.com/MITR-Consultancy-100190372261098',
+            link: 'https://www.linkedin.com/company/mitr-consulting/',
             icon: ICONS.linkedin
         },
         {
@@ -22,7 +22,7 @@ const Footer = () => {
         },
         {
             name: 'instagram',
-            link: 'https://www.facebook.com/MITR-Consultancy-100190372261098',
+            link: 'https://www.instagram.com/_mitr_consultancy/?hl=en',
             icon: ICONS.instagram
         },
     ];

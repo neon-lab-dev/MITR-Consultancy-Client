@@ -53,7 +53,7 @@ const FAQ = () => {
     setIsAccordionOpen((prevIndex) => (prevIndex === index ? -1 : index));
 
   return (
-    <div className="bg-white py-[128px] font-Inter">
+    <div className="bg-white py-[80px] font-Inter">
       <Container>
         <div>
           <Heading
@@ -72,7 +72,7 @@ const FAQ = () => {
                   className="flex gap-2 cursor-pointer items-center justify-between w-full"
                   onClick={() => handleClick(index)}
                 >
-                  <h1 className="text-neutral-10 font-semibold">
+                  <h1 className="text-neutral-10 font-semibold text-xs md:text-base xl:text-xl">
                     {faq.question}
                   </h1>
                   <Image
@@ -90,7 +90,7 @@ const FAQ = () => {
                       : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
-                  <p className="text-neutral-20 overflow-hidden">{faq.answer}</p>
+                  <p className="text-neutral-20 overflow-hidden text-xs md:text-base ">{faq.answer}</p>
                 </div>
               </article>
             ))}

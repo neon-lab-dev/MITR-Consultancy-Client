@@ -1,9 +1,14 @@
+"use client"
 import { IMAGES } from "@/assets";
+import ContactUs from "@/Components/ContactUs/ContactUs";
 import Button from "@/Components/Reusable/Button/Button";
 import Container from "@/Components/Shared/Container/Container";
 import Image from "next/image";
+import { useState } from "react";
+
 
 const Hero = () => {
+    const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
     return (
         <div className="font-Inter relative h-screen">
             {/* Background Image */}
@@ -31,11 +36,15 @@ const Hero = () => {
                         Welcome to Mitr Consulting – where innovation and excellence converge. We provide tailored digital solutions designed to bring your ideas to life and drive your business success.
                     </p>
                     <div className="flex flex-col md:flex-row items-center justify-start gap-4 xl:gap-9 mt-4 md:mt-9 xl:mt-[62px]">
-                        <Button variant="primary" title="Start a Project" classNames="w-[200px]" />
-                        <Button variant="secondary" title="Learn More" classNames="w-[200px]" />
+                        <Button handleClick={()=>setIsContactUsModalOpen(true)} variant="primary" title="Start a Project" classNames="w-[200px]" />
+                        <Button variant="secondary" title="View Our Works" classNames="w-[200px]" />
                     </div>
                 </div>
             </Container>
+            <ContactUs
+        isContactUsModalOpen={isContactUsModalOpen}
+        setIsContactUsModalOpen={setIsContactUsModalOpen}
+      />
         </div>
     );
 };

@@ -10,32 +10,32 @@ const OurServices = () => {
     {
       icon: ICONS.uiUx,
       title: "Ui/UX Design",
-      description: "Get a Website Interface to improve user experience , maximize brand awareness, and increase conversions."
+      description: " We create user-friendly and visually stunning designs that make your product stand out."
     },
     {
       icon: ICONS.appDevelopment,
       title: "App development",
-      description: "Get a Website Interface to improve user experience , maximize brand awareness, and increase conversions."
+      description: "From idea to launch, we build apps that are fast, reliable, and tailored to your needs."
     },
     {
       icon: ICONS.backendDevelopment,
       title: "Backed Development",
-      description: "Get a Website Interface to improve user experience , maximize brand awareness, and increase conversions."
+      description: "Our robust backend solutions ensure your applications run smoothly and securely."
     },
     {
       icon: ICONS.frontendDevelopment,
       title: "Frontend Development",
-      description: "Get a Website Interface to improve user experience , maximize brand awareness, and increase conversions."
+      description: "We craft responsive and attractive interfaces that your users will love."
     },
     {
       icon: ICONS.softwareDevelopment,
       title: "Software Development",
-      description: "Get a Website Interface to improve user experience , maximize brand awareness, and increase conversions."
+      description: " Get custom software solutions designed to simplify and enhance your business operations."
     },
     {
       icon: ICONS.webDevelopment,
       title: "Web Development",
-      description: "Get a Website Interface to improve user experience , maximize brand awareness, and increase conversions."
+      description: "Let us build a website that’s not just beautiful but also drives results for your business."
     },
   ];
   
@@ -52,7 +52,7 @@ const OurServices = () => {
             align='center'
             subHeading='Services'
             heading='Our List of Best services'
-            description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus mattis nunc aliquam tincidunt est non. Viverra nec eu.'
+            description='Discover our diverse range of top-quality services, tailored to meet your needs with excellence.'
           />
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[46px] mt-[62px]'>
             {ourServices.map((service, index) => (

@@ -1,23 +1,31 @@
-/* eslint-disable react/no-unescaped-entities */
+"use client"
 import Image from "next/image";
 import Heading from "../Reusable/Heading/Heading";
 import Container from "../Shared/Container/Container";
 import { IMAGES } from "@/assets";
 import Button from "../Reusable/Button/Button";
+import ContactUs from "../ContactUs/ContactUs";
+import { useState } from "react";
 
 const AboutUs = () => {
+  const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
   return (
     <div className="bg-primary-40 py-[60px] md:py-20 xl:py-[128px]">
       <Container>
-        <div className="flex flex-col lg:flex-row items-center gap-[54px] ">
+        <div className="flex flex-col-reverse  lg:flex-row items-center gap-[54px] ">
           
-          <div className="order-1 lg:order-2">
+        <Image
+            src={IMAGES.aboutUs}
+            alt="about -MITR"
+            className="w-full h-full"
+          />
+          <div className="">
             <Heading
               align="left"
               subHeading="About MITR"
               heading="Most trusted Business Consulting"
             />
-            <p className={`text-neutral-20 mt-6`}>
+            <p className={`text-neutral-20 mt-6 text-justify`}>
               At MITR Consulting, we are a team of passionate professionals
               dedicated to transforming ideas into impactful digital solutions.
               With expertise spanning UI/UX design, app development, back-end
@@ -35,19 +43,19 @@ const AboutUs = () => {
 
             <div className="mt-[68px]">
               <Button
+                handleClick={()=>setIsContactUsModalOpen(true)}
                 variant="primary"
-                title="Learn More"
+                title="Start A Project"
                 classNames="w-[200px]"
               />
             </div>
           </div>
-          <Image
-            src={IMAGES.aboutUs}
-            alt="about -MITR"
-            className="w-full h-full"
-          />
         </div>
       </Container>
+      <ContactUs
+        isContactUsModalOpen={isContactUsModalOpen}
+        setIsContactUsModalOpen={setIsContactUsModalOpen}
+      />
     </div>
   );
 };

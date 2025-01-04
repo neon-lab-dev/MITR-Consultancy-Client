@@ -1,24 +1,49 @@
+"use client"
 import { IMAGES } from "@/assets";
 import Image from "next/image";
 import Container from "../Shared/Container/Container";
 import Button from "../Reusable/Button/Button";
+import { useState } from "react";
+import ContactUs from "../ContactUs/ContactUs";
 
 const LetsTalk = () => {
-    return (
-        <div className="relative font-Inter overflow-hidden">
-            <Container>
-                <div className="bg-neutral-50 bg-opacity-50 h-[235px] md:h-[689px] xl:h-full absolute top-0 bottom-0 z-10 rounded-xl"></div>
-                <Image src={IMAGES.letsTalkBgImg} alt="MITR Consultancy" className="w-full h-[235px] md:h-[400px] xl:h-full rounded-xl" />
-                <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 items-center justify-center xl:justify-between w-full max-w-[1300px] px-4 xl:px-[96px] absolute top-0 bottom-0 z-20">
-                    <div className="flex flex-col text-center xl:text-start gap-4 md:gap-8 w-full">
-                        <h1 className="text-white text-lg md:text-[32px] font-bold w-full">Do you have a project in mind?</h1>
-                        <p className="text-white max-w-full md:max-w-[475px] mx-auto xl:mx-0 text-xs md:text-lg leading-7">Welcome to Mitr Lorem ipsum dolor sit amet consectetur adipiscing elit amet diam in est pharetra porttitor libero.</p>
-                    </div>
-                    <Button variant="primary" title="Let’s talk" classNames="w-[200px]" />
-                </div>
-            </Container>
+  const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
+  return (
+    <div className="relative font-Inter overflow-hidden">
+      {/* Background Container */}
+      <Container>
+        <div className="relative h-[235px] md:h-[400px] xl:h-[450px] rounded-xl overflow-hidden">
+          {/* Background Image */}
+          <Image
+            src={IMAGES.letsTalkBgImg}
+            alt="MITR Consultancy"
+            className="w-full h-full object-cover"
+          />
+
+          {/* Content Overlay */}
+          <div className="absolute inset-0 flex flex-col lg:flex-row items-center justify-center xl:justify-between gap-10 lg:gap-0 px-4 py-4 xl:px-[96px] max-w-[1300px] mx-auto z-20">
+            {/* Text Section */}
+            <div className="text-center lg:text-left flex flex-col gap-4 md:gap-8 w-full lg:w-[70%]">
+              <h1 className="text-white text-lg md:text-[32px] font-bold">
+                Do you have a project in mind?
+              </h1>
+              <p className="text-white text-xs md:text-lg md:leading-7 leading-5 max-w-full md:max-w-[475px] mx-auto lg:mx-0">
+                Welcome to Mitr Lorem ipsum dolor sit amet consectetur
+                adipiscing elit amet diam in est pharetra porttitor libero.
+              </p>
+            </div>
+
+            {/* Button Section */}
+            <Button  handleClick={()=>setIsContactUsModalOpen(true)} variant="primary" title="Start A Project" classNames="w-[200px] h-[44px] md:h-auto" />
+          </div>
         </div>
-    );
+      </Container>
+      <ContactUs
+        isContactUsModalOpen={isContactUsModalOpen}
+        setIsContactUsModalOpen={setIsContactUsModalOpen}
+      />
+    </div>
+  );
 };
 
 export default LetsTalk;

@@ -5,6 +5,7 @@ import gradientBg from "../assets/Images/gradient-bg.png";
 import letsTalkBgImg from "../assets/Images/lets-talk-bg.png";
 import contactUsBgImg from "../assets/Images/contact-us-bg.png";
 
+
 // Services
 import uiUx from "../assets/Icons/ui-ux.svg";
 import appDevelopment from "../assets/Icons/app-development.svg";
@@ -12,6 +13,8 @@ import backendDevelopment from "../assets/Icons/backend-development.svg";
 import frontendDevelopment from "../assets/Icons/frontend-development.svg";
 import softwareDevelopment from "../assets/Icons/software-development.svg";
 import webDevelopment from "../assets/Icons/web-development.svg";
+
+import profile from "../assets/Icons/profile.svg";
 
 import rightArrow from "../assets/Icons/right-arrow.svg";
 import downArrow from "../assets/Icons/down-arrow.svg";
@@ -24,7 +27,7 @@ import twitter from "../assets/Icons/Twitter logo.svg";
 import linkedin from "../assets/Icons/linkedin logo.svg";
 import instagram from "../assets/Icons/instagram logo.svg";
 
-import project1 from "../assets/Images/Instagram post - 1.png";
+import project1 from "../assets/Images/Projects/StudentTiffin.png";
 import project2 from "../assets/Images/Instagram post - 2.png";
 import project3 from "../assets/Images/Instagram post - 13.png";
 
@@ -98,6 +101,8 @@ export const ICONS = {
     frontendDevelopment,
     softwareDevelopment,
     webDevelopment,
+
+    profile,
 
     rightArrow,
     downArrow,
