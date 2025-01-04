@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <div id="home">
       <div
-        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-neutral-40 bg-opacity-75" : "bg-transparent"
+        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 py-2 ${isScrolled ? "bg-neutral-40 bg-opacity-75" : "bg-transparent"
           }`}
       >
         <Container>

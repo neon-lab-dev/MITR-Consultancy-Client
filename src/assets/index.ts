@@ -16,6 +16,8 @@ import webDevelopment from "../assets/Icons/web-development.svg";
 
 import profile from "../assets/Icons/profile.svg";
 import cross from "../assets/Icons/cross.svg";
+import rightArrow2 from "../assets/Icons/right-arrow2.svg";
+import rightArrowDark from "../assets/Icons/right-arrow-dark.svg";
 
 import rightArrow from "../assets/Icons/right-arrow.svg";
 import downArrow from "../assets/Icons/down-arrow.svg";
@@ -110,6 +112,8 @@ export const ICONS = {
     cross,
 
     rightArrow,
+    rightArrow2,
+    rightArrowDark,
     downArrow,
     avatar,
     star,
