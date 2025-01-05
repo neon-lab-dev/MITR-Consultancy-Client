@@ -17,7 +17,7 @@ const TestimonialCard: React.FC<TTestimonialCard> = ({
   designation,
 }) => {
   return (
-    <div className="bg-white shadow-box-shadow p-8 rounded flex flex-col gap-6 md:w-[416px] w-[298px]">
+    <div className="bg-white shadow-box-shadow p-8 rounded flex flex-col gap-6 w-full md:w-full xl:w-[416px]">
       <StarRatings
         rating={rating}
         starRatedColor="#0099FF"
