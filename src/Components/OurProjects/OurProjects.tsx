@@ -26,10 +26,10 @@ const OurProjects = () => {
                             description="Explore our curated collection of top-notch projects showcasing innovation and excellence."
                         />
                         <div className='hidden lg:flex items-center gap-4'>
-                            <button id="prevButton" className="p-2 rounded-lg bg-white border border-neutral-60 hover:bg-gray-100 transition duration-300">
+                            <button id="prevProjectButton" className="p-2 rounded-lg bg-white border border-neutral-60 hover:bg-gray-100 transition duration-300">
                                 <Image src={ICONS.rightArrowDark} alt='' className='size-6 rotate-180' />
                             </button>
-                            <button id="nextButton" className="p-2 rounded-lg bg-primary-10 border border-primary-10 hover:bg-primary-10/80 transition duration-300">
+                            <button id="nextProjectButton" className="p-2 rounded-lg bg-primary-10 border border-primary-10 hover:bg-primary-10/80 transition duration-300">
                                 <Image src={ICONS.rightArrow2} alt='' className='size-6' />
                             </button>
                         </div>
@@ -39,8 +39,8 @@ const OurProjects = () => {
                         spaceBetween={20}
                         slidesPerView={4}
                         navigation={{
-                            prevEl: "#prevButton",
-                            nextEl: "#nextButton",
+                            prevEl: "#prevProjectButton",
+                            nextEl: "#nextProjectButton",
                         }}
                         modules={[Navigation, Pagination]}
                         pagination={{
@@ -64,10 +64,10 @@ const OurProjects = () => {
                     </Swiper>
 
                     <div className='flex lg:hidden items-center justify-center gap-4 mt-7'>
-                        <button id="prevButton" className="p-2 rounded-lg bg-white border border-neutral-60 hover:bg-gray-100 transition duration-300">
+                        <button id="prevProjectButton" className="p-2 rounded-lg bg-white border border-neutral-60 hover:bg-gray-100 transition duration-300">
                             <Image src={ICONS.rightArrowDark} alt='' className='size-6 rotate-180' />
                         </button>
-                        <button id="nextButton" className="p-2 rounded-lg bg-primary-10 border border-primary-10 hover:bg-primary-10/80 transition duration-300">
+                        <button id="nextProjectButton" className="p-2 rounded-lg bg-primary-10 border border-primary-10 hover:bg-primary-10/80 transition duration-300">
                             <Image src={ICONS.rightArrow2} alt='' className='size-6' />
                         </button>
                     </div>
