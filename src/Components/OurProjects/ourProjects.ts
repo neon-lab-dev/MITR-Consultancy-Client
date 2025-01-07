@@ -7,6 +7,7 @@ export const ourProjects = [
         description:
             "Students Tiffin is a subscription-based meal delivery service, offering fresh, healthy, and affordable tiffin options for students. It ensures timely delivery and caters to the dietary needs of its customers.",
         image: IMAGES.project1,
+        liveLink : "https://studentstiffin.ie/"
     },
     {
         _id: "2",
@@ -14,6 +15,7 @@ export const ourProjects = [
         description:
             "SpaceFrame is an e-commerce website for interior design enthusiasts. It features a wide range of modern furniture, decor items, and design solutions to enhance home and office interiors.",
         image: IMAGES.project2,
+        liveLink : "https://spaceframe.co.in/"
     },
     {
         _id: "3",
@@ -21,6 +23,7 @@ export const ourProjects = [
         description:
             "Now Digital Easy provides domain hosting and Google Workspace services, empowering businesses with reliable infrastructure. It offers seamless hosting, email solutions, and productivity tools for efficient operations.",
         image: IMAGES.ndeWebsite,
+        liveLink : "https://www.nowdigitaleasy.com/"
     },
     {
         _id: "4",
@@ -28,12 +31,6 @@ export const ourProjects = [
         description:
             "Dental UI is a modern and user-friendly web platform for dental clinics. It includes appointment scheduling, patient management, and informative content to improve the patient experience.",
         image: IMAGES.dental,
-    },
-    {
-        _id: "5",
-        projectName: "Java Sports",
-        description:
-            "Java Sports is an e-commerce platform specializing in sporting goods. It offers a diverse range of equipment and apparel for enthusiasts and professionals across various sports.",
-        image: IMAGES.javasports,
+        liveLink : "https://dental-ui-2.vercel.app/"
     },
 ];

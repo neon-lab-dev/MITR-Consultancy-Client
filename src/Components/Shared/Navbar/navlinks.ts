@@ -25,4 +25,8 @@ export const navlinks = [
                 .getElementById("portfolio")
                 ?.scrollIntoView({ behavior: "smooth" }),
     },
+    {
+        label: "Internship Programmes",
+        path : "internship-programmes"
+    },
 ];

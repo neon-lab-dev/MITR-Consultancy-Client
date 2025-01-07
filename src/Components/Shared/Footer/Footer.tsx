@@ -1,9 +1,12 @@
 "use client"
 import { ICONS, IMAGES } from "@/assets";
+import ContactUs from "@/Components/ContactUs/ContactUs";
 import Image from "next/image";
+import { useState } from "react";
 
 
 const Footer = () => {
+    const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
     const socialLinks = [
         {
             name: 'facebook',
@@ -68,15 +71,14 @@ const Footer = () => {
             label: "Contact Us",
             path: "/",
             action: () => {
-                // router.push("/");
-                const portfolioSection = document.getElementById("portfolio");
-                portfolioSection?.scrollIntoView({ behavior: "smooth" });
+                setIsContactUsModalOpen(true);
             },
         },
     ];
 
     return (
-        <div className="bg-primary-50 py-[42px] flex flex-col items-center justify-center gap-6 font-Inter mt-[151px] py-10">
+        <div className="bg-primary-50">
+            <div className=" flex flex-col items-center justify-center gap-6 font-Inter mt-[151px] py-10">
             <div className="flex items-center gap-5">
                 <Image src={IMAGES.MITRConsoltancyLogo} alt="MITR Consultancy" className="w-[68px] h-[33px]" />
                 <div className="w-[2px] h-[26px] bg-neutral-10/40"></div>
@@ -102,6 +104,13 @@ const Footer = () => {
             </div>
 
             <p className="text-neutral-20 text-xs md:text-base">© 2024 Mitr Consultancy </p>
+
+             {/* Contact Us Modal */}
+        </div>
+      <ContactUs
+        isContactUsModalOpen={isContactUsModalOpen}
+        setIsContactUsModalOpen={setIsContactUsModalOpen}
+      />
         </div>
     );
 };

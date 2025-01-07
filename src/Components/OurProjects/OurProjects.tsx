@@ -54,7 +54,7 @@ const OurProjects = () => {
                             1024: { slidesPerView: 2 },
                             1366: { slidesPerView: 3 },
                         }}
-                        className="w-full"
+                        className="w-full mt-10"
                     >
                         {ourProjects?.map((project) => (
                             <SwiperSlide key={project._id} className='mb-16 w-full'>
