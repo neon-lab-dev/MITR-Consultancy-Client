@@ -33,4 +33,44 @@ export const ourProjects = [
         image: IMAGES.dental,
         liveLink : "https://dental-ui-2.vercel.app/"
     },
+    {
+        _id: "5",
+        projectName: "Agriculture",
+        description:
+            "Agriculture focuses on promoting sustainable and organic farming practices. The website offers products, insights, and resources for farmers and consumers, driving awareness of eco-friendly agricultural methods.",
+        image: IMAGES.agri,
+        liveLink: "https://dhanlakshmiherbalorganics.com/",
+    },
+    {
+        _id: "7",
+        projectName: "Career Hub",
+        description:
+            "Career Hub is a comprehensive platform designed to help job seekers and recruiters connect efficiently. It provides tools for job postings, candidate searches, and career development resources.",
+        image: IMAGES.careerHub,
+        liveLink: "https://career-hub-pi.vercel.app/",
+    },
+    {
+        _id: "8",
+        projectName: "Abirami Enterprises",
+        description:
+            "Abirami Enterprises showcases a diverse range of industrial and commercial products. The website provides detailed catalogs and easy navigation for seamless browsing and inquiries.",
+        image: IMAGES.abhiramiProject,
+        liveLink: "https://abhirami-enterprises.vercel.app/",
+    },
+    {
+        _id: "10",
+        projectName: "Bonohomie",
+        description:
+            "Bonohomie is a lifestyle e-commerce platform offering stylish and affordable products for modern living. The platform combines quality and design for an exceptional shopping experience.",
+        image: IMAGES.bonhomie,
+        liveLink: "https://bonohoie.vercel.app/",
+    },
+    {
+        _id: "11",
+        projectName: "Blog Website",
+        description:
+            "The Blog Website is a beautifully designed platform for bloggers to share their thoughts, stories, and insights. It features user-friendly navigation and customizable layouts for content creators.",
+        image: IMAGES.blogWebsite,
+        liveLink: "https://blogdesign-gilt.vercel.app/",
+    },
 ];

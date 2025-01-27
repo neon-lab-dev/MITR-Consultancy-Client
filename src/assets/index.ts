@@ -35,7 +35,11 @@ import project2 from "../assets/Images/Projects/spacefarm.png";
 import ndeWebsite from "../assets/Images/Projects/nde.png";
 import dental from "../assets/Images/Projects/dental.png";
 import javasports from "../assets/Images/Projects/javasports.png";
-
+import abhiramiProject from "../assets/Images/Projects/abhirami.png"
+import agri from "../assets/Images/Projects/agriculture.png"
+import careerHub from "../assets/Images/Projects/careerHub.png"
+import blogWebsite from "../assets/Images/Projects/blog.png"
+import bonhomie from "../assets/Images/Projects/bonhomie.png"
 
 // Cleintts
 import abhirami from "../assets/Images/Clients/Mask group.png";
@@ -99,6 +103,11 @@ export const IMAGES = {
     ndeWebsite,
     dental,
     javasports,
+    abhiramiProject,
+    agri,
+    careerHub,
+    blogWebsite,
+    bonhomie
 };
 
 export const ICONS = {

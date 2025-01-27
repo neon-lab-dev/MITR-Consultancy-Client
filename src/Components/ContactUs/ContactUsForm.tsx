@@ -38,10 +38,10 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
 
     emailjs
       .sendForm(
-        "service_8exd75k",
-        "template_w5ucukg",
+        "service_phm6lbd",
+        "template_6sw301n",
         form.current,
-        "zVZ_vJ5DlHMffQppL"
+        "Cg5X16aA9m-EFkzTu"
       )
       .then(
         () => {
@@ -52,12 +52,14 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
             },
             duration: 3000,
           });
+          methods.reset();
         },
         (error) => {
           console.error(error);
           toast.error("Failed! Try again.");
         }
       );
+
   };
 
   const inputFieldStyle = "md:py-[18px] py-3 px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20 focus:border-primary-10 transition duration-300 focus:outline-none"

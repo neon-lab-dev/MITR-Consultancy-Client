@@ -31,19 +31,22 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isSidebarOpen, setIsSideb
                     </button>
                 </div>
                 <div className="flex flex-col gap-4 p-4">
-                    {navlinks.map((link, index) => (
-                        <button
-                            key={index}
-                            onClick={() => {
-                                link.action();
-                                setIsSidebarOpen(false);
-                            }}
-                            className="text-lg font-medium hover:text-primary-10 transition duration-300"
-                        >
-                            {link.label}
-                        </button>
-                    ))}
-                </div>
+    {navlinks.map((link, index) => (
+        <button
+            key={index}
+            onClick={() => {
+                if (link.action) { // Ensure action is defined before invoking it
+                    link.action();
+                }
+                setIsSidebarOpen(false);
+            }}
+            className="text-lg font-medium hover:text-primary-10 transition duration-300"
+        >
+            {link.label}
+        </button>
+    ))}
+</div>
+
                 <div className="mt-auto p-4">
                     <Button
                         handleClick={() => {
