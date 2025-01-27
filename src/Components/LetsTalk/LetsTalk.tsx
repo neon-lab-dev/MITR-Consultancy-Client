@@ -28,7 +28,7 @@ const LetsTalk = () => {
                 Do you have a project in mind?
               </h1>
               <p className="text-white text-xs md:text-lg md:leading-7 leading-5 max-w-full md:max-w-[475px] mx-auto lg:mx-0">
-                Welcome to Mitr Lorem ipsum dolor sit amet consectetur
+                Welcome to MITR Lorem ipsum dolor sit amet consectetur
                 adipiscing elit amet diam in est pharetra porttitor libero.
               </p>
             </div>
