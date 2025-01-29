@@ -1,8 +1,8 @@
 import { IMAGES } from '@/assets';
 import Image from 'next/image';
 import React from 'react';
-import Container from '../Shared/Container/Container';
-import Heading from '../Reusable/Heading/Heading';
+import Container from '../../Shared/Container/Container';
+import Heading from '../../Reusable/Heading/Heading';
 import Marquee from 'react-fast-marquee';
 
 const Achievements = () => {

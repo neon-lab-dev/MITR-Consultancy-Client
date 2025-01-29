@@ -1,9 +1,9 @@
 import React from 'react';
-import Heading from '../Reusable/Heading/Heading';
+import Heading from '../../Reusable/Heading/Heading';
 import Image from 'next/image';
 import { ICONS, IMAGES } from '@/assets';
 import OurServiceCard from './OurServiceCard';
-import Container from '../Shared/Container/Container';
+import Container from '../../Shared/Container/Container';
 
 const OurServices = () => {
   const ourServices = [

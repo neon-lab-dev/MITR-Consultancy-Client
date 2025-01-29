@@ -1,6 +1,6 @@
 "use client"
-import Container from '../Shared/Container/Container';
-import Heading from '../Reusable/Heading/Heading';
+import Container from '../../Shared/Container/Container';
+import Heading from '../../Reusable/Heading/Heading';
 import OurProjectCard from './OurProjectCard';
 import { ourProjects } from './ourProjects';
 import Image from 'next/image';
@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import React from 'react';
-import { ICONS } from '../../assets/index';
+import { ICONS } from '../../../assets/index';
 
 const OurProjects = () => {
     return (

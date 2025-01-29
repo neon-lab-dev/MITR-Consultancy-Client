@@ -4,7 +4,7 @@ import { IMAGES } from "@/assets";
 import Image from "next/image";
 import Container from "../Container/Container";
 import Button from "@/Components/Reusable/Button/Button";
-import ContactUs from "@/Components/ContactUs/ContactUs";
+import ContactUs from "@/Components/Home/ContactUs/ContactUs";
 import HamburgerMenu from "./HamburgerMenu";
 import { navlinks } from "./navlinks";
 

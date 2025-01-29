@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client"
 import Image from "next/image";
-import Heading from "../Reusable/Heading/Heading";
-import Container from "../Shared/Container/Container";
+import Heading from "../../Reusable/Heading/Heading";
+import Container from "../../Shared/Container/Container";
 import { IMAGES } from "@/assets";
-import Button from "../Reusable/Button/Button";
+import Button from "../../Reusable/Button/Button";
 import ContactUs from "../ContactUs/ContactUs";
 import { useState } from "react";
 

@@ -4,21 +4,21 @@ import ContactUs from "@/Components/Home/ContactUs/ContactUs";
 import Button from "@/Components/Reusable/Button/Button";
 import Container from "@/Components/Shared/Container/Container";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
-
-const Hero = () => {
+const InternshipProgrammesHero = () => {
     const [isContactUsModalOpen, setIsContactUsModalOpen] = useState<boolean>(false);
     return (
         <div className="font-Inter relative h-screen">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src={IMAGES.heroImg}
+                    src={IMAGES.internshipProgrammeBg}
                     alt="MITR Consultancy"
-                    layout="fill" // Ensures the image fills the container
-                    objectFit="cover" // Ensures the image maintains aspect ratio and covers the area
-                    priority // Optimizes loading for above-the-fold content
+                    layout="fill"
+                    objectFit="cover"
+                    priority
                 />
             </div>
 
@@ -29,18 +29,16 @@ const Hero = () => {
             <Container>
                 <div className="flex items-center xl:items-start justify-center absolute top-0 bottom-0 flex-col z-20 text-center xl:text-start">
                     <h1 className="text-white leading-6 md:leading-[40px] xl:leading-[80px] text-xl md:text-[32px] xl:text-[68px] font-bold max-w-[344px] md:max-w-[550px] xl:max-w-[1071px]">
-                        Bring your thoughts to reality with{" "}
-                        <span className="text-primary-20">MITR Consultancy</span>
+                    Industry Ready Training Program By{" "}
+                        <span className="text-primary-20">Mitr Consultancy</span>
                     </h1>
                     <p className="text-white text-[11px] md:text-sm xl:text-lg leading-[18px] xl:leading-7 max-w-[1071px] mt-3 xl:mt-6 px-4">
-                        Welcome to MITR Consulting – where innovation and excellence converge. We provide tailored digital solutions designed to bring your ideas to life and drive your business success.
+                    We are a team of passionate professionals dedicated to transforming ideas into impactful digital solutions. With expertise spanning UI/UX design, app development, back-end systems, software development, and front-end technologies, we craft products that are innovative, reliable, and tailored to your unique needs.
                     </p>
                     <div className="flex flex-col md:flex-row items-center justify-start gap-4 xl:gap-6 mt-4 md:mt-9 xl:mt-[62px]">
-                        <Button handleClick={() => setIsContactUsModalOpen(true)} variant="primary" title="Start a Project" classNames="w-[200px]" />
-                        <Button handleClick={() =>
-                            document
-                                .getElementById("portfolio")
-                                ?.scrollIntoView({ behavior: "smooth" })} variant="secondary" title="View Our Works" classNames="w-[200px]" />
+                        <Link href={"/courses"}>
+                        <Button variant="primary" title="View Courses" classNames="w-[200px]" />
+                        </Link>
                     </div>
                 </div>
             </Container>
@@ -52,4 +50,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default InternshipProgrammesHero;

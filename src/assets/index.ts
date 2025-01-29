@@ -1,5 +1,6 @@
 import MITRConsoltancyLogo from "../assets/Images/mitr-consultancy.png";
 import heroImg from "../assets/Images/hero-image.png";
+import internshipProgrammeBg from "../assets/Images/internshipProgrammeBg.png";
 import aboutUs from "../assets/Images/about-us.png";
 import gradientBg from "../assets/Images/gradient-bg.png";
 import letsTalkBgImg from "../assets/Images/lets-talk-bg.png";
@@ -68,6 +69,7 @@ import docker from "../assets/Images/Technologies/image 24.png";
 export const IMAGES = {
     MITRConsoltancyLogo,
     heroImg,
+    internshipProgrammeBg,
     aboutUs,
     gradientBg,
     letsTalkBgImg,

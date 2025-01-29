@@ -1,6 +1,6 @@
 "use client"
-import Heading from "../Reusable/Heading/Heading";
-import Container from "../Shared/Container/Container";
+import Heading from "../../Reusable/Heading/Heading";
+import Container from "../../Shared/Container/Container";
 import { testimonials } from "./testimonial.data";
 import TestimonialCard from "./TestimonialCard";
 import { Swiper, SwiperSlide } from "swiper/react";

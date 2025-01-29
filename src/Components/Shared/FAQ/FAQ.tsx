@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import Heading from "../Reusable/Heading/Heading";
-import Container from "../Shared/Container/Container";
+import Heading from "../../Reusable/Heading/Heading";
+import Container from "../Container/Container";
 import Image from "next/image";
 import { ICONS } from "@/assets";
 

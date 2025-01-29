@@ -1,6 +1,6 @@
 "use client"
 import { ICONS, IMAGES } from "@/assets";
-import ContactUs from "@/Components/ContactUs/ContactUs";
+import ContactUs from "@/Components/Home/ContactUs/ContactUs";
 import Image from "next/image";
 import { useState } from "react";
 

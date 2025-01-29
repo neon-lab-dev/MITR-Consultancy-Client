@@ -2,8 +2,8 @@
 import { IMAGES } from "@/assets";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import Heading from "../Reusable/Heading/Heading";
-import Container from "../Shared/Container/Container";
+import Heading from "../../Reusable/Heading/Heading";
+import Container from "../../Shared/Container/Container";
 const Technologies = () => {
     const technologies1 = [IMAGES.angular, IMAGES.aws, IMAGES.docker, IMAGES.flutter];
     const technologies2 = [IMAGES.nodejs, IMAGES.java, IMAGES.nextjs, IMAGES.reactJs, IMAGES.reactNative];

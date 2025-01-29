@@ -27,6 +27,6 @@ export const navlinks = [
     },
     {
         label: "Internship Programmes",
-        path : "internship-programmes"
+        path : "/internship-programmes"
     },
 ];

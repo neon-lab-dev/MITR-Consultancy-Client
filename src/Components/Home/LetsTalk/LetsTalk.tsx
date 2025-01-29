@@ -1,8 +1,8 @@
 "use client"
 import { IMAGES } from "@/assets";
 import Image from "next/image";
-import Container from "../Shared/Container/Container";
-import Button from "../Reusable/Button/Button";
+import Container from "../../Shared/Container/Container";
+import Button from "../../Reusable/Button/Button";
 import { useState } from "react";
 import ContactUs from "../ContactUs/ContactUs";
 

@@ -1,5 +1,5 @@
 import { FormProvider, useForm, SubmitHandler } from "react-hook-form";
-import Button from "../Reusable/Button/Button";
+import Button from "../../Reusable/Button/Button";
 import { useRef } from "react";
 import { toast, Toaster } from "sonner";
 import emailjs from "@emailjs/browser";
