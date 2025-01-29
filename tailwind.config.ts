@@ -26,8 +26,10 @@ export default {
         neutral: {
           10: "#333",
           20 : "#494949",
+          25 : "#717179",
           30 : "#2B2B2B",
           40 : "#03253B",
+          45 : "#071540",
           50 : "#022740",
           60 : '#393939de',
           70 : "#F0F1F3",
@@ -41,6 +43,7 @@ export default {
         'service-card' : ' 0px 0px 65px 0px rgba(0, 153, 255, 0.12)',
         'box-shadow' : '0px 4px 8px 0px rgba(0, 0, 0, 0.10)',
         'faq-box-shadow' : '0px 10px 20px 0px rgba(164, 217, 253, 0.15)',
+        'training-card' : '0px 10px 20px 0px rgba(164, 217, 253, 0.15)'
       }
     },
   },

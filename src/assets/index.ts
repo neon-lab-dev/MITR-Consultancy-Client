@@ -25,6 +25,9 @@ import downArrow from "../assets/Icons/down-arrow.svg";
 import avatar from "../assets/Icons/avatar.svg";
 import star from "../assets/Icons/star.svg";
 import hamburgerMenu from "../assets/Icons/hamburgerMenu.svg";
+import lessons from "../assets/Icons/lessons.svg";
+import duration from "../assets/Icons/duration.svg";
+
 // Social Icons
 import facebook from "../assets/Icons/facebook logo.svg";
 import twitter from "../assets/Icons/Twitter logo.svg";
@@ -65,6 +68,9 @@ import nodejs from "../assets/Images/Technologies/image 21.png";
 import java from "../assets/Images/Technologies/image 22.png";
 import aws from "../assets/Images/Technologies/image 23.png";
 import docker from "../assets/Images/Technologies/image 24.png";
+
+import backendDevelopmentImg from "../assets/Images/backend-development.png";
+
 
 export const IMAGES = {
     MITRConsoltancyLogo,
@@ -109,7 +115,9 @@ export const IMAGES = {
     agri,
     careerHub,
     blogWebsite,
-    bonhomie
+    bonhomie,
+
+    backendDevelopmentImg,
 };
 
 export const ICONS = {
@@ -129,6 +137,8 @@ export const ICONS = {
     avatar,
     star,
     hamburgerMenu,
+    lessons,
+    duration,
 
     facebook,
     twitter,
