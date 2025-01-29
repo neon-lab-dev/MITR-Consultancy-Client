@@ -27,6 +27,7 @@ import star from "../assets/Icons/star.svg";
 import hamburgerMenu from "../assets/Icons/hamburgerMenu.svg";
 import lessons from "../assets/Icons/lessons.svg";
 import duration from "../assets/Icons/duration.svg";
+import skills from "../assets/Icons/skills.svg";
 
 // Social Icons
 import facebook from "../assets/Icons/facebook logo.svg";
@@ -70,6 +71,7 @@ import aws from "../assets/Images/Technologies/image 23.png";
 import docker from "../assets/Images/Technologies/image 24.png";
 
 import backendDevelopmentImg from "../assets/Images/backend-development.png";
+import purposeOfProgramme from "../assets/Images/purpose-of-programme.png";
 
 
 export const IMAGES = {
@@ -118,6 +120,7 @@ export const IMAGES = {
     bonhomie,
 
     backendDevelopmentImg,
+    purposeOfProgramme,
 };
 
 export const ICONS = {
@@ -139,6 +142,7 @@ export const ICONS = {
     hamburgerMenu,
     lessons,
     duration,
+    skills,
 
     facebook,
     twitter,
