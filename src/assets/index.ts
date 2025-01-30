@@ -29,6 +29,33 @@ import lessons from "../assets/Icons/lessons.svg";
 import duration from "../assets/Icons/duration.svg";
 import skills from "../assets/Icons/skills.svg";
 
+import reactjs from "../assets/Icons/Technologies/reactjs.svg";
+import mongoDB from "../assets/Icons/Technologies/mongodb.svg";
+import expressjs from "../assets/Icons/Technologies/expressjs.svg";
+import nodejsIcon from "../assets/Icons/Technologies/nodejs.svg";
+import nextjsIcon from "../assets/Icons/Technologies/nextjs.svg";
+import typescript from "../assets/Icons/Technologies/typescript.svg";
+import javascript from "../assets/Icons/Technologies/javascript.svg";
+import redux from "../assets/Icons/Technologies/redux.svg";
+import rtkQuery from "../assets/Icons/Technologies/redux.svg";
+import tailwind from "../assets/Icons/Technologies/tailwind.svg";
+import bootstrap from "../assets/Icons/Technologies/bootstrap.svg";
+import zod from "../assets/Icons/Technologies/zod.svg";
+import axios from "../assets/Icons/Technologies/axios.svg";
+import jwt from "../assets/Icons/Technologies/jwt.png";
+import html5 from "../assets/Icons/Technologies/html5.svg";
+import css3 from "../assets/Icons/Technologies/css3.svg";
+
+// Tools
+import vscode from "../assets/Icons/Tools/vscode.svg";
+import git from "../assets/Icons/Tools/git.svg";
+import github from "../assets/Icons/Tools/github.svg";
+import mongodbCompass from "../assets/Icons/Tools/mongodb-compass.svg";
+import netlify from "../assets/Icons/Tools/netlify.svg";
+import postman from "../assets/Icons/Tools/postman.svg";
+import vercel from "../assets/Icons/Tools/vercel.svg";
+import figma from "../assets/Icons/Tools/figma.svg";
+
 // Social Icons
 import facebook from "../assets/Icons/facebook logo.svg";
 import twitter from "../assets/Icons/Twitter logo.svg";
@@ -143,6 +170,34 @@ export const ICONS = {
     lessons,
     duration,
     skills,
+
+    mongoDB,
+    reactJs,
+    nextjsIcon,
+    reactjs,
+    expressjs,
+    nodejsIcon,
+    typescript,
+    javascript,
+    redux,
+    rtkQuery,
+    tailwind,
+    bootstrap,
+    zod,
+    axios,
+    jwt,
+    html5,
+    css3,
+
+    vscode,
+    git,
+    github,
+    mongodbCompass,
+    netlify,
+    postman,
+    vercel,
+    figma,
+
 
     facebook,
     twitter,
