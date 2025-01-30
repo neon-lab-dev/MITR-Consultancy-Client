@@ -3,6 +3,7 @@ import StartTraining from "@/Components/InternshipProgrammes/StartTraining/Start
 import PurposeOfProgramme from "@/Components/InternshipProgrammes/PurposeOfProgramme/PurposeOfProgramme";
 import KeyTechnologies from "@/Components/InternshipProgrammes/KeyTechnologies/KeyTechnologies";
 import Tools from "@/Components/InternshipProgrammes/Tools/Tools";
+import LearningOutcomes from "@/Components/InternshipProgrammes/LearningOutcomes/LearningOutcomes";
 
 const InternshipProgrammes = () => {
     return (
@@ -12,6 +13,7 @@ const InternshipProgrammes = () => {
             <PurposeOfProgramme/>
             <KeyTechnologies/>
             <Tools/>
+            <LearningOutcomes/>
         </div>
     );
 };

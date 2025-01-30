@@ -5,6 +5,8 @@ import aboutUs from "../assets/Images/about-us.png";
 import gradientBg from "../assets/Images/gradient-bg.png";
 import letsTalkBgImg from "../assets/Images/lets-talk-bg.png";
 import contactUsBgImg from "../assets/Images/contact-us-bg.png";
+import learningOutcomes from "../assets/Images/learning-outcome.png";
+import benefits from "../assets/Images/benefits.png";
 
 
 // Services
@@ -28,6 +30,9 @@ import hamburgerMenu from "../assets/Icons/hamburgerMenu.svg";
 import lessons from "../assets/Icons/lessons.svg";
 import duration from "../assets/Icons/duration.svg";
 import skills from "../assets/Icons/skills.svg";
+import realWorldProject from "../assets/Icons/industry-level-projects.png.png";
+import backendPrefociency from "../assets/Icons/ai-icon.png.png";
+import industryRole from "../assets/Icons/on-demand-classes.png.png";
 
 import reactjs from "../assets/Icons/Technologies/reactjs.svg";
 import mongoDB from "../assets/Icons/Technologies/mongodb.svg";
@@ -109,6 +114,8 @@ export const IMAGES = {
     gradientBg,
     letsTalkBgImg,
     contactUsBgImg,
+    learningOutcomes,
+    benefits,
 
     // Clients
     abhirami,
@@ -170,6 +177,9 @@ export const ICONS = {
     lessons,
     duration,
     skills,
+    realWorldProject,
+    backendPrefociency,
+    industryRole,
 
     mongoDB,
     reactJs,
