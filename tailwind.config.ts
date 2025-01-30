@@ -13,6 +13,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         white : "#FFF",
+        black : "#000",
         primary: {
           10: "#0099FF",
           20 : "#09F",

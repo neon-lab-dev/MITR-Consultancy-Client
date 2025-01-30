@@ -1,0 +1,10 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="chevron_backward">
+<mask id="mask0_19_88" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<rect id="Bounding box" y="24" width="24" height="24" transform="rotate(-90 0 24)" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_19_88)">
+<path id="chevron_backward_2" d="M18 10L12 16L6 10L7.4 8.6L12 13.2L16.6 8.6L18 10Z" fill="#303141"/>
+</g>
+</g>
+</svg>

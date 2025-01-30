@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../Reusable/Button/Button";
+import Button from "../../Reusable/Button/Button";
 import { ICONS } from "@/assets";
 
 const DetailsCard = () => {

@@ -25,6 +25,9 @@ import rightArrowDark from "../assets/Icons/right-arrow-dark.svg";
 
 import rightArrow from "../assets/Icons/right-arrow.svg";
 import downArrow from "../assets/Icons/down-arrow.svg";
+import downArrow2 from "../assets/Icons/down-arrow2.svg";
+import downArrowWhite from "../assets/Icons/down-arrow-white.svg";
+import checkCircle from "../assets/Icons/check_circle.svg";
 import avatar from "../assets/Icons/avatar.svg";
 import star from "../assets/Icons/star.svg";
 import hamburgerMenu from "../assets/Icons/hamburgerMenu.svg";
@@ -181,6 +184,9 @@ export const ICONS = {
     rightArrow2,
     rightArrowDark,
     downArrow,
+    downArrow2,
+    downArrowWhite,
+    checkCircle,
     avatar,
     star,
     hamburgerMenu,
