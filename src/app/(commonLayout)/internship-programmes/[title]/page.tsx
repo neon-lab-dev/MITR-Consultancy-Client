@@ -1,3 +1,4 @@
+import Certification from "@/Components/ProgrammeDetails/Certifications/Certification";
 import Evaluation from "@/Components/ProgrammeDetails/Evaluation/Evaluation";
 import ProgrammeDetailsHero from "@/Components/ProgrammeDetails/ProgrammeDetailsHero/ProgrammeDetailsHero";
 import ProgrammeDuration from "@/Components/ProgrammeDetails/ProgrammeDuration/ProgrammeDuration";
@@ -19,6 +20,7 @@ const ProgrammeDetailsPage = () => {
                 <ProgrammeStructure />
                 <SkillsYouWillGain/>
                 <Evaluation/>
+                <Certification/>
             </div>
             </Container>
         </div>

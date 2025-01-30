@@ -8,6 +8,7 @@ import contactUsBgImg from "../assets/Images/contact-us-bg.png";
 import frontendDevelopmentBgImg from "../assets/Images/Group 180448.png";
 import learningOutcomes from "../assets/Images/learning-outcome.png";
 import benefits from "../assets/Images/benefits.png";
+import certificate from "../assets/Images/ist-certificate.png.png";
 
 
 // Services
@@ -39,7 +40,7 @@ import backendPrefociency from "../assets/Icons/ai-icon.png.png";
 import industryRole from "../assets/Icons/on-demand-classes.png.png";
 import tickCircle from "../assets/Icons/tick-circle.svg";
 import duration2 from "../assets/Icons/duration2.svg";
-import certificate from "../assets/Icons/certificate.svg";
+import certification from "../assets/Icons/certificate.svg";
 import students from "../assets/Icons/students.svg";
 import skillLevel from "../assets/Icons/skill-level.svg";
 import training from "../assets/Icons/training.svg";
@@ -129,6 +130,7 @@ export const IMAGES = {
     frontendDevelopmentBgImg,
     learningOutcomes,
     benefits,
+    certification,
 
     // Clients
     abhirami,
