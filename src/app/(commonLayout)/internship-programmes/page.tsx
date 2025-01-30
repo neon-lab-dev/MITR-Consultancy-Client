@@ -5,6 +5,8 @@ import KeyTechnologies from "@/Components/InternshipProgrammes/KeyTechnologies/K
 import Tools from "@/Components/InternshipProgrammes/Tools/Tools";
 import LearningOutcomes from "@/Components/InternshipProgrammes/LearningOutcomes/LearningOutcomes";
 import BenefitsForStudent from "@/Components/InternshipProgrammes/BenefitsForStudent/BenefitsForStudent";
+import FAQ from "@/Components/Shared/FAQ/FAQ";
+import ProgramHighlights from "@/Components/InternshipProgrammes/ProgramHighlights/ProgramHighlights";
 
 const InternshipProgrammes = () => {
     return (
@@ -14,8 +16,10 @@ const InternshipProgrammes = () => {
             <PurposeOfProgramme/>
             <KeyTechnologies/>
             <Tools/>
+            <ProgramHighlights/>
             <LearningOutcomes/>
             <BenefitsForStudent/>
+            <FAQ/>
         </div>
     );
 };

@@ -33,6 +33,7 @@ import skills from "../assets/Icons/skills.svg";
 import realWorldProject from "../assets/Icons/industry-level-projects.png.png";
 import backendPrefociency from "../assets/Icons/ai-icon.png.png";
 import industryRole from "../assets/Icons/on-demand-classes.png.png";
+import tickCircle from "../assets/Icons/tick-circle.svg";
 
 import reactjs from "../assets/Icons/Technologies/reactjs.svg";
 import mongoDB from "../assets/Icons/Technologies/mongodb.svg";
@@ -180,6 +181,7 @@ export const ICONS = {
     realWorldProject,
     backendPrefociency,
     industryRole,
+    tickCircle,
 
     mongoDB,
     reactJs,
