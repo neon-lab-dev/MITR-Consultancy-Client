@@ -4,6 +4,7 @@ import PurposeOfProgramme from "@/Components/InternshipProgrammes/PurposeOfProgr
 import KeyTechnologies from "@/Components/InternshipProgrammes/KeyTechnologies/KeyTechnologies";
 import Tools from "@/Components/InternshipProgrammes/Tools/Tools";
 import LearningOutcomes from "@/Components/InternshipProgrammes/LearningOutcomes/LearningOutcomes";
+import BenefitsForStudent from "@/Components/InternshipProgrammes/BenefitsForStudent/BenefitsForStudent";
 
 const InternshipProgrammes = () => {
     return (
@@ -14,6 +15,7 @@ const InternshipProgrammes = () => {
             <KeyTechnologies/>
             <Tools/>
             <LearningOutcomes/>
+            <BenefitsForStudent/>
         </div>
     );
 };
