@@ -14,7 +14,7 @@ const ProgramHighlights = () => {
         },
         {
             title: "Unique Selling Points (USPs) :",
-            description: "Live projects, mock interviews, and certifications."
+            description: "Work in Live Projects with industry experts, Practice Session and Certifications."
         },
     ]
     return (

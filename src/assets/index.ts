@@ -5,6 +5,7 @@ import aboutUs from "../assets/Images/about-us.png";
 import gradientBg from "../assets/Images/gradient-bg.png";
 import letsTalkBgImg from "../assets/Images/lets-talk-bg.png";
 import contactUsBgImg from "../assets/Images/contact-us-bg.png";
+import frontendDevelopmentBgImg from "../assets/Images/Group 180448.png";
 import learningOutcomes from "../assets/Images/learning-outcome.png";
 import benefits from "../assets/Images/benefits.png";
 
@@ -34,6 +35,13 @@ import realWorldProject from "../assets/Icons/industry-level-projects.png.png";
 import backendPrefociency from "../assets/Icons/ai-icon.png.png";
 import industryRole from "../assets/Icons/on-demand-classes.png.png";
 import tickCircle from "../assets/Icons/tick-circle.svg";
+import duration2 from "../assets/Icons/duration2.svg";
+import certificate from "../assets/Icons/certificate.svg";
+import students from "../assets/Icons/students.svg";
+import skillLevel from "../assets/Icons/skill-level.svg";
+import training from "../assets/Icons/training.svg";
+import rating from "../assets/Icons/rating.svg";
+import users from "../assets/Icons/user-group.svg";
 
 import reactjs from "../assets/Icons/Technologies/reactjs.svg";
 import mongoDB from "../assets/Icons/Technologies/mongodb.svg";
@@ -115,6 +123,7 @@ export const IMAGES = {
     gradientBg,
     letsTalkBgImg,
     contactUsBgImg,
+    frontendDevelopmentBgImg,
     learningOutcomes,
     benefits,
 
@@ -182,6 +191,13 @@ export const ICONS = {
     backendPrefociency,
     industryRole,
     tickCircle,
+    duration2,
+    students,
+    certificate,
+    skillLevel,
+    training,
+    rating,
+    users,
 
     mongoDB,
     reactJs,

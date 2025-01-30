@@ -6,8 +6,9 @@ import Heading from '../../Reusable/Heading/Heading';
 import Marquee from 'react-fast-marquee';
 
 const Achievements = () => {
-    const ourAchievements1 = [IMAGES.interior, IMAGES.blog, IMAGES.bonohomie, IMAGES.agriculture, IMAGES.studentTiffin, IMAGES.lawer, IMAGES.abhirami]
-    const ourAchievements2 = [IMAGES.dentistClinic, IMAGES.nde, IMAGES.ramsun, IMAGES.careerhub]
+    const ourAchievements1 = [IMAGES.interior, IMAGES.blog, IMAGES.bonohomie, IMAGES.agriculture, IMAGES.studentTiffin, IMAGES.lawer, IMAGES.abhirami];
+
+    const ourAchievements2 = [IMAGES.dentistClinic, IMAGES.nde, IMAGES.ramsun, IMAGES.careerhub];
 
     return (
         <Container>

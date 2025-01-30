@@ -7,7 +7,7 @@ const LearningOutcomes = () => {
     const learningOutcomes = [
         {
             icon: ICONS.industryRole,
-            description: "Proficiency in backend development."
+            description: "Proficiency in project development."
         },
         {
             icon: ICONS.backendPrefociency,

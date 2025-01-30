@@ -1,0 +1,13 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 37955">
+<rect width="36" height="36" rx="6" fill="#61BDFB" fill-opacity="0.23"/>
+<g id="bar_chart_4_bars">
+<mask id="mask0_1_2404" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="6" width="24" height="24">
+<rect id="Bounding box" x="6" y="6" width="24" height="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1_2404)">
+<path id="bar_chart_4_bars_2" d="M8 27V25H28V27H8ZM9 24V17H12V24H9ZM14 24V12H17V24H14ZM19 24V15H22V24H19ZM24 24V9H27V24H24Z" fill="#0099FF"/>
+</g>
+</g>
+</g>
+</svg>

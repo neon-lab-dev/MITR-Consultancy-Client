@@ -24,6 +24,7 @@ export default {
         },
         secondary: {
           10: "#FF9900",
+          15 : "#FFB45C",
         },
         neutral: {
           10: "#333",
@@ -36,8 +37,12 @@ export default {
           50 : "#022740",
           55 : '#484848',
           60 : '#393939de',
+          65 : "#D4D3D8",
           70 : "#F0F1F3",
-          80 : '#F9F9F9'
+          80 : '#F9F9F9',
+          85 : '#384152',
+          90 : '#303141',
+          95 : '#595C73',
         },
       },
       fontFamily: {
@@ -47,7 +52,8 @@ export default {
         'service-card' : ' 0px 0px 65px 0px rgba(0, 153, 255, 0.12)',
         'box-shadow' : '0px 4px 8px 0px rgba(0, 0, 0, 0.10)',
         'faq-box-shadow' : '0px 10px 20px 0px rgba(164, 217, 253, 0.15)',
-        'training-card' : '0px 10px 20px 0px rgba(164, 217, 253, 0.15)'
+        'training-card' : '0px 10px 20px 0px rgba(164, 217, 253, 0.15)',
+        'course-details' : '0px 0px 70px 0px rgba(164, 217, 253, 0.20)'
       }
     },
   },
