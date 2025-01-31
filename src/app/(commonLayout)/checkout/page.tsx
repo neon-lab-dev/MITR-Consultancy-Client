@@ -1,3 +1,4 @@
+import BillingDetails from "@/Components/Checkout/BillingDetails/BillingDetails";
 import BillingInfoForm from "@/Components/Checkout/BillingInfoForm/BillingInfoForm";
 import OrderDetails from "@/Components/Checkout/OrderDetails/OrderDetails";
 import Container from "@/Components/Shared/Container/Container";
@@ -15,6 +16,7 @@ const Checkout = () => {
                     <BillingInfoForm/>
                     <div className="flex flex-col gap-[30px] w-full xl:w-[35%] mt-[60px]">
                         <OrderDetails/>
+                        <BillingDetails/>
                     </div>
                 </div>
             </div>
