@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import ProfileInfo from "./ProfileInfo";
 
 const ProfileTabs = () => {
     const [selectedTab, setSelectedTab] = useState("Profile");
@@ -27,6 +28,11 @@ const ProfileTabs = () => {
                     }}
                 />
             </div>
+
+            {
+                selectedTab === "Profile" &&
+                <ProfileInfo/>
+            }
         </div>
     );
 };

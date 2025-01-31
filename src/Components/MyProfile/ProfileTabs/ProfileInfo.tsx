@@ -1,25 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-import TextInput from "@/Components/Reusable/TextInput/TextInput";
 import { useForm } from "react-hook-form";
+import TextInput from "@/Components/Reusable/TextInput/TextInput";
 
-// type TBillingFormData = {
-
-// }
-const BillingInfoForm = () => {
+const ProfileInfo = () => {
     const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm();
-
-    const handleCheckout = (data:any) => {
-        console.log(data);
-    };
+            register,
+            handleSubmit,
+            formState: { errors },
+        } = useForm();
     
+        const handleCheckout = (data:any) => {
+            console.log(data);
+        };
+
     return (
-        <div className="w-full xl:w-[65%]">
-            <form onSubmit={handleSubmit(handleCheckout)}>
+        <form onSubmit={handleSubmit(handleCheckout)} className="mt-9">
                 {/* Billing Address Info */}
                 <h2 className="text-neutral-45 text-2xl font-semibold leading-9">
                     Billing Address
@@ -151,8 +147,7 @@ const BillingInfoForm = () => {
                     </div>
                 </div>
             </form>
-        </div>
     );
 };
 
-export default BillingInfoForm;
+export default ProfileInfo;
