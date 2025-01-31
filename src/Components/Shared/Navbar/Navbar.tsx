@@ -8,6 +8,7 @@ import ContactUs from "@/Components/Home/ContactUs/ContactUs";
 import HamburgerMenu from "./HamburgerMenu";
 import { navlinks } from "./navlinks";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -38,8 +39,7 @@ const Navbar = () => {
     "/get-started",
     "/profile",
   ];
-  
-  // Check if the pathname matches any of the specific pages OR starts with "/internship-programmes/"
+
   const textColor = neutralPages.includes(pathname) || pathname.startsWith("/internship-programmes/")
     ? "text-neutral-85"
     : "text-white";
@@ -52,11 +52,13 @@ const Navbar = () => {
       >
         <Container>
           <div className="flex w-full justify-between items-center font-Inter">
-            <Image
-              src={IMAGES.MITRConsoltancyLogo}
-              alt="MITR Consultancy"
-              className="xl:w-[134px] xl:h-[64px] md:w-[90px] md:h-[45px] h-[36px] w-[72px]"
-            />
+            <Link href={"/"}>
+              <Image
+                src={IMAGES.MITRConsoltancyLogo}
+                alt="MITR Consultancy"
+                className="xl:w-[134px] xl:h-[64px] md:w-[90px] md:h-[45px] h-[36px] w-[72px]"
+              />
+            </Link>
             {/* Desktop Nav */}
             <div className="hidden xl:flex items-center gap-10">
               {navlinks.map((link, index) => (
