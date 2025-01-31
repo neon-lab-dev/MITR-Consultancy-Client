@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import TextInput from "@/Components/Reusable/TextInput/TextInput";
 import { useForm } from "react-hook-form";
@@ -12,7 +13,7 @@ const BillingInfoForm = () => {
         formState: { errors },
     } = useForm();
 
-    const handleCheckout = (data) => {
+    const handleCheckout = (data:any) => {
         console.log(data);
     }
     return (
