@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const CartItems = () => {
     return (
-        <div className="flex flex-col gap-8 mt-8 w-full lg:w-[70%]">
+        <div className="flex flex-col gap-8 w-full lg:w-[70%]">
             <div className="flex items-center justify-between bg-white border-b border-neutral-100 pb-[22px]">
                 <div className="flex items-center gap-4">
                     <Image src={IMAGES.backendDevelopmentImg} alt="lessons" className="rounded-lg w-[160px] h-[116px]" />

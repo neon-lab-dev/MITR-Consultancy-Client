@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import CartItems from "@/Components/Cart/CartItems/CartItems";
 import ProceedToPay from "@/Components/Cart/ProceedToPay/ProceedToPay";
+import InterestedTrainings from "@/Components/ProgrammeDetails/InterestedTrainings/InterestedTrainings";
 import Container from "@/Components/Shared/Container/Container";
 
 const Cart = () => {
@@ -14,10 +15,11 @@ const Cart = () => {
                     3 Items in your Cart
                 </h2>
 
-                <div className="flex gap-6">
+                <div className="flex gap-6 mt-8">
                     <CartItems />
                     <ProceedToPay />
                 </div>
+                <InterestedTrainings/>
             </div>
         </Container>
     );
