@@ -40,7 +40,7 @@ const Navbar = () => {
     "/profile",
   ];
 
-  const textColor = neutralPages.includes(pathname) || pathname.startsWith("/internship-programmes/")
+  const textColor = neutralPages.includes(pathname) || pathname.startsWith("/internship-programmes/") || pathname.startsWith("/auth/")
     ? "text-neutral-85"
     : "text-white";
 

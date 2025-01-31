@@ -27,8 +27,7 @@ const GetStartedForm = () => {
     };
 
     return (
-        <div className="font-Inter mt-6">
-            <form onSubmit={handleSubmit(handleLogin)} className="flex flex-col gap-6">
+            <form onSubmit={handleSubmit(handleLogin)} className="flex flex-col gap-6 font-Inter mt-6">
                 <TextInput
                     label="Email Address"
                     placeholder="Enter Your Email"
@@ -116,7 +115,6 @@ const GetStartedForm = () => {
                     <span className="text-neutral-115 leading-6">By clicking you agree with our privacy Policy and terms of use</span>
                 </label>
             </form>
-        </div>
     );
 };
 
