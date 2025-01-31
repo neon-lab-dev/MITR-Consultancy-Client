@@ -7,8 +7,10 @@ import Button from "@/Components/Reusable/Button/Button";
 import ContactUs from "@/Components/Home/ContactUs/ContactUs";
 import HamburgerMenu from "./HamburgerMenu";
 import { navlinks } from "./navlinks";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,6 +32,18 @@ const Navbar = () => {
     };
   }, []);
 
+  const neutralPages = [
+    "/cart",
+    "/checkout",
+    "/get-started",
+    "/profile",
+  ];
+  
+  // Check if the pathname matches any of the specific pages OR starts with "/internship-programmes/"
+  const textColor = neutralPages.includes(pathname) || pathname.startsWith("/internship-programmes/")
+    ? "text-neutral-85"
+    : "text-white";
+
   return (
     <div id="home">
       <div
@@ -49,7 +63,7 @@ const Navbar = () => {
                 <button
                   key={index}
                   onClick={link.action}
-                  className="text-white text-lg font-medium hover:text-primary-10 transition duration-300"
+                  className={`text-lg font-medium hover:text-primary-10 transition duration-300 ${textColor}`}
                 >
                   {link.label}
                 </button>
