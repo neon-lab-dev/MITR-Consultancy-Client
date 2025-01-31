@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import ProfileInfo from "./ProfileInfo";
+import EnrolledCourse from "./EnrolledCourse";
 
 const ProfileTabs = () => {
     const [selectedTab, setSelectedTab] = useState("Profile");
@@ -30,8 +31,10 @@ const ProfileTabs = () => {
             </div>
 
             {
-                selectedTab === "Profile" &&
+                selectedTab === "Profile" ?
                 <ProfileInfo/>
+                :
+                <EnrolledCourse/>
             }
         </div>
     );
