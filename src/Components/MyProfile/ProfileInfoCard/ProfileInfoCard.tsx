@@ -1,7 +1,7 @@
 
 const ProfileInfoCard = () => {
     return (
-        <div className="w-full lg:w-[25%] h-[500px] bg-white shadow-course-details rounded-2xl px-4 py-8">
+        <div className="mt-12 w-full lg:w-[25%] h-[500px] bg-white shadow-course-details rounded-2xl px-4 py-8">
             <div className="size-[170px] mx-auto rounded-full text-white text-[48px] font-bold uppercase text-center flex items-center justify-center bg-gradient-to-r from-blue-300 to-blue-500">RS</div>
             <h1 className="text-neutral-45 text-2xl font-semibold leading-9 text-center mt-4">Rahul Sutradhar</h1>
             <p className="text-neutral-115 leading-6 text-center">Cumilla, Bangladesh</p>
