@@ -1,11 +1,9 @@
 import { IMAGES } from "@/assets";
 import Image from "next/image";
-import ProfileInfoCard from "../ProfileInfoCard/ProfileInfoCard";
-import Container from "@/Components/Shared/Container/Container";
 
 const MyProfileHero = () => {
     return (
-        <div className="font-Inter mt-20 relative">
+        <div className="font-Inter mt-20">
             {/* Background Image */}
             <div className="relative w-full h-[265px]">
                 <Image
@@ -20,9 +18,6 @@ const MyProfileHero = () => {
                     <h1 className="text-white text-[48px] font-bold uppercase text-center">Your Name</h1>
                 </div>
             </div>
-            <Container>
-            <ProfileInfoCard/>
-            </Container>
         </div>
     );
 };
