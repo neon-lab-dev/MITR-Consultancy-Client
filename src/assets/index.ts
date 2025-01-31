@@ -6,6 +6,7 @@ import gradientBg from "../assets/Images/gradient-bg.png";
 import letsTalkBgImg from "../assets/Images/lets-talk-bg.png";
 import contactUsBgImg from "../assets/Images/contact-us-bg.png";
 import frontendDevelopmentBgImg from "../assets/Images/Group 180448.png";
+import myProfileBg from "../assets/Images/my-profile-bg.png";
 import learningOutcomes from "../assets/Images/learning-outcome.png";
 import benefits from "../assets/Images/benefits.png";
 import certification from "../assets/Images/ist-certificate.png.png";
@@ -128,6 +129,7 @@ export const IMAGES = {
     letsTalkBgImg,
     contactUsBgImg,
     frontendDevelopmentBgImg,
+    myProfileBg,
     learningOutcomes,
     benefits,
     certification,

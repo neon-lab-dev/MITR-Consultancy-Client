@@ -38,6 +38,7 @@ const Navbar = () => {
     "/checkout",
     "/get-started",
     "/profile",
+    "/my-profile",
   ];
 
   const textColor = neutralPages.includes(pathname) || pathname.startsWith("/internship-programmes/") || pathname.startsWith("/auth/")
