@@ -5,9 +5,9 @@ import { ReactNode } from "react";
 
 const AdminLayout = ({ children }: { children: ReactNode }) => {
     return (
-        <div className="flex gap-8">
+        <div className="flex">
             <DashboardSidebar />
-            <div className="w-full flex flex-col gap-8">
+            <div className="w-full flex flex-col gap-8 px-8">
                 <DashboardHeader />
                 <div className="">
                 {children}
