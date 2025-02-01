@@ -4,11 +4,13 @@ import { useForm } from "react-hook-form";
 import TextInput from "@/Components/Reusable/TextInput/TextInput";
 import { useSetupProfileMutation } from "@/redux/Features/Auth/authApi";
 import { toast } from "sonner";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useGetMeQuery, useUpdateProfileMutation } from "@/redux/Features/User/userApi";
 import useOtpDataFromLocalStorage from "@/hooks/useOtpDataFromLocalStorage";
 import Button2 from "@/Components/Reusable/Button/Button2";
 import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
+import { setUser } from "@/redux/Features/Auth/authSlice";
+import { useDispatch } from "react-redux";
 
 type TEducation = {
     institute: string;
@@ -28,11 +30,19 @@ type TProfileData = {
     pinCode: string;
     education: TEducation[];
 }
-const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
+const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }) => {
+    const dispatch = useDispatch();
+    const [isNewUser, setIsNewUser] = useState<boolean>(false);
+    useEffect(() => {
+        const result = localStorage.getItem("isNewUser");
+        setIsNewUser(result === "true");
+    }, []);
+    console.log(isNewUser);
+
     const { data: myProfile } = useGetMeQuery({});
     const [otpData] = useOtpDataFromLocalStorage<any>("otpData");
     const [setupProfile, { isLoading }] = useSetupProfileMutation();
-    const [updateProfile, {isLoading:isProfileUpdating}] = useUpdateProfileMutation();
+    const [updateProfile, { isLoading: isProfileUpdating }] = useUpdateProfileMutation();
     const {
         register,
         handleSubmit,
@@ -89,7 +99,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                 endDate: edu.endDate,
             })),
         };
-    
+
         try {
             if (isEditEnabled) {
                 // Call updateProfile API if editing
@@ -105,6 +115,14 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                 if (response?.success) {
                     toast.success(response?.message);
                     localStorage.removeItem("otpData");
+                    const user = {
+                        _id: response?.user?._id,
+                        name: response?.user?.full_name,
+                        role: response?.user?.role,
+                        email: response?.user?.email
+                    }
+                    dispatch(setUser({ user }));
+                    localStorage.removeItem("isNewUser");
                     window.location.reload();
                     window.scrollTo(0, 0);
                 }
@@ -113,7 +131,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
             toast.error(error?.data?.message || "Failed to save profile.");
         }
     };
-    
+
 
     return (
         <form onSubmit={handleSubmit(handleProfileSubmit)} className="mt-9 font-Inter">
@@ -132,7 +150,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                         type="text"
                         error={errors.full_name}
                         {...register("full_name", { required: "name is required" })}
-                        isDisabled={!isEditEnabled}
+                        isDisabled={!(isEditEnabled || isNewUser)}
                     />
                     <TextInput
                         label="Email Address"
@@ -140,7 +158,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                         type="text"
                         error={errors.email}
                         {...register("email", { required: "Email is required" })}
-                        isDisabled={!isEditEnabled}
+                                                isDisabled={!(isEditEnabled || isNewUser)}
                     />
                 </div>
                 <div className="flex items-center gap-[30px]">
@@ -150,7 +168,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                         type="text"
                         error={errors.mobileNumber}
                         {...register("mobileNumber", { required: "Phone number is required" })}
-                        isDisabled={!isEditEnabled}
+                                                isDisabled={!(isEditEnabled || isNewUser)}
                     />
                     <TextInput
                         label="Country"
@@ -158,7 +176,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                         type="text"
                         error={errors.country}
                         {...register("country", { required: "Country name is required" })}
-                        isDisabled={!isEditEnabled}
+                                                isDisabled={!(isEditEnabled || isNewUser)}
                     />
                     <TextInput
                         label="Town / City"
@@ -166,7 +184,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                         type="text"
                         error={errors.city}
                         {...register("city", { required: "City is required" })}
-                        isDisabled={!isEditEnabled}
+                                                isDisabled={!(isEditEnabled || isNewUser)}
                     />
                 </div>
                 <div className="flex items-center gap-7">
@@ -176,7 +194,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                         type="text"
                         error={errors.state}
                         {...register("state", { required: "State is required" })}
-                        isDisabled={!isEditEnabled}
+                                                isDisabled={!(isEditEnabled || isNewUser)}
                     />
                     <TextInput
                         label="Postal Code / Zip"
@@ -184,7 +202,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                         type="text"
                         error={errors.pinCode}
                         {...register("pinCode", { required: "Post code is required" })}
-                        isDisabled={!isEditEnabled}
+                                                isDisabled={!(isEditEnabled || isNewUser)}
                     />
                 </div>
 
@@ -201,7 +219,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                     type="text"
                     error={errors.education?.[0]?.institute}
                     {...register("education.0.institute", { required: "Institute name is required" })}
-                    isDisabled={!isEditEnabled}
+                                            isDisabled={!(isEditEnabled || isNewUser)}
                 />
                 <TextInput
                     label="Degree"
@@ -209,7 +227,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                     type="text"
                     error={errors.education?.[0]?.degree}
                     {...register("education.0.degree", { required: "Degree is required" })}
-                    isDisabled={!isEditEnabled}
+                                            isDisabled={!(isEditEnabled || isNewUser)}
                 />
                 <div className="flex items-center gap-[30px] w-full">
                     <TextInput
@@ -218,7 +236,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                         type="text"
                         error={errors.education?.[0]?.branch}
                         {...register("education.0.branch", { required: "Branch is required" })}
-                        isDisabled={!isEditEnabled}
+                                                isDisabled={!(isEditEnabled || isNewUser)}
                     />
                     <TextInput
                         label="Semester"
@@ -226,7 +244,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                         type="text"
                         error={errors.education?.[0]?.semester}
                         {...register("education.0.semester", { required: "Semester is required" })}
-                        isDisabled={!isEditEnabled}
+                                                isDisabled={!(isEditEnabled || isNewUser)}
                     />
                 </div>
                 <div className="flex items-center gap-[30px]">
@@ -236,7 +254,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                         type="text"
                         error={errors.education?.[0]?.year}
                         {...register("education.0.year", { required: "Current year is required" })}
-                        isDisabled={!isEditEnabled}
+                                                isDisabled={!(isEditEnabled || isNewUser)}
                     />
                     <TextInput
                         label="End Year"
@@ -244,7 +262,7 @@ const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
                         type="text"
                         error={errors.education?.[0]?.endDate}
                         {...register("education.0.endDate", { required: "End year is required" })}
-                        isDisabled={!isEditEnabled}
+                                                isDisabled={!(isEditEnabled || isNewUser)}
                     />
                 </div>
             </div>
