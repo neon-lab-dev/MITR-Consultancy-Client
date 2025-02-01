@@ -25,8 +25,8 @@ const ProgrammeDetailsPage = () => {
                     <ProgrammeDuration />
                     <WhoCanApply />
                     <StudentsBenefits />
-                    <ProgrammeStructure />
-                    <SkillsYouWillGain />
+                    <ProgrammeStructure phases={data?.course?.phases} />
+                    <SkillsYouWillGain skillsCovered={data?.course?.skillsCovered} />
                     <Evaluation />
                     <Certification />
                 </div>
