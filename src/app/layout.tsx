@@ -4,6 +4,7 @@ import "./globals.css";
 import ClientProvider from "@/providers/ClientProvider";
 import { Toaster } from "sonner";
 import { CartProvider } from "@/providers/CartProvider/CartProvider";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <ClientProvider><CartProvider>{children}</CartProvider></ClientProvider>
         <Toaster position="bottom-right" richColors />
+        <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="afterInteractive" />
       </body>
     </html>
   );

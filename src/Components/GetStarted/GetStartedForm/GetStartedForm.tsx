@@ -62,7 +62,7 @@ const GetStartedForm = () => {
     };
 
     return (
-            <form onSubmit={handleSubmit(handleLogin)} className="flex flex-col gap-6 font-Inter mt-6">
+            <form onSubmit={handleSubmit(handleLogin)} className="flex flex-col gap-6 font-Inter mt-10">
                 <TextInput
                     label="Email Address"
                     placeholder="Enter Your Email"

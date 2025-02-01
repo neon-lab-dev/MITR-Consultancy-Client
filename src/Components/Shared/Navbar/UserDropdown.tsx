@@ -36,6 +36,7 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
         { label: "My Profile", path: "/my-profile", },
     ];
 
+    // Logout function
     const handleLogout = async () => {
         try {
           const response = await fetch(

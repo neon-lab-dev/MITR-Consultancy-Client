@@ -63,7 +63,6 @@ const VerifyOtp = () => {
                 toast.success(response?.message);
                 if (response?.newUser) {
                     router.push("/my-profile");
-                    localStorage.setItem("isNewUser", "true");
                 } else {
                     const user = {
                         _id: response?.user?._id,
@@ -90,6 +89,7 @@ const VerifyOtp = () => {
         <Container>
             <div className="p-8 bg-white rounded-2xl shadow-course-details font-Inter mt-36 w-full max-w-[650px] mx-auto">
                 <AuthHeading
+                align="center"
                     heading="Verify OTP"
                     description="Check your email and verify the OTP to get access."
                 />
@@ -108,7 +108,7 @@ const VerifyOtp = () => {
 
                     {
                         isTimerFinished ?
-                            <Link href={"/auth/get-started"} className="text-primary-10 text-sm leading-5 font-medium text-center">Resend OTP</Link>
+                            <Link href={"/auth/get-started"} className="text-primary-20 text-sm leading-5 font-medium text-center">Resend OTP</Link>
                             :
                             <p className="font-Inter text-neutral-10 text-center">
                                 0:{timeLeft.toString().padStart(2, "0")}
