@@ -27,18 +27,18 @@ const BillingInfoForm = () => {
                 <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
                     <div className="flex items-center gap-[30px] w-full">
                     <TextInput
-                        label="First Name"
-                        placeholder="Enter First Name"
+                        label="Full Name"
+                        placeholder="Enter Your Full Name"
                         type="text"
-                        error={errors.firstName}
-                        {...register("firstName", { required: "First name is required" })}
+                        error={errors.full_name}
+                        {...register("full_name", { required: "Full name is required" })}
                     />
                     <TextInput
-                        label="Last Name"
-                        placeholder="Enter Last Name"
+                        label="Email Address"
+                        placeholder="Enter Your Email"
                         type="text"
-                        error={errors.lastName}
-                        {...register("lastName", { required: "Last name is required" })}
+                        error={errors.email}
+                        {...register("email", { required: "Email is required" })}
                     />
                     </div>
                     <div className="flex items-center gap-[30px]">
@@ -88,13 +88,7 @@ const BillingInfoForm = () => {
                         error={errors.phoneNumber}
                         {...register("phoneNumber", { required: "Phone number is required" })}
                     />
-                    <TextInput
-                        label="Email Address"
-                        placeholder="Enter Your Email"
-                        type="text"
-                        error={errors.email}
-                        {...register("email", { required: "Email is required" })}
-                    />
+                    
                     </div>
                 </div>
 

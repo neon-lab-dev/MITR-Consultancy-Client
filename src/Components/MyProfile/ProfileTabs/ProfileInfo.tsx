@@ -3,42 +3,123 @@
 import { useForm } from "react-hook-form";
 import TextInput from "@/Components/Reusable/TextInput/TextInput";
 import Button from "@/Components/Reusable/Button/Button";
+import { useSetupProfileMutation } from "@/redux/Features/Auth/authApi";
+import { toast } from "sonner";
+import { useEffect } from "react";
+import { useGetMeQuery } from "@/redux/Features/User/userApi";
 
+type TEducation = {
+    institute: string;
+    degree: string;
+    branch: string;
+    semester: string;
+    year: string;
+    endDate: string;
+}
+type TProfileData = {
+    full_name: string;
+    email: string;
+    mobileNumber: string;
+    city: string;
+    state: string;
+    country: string;
+    pinCode: string;
+    education: TEducation[];
+}
 const ProfileInfo = () => {
+    const { data: myProfile } = useGetMeQuery({});
+    const [setupProfile] = useSetupProfileMutation();
     const {
-            register,
-            handleSubmit,
-            formState: { errors },
-        } = useForm();
-    
-        const handleCheckout = (data:any) => {
-            console.log(data);
+        register,
+        handleSubmit,
+        setValue,
+        formState: { errors },
+    } = useForm<TProfileData>();
+
+    useEffect(() => {
+        if (myProfile) {
+            setValue("full_name", myProfile?.user?.full_name);
+            setValue("email", myProfile?.user?.email);
+            setValue("mobileNumber", myProfile?.user?.mobileNumber);
+            setValue("city", myProfile?.user?.city);
+            setValue("state", myProfile?.user?.state);
+            setValue("country", myProfile?.user?.country);
+            setValue("pinCode", myProfile?.user?.pinCode);
+            if (myProfile?.user?.education) {
+                myProfile?.user?.education?.forEach((item:TEducation, index: number) => {
+                    console.log(item);
+                    setValue(`education.${index}.institute` as keyof TProfileData, item.institute);
+                    setValue(`education.${index}.degree` as keyof TProfileData, item.degree);
+                    setValue(`education.${index}.branch` as keyof TProfileData, item.branch);
+                    setValue(`education.${index}.semester` as keyof TProfileData, item.semester);
+                    setValue(`education.${index}.year` as keyof TProfileData, item.year);
+                    setValue(`education.${index}.endDate` as keyof TProfileData, item.endDate);
+                });
+            }
+        }
+    }, [myProfile, setValue]);
+
+    const handleSetupProfile = async (data: TProfileData) => {
+        const formattedData = {
+            full_name: data.full_name,
+            email: data.email,
+            mobileNumber: data.mobileNumber,
+            country: data.country,
+            state: data.state,
+            city: data.city,
+            pinCode: data.pinCode,
+            education: data.education.map((edu) => ({
+                institute: edu.institute,
+                degree: edu.degree,
+                branch: edu.branch,
+                semester: edu.semester,
+                year: edu.year,
+                endDate: edu.endDate,
+            })),
         };
 
+        try {
+            const response = await setupProfile(formattedData).unwrap();
+            console.log(response);
+            toast.success("Profile setup successfully!");
+            console.log("Profile response:", response);
+        } catch (error: any) {
+            toast.error(error?.data?.message || "Failed to setup profile.");
+            console.error("Profile setup error:", error);
+        }
+    };
+
     return (
-        <form onSubmit={handleSubmit(handleCheckout)} className="mt-9">
-                {/* Billing Address Info */}
-                <h2 className="text-neutral-45 text-2xl font-semibold leading-9">
-                    Billing Address
-                </h2>
-                <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
-                    <div className="flex items-center gap-[30px] w-full">
+        <form onSubmit={handleSubmit(handleSetupProfile)} className="mt-9">
+            {/* Billing Address Info */}
+            <h2 className="text-neutral-45 text-2xl font-semibold leading-9">
+                Billing Address
+            </h2>
+            <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
+                <div className="flex items-center gap-[30px] w-full">
                     <TextInput
-                        label="First Name"
-                        placeholder="Enter First Name"
+                        label="Full Name"
+                        placeholder="Enter Full Name"
                         type="text"
-                        error={errors.firstName}
-                        {...register("firstName", { required: "First name is required" })}
+                        error={errors.full_name}
+                        {...register("full_name", { required: "name is required" })}
                     />
                     <TextInput
-                        label="Last Name"
-                        placeholder="Enter Last Name"
+                        label="Email Address"
+                        placeholder="Enter Your Email"
                         type="text"
-                        error={errors.lastName}
-                        {...register("lastName", { required: "Last name is required" })}
+                        error={errors.email}
+                        {...register("email", { required: "Email is required" })}
                     />
-                    </div>
-                    <div className="flex items-center gap-[30px]">
+                </div>
+                <div className="flex items-center gap-[30px]">
+                    <TextInput
+                        label="Phone"
+                        placeholder="Enter Phone Number"
+                        type="text"
+                        error={errors.mobileNumber}
+                        {...register("mobileNumber", { required: "Phone number is required" })}
+                    />
                     <TextInput
                         label="Country"
                         placeholder="Enter Country Name"
@@ -47,21 +128,14 @@ const ProfileInfo = () => {
                         {...register("country", { required: "Country name is required" })}
                     />
                     <TextInput
-                        label="Street Address"
-                        placeholder="Enter Street Address"
-                        type="text"
-                        error={errors.streetAddress}
-                        {...register("streetAddress", { required: "Street address is required" })}
-                    />
-                    </div>
-                    <div className="flex items-center gap-7">
-                    <TextInput
                         label="Town / City"
                         placeholder="Enter Town / City"
                         type="text"
                         error={errors.city}
                         {...register("city", { required: "City is required" })}
                     />
+                </div>
+                <div className="flex items-center gap-7">
                     <TextInput
                         label="State / Zone"
                         placeholder="Enter State / Zone"
@@ -73,84 +147,69 @@ const ProfileInfo = () => {
                         label="Postal Code / Zip"
                         placeholder="Enter Postal Code / Zip"
                         type="text"
-                        error={errors.postCode}
-                        {...register("postCode", { required: "Post code is required" })}
+                        error={errors.pinCode}
+                        {...register("pinCode", { required: "Post code is required" })}
                     />
-                    </div>
-                    <div className="flex items-center gap-[30px]">
-                    <TextInput
-                        label="Phone"
-                        placeholder="Enter Phone Number"
-                        type="text"
-                        error={errors.phoneNumber}
-                        {...register("phoneNumber", { required: "Phone number is required" })}
-                    />
-                    <TextInput
-                        label="Email Address"
-                        placeholder="Enter Your Email"
-                        type="text"
-                        error={errors.email}
-                        {...register("email", { required: "Email is required" })}
-                    />
-                    </div>
                 </div>
 
-                {/* Educational Info */}
-                <h2 className="text-neutral-45 text-2xl font-semibold leading-9 mt-8">
+            </div>
+
+            {/* Educational Info */}
+            <h2 className="text-neutral-45 text-2xl font-semibold leading-9 mt-8">
                 Educational Information
-                </h2>
-                <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
+            </h2>
+            <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
                 <TextInput
-                        label="Institute Name"
-                        placeholder="Enter Your Institute Name"
-                        type="text"
-                        error={errors.Institute}
-                        {...register("Institute", { required: "Institute name is required" })}
-                    />
-                    <TextInput
-                        label="Degree"
-                        placeholder="ex- Computer Science & Engineering"
-                        type="text"
-                        error={errors.degree}
-                        {...register("degree", { required: "Degree is required" })}
-                    />
-                    <div className="flex items-center gap-[30px] w-full">
+                    label="Institute Name"
+                    placeholder="Enter Your Institute Name"
+                    type="text"
+                    error={errors.education?.[0]?.institute}
+                    {...register("education.0.institute", { required: "Institute name is required" })}
+                />
+                <TextInput
+                    label="Degree"
+                    placeholder="ex- Computer Science & Engineering"
+                    type="text"
+                    error={errors.education?.[0]?.degree}
+                    {...register("education.0.degree", { required: "Degree is required" })}
+                />
+                <div className="flex items-center gap-[30px] w-full">
                     <TextInput
                         label="Branch"
                         placeholder="Enter Last Name"
                         type="text"
-                        error={errors.branch}
-                        {...register("branch", { required: "Branch is required" })}
+                        error={errors.education?.[0]?.branch}
+                        {...register("education.0.branch", { required: "Branch is required" })}
                     />
                     <TextInput
                         label="Semester"
                         placeholder="ex- 7th"
                         type="text"
-                        error={errors.semester}
-                        {...register("semester", { required: "semester is required" })}
+                        error={errors.education?.[0]?.semester}
+                        {...register("education.0.semester", { required: "Semester is required" })}
                     />
-                    </div>
-                    <div className="flex items-center gap-[30px]">
+                </div>
+                <div className="flex items-center gap-[30px]">
                     <TextInput
                         label="Current Year"
                         placeholder="ex- 3rd"
                         type="text"
-                        error={errors.year}
-                        {...register("year", { required: "Current year is required" })}
+                        error={errors.education?.[0]?.year}
+                        {...register("education.0.year", { required: "Current year is required" })}
                     />
                     <TextInput
                         label="End Year"
                         placeholder="ex- 2027"
                         type="text"
-                        error={errors.endDate}
-                        {...register("endDate", { required: "End year is required" })}
+                        error={errors.education?.[0]?.endDate}
+                        {...register("education.0.endDate", { required: "End year is required" })}
                     />
-                    </div>
                 </div>
-                <div className="flex justify-end mt-5">
+            </div>
+            <div className="flex justify-end mt-5">
                 <Button variant="primary" title="Submit" classNames="" />
-                </div>
-            </form>
+            </div>
+        </form>
     );
 };
 

@@ -8,7 +8,6 @@ import { useCart } from "@/providers/CartProvider/CartProvider";
 
 const Cart = () => {
      const { cartData } = useCart();
-     console.log(cartData);
     return (
         <Container>
             <div className="font-Inter mt-36">
@@ -28,7 +27,7 @@ const Cart = () => {
                         )
                     }
                     </div>
-                    <ProceedToPay />
+                    <ProceedToPay cartTotal={cartData} />
                 </div>
                 <InterestedTrainings/>
             </div>

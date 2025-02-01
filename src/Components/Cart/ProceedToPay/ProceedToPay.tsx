@@ -1,6 +1,7 @@
 import Button from "@/Components/Reusable/Button/Button";
 
-const ProceedToPay = () => {
+const ProceedToPay = ({cartTotal}) => {
+    const totalPrice = cartTotal && cartTotal?.reduce((acc, currVal) => acc + currVal.price, 0);
     return (
         <div className="py-8 px-4 bg-white shadow-course-details w-full lg:w-[30%] flex flex-col gap-6 font-Inter">
             <div>
@@ -15,11 +16,11 @@ const ProceedToPay = () => {
             </div>
             <div className="flex items-center justify-between border-b border-neutral-100 pb-[13px] text-neutral-105 text-xl font-semibold leading-8">
                 <p>Subtotal</p>
-                <p>₹999</p>
+                <p>₹{totalPrice}</p>
             </div>
             <div className="flex items-center justify-between text-neutral-105 text-xl font-semibold leading-8">
                 <p>Total</p>
-                <p>₹999</p>
+                <p>₹{totalPrice}</p>
             </div>
             <Button variant="primary" title="Proceed To Pay" classNames="" />
         </div>
