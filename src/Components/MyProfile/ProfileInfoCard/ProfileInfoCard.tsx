@@ -1,8 +1,7 @@
 import { formatDate } from "@/utils/formatDate";
 import { useEffect, useState } from "react";
 
-const ProfileInfoCard = ({ name, location, purchasedCourses, joinedAt }) => {
-    console.log(name);
+const ProfileInfoCard = ({ name, location, purchasedCourses, joinedAt,  isEditEnabled, setIsEditEnabled }) => {
     const [initials, setInitials] = useState<string>("");
 
     useEffect(() => {
@@ -21,7 +20,9 @@ const ProfileInfoCard = ({ name, location, purchasedCourses, joinedAt }) => {
             <div className="size-[170px] mx-auto rounded-full text-white text-[48px] font-bold uppercase text-center flex items-center justify-center bg-gradient-to-r from-blue-300 to-blue-500">{initials}</div>
             <h1 className="text-neutral-45 text-2xl font-semibold leading-9 text-center mt-4">{name ? name : "Your Name"}</h1>
             <p className="text-neutral-115 leading-6 text-center">{location !==undefined ? location : "Your Location"}</p>
-            <button className="border px-6 py-3 font-Inter text-lg font-medium rounded border-primary-20 text-primary-20 w-full mt-7">Edit Profile</button>
+            <button onClick={() => setIsEditEnabled(!isEditEnabled)} className="border px-6 py-3 font-Inter text-lg font-medium rounded border-primary-20 text-primary-20 w-full mt-7">
+                {isEditEnabled ? "Cancel" : "Edit Profile"}
+                </button>
 
             <div className="flex items-center justify-between text-neutral-105 text-xl font-medium mt-9 leading-8">
                 <p>Courses</p>

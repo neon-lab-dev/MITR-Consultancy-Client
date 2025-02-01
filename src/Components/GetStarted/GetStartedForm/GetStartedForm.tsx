@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-import Button from "@/Components/Reusable/Button/Button";
+import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
+import Button2 from "@/Components/Reusable/Button/Button2";
 import TextInput from "@/Components/Reusable/TextInput/TextInput";
 import useOtpDataFromLocalStorage from "@/hooks/useOtpDataFromLocalStorage";
 import { useSendOtpMutation } from "@/redux/Features/Auth/authApi";
@@ -76,7 +77,10 @@ const GetStartedForm = () => {
                     error={errors.mobileNumber}
                     {...register("mobileNumber", { required: "Phone number is required" })}
                 />
-                <Button variant="primary" title="Submit" classNames="" />
+                <Button2 variant="primary" title="Submit">
+                    {
+                        isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Submit"}
+                </Button2>
                 <label className="flex items-center gap-[10px] cursor-pointer">
                     <input
                         type="checkbox"

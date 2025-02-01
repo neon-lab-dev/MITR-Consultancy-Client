@@ -2,11 +2,10 @@
 "use client"
 import { useForm } from "react-hook-form";
 import TextInput from "@/Components/Reusable/TextInput/TextInput";
-import Button from "@/Components/Reusable/Button/Button";
 import { useSetupProfileMutation } from "@/redux/Features/Auth/authApi";
 import { toast } from "sonner";
 import { useEffect } from "react";
-import { useGetMeQuery } from "@/redux/Features/User/userApi";
+import { useGetMeQuery, useUpdateProfileMutation } from "@/redux/Features/User/userApi";
 import useOtpDataFromLocalStorage from "@/hooks/useOtpDataFromLocalStorage";
 import Button2 from "@/Components/Reusable/Button/Button2";
 import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
@@ -29,11 +28,11 @@ type TProfileData = {
     pinCode: string;
     education: TEducation[];
 }
-const ProfileInfo = () => {
+const ProfileInfo = ({isEditEnabled, setIsEditEnabled}) => {
     const { data: myProfile } = useGetMeQuery({});
-    console.log(myProfile);
     const [otpData] = useOtpDataFromLocalStorage<any>("otpData");
-    const [setupProfile, {isLoading}] = useSetupProfileMutation();
+    const [setupProfile, { isLoading }] = useSetupProfileMutation();
+    const [updateProfile, {isLoading:isProfileUpdating}] = useUpdateProfileMutation();
     const {
         register,
         handleSubmit,
@@ -48,6 +47,7 @@ const ProfileInfo = () => {
         }
     }, [otpData, setValue]);
 
+    // Setting profile data
     useEffect(() => {
         if (myProfile) {
             setValue("full_name", myProfile?.user?.full_name);
@@ -58,7 +58,7 @@ const ProfileInfo = () => {
             setValue("country", myProfile?.user?.country);
             setValue("pinCode", myProfile?.user?.pinCode);
             if (myProfile?.user?.education) {
-                myProfile?.user?.education?.forEach((item:TEducation, index: number) => {
+                myProfile?.user?.education?.forEach((item: TEducation, index: number) => {
                     console.log(item);
                     setValue(`education.${index}.institute` as keyof TProfileData, item.institute);
                     setValue(`education.${index}.degree` as keyof TProfileData, item.degree);
@@ -71,7 +71,7 @@ const ProfileInfo = () => {
         }
     }, [myProfile, setValue]);
 
-    const handleSetupProfile = async (data: TProfileData) => {
+    const handleProfileSubmit = async (data: TProfileData) => {
         const formattedData = {
             full_name: data.full_name,
             email: data.email,
@@ -89,20 +89,34 @@ const ProfileInfo = () => {
                 endDate: edu.endDate,
             })),
         };
-
+    
         try {
-            const response = await setupProfile(formattedData).unwrap();
-            console.log(response);
-            toast.success("Profile setup successfully!");
-            window.location.reload();
+            if (isEditEnabled) {
+                // Call updateProfile API if editing
+                const response = await updateProfile(formattedData).unwrap();
+                if (response?.success) {
+                    toast.success(response?.message);
+                    setIsEditEnabled(false);
+                    window.scrollTo(0, 0);
+                }
+            } else {
+                // Call setupProfile API if setting up profile
+                const response = await setupProfile(formattedData).unwrap();
+                if (response?.success) {
+                    toast.success(response?.message);
+                    localStorage.removeItem("otpData");
+                    window.location.reload();
+                    window.scrollTo(0, 0);
+                }
+            }
         } catch (error: any) {
-            toast.error(error?.data?.message || "Failed to setup profile.");
-            console.error("Profile setup error:", error);
+            toast.error(error?.data?.message || "Failed to save profile.");
         }
     };
+    
 
     return (
-        <form onSubmit={handleSubmit(handleSetupProfile)} className="mt-9 font-Inter">
+        <form onSubmit={handleSubmit(handleProfileSubmit)} className="mt-9 font-Inter">
             {/* Billing Address Info */}
             <h2 className="text-neutral-45 text-2xl font-semibold leading-9">
                 Billing Address
@@ -118,6 +132,7 @@ const ProfileInfo = () => {
                         type="text"
                         error={errors.full_name}
                         {...register("full_name", { required: "name is required" })}
+                        isDisabled={!isEditEnabled}
                     />
                     <TextInput
                         label="Email Address"
@@ -125,6 +140,7 @@ const ProfileInfo = () => {
                         type="text"
                         error={errors.email}
                         {...register("email", { required: "Email is required" })}
+                        isDisabled={!isEditEnabled}
                     />
                 </div>
                 <div className="flex items-center gap-[30px]">
@@ -134,6 +150,7 @@ const ProfileInfo = () => {
                         type="text"
                         error={errors.mobileNumber}
                         {...register("mobileNumber", { required: "Phone number is required" })}
+                        isDisabled={!isEditEnabled}
                     />
                     <TextInput
                         label="Country"
@@ -141,6 +158,7 @@ const ProfileInfo = () => {
                         type="text"
                         error={errors.country}
                         {...register("country", { required: "Country name is required" })}
+                        isDisabled={!isEditEnabled}
                     />
                     <TextInput
                         label="Town / City"
@@ -148,6 +166,7 @@ const ProfileInfo = () => {
                         type="text"
                         error={errors.city}
                         {...register("city", { required: "City is required" })}
+                        isDisabled={!isEditEnabled}
                     />
                 </div>
                 <div className="flex items-center gap-7">
@@ -157,6 +176,7 @@ const ProfileInfo = () => {
                         type="text"
                         error={errors.state}
                         {...register("state", { required: "State is required" })}
+                        isDisabled={!isEditEnabled}
                     />
                     <TextInput
                         label="Postal Code / Zip"
@@ -164,6 +184,7 @@ const ProfileInfo = () => {
                         type="text"
                         error={errors.pinCode}
                         {...register("pinCode", { required: "Post code is required" })}
+                        isDisabled={!isEditEnabled}
                     />
                 </div>
 
@@ -180,6 +201,7 @@ const ProfileInfo = () => {
                     type="text"
                     error={errors.education?.[0]?.institute}
                     {...register("education.0.institute", { required: "Institute name is required" })}
+                    isDisabled={!isEditEnabled}
                 />
                 <TextInput
                     label="Degree"
@@ -187,6 +209,7 @@ const ProfileInfo = () => {
                     type="text"
                     error={errors.education?.[0]?.degree}
                     {...register("education.0.degree", { required: "Degree is required" })}
+                    isDisabled={!isEditEnabled}
                 />
                 <div className="flex items-center gap-[30px] w-full">
                     <TextInput
@@ -195,6 +218,7 @@ const ProfileInfo = () => {
                         type="text"
                         error={errors.education?.[0]?.branch}
                         {...register("education.0.branch", { required: "Branch is required" })}
+                        isDisabled={!isEditEnabled}
                     />
                     <TextInput
                         label="Semester"
@@ -202,6 +226,7 @@ const ProfileInfo = () => {
                         type="text"
                         error={errors.education?.[0]?.semester}
                         {...register("education.0.semester", { required: "Semester is required" })}
+                        isDisabled={!isEditEnabled}
                     />
                 </div>
                 <div className="flex items-center gap-[30px]">
@@ -211,6 +236,7 @@ const ProfileInfo = () => {
                         type="text"
                         error={errors.education?.[0]?.year}
                         {...register("education.0.year", { required: "Current year is required" })}
+                        isDisabled={!isEditEnabled}
                     />
                     <TextInput
                         label="End Year"
@@ -218,17 +244,27 @@ const ProfileInfo = () => {
                         type="text"
                         error={errors.education?.[0]?.endDate}
                         {...register("education.0.endDate", { required: "End year is required" })}
+                        isDisabled={!isEditEnabled}
                     />
                 </div>
             </div>
             {
                 !myProfile &&
                 <div className="flex justify-end mt-5">
-                <Button2 variant="primary" title="Submit">
-                    {
-                        isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Submit"}
-                </Button2>
-            </div>
+                    <Button2 variant="primary" title="Submit">
+                        {
+                            isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Submit"}
+                    </Button2>
+                </div>
+            }
+            {
+                isEditEnabled &&
+                <div className="flex justify-end mt-5">
+                    <Button2 variant="primary" title="Save">
+                        {
+                            isProfileUpdating ? <LoadingSpinner fontSize="text-[15px]" /> : "Save"}
+                    </Button2>
+                </div>
             }
         </form>
     );

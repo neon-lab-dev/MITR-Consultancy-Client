@@ -42,25 +42,25 @@ const authApi = baseApi.injectEndpoints({
       providesTags: ["user"],
     }),
 
-    forgotPassword: builder.mutation({
-      query: (forgotPasswordData) => ({
-        url: "/auth/forgot-password",
-        method: "POST",
-        body: forgotPasswordData,
-        credentials: "include",
-      }),
-      invalidatesTags: ["user"],
-    }),
+    // forgotPassword: builder.mutation({
+    //   query: (forgotPasswordData) => ({
+    //     url: "/auth/forgot-password",
+    //     method: "POST",
+    //     body: forgotPasswordData,
+    //     credentials: "include",
+    //   }),
+    //   invalidatesTags: ["user"],
+    // }),
 
-    resetPassword: builder.mutation({
-      query: ({resetPasswordData, token}) => ({
-        url: `/auth/reset-password/${token}`,
-        method: "POST",
-        body: resetPasswordData,
-        credentials: "include",
-      }),
-      invalidatesTags: ["user"],
-    }),
+    // resetPassword: builder.mutation({
+    //   query: ({resetPasswordData, token}) => ({
+    //     url: `/auth/reset-password/${token}`,
+    //     method: "POST",
+    //     body: resetPasswordData,
+    //     credentials: "include",
+    //   }),
+    //   invalidatesTags: ["user"],
+    // }),
 
 
   }),
@@ -71,6 +71,6 @@ export const {
   useSetupProfileMutation,
   useVerifyOtpMutation,
   useLogoutUserQuery,
-  useForgotPasswordMutation,
-  useResetPasswordMutation
+  // useForgotPasswordMutation,
+  // useResetPasswordMutation
 } = authApi;

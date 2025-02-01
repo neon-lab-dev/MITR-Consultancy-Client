@@ -3,7 +3,7 @@ import { useState } from "react";
 import ProfileInfo from "./ProfileInfo";
 import EnrolledCourse from "./EnrolledCourse";
 
-const ProfileTabs = () => {
+const ProfileTabs = ({isEditEnabled, setIsEditEnabled}) => {
     const [selectedTab, setSelectedTab] = useState("Profile");
     const tabButtons = ["Profile", "Enrolled Courses"];
 
@@ -32,7 +32,7 @@ const ProfileTabs = () => {
 
             {
                 selectedTab === "Profile" ?
-                <ProfileInfo/>
+                <ProfileInfo isEditEnabled={isEditEnabled} setIsEditEnabled={setIsEditEnabled}  />
                 :
                 <EnrolledCourse/>
             }

@@ -1,7 +1,9 @@
 "use client"
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { OtpFormData } from "@/Components/GetStarted/GetStartedForm/GetStartedForm";
+import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
 import AuthHeading from "@/Components/Reusable/AuthHeading/AuthHeading";
-import Button from "@/Components/Reusable/Button/Button";
+import Button2 from "@/Components/Reusable/Button/Button2";
 import TextInput from "@/Components/Reusable/TextInput/TextInput";
 import Container from "@/Components/Shared/Container/Container";
 import useOtpDataFromLocalStorage from "@/hooks/useOtpDataFromLocalStorage";
@@ -10,7 +12,6 @@ import { setUser } from "@/redux/Features/Auth/authSlice";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { toast } from "sonner";
@@ -99,7 +100,10 @@ const VerifyOtp = () => {
                         error={errors.otp}
                         {...register("otp", { required: "Enter 6 Digit OTP" })}
                     />
-                    <Button variant="primary" title="Submit" classNames="" />
+                    <Button2 variant="primary" title="Submit">
+                        {
+                            isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Submit"}
+                    </Button2>
 
                     {
                         isTimerFinished ?
