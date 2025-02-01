@@ -45,10 +45,14 @@ const Navbar = () => {
     ? "text-neutral-85"
     : "text-white";
 
+  const btnStyle = neutralPages.includes(pathname) || pathname.startsWith("/internship-programmes/") || pathname.startsWith("/auth/")
+    ? "text-primary-20 border-primary-20"
+    : "text-white border-white";
+
   return (
     <div id="home">
       <div
-        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 py-2 ${isScrolled ? "bg-neutral-40 bg-opacity-75" : "backdrop-blur-sm bg-transparent"
+        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 py-2 ${isScrolled ? "bg-neutral-40" : "backdrop-blur-sm bg-transparent"
           }`}
       >
         <Container>
@@ -63,21 +67,26 @@ const Navbar = () => {
             {/* Desktop Nav */}
             <div className="hidden xl:flex items-center gap-10">
               {navlinks.map((link, index) => (
+                link?.action ? 
                 <button
                   key={index}
                   onClick={link.action}
-                  className={`text-lg font-medium hover:text-primary-10 transition duration-300 ${textColor}`}
+                  className={`text-lg font-medium hover:text-primary-10 transition duration-300 ${isScrolled && "text-white"} ${textColor}`}
                 >
                   {link.label}
                 </button>
+                : <Link key={index} href={link.path} className={`text-lg font-medium hover:text-primary-10 transition duration-300  ${isScrolled && "text-white"} ${textColor}`}>{link.label}</Link>
               ))}
             </div>
             <div className="flex gap-6">
+              
+              <Link href={"/auth/get-started"}>
+              <button className={`border px-6 py-3 font-Inter text-lg font-medium rounded items-center justify-center flex hover:bg-primary-20 transition duration-300 hover:text-white hover:border-primary-20  ${btnStyle}`}>Sign Up / Sign In</button></Link>
               <Button
                 handleClick={() => setIsContactUsModalOpen(true)}
                 variant="primary"
                 title="Contact Us"
-                classNames="xl:w-[200px] w-[148px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
+                classNames="w-[148px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
               />
               {/* Hamburger Menu for Small Screens */}
               <div className="xl:hidden flex items-center">

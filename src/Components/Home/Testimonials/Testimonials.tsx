@@ -16,7 +16,7 @@ const Testimonials = () => {
         <div className="bg-white py-[60px] md:py-20 xl:py-[98px]">
             <Container>
                 <div>
-                    <div className='flex justify-between'>
+                    <div className='flex justify-between mb-5'>
                         <Heading
                             align='left'
                             subHeading='Testimonials'

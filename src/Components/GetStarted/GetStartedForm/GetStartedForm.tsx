@@ -2,21 +2,55 @@
 "use client"
 import Button from "@/Components/Reusable/Button/Button";
 import TextInput from "@/Components/Reusable/TextInput/TextInput";
-import { useState } from "react";
+import useOtpDataFromLocalStorage from "@/hooks/useOtpDataFromLocalStorage";
+import { useSendOtpMutation } from "@/redux/Features/Auth/authApi";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+
+export type OtpFormData = {
+    email: string;
+    mobileNumber: string;
+};
 
 const GetStartedForm = () => {
+    const [sendOtp, { isLoading }] = useSendOtpMutation();
+    const [otpData] = useOtpDataFromLocalStorage<OtpFormData>("otpData");
+    const router = useRouter();
     const {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm();
+        setValue,
+    } = useForm<OtpFormData>();
 
-    const handleLogin = (data: any) => {
-        console.log(data);
+    // Set default values from localStorage data
+    useEffect(() => {
+        if (otpData) {
+            setValue("email", otpData.email);
+            setValue("mobileNumber", otpData.mobileNumber);
+        }
+    }, [otpData, setValue]);
+
+    const handleLogin = async (data: OtpFormData) => {
+        try {
+            const otpData = {
+                mobileNumber: data.mobileNumber,
+                email: data.email,
+            };
+            const response = await sendOtp(otpData).unwrap();
+            if (response?.success) {
+                toast.success(response?.message);
+                router.push("/auth/verify-otp");
+                localStorage.setItem("otpData", JSON.stringify(otpData));
+            }
+        } catch (err) {
+            toast.error((err as any)?.data?.message);
+        }
     };
 
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState<boolean>(false);
 
     const handleInputChange = (event) => {
         if (event.target.checked) {
@@ -39,8 +73,8 @@ const GetStartedForm = () => {
                     label="Phone Number"
                     placeholder="Enter Your Phone Number"
                     type="text"
-                    error={errors.phoneNumber}
-                    {...register("phoneNumber", { required: "Phone number is required" })}
+                    error={errors.mobileNumber}
+                    {...register("mobileNumber", { required: "Phone number is required" })}
                 />
                 <Button variant="primary" title="Submit" classNames="" />
                 <label className="flex items-center gap-[10px] cursor-pointer">

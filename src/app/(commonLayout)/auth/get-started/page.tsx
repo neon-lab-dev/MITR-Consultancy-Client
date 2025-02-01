@@ -7,7 +7,7 @@ const GetStared = () => {
         <Container>
             <div className="p-8 bg-white rounded-2xl shadow-course-details font-Inter mt-36 w-full max-w-[650px] mx-auto">
                 <AuthHeading
-                heading="Signin/Signup to your account"
+                heading="Sign In / Sign Up to your account"
                 description="Gain insights from leading professionals and become part of the largest online creative community."
                 />
                 <GetStartedForm/>

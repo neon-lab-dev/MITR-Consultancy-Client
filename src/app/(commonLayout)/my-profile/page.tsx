@@ -8,8 +8,9 @@ const MyProfile = () => {
         <div className="">
             <MyProfileHero />
             <Container>
-                <div className="flex gap-10 ">
+                <div className="flex gap-10 relative">
                     <ProfileInfoCard />
+                    <div className="w-full lg:w-[25%]"></div>
                     <ProfileTabs />
                 </div>
             </Container>

@@ -9,7 +9,7 @@ type TTrainingCard = {
 }
 const TrainingCard:React.FC<TTrainingCard> = ({isDescriptionVisible, isPriceVisible, imageHeight="h-[215px]"}) => {
     return (
-        <div className="bg-white rounded-lg font-Inter shadow-training-card">
+        <Link href={`/internship-programmes/name`} className="bg-white rounded-lg font-Inter shadow-training-card">
             <Image src={IMAGES.backendDevelopmentImg} alt="lessons" className={`rounded-t-lg w-full ${imageHeight}`} />
             <div className="px-2 pt-2 pb-5">
                 <h1 className="text-neutral-45 font-semibold leading-[25px]">Backend Development Using Node.js, MongoDB, and Express.js</h1>
@@ -41,7 +41,7 @@ const TrainingCard:React.FC<TTrainingCard> = ({isDescriptionVisible, isPriceVisi
                 </div>
                 }
             </div>
-        </div>
+        </Link>
     );
 };
 

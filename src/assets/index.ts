@@ -117,6 +117,8 @@ import aws from "../assets/Images/Technologies/image 23.png";
 import docker from "../assets/Images/Technologies/image 24.png";
 
 import backendDevelopmentImg from "../assets/Images/backend-development.png";
+import frontendDevelopmentImg from "../assets/Images/frontend-development.jpg";
+import uiUxImg from "../assets/Images/ui-ux.jpg";
 import purposeOfProgramme from "../assets/Images/purpose-of-programme.png";
 
 
@@ -171,6 +173,8 @@ export const IMAGES = {
     bonhomie,
 
     backendDevelopmentImg,
+    frontendDevelopmentImg,
+    uiUxImg,
     purposeOfProgramme,
 };
 
