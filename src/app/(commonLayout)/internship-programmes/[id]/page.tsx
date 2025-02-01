@@ -14,9 +14,8 @@ import { useGetSingleProgrammeByIdQuery } from "@/redux/Features/InterhshipProgr
 import { useParams } from "next/navigation";
 
 const ProgrammeDetailsPage = () => {
-    const {id} = useParams();
-    const {data} = useGetSingleProgrammeByIdQuery(id);
-    console.log(data);
+    const { id } = useParams();
+    const { data } = useGetSingleProgrammeByIdQuery(id);
     return (
         <div>
             <ProgrammeDetailsHero {...data?.course} />
