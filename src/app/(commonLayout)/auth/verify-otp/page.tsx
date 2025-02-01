@@ -61,7 +61,7 @@ const VerifyOtp = () => {
             if (response?.message) {
                 toast.success(response?.message);
                 if (response?.newUser) {
-                    router.push("/auth/setup-profile");
+                    router.push("/my-profile");
                 } else {
                     const user = {
                         _id: response?.user?._id,

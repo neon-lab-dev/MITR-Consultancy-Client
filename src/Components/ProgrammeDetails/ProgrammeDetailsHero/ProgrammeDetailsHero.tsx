@@ -4,7 +4,7 @@ import Image from "next/image";
 import DetailsCard from "./DetailsCard";
 import TrainingCard from "./TrainingCard";
 
-const ProgrammeDetailsHero = () => {
+const ProgrammeDetailsHero = ({courseName, title, description, price, duration, totalEnrolled, rating}) => {
     return (
         <div className="font-Inter mt-20">
             {/* Background Image */}
@@ -24,15 +24,14 @@ const ProgrammeDetailsHero = () => {
                     <div className="flex items-center justify-between w-full">
                         <div className="relative">
                             <h1 className="text-white text-xl md:text-[36px] font-bold max-w-[344px] md:max-w-[550px] xl:max-w-[660px] leading-normal">
-                                <span className="text-secondary-15">Frontend Development</span>  : Building Modern Web Applications
+                                <span className="text-secondary-15">{courseName}</span>  : {title}
                             </h1>
                             <p className="text-white text-sm max-w-[344px] md:max-w-[550px] xl:max-w-[660px] leading-normal mt-3 xl:mt-6">
-                                Become a Full-Stack Web Developer with just ONE course. HTML, CSS, Javascript,
-                                Node, React, PostgreSQL, Web3 and DApps
+                                {description}
                             </p>
-                            <TrainingCard />
+                            <TrainingCard rating={rating} totalEnrolled={totalEnrolled} />
                         </div>
-                        <DetailsCard />
+                        <DetailsCard price={price} duration={duration} totalEnrolled={totalEnrolled} />
                     </div>
                 </div>
             </Container>

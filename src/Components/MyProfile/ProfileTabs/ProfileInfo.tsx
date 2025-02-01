@@ -2,6 +2,7 @@
 "use client"
 import { useForm } from "react-hook-form";
 import TextInput from "@/Components/Reusable/TextInput/TextInput";
+import Button from "@/Components/Reusable/Button/Button";
 
 const ProfileInfo = () => {
     const {
@@ -145,6 +146,9 @@ const ProfileInfo = () => {
                         {...register("endDate", { required: "End year is required" })}
                     />
                     </div>
+                </div>
+                <div className="flex justify-end mt-5">
+                <Button variant="primary" title="Submit" classNames="" />
                 </div>
             </form>
     );

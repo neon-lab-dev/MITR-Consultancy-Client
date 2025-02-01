@@ -1,3 +1,4 @@
+"use client";
 import Certification from "@/Components/ProgrammeDetails/Certifications/Certification";
 import Evaluation from "@/Components/ProgrammeDetails/Evaluation/Evaluation";
 import InterestedTrainings from "@/Components/ProgrammeDetails/InterestedTrainings/InterestedTrainings";
@@ -9,11 +10,16 @@ import StudentsBenefits from "@/Components/ProgrammeDetails/StudentsBenefits/Stu
 import WhoCanApply from "@/Components/ProgrammeDetails/WhoCanApply/WhoCanApply";
 import Container from "@/Components/Shared/Container/Container";
 import FAQ from "@/Components/Shared/FAQ/FAQ";
+import { useGetSingleProgrammeByIdQuery } from "@/redux/Features/InterhshipProgrammes/internshipProgrammesApi";
+import { useParams } from "next/navigation";
 
 const ProgrammeDetailsPage = () => {
+    const {id} = useParams();
+    const {data} = useGetSingleProgrammeByIdQuery(id);
+    console.log(data);
     return (
         <div>
-            <ProgrammeDetailsHero />
+            <ProgrammeDetailsHero {...data?.course} />
             <Container>
                 <div className="w-full xl:w-[70%]">
                     <ProgrammeDuration />
