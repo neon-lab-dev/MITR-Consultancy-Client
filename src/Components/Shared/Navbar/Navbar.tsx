@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { IMAGES } from "@/assets";
+import { ICONS, IMAGES } from "@/assets";
 import Image from "next/image";
 import Container from "../Container/Container";
 import Button from "@/Components/Reusable/Button/Button";
@@ -9,9 +9,20 @@ import HamburgerMenu from "./HamburgerMenu";
 import { navlinks } from "./navlinks";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
+import UserDropdown from "./UserDropdown";
+
+export type TLoggedInUser = {
+  _id: string;
+  name: string;
+  role: "user" | "admin";
+  email: string;
+};
 
 const Navbar = () => {
   const pathname = usePathname();
+  const user = useSelector(useCurrentUser) as TLoggedInUser;
   const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -80,8 +91,16 @@ const Navbar = () => {
             </div>
             <div className="flex gap-6">
               
-              <Link href={"/auth/get-started"}>
-              <button className={`border px-6 py-3 font-Inter text-lg font-medium rounded items-center justify-center flex hover:bg-primary-20 transition duration-300 hover:text-white hover:border-primary-20  ${btnStyle}`}>Sign Up / Sign In</button></Link>
+              {
+                user ? 
+                <UserDropdown btnStyle={btnStyle} />
+                :
+                <Link href={user ? "/my-profile" : "/auth/get-started"}>
+                <button className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}>
+                Sign Up / Sign In
+                  </button>
+                  </Link>
+              }
               <Button
                 handleClick={() => setIsContactUsModalOpen(true)}
                 variant="primary"
