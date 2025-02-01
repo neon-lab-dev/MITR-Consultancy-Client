@@ -6,7 +6,7 @@ export type TCartData = {
     name : string;
     image: string;
     rating: string;
-    lesson: string;
+    lessons: string;
     duration : string;
     price: number;
   }

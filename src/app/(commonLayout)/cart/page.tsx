@@ -16,7 +16,7 @@ const Cart = () => {
                     Programmes You've Added
                 </h1>
                 <h2 className="text-neutral-45 text-2xl font-semibold leading-9 mt-[14px]">
-                    3 Items in your Cart
+                    {cartData?.length} Items in your Cart
                 </h2>
 
                 <div className="flex gap-6 mt-8">

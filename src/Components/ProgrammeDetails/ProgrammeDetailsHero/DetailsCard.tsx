@@ -9,7 +9,7 @@ import Button2 from "@/Components/Reusable/Button/Button2";
 import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
 import SuccessWithTick from "@/Components/SuccessWithTick/SuccessWithTick";
 
-const DetailsCard = ({ id, image, lesson, rating, name, price, totalEnrolled, duration }) => {
+const DetailsCard = ({ id, image, lessons, rating, name, price, totalEnrolled, duration }) => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     const [isAdded, setIsAdded] = useState(false);
@@ -48,7 +48,7 @@ const DetailsCard = ({ id, image, lesson, rating, name, price, totalEnrolled, du
                 name: name,
                 image: image,
                 rating: rating,
-                lesson: lesson,
+                lessons: lessons,
                 duration: duration,
                 price: price,
             };
