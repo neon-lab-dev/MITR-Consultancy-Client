@@ -15,7 +15,7 @@ const MyProfile = () => {
                 <div className="flex gap-10 relative">
                     <ProfileInfoCard
                     name={data?.user?.full_name}
-                    location={`${data?.user?.city}, ${data?.user?.country}`}
+                    location={`${data?.user?.city ? data?.user?.city : "Your"}, ${data?.user?.country ? data?.user?.country : "Location"}`}
                     purchasedCourses={data?.user?.purchasedCourses}
                     joinedAt={data?.user?.createdAt}
                     />

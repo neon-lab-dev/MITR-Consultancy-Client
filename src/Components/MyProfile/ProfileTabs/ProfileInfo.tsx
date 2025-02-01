@@ -7,6 +7,9 @@ import { useSetupProfileMutation } from "@/redux/Features/Auth/authApi";
 import { toast } from "sonner";
 import { useEffect } from "react";
 import { useGetMeQuery } from "@/redux/Features/User/userApi";
+import useOtpDataFromLocalStorage from "@/hooks/useOtpDataFromLocalStorage";
+import Button2 from "@/Components/Reusable/Button/Button2";
+import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
 
 type TEducation = {
     institute: string;
@@ -28,13 +31,22 @@ type TProfileData = {
 }
 const ProfileInfo = () => {
     const { data: myProfile } = useGetMeQuery({});
-    const [setupProfile] = useSetupProfileMutation();
+    console.log(myProfile);
+    const [otpData] = useOtpDataFromLocalStorage<any>("otpData");
+    const [setupProfile, {isLoading}] = useSetupProfileMutation();
     const {
         register,
         handleSubmit,
         setValue,
         formState: { errors },
     } = useForm<TProfileData>();
+
+    useEffect(() => {
+        if (otpData) {
+            setValue("mobileNumber", otpData.mobileNumber);
+            setValue("email", otpData.email);
+        }
+    }, [otpData, setValue]);
 
     useEffect(() => {
         if (myProfile) {
@@ -82,7 +94,7 @@ const ProfileInfo = () => {
             const response = await setupProfile(formattedData).unwrap();
             console.log(response);
             toast.success("Profile setup successfully!");
-            console.log("Profile response:", response);
+            window.location.reload();
         } catch (error: any) {
             toast.error(error?.data?.message || "Failed to setup profile.");
             console.error("Profile setup error:", error);
@@ -90,11 +102,14 @@ const ProfileInfo = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit(handleSetupProfile)} className="mt-9">
+        <form onSubmit={handleSubmit(handleSetupProfile)} className="mt-9 font-Inter">
             {/* Billing Address Info */}
             <h2 className="text-neutral-45 text-2xl font-semibold leading-9">
                 Billing Address
             </h2>
+            {
+                !myProfile && <p className="text-orange-500 text-sm mt-2">Setup your profile now</p>
+            }
             <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
                 <div className="flex items-center gap-[30px] w-full">
                     <TextInput
@@ -206,9 +221,15 @@ const ProfileInfo = () => {
                     />
                 </div>
             </div>
-            <div className="flex justify-end mt-5">
-                <Button variant="primary" title="Submit" classNames="" />
+            {
+                !myProfile &&
+                <div className="flex justify-end mt-5">
+                <Button2 variant="primary" title="Submit">
+                    {
+                        isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Submit"}
+                </Button2>
             </div>
+            }
         </form>
     );
 };
