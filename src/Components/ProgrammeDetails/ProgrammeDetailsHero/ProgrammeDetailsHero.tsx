@@ -4,7 +4,7 @@ import Image from "next/image";
 import DetailsCard from "./DetailsCard";
 import TrainingCard from "./TrainingCard";
 
-const ProgrammeDetailsHero = ({courseName, title, description, price, duration, totalEnrolled, rating}) => {
+const ProgrammeDetailsHero = ({_id, poster, lesson, courseName, title, description, price, duration, totalEnrolled, rating}) => {
     return (
         <div className="font-Inter mt-20">
             {/* Background Image */}
@@ -31,7 +31,7 @@ const ProgrammeDetailsHero = ({courseName, title, description, price, duration, 
                             </p>
                             <TrainingCard rating={rating} totalEnrolled={totalEnrolled} />
                         </div>
-                        <DetailsCard price={price} duration={duration} totalEnrolled={totalEnrolled} />
+                        <DetailsCard id={_id} name={courseName} image={poster?.url} rating={rating} price={price} duration={duration} lesson={lesson} totalEnrolled={totalEnrolled} />
                     </div>
                 </div>
             </Container>
