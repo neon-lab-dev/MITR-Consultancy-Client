@@ -7,7 +7,7 @@ const TermsAndConditions = () => {
         {
             title: "1. Services Provided",
             description: "",
-            poiniters: [
+            pointers: [
                 "We offer website and app development services.",
                 "We provide internship programs for students in their 5th to 7th semester."
             ]
@@ -15,7 +15,7 @@ const TermsAndConditions = () => {
         {
             title: "2. Payment &amp; Refunds",
             description: "",
-            poiniters: [
+            pointers: [
                 "Internship programs are priced at ₹990, payable online via Razorpay.",
                 "No refunds will be issued for any payments made.",
             ]
@@ -45,7 +45,7 @@ const TermsAndConditions = () => {
             description: "These terms are governed by the laws of India.",
         },
     ];
-    
+
     return (
         <div>
             <PrivacyPolicyHero title="Terms and conditions" />
@@ -65,10 +65,10 @@ const TermsAndConditions = () => {
                                 }
 
                                 {
-                                    content?.poiniters ?
+                                    content?.pointers ?
                                         <div className="flex flex-col gap-3 mt-3">
                                             {
-                                                content?.poiniters?.map((pointer, index) =>
+                                                content?.pointers?.map((pointer, index) =>
                                                     <div key={index} className="flex items-center gap-3">
                                                         <div className="size-2 rounded-full bg-neutral-10"></div>
                                                         <p className="font-normal text-lg text-neutral-10">{pointer}</p>

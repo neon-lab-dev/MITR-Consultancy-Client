@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
         {
             title: "1. Information We Collect",
             description: "",
-            poiniters: [
+            pointers: [
                 "Personal Information: Name, email address, phone number, payment details (processed via Razorpay), and other details required for service provision.",
                 "Non-Personal Information: IP address, browser type, and website usage data."
             ]
@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
         {
             title: "2. How We Use Your Information",
             description: "",
-            poiniters: [
+            pointers: [
                 "To provide website and app development services.",
                 "To enroll students in internship programs.",
                 "To process payments and manage transactions.",
@@ -60,10 +60,10 @@ const PrivacyPolicy = () => {
                                 }
 
                                 {
-                                    content?.poiniters ?
+                                    content?.pointers ?
                                         <div className="flex flex-col gap-3 mt-3">
                                             {
-                                                content?.poiniters?.map((pointer, index) =>
+                                                content?.pointers?.map((pointer, index) =>
                                                     <div key={index} className="flex items-center gap-3">
                                                         <div className="size-2 rounded-full bg-neutral-10"></div>
                                                         <p className="font-normal text-lg text-neutral-10">{pointer}</p>
