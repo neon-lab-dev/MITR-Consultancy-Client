@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { ICONS, IMAGES } from "@/assets";
+import { IMAGES } from "@/assets";
 import Image from "next/image";
 import Container from "../Container/Container";
 import Button from "@/Components/Reusable/Button/Button";
@@ -50,6 +50,7 @@ const Navbar = () => {
     "/get-started",
     "/profile",
     "/my-profile",
+    "/privacy-policy",
   ];
 
   const textColor = neutralPages.includes(pathname) || pathname.startsWith("/internship-programmes/") || pathname.startsWith("/auth/")
