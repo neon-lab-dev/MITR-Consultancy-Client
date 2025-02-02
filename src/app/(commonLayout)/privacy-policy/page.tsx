@@ -41,7 +41,7 @@ const PrivacyPolicy = () => {
 
     return (
         <div>
-            <PrivacyPolicyHero />
+            <PrivacyPolicyHero title="Privacy policy" />
             <Container>
                 <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 mt-14">
                     {
