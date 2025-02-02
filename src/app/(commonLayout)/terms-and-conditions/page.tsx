@@ -3,7 +3,7 @@ import Container from "@/Components/Shared/Container/Container";
 
 
 const TermsAndConditions = () => {
-    const privacyPolicyContent = [
+    const termsAndConditionsContent = [
         {
             title: "1. Services Provided",
             description: "",
@@ -23,7 +23,7 @@ const TermsAndConditions = () => {
         {
             title: "3. User Responsibilities",
             description: "",
-            pointers : [
+            pointers: [
                 "You must provide accurate information when registering for our services.",
                 "You agree not to misuse our website or services in any way."
             ]
@@ -40,16 +40,21 @@ const TermsAndConditions = () => {
             title: "5. Termination",
             description: "We reserve the right to suspend or terminate access to our services if users violate these terms.",
         },
+        {
+            title: "6. Governing Law",
+            description: "These terms are governed by the laws of India.",
+        },
     ];
+    
     return (
         <div>
             <PrivacyPolicyHero title="Terms and conditions" />
             <Container>
                 <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 mt-14">
-                <p className="font-normal text-lg mt-2">Welcome to MITR Consultancy. By using our website and services, you agree to comply with
-                the following terms.</p>
+                    <p className="font-normal text-lg mt-2">Welcome to MITR Consultancy. By using our website and services, you agree to comply with
+                        the following terms.</p>
                     {
-                        privacyPolicyContent?.map(content =>
+                        termsAndConditionsContent?.map(content =>
                             <div key={content?.title}>
                                 <h1 className="font-bold text-3xl text-neutral-10">
                                     {content?.title}
