@@ -1,53 +1,53 @@
 import PrivacyPolicyHero from "@/Components/PrivacyPolicy/PrivacyPolicyHero/PrivacyPolicyHero";
 import Container from "@/Components/Shared/Container/Container";
 
-const PrivacyPolicy = () => {
+
+const TermsAndConditions = () => {
     const privacyPolicyContent = [
         {
-            title: "1. Information We Collect",
+            title: "1. Services Provided",
             description: "",
             poiniters: [
-                "Personal Information: Name, email address, phone number, payment details (processed via Razorpay), and other details required for service provision.",
-                "Non-Personal Information: IP address, browser type, and website usage data."
+                "We offer website and app development services.",
+                "We provide internship programs for students in their 5th to 7th semester."
             ]
         },
         {
-            title: "2. How We Use Your Information",
+            title: "2. Payment &amp; Refunds",
             description: "",
             poiniters: [
-                "To provide website and app development services.",
-                "To enroll students in internship programs.",
-                "To process payments and manage transactions.",
-                "To improve website functionality and customer experience."
+                "Internship programs are priced at ₹990, payable online via Razorpay.",
+                "No refunds will be issued for any payments made.",
             ]
         },
         {
-            title: "3. Data Protection",
-            description: "We use appropriate security measures to protect your data. However, no method of transmission over the internet is 100% secure.",
+            title: "3. User Responsibilities",
+            description: "",
+            pointers : [
+                "You must provide accurate information when registering for our services.",
+                "You agree not to misuse our website or services in any way."
+            ]
         },
         {
-            title: "4. Third-Party Services",
+            title: "4. Limitation of Liability",
             description: "We use Razorpay for payment processing. Your payment details are securely handled by Razorpay and not stored by us.",
         },
         {
             title: "5. Your Rights",
-            description: "You may request access, correction, or deletion of your personal data by contacting us.",
+            description: "We are not responsible for any indirect damages arising from the use of our services.",
         },
         {
-            title: "6. Changes to this Policy",
-            description: "We may update this policy periodically. Changes will be posted on this page.",
+            title: "5. Termination",
+            description: "We reserve the right to suspend or terminate access to our services if users violate these terms.",
         },
     ];
-
     return (
         <div>
-            <PrivacyPolicyHero title="Privacy policy" />
+            <PrivacyPolicyHero title="Terms and conditions" />
             <Container>
                 <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 mt-14">
-
-                    <p className="font-normal text-lg mt-2">MITR Consultancy (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates <a href="https://mitraconsultancy.co.in/" className="font-semibold text-primary-20">https://mitraconsultancy.co.in/</a> (the &quot;Website&quot;).
-                        This Privacy Policy explains how we collect, use, and protect your personal information when
-                        you use our services.</p>
+                <p className="font-normal text-lg mt-2">Welcome to MITR Consultancy. By using our website and services, you agree to comply with
+                the following terms.</p>
                     {
                         privacyPolicyContent?.map(content =>
                             <div key={content?.title}>
@@ -83,4 +83,4 @@ const PrivacyPolicy = () => {
     );
 };
 
-export default PrivacyPolicy;
+export default TermsAndConditions;
