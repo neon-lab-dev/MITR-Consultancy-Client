@@ -2,6 +2,7 @@
 import { ICONS, IMAGES } from "@/assets";
 import ContactUs from "@/Components/Home/ContactUs/ContactUs";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 
@@ -76,6 +77,21 @@ const Footer = () => {
         },
     ];
 
+    const footerLinks2 = [
+        {
+            label: "Privacy Policy",
+            path: "/privacy-policy",
+        },
+        {
+            label: "Terms And Conditions",
+            path: "/terms-and-conditions",
+        },
+        {
+            label: "Refund Policy",
+            path: "/refund-policy",
+        },
+    ];
+
     return (
         <div className="bg-primary-50">
             <div className=" flex flex-col items-center justify-center gap-6 font-Inter mt-[151px] py-10">
@@ -99,6 +115,14 @@ const Footer = () => {
                 {
                     footerLinks.map((link, index) => (
                         <button key={index} onClick={link.action} className="text-neutral-20 md:text-lg text-xs font-medium hover:text-primary-10 transition duration-300">{link.label}</button>
+                    ))
+                }
+            </div>
+            {/* Links */}
+            <div className="flex items-center gap-3 md:gap-16 lg:gap-20 mt-5">
+                {
+                    footerLinks2.map((link, index) => (
+                        <Link key={index} href={link?.path} className="text-neutral-20 md:text-lg text-xs font-medium hover:text-primary-10 transition duration-300">{link.label}</Link>
                     ))
                 }
             </div>
