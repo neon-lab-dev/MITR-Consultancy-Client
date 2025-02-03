@@ -9,7 +9,18 @@ import Button2 from "@/Components/Reusable/Button/Button2";
 import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
 import SuccessWithTick from "@/Components/SuccessWithTick/SuccessWithTick";
 
-const DetailsCard = ({ id, image, lessons, rating, name, price, totalEnrolled, duration }) => {
+type TDetailsCardProps = {
+    id: string;
+    image: string;
+    lessons: string;
+    rating: string;
+    name: string;
+    price: number;
+    totalEnrolled: number;
+    duration: string;
+}
+
+const DetailsCard: React.FC<TDetailsCardProps> = ({ id, image, lessons, rating, name, price, totalEnrolled, duration }) => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     const [isAdded, setIsAdded] = useState(false);

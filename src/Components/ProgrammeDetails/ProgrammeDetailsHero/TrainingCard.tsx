@@ -1,7 +1,7 @@
 import { ICONS } from "@/assets";
 import Image from "next/image";
 
-const TrainingCard = ({totalEnrolled, rating}) => {
+const TrainingCard = ({totalEnrolled, rating} : {totalEnrolled ?:string | number; rating? : string}) => {
     return (
         <div className="flex rounded-lg w-[796px] absolute top-[280px] shadow-course-details">
             <div className="bg-primary-20 py-3 px-4 rounded-l-lg flex flex-col items-center justify-center">

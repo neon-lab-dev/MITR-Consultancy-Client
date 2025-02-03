@@ -3,7 +3,11 @@ import { useState } from "react";
 import ProfileInfo from "./ProfileInfo";
 import EnrolledCourse from "./EnrolledCourse";
 
-const ProfileTabs = ({isEditEnabled, setIsEditEnabled}) => {
+type TProfileTabsProps = {
+    isEditEnabled: boolean;
+    setIsEditEnabled: (value: boolean) => void;
+};
+const ProfileTabs: React.FC<TProfileTabsProps> = ({ isEditEnabled, setIsEditEnabled }) => {
     const [selectedTab, setSelectedTab] = useState("Profile");
     const tabButtons = ["Profile", "Enrolled Courses"];
 
@@ -32,9 +36,9 @@ const ProfileTabs = ({isEditEnabled, setIsEditEnabled}) => {
 
             {
                 selectedTab === "Profile" ?
-                <ProfileInfo isEditEnabled={isEditEnabled} setIsEditEnabled={setIsEditEnabled}  />
-                :
-                <EnrolledCourse/>
+                    <ProfileInfo isEditEnabled={isEditEnabled} setIsEditEnabled={setIsEditEnabled} />
+                    :
+                    <EnrolledCourse />
             }
         </div>
     );

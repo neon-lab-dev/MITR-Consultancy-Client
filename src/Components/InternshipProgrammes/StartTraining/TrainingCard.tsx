@@ -4,11 +4,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 type TTrainingCard = {
-    isDescriptionVisible? : boolean;
-    isPriceVisible? : boolean;
-    imageHeight? : string;
+    isDescriptionVisible?: boolean;
+    isPriceVisible?: boolean;
+    imageHeight?: string;
+    _id?: string;
+    poster?: {
+        url : string;
+    };
+    courseName?: string;
+    description?: string;
+    price?: number;
+    lessons?: string;
+    duration?: string;
 }
-const TrainingCard:React.FC<TTrainingCard> = ({_id, poster, courseName, description, price, lessons, duration, isDescriptionVisible, isPriceVisible, imageHeight="h-[215px]"}) => {
+const TrainingCard: React.FC<TTrainingCard> = ({ _id, poster, courseName, description, price, lessons, duration, isDescriptionVisible, isPriceVisible, imageHeight = "h-[215px]" }) => {
     return (
         <Link href={`/internship-programmes/${_id}`} className="bg-white rounded-lg font-Inter shadow-training-card">
             <img src={poster?.url} alt="lessons" className={`rounded-t-lg w-full ${imageHeight}`} />
@@ -33,13 +42,13 @@ const TrainingCard:React.FC<TTrainingCard> = ({_id, poster, courseName, descript
                 {
                     isPriceVisible &&
                     <div className="flex items-center justify-between mt-4">
-                    <Link href={`/internship-programme/${_id}`} className="text-primary-10 font-bold xl:text-lg text-xs leading-5 border-b-2 border-primary-10">
-                    View Details
-                    </Link>
-                    <h1 className="text-neutral-45 font-bold xl:text-lg text-xs leading-5">
-                    ₹{price}
-                    </h1>
-                </div>
+                        <Link href={`/internship-programme/${_id}`} className="text-primary-10 font-bold xl:text-lg text-xs leading-5 border-b-2 border-primary-10">
+                            View Details
+                        </Link>
+                        <h1 className="text-neutral-45 font-bold xl:text-lg text-xs leading-5">
+                            ₹{price}
+                        </h1>
+                    </div>
                 }
             </div>
         </Link>

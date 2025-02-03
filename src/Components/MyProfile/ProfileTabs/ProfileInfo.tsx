@@ -30,7 +30,12 @@ type TProfileData = {
     pinCode: string;
     education: TEducation[];
 }
-const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }) => {
+type ProfileInfoProps = {
+    isEditEnabled: boolean;
+    setIsEditEnabled: (value: boolean) => void;
+};
+
+const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
     const dispatch = useDispatch();
     const [isNewUser, setIsNewUser] = useState<boolean>(false);
     useEffect(() => {

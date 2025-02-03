@@ -53,7 +53,7 @@ const GetStartedForm = () => {
 
     const [checked, setChecked] = useState<boolean>(false);
 
-    const handleInputChange = (event) => {
+    const handleInputChange = (event : React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.checked) {
             setChecked(true);
         } else {

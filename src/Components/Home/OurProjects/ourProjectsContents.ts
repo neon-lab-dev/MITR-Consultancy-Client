@@ -1,6 +1,6 @@
 import { IMAGES } from "@/assets";
 
-export const ourProjects = [
+export const ourProjectsContent = [
     {
         _id: "1",
         projectName: "Students Tiffin",

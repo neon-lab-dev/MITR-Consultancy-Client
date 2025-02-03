@@ -2,7 +2,6 @@
 import Container from '../../Shared/Container/Container';
 import Heading from '../../Reusable/Heading/Heading';
 import OurProjectCard from './OurProjectCard';
-import { ourProjects } from './ourProjects';
 import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +11,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import React from 'react';
 import { ICONS } from '../../../assets/index';
+import { ourProjectsContent } from './ourProjectsContents';
 
 const OurProjects = () => {
     return (
@@ -54,9 +54,8 @@ const OurProjects = () => {
                             1024: { slidesPerView: 2 },
                             1366: { slidesPerView: 3 },
                         }}
-                        className="w-full mt-10"
-                    >
-                        {ourProjects?.map((project) => (
+                        className="w-full mt-10">
+                        {ourProjectsContent?.map((project) => (
                             <SwiperSlide key={project._id} className='mb-16 w-full'>
                                 <OurProjectCard  {...project} />
                             </SwiperSlide>

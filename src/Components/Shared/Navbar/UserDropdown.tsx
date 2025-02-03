@@ -52,7 +52,8 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
             toast.error("Logout failed");
           }
         } catch (err) {
-          toast.error("Failed to log out. Please try again.", err);
+          toast.error("Failed to log out. Please try again.");
+          console.log(err);
         }
       };
 

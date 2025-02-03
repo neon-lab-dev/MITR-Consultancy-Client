@@ -1,13 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { ICONS } from "@/assets";
 import Image from "next/image";
 import { useState } from "react";
 
-const ProgrammeStructure = ({phases}) => {
+const ProgrammeStructure = ({phases} : {phases:any[]}) => {
 
     const [isAccordingOpen, setIsAccordingOpen] = useState(0);
 
-    const handleClick = (index) =>
+    const handleClick = (index:any) =>
         setIsAccordingOpen((prevIndex) => (prevIndex === index ? null : index));
     return (
         <div className="mt-[64px]">
@@ -47,10 +48,10 @@ const ProgrammeStructure = ({phases}) => {
                                     : "grid-rows-[0fr] opacity-0"
                                     }`}>
                                 {
-                                    phase?.modules?.map(module => 
+                                    phase?.modules?.map((module:any) => 
                                         <div key={module?.title} className={`flex flex-col gap-5 ${isAccordingOpen === index ? "h-full" : "h-0"} `}>
                                     {
-                                        module?.topics?.map(topic => 
+                                        module?.topics?.map((topic:any) => 
                                             <div key={topic?.title} className="flex gap-3">
                                         <Image src={ICONS.checkCircle} alt="check-circle" className="size-5" />
                                         <li className="text-black font-medium leading-6">{topic?.title}:

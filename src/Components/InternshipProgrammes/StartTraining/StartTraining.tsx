@@ -12,9 +12,9 @@ export type TInternshipProgramme = {
     courseName: string;
     title: string;
     description: string;
-    rating: number;
+    rating: string;
     totalEnrolled: number;
-    lessons: number;
+    lessons: string;
     price: number;
     duration: string;
     phases: {

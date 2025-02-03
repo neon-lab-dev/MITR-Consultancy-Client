@@ -4,7 +4,21 @@ import Image from "next/image";
 import DetailsCard from "./DetailsCard";
 import TrainingCard from "./TrainingCard";
 
-const ProgrammeDetailsHero = ({_id, poster, lessons, courseName, title, description, price, duration, totalEnrolled, rating}) => {
+type TProgrammeDetailsHero = {
+    _id: string;
+    poster: {
+        url : string;
+    };
+    lessons: string;
+    courseName: string;
+    title: string;
+    description: string;
+    price: number;
+    duration: string;
+    totalEnrolled: number;
+    rating: string;
+  };
+const ProgrammeDetailsHero : React.FC<TProgrammeDetailsHero> = ({_id, poster, lessons, courseName, title, description, price, duration, totalEnrolled, rating}) => {
     return (
         <div className="font-Inter mt-20">
             {/* Background Image */}
