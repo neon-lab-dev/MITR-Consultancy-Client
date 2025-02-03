@@ -15,7 +15,7 @@ const ProgrammeStructure = ({phases} : {phases:any[]}) => {
             <h1 className="text-neutral-10 text-[30px] font-semibold leading-[48px]">Program Structure</h1>
             {/* Phases */}
             <div className="flex flex-col gap-6 mt-[30px]">
-                <h1 className="text-neutral-10 text-[28px] leading-[48px]"><span className="font-bold">Phase 1</span> : Technical Foundation (4 Weeks)</h1>
+                {/* <h1 className="text-neutral-10 text-[28px] leading-[48px]"><span className="font-bold">Phase 1</span> : Technical Foundation (4 Weeks)</h1> */}
 
                 <div className="flex gap-3 flex-col w-full">
                     {phases?.map((phase, index) => (
@@ -54,7 +54,7 @@ const ProgrammeStructure = ({phases} : {phases:any[]}) => {
                                         module?.topics?.map((topic:any) => 
                                             <div key={topic?.title} className="flex gap-3">
                                         <Image src={ICONS.checkCircle} alt="check-circle" className="size-5" />
-                                        <li className="text-black font-medium leading-6">{topic?.title}:
+                                        <li className="text-black font-medium leading-6">{topic?.title}
                                             <br />
                                             {
                                                 topic?.contents?.map((content:string) => 

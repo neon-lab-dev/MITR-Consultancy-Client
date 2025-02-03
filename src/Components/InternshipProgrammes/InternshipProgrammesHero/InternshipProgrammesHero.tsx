@@ -36,7 +36,7 @@ const InternshipProgrammesHero = () => {
                         <Button handleClick={() =>
                             document
                                 .getElementById("programmes")
-                                ?.scrollIntoView({ behavior: "smooth" })} variant="primary" title="View Courses" classNames="w-[200px]" />
+                                ?.scrollIntoView({ behavior: "smooth" })} variant="primary" title="View Programmes" classNames="w-[220px]" />
                     </div>
                 </div>
             </Container>
