@@ -41,8 +41,6 @@ const VerifyOtp = () => {
                 }
             });
         }, 1000);
-
-        // Cleanup interval on component unmount
         return () => clearInterval(timerInterval);
     }, []);
 

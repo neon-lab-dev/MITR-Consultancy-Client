@@ -1,6 +1,15 @@
 import Button from "@/Components/Reusable/Button/Button";
 
-const ProceedToPay = ({cartTotal}) => {
+export type TProceedToPayProps = {
+    _id: string;
+    name: string;
+    image: string;
+    price: number;
+    duration: string;
+    lessons: string | number;
+    rating: string | number;
+  }
+const ProceedToPay = ({cartTotal} : {cartTotal:TProceedToPayProps[]}) => {
     const totalPrice = cartTotal && cartTotal?.reduce((acc, currVal) => acc + currVal.price, 0);
     // const handleCheckout = () => {
     //     try{

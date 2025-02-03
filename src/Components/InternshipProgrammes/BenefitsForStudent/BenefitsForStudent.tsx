@@ -20,7 +20,8 @@ const BenefitsForStudent = () => {
             title : "AI-driven practice interviews",
             description : "Elevate your resume and get personalized 1:1 resume vetting sessions."
         },
-    ]
+    ];
+    
     return (
         <div className="font-Inter py-[60px] md:py-20 xl:py-[98px] bg-primary-40">
             <Container>

@@ -2,7 +2,17 @@ import { ICONS } from "@/assets";
 import { useCart } from "@/providers/CartProvider/CartProvider";
 import Image from "next/image";
 
-const CartItem = ({_id, name, image, price, duration, lessons, rating}) => {
+type TCartItemProps = {
+    _id: string;
+    name: string;
+    image: string;
+    price: number;
+    duration: string;
+    lessons: string;
+    rating: string | number;
+  }
+
+const CartItem:React.FC<TCartItemProps> = ({_id, name, image, price, duration, lessons, rating}) => {
     const { removeCourseFromCart } = useCart();
     return (
             <div className="flex items-center justify-between bg-white border-b border-neutral-100 pb-[22px]">

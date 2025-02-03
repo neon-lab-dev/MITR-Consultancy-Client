@@ -1,6 +1,7 @@
+import { TProceedToPayProps } from "@/Components/Cart/ProceedToPay/ProceedToPay";
 import Image from "next/image";
 
-const OrderDetails = ({ cartData }) => {
+const OrderDetails = ({ cartData } : {cartData:TProceedToPayProps[]}) => {
     return (
         <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details w-full flex flex-col gap-6 font-Inter">
             <h1 className="text-neutral-45 text-2xl font-semibold leading-6">Order Details</h1>

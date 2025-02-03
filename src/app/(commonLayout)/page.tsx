@@ -6,7 +6,7 @@ import LetsTalk from "@/Components/Home/LetsTalk/LetsTalk";
 import OurServices from "@/Components/Home/OurServices/OurServices";
 import Technologies from "@/Components/Home/Technologies/Technologies";
 import Testimonials from "@/Components/Home/Testimonials/Testimonials";
-import OurProjects from '../../Components/Home/OurProjects/OurProjects';
+import OurProjects from './../../Components/Home/OurProjects/OurProjects';
 
 export default function Home() {
   return (

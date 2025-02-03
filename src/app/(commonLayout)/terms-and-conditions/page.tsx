@@ -51,8 +51,7 @@ const TermsAndConditions = () => {
             <PrivacyPolicyHero title="Terms and conditions" />
             <Container>
                 <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 mt-10">
-                    <p className="font-normal text-lg mt-2">Welcome to MITR Consultancy. By using our website and services, you agree to comply with
-                        the following terms.</p>
+                    <p className="font-normal text-lg mt-2">Welcome to MITR Consultancy. By using our website and services, you agree to comply with the following terms.</p>
                     {
                         termsAndConditionsContent?.map(content =>
                             <div key={content?.title}>

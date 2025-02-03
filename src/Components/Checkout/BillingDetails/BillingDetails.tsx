@@ -1,8 +1,8 @@
 
+import { TProceedToPayProps } from '@/Components/Cart/ProceedToPay/ProceedToPay';
 import Button from '@/Components/Reusable/Button/Button';
-import React from 'react';
 
-const BillingDetails = ({cartData}) => {
+const BillingDetails = ({cartData} : {cartData:TProceedToPayProps[]}) => {
     const totalPrice = cartData && cartData?.reduce((acc, currVal) => acc + currVal.price, 0);
     return (
         <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details w-full flex flex-col gap-6 font-Inter">
