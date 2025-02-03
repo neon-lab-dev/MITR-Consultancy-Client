@@ -52,7 +52,7 @@ const Navbar = () => {
     "/my-profile",
     "/privacy-policy",
     "/terms-and-conditions",
-    "/refund-policy"
+    "/refund-policy",
   ];
 
   const textColor = neutralPages.includes(pathname) || pathname.startsWith("/internship-programmes/") || pathname.startsWith("/auth/")
@@ -67,8 +67,7 @@ const Navbar = () => {
     <div id="home">
       <div
         className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 py-2 ${isScrolled ? "bg-neutral-40" : "backdrop-blur-sm bg-transparent"
-          }`}
-      >
+          }`}>
         <Container>
           <div className="flex w-full justify-between items-center font-Inter">
             <Link href={"/"}>

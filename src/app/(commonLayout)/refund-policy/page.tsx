@@ -6,7 +6,7 @@ const RefundPolicy = () => {
         <div>
             <PrivacyPolicyHero title="Refund Policy" />
             <Container>
-                <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 mt-14">
+                <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 mt-10">
                     <p className="font-normal text-lg">
                         At MITR Consultancy, we follow a <strong>No Refund Policy</strong> for our internship programs. Once payment is made, no cancellations or refunds will be processed. We encourage users to carefully review the program details before making a payment.
                     </p>

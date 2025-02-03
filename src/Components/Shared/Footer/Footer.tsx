@@ -119,7 +119,7 @@ const Footer = () => {
                 }
             </div>
             {/* Links */}
-            <div className="flex items-center gap-3 md:gap-16 lg:gap-20 mt-5">
+            <div className="flex items-center gap-3 md:gap-16 lg:gap-20">
                 {
                     footerLinks2.map((link, index) => (
                         <Link key={index} href={link?.path} className="text-neutral-20 md:text-lg text-xs font-medium hover:text-primary-10 transition duration-300">{link.label}</Link>
