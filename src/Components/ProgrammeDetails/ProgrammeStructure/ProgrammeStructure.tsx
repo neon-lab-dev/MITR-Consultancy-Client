@@ -25,7 +25,7 @@ const ProgrammeStructure = ({ phases }: { phases: any[] }) => {
                             <h1 className="text-neutral-10 text-[28px] leading-[48px]"><span className="font-bold">Phase {index + 1}</span> : {phase?.title}</h1>
                             {/* Modules */}
                             {
-                                phase?.modules?.map((module, index) =>
+                                phase?.modules?.map((module:any) =>
                                     <div key={module?._id} className="flex gap-3 flex-col w-full">
                                         <article
                                             className={`shadow-course-details bg-white`}
