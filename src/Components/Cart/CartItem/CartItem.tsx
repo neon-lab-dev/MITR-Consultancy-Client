@@ -22,7 +22,7 @@ const CartItem:React.FC<TCartItemProps> = ({_id, name, image, price, duration, l
                         <h1 className="text-neutral-45 font-semibold leading-[25px] w-full max-w-[377px]">{name}</h1>
                         <div className="flex items-center">
                             <p className="text-neutral-25 text-[13px] font-medium">{rating}</p>
-                            <Image src={ICONS.rating} alt="rating" className="" />
+                            <Image src={ICONS.rating} alt="rating" className="size-3" />
                         </div>
                         <div className="flex items-center gap-6">
                             <div className="flex items-center gap-2">

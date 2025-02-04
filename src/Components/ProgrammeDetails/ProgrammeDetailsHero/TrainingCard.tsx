@@ -13,7 +13,14 @@ const TrainingCard = ({totalEnrolled, rating} : {totalEnrolled ?:string | number
                 <div className="bg-neutral-65 h-full w-[1px]"></div>
                 <div className="flex flex-col items-center gap-2">
                     <p className="text-neutral-90 font-semibold text-[21px] leading-7">{rating}</p>
-                    <Image src={ICONS.rating} alt="training" className="" />
+                    <div className="flex items-center gap-1">
+                        {
+                            [1, 2, 3, 4, 5].map((_, index) =>
+                                <Image key={index} src={ICONS.rating} alt="training" className="size-3" />
+                            )
+                        }
+                    </div>
+                    
                     <p className="text-neutral-95 text-sm">422,249 ratings</p>
                 </div>
                 <div className="bg-neutral-65 h-full w-[1px]"></div>
@@ -28,3 +35,4 @@ const TrainingCard = ({totalEnrolled, rating} : {totalEnrolled ?:string | number
 };
 
 export default TrainingCard;
+  
