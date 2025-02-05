@@ -29,7 +29,7 @@ const Cart = () => {
                     </div>
                     <ProceedToPay cartTotal={cartData} />
                 </div>
-                <InterestedTrainings/>
+                <InterestedTrainings id={""} />
             </div>
         </Container>
     );
