@@ -1,13 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
-import { IMAGES } from "@/assets";
+import { ICONS, IMAGES } from "@/assets";
 import Image from "next/image";
 import Container from "../Container/Container";
 import Button from "@/Components/Reusable/Button/Button";
 import ContactUs from "@/Components/Home/ContactUs/ContactUs";
 import HamburgerMenu from "./HamburgerMenu";
-import { navlinks } from "./navlinks";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
@@ -21,6 +20,7 @@ export type TLoggedInUser = {
 };
 
 const Navbar = () => {
+  const router = useRouter();
   const pathname = usePathname();
   const user = useSelector(useCurrentUser) as TLoggedInUser;
   const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
@@ -63,6 +63,34 @@ const Navbar = () => {
     ? "text-primary-20 border-primary-20"
     : "text-white border-white";
 
+
+  useEffect(() => {
+    const storedSection = sessionStorage.getItem("scrollToSection");
+    if (storedSection) {
+      setTimeout(() => {
+        document.getElementById(storedSection)?.scrollIntoView({ behavior: "smooth" });
+        sessionStorage.removeItem("scrollToSection");
+      }, 300);
+    }
+  }, [pathname]);
+
+  const handleNavigation = (id: string) => {
+    if (pathname === "/") {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      sessionStorage.setItem("scrollToSection", id);
+      router.push("/");
+    }
+  };
+
+  const navlinks = [
+    { label: "Home", action: () => handleNavigation("home") },
+    { label: "Services", action: () => handleNavigation("services") },
+    { label: "About Us", action: () => handleNavigation("aboutUs") },
+    { label: "Portfolio", action: () => handleNavigation("portfolio") },
+    { label: "Internship Programmes", path: "/internship-programmes" },
+  ];
+
   return (
     <div id="home">
       <div
@@ -80,27 +108,27 @@ const Navbar = () => {
             {/* Desktop Nav */}
             <div className="hidden xl:flex items-center gap-10">
               {navlinks.map((link, index) => (
-                link?.action ? 
-                <button
-                  key={index}
-                  onClick={link.action}
-                  className={`text-lg font-medium hover:text-primary-10 transition duration-300 ${isScrolled && "text-white"} ${textColor}`}
-                >
-                  {link.label}
-                </button>
-                : <Link key={index} href={link.path} className={`text-lg font-medium hover:text-primary-10 transition duration-300  ${isScrolled && "text-white"} ${textColor}`}>{link.label}</Link>
+                link?.action ?
+                  <button
+                    key={index}
+                    onClick={link.action}
+                    className={`text-lg font-medium hover:text-primary-10 transition duration-300 ${isScrolled && "text-white"} ${textColor}`}
+                  >
+                    {link.label}
+                  </button>
+                  : <Link key={index} href={link.path} className={`text-lg font-medium hover:text-primary-10 transition duration-300  ${isScrolled && "text-white"} ${textColor}`}>{link.label}</Link>
               ))}
             </div>
+
             <div className="flex gap-6">
-              
               {
-                user ? 
-                <UserDropdown btnStyle={btnStyle} />
-                :
-                <Link href={user ? "/my-profile" : "/auth/get-started"}>
-                <button className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}>
-                Sign Up / Sign In
-                  </button>
+                user ?
+                  <UserDropdown btnStyle={btnStyle} />
+                  :
+                  <Link href={user ? "/my-profile" : "/auth/get-started"}>
+                    <button className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}>
+                      Sign Up / Sign In
+                    </button>
                   </Link>
               }
               <Button
@@ -112,7 +140,7 @@ const Navbar = () => {
               {/* Hamburger Menu for Small Screens */}
               <div className="xl:hidden flex items-center">
                 <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-                  <span className="text-white text-2xl">&#9776;</span>
+                  <Image src={ICONS.hamburgerMenuBlue} alt="menu icon" className="size-7" />
                 </button>
               </div>
             </div>

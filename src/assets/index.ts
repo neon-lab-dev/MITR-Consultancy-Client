@@ -35,6 +35,7 @@ import checkCircle from "../assets/Icons/check_circle.svg";
 import avatar from "../assets/Icons/avatar.svg";
 import star from "../assets/Icons/star.svg";
 import hamburgerMenu from "../assets/Icons/hamburgerMenu.svg";
+import hamburgerMenuBlue from "../assets/Icons/menu-blue.svg";
 import lessons from "../assets/Icons/lessons.svg";
 import duration from "../assets/Icons/duration.svg";
 import skills from "../assets/Icons/skills.svg";
@@ -202,6 +203,7 @@ export const ICONS = {
     avatar,
     star,
     hamburgerMenu,
+    hamburgerMenuBlue,
     lessons,
     duration,
     skills,

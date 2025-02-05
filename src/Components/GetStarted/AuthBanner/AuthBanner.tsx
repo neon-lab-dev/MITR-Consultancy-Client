@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AuthBanner = () => {
     return (
-        <div className="relative h-full w-full xl:w-[45%] flex flex-col items-center justify-center">
+        <div className="relative h-full w-full xl:w-[45%] hidden xl:flex flex-col items-center justify-center">
             <Image src={IMAGES.contactUsBgImg} alt="MITR Consultancy" className="rounded-xl h-full w-full" />
             <div className="flex flex-col items-center justify-center w-full absolute top-0 bottom-0 right-0 left-0 z-20 px-8">
                 <Image src={IMAGES.MITRConsoltancyLogo} alt="MITR Consultancy" className="w-[164px] h-[64px]" />
