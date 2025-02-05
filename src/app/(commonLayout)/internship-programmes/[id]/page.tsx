@@ -29,7 +29,7 @@ const ProgrammeDetailsPage = () => {
                     <Evaluation />
                     <Certification />
                 </div>
-                <InterestedTrainings />
+                <InterestedTrainings id={data?.course?._id} />
                 <FAQ />
             </Container>
         </div>
