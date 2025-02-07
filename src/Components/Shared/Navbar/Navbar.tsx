@@ -122,26 +122,32 @@ const Navbar = () => {
               ))}
             </div>
 
-           
+
 
             <div className="flex items-center gap-6">
-            <div className="relative">
-                <Image src={ICONS.cart} alt="cart-icon" className="size-8" />
-                <div className="size-4 rounded-full bg-primary-20 text-white flex items-center justify-center absolute -top-1 -right-2 text-[9px]">{cartData?.length}</div>
-              </div>
               {pathname !== "/" && (
-                user ? (
-                  <UserDropdown btnStyle={btnStyle} />
-                ) : (
-                  <Link href="/auth/get-started">
-                    <button className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}>
-                      Sign Up / Sign In
-                    </button>
+                <>
+                  <Link href={"/cart"} className="relative">
+                    <Image src={ICONS.cart} alt="cart-icon" className="size-8" />
+                    <div className="size-4 rounded-full bg-primary-20 text-white flex items-center justify-center absolute -top-1 -right-2 text-[9px]">
+                      {cartData?.length}
+                    </div>
                   </Link>
-                )
+
+                  {user ? (
+                    <UserDropdown btnStyle={btnStyle} />
+                  ) : (
+                    <Link href="/auth/get-started">
+                      <button className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}>
+                        Sign Up / Sign In
+                      </button>
+                    </Link>
+                  )}
+                </>
               )}
 
-              
+
+
 
               <Button
                 handleClick={() => setIsContactUsModalOpen(true)}
