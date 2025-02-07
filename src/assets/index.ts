@@ -13,6 +13,7 @@ import certification from "../assets/Images/ist-certificate.png.png";
 
 
 // Services
+import cart from "../assets/Icons/cart.svg";
 import uiUx from "../assets/Icons/ui-ux.svg";
 import appDevelopment from "../assets/Icons/app-development.svg";
 import backendDevelopment from "../assets/Icons/backend-development.svg";
@@ -182,6 +183,7 @@ export const IMAGES = {
 };
 
 export const ICONS = {
+    cart,
     uiUx,
     appDevelopment,
     backendDevelopment,

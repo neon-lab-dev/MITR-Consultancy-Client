@@ -11,6 +11,7 @@ import Link from "next/link";
 import { useSelector } from "react-redux";
 import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
 import UserDropdown from "./UserDropdown";
+import { useCart } from "@/providers/CartProvider/CartProvider";
 
 export type TLoggedInUser = {
   _id: string;
@@ -26,6 +27,7 @@ const Navbar = () => {
   const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { cartData } = useCart();
 
 
   // Handle scroll event to change navbar background
@@ -120,17 +122,27 @@ const Navbar = () => {
               ))}
             </div>
 
-            <div className="flex gap-6">
-              {
-                user ?
+           
+
+            <div className="flex items-center gap-6">
+            <div className="relative">
+                <Image src={ICONS.cart} alt="cart-icon" className="size-8" />
+                <div className="size-4 rounded-full bg-primary-20 text-white flex items-center justify-center absolute -top-1 -right-2 text-[9px]">{cartData?.length}</div>
+              </div>
+              {pathname !== "/" && (
+                user ? (
                   <UserDropdown btnStyle={btnStyle} />
-                  :
-                  <Link href={user ? "/my-profile" : "/auth/get-started"}>
+                ) : (
+                  <Link href="/auth/get-started">
                     <button className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}>
                       Sign Up / Sign In
                     </button>
                   </Link>
-              }
+                )
+              )}
+
+              
+
               <Button
                 handleClick={() => setIsContactUsModalOpen(true)}
                 variant="primary"

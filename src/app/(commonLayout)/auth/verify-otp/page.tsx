@@ -53,7 +53,7 @@ const VerifyOtp = () => {
     const handleVerifyOtp = async (data: FormData) => {
         try {
             const verifyOtpData = {
-                mobileNumber: otpData?.mobileNumber,
+                email: otpData?.email,
                 otp: data.otp,
             };
             const response = await verifyOtp(verifyOtpData).unwrap();
@@ -88,7 +88,7 @@ const VerifyOtp = () => {
         <Container>
             <div className="p-8 bg-white rounded-2xl shadow-course-details font-Inter mt-36 w-full max-w-[650px] mx-auto">
                 <AuthHeading
-                align="center"
+                    align="center"
                     heading="Verify OTP"
                     description="Check your email and verify the OTP to get access."
                 />

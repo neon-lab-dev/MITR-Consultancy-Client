@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { ICONS } from "@/assets";
 import { useCart } from "@/providers/CartProvider/CartProvider";
@@ -7,7 +7,6 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import Button2 from "@/Components/Reusable/Button/Button2";
 import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
-import SuccessWithTick from "@/Components/SuccessWithTick/SuccessWithTick";
 
 type TDetailsCardProps = {
     id: string;
@@ -23,8 +22,11 @@ type TDetailsCardProps = {
 const DetailsCard: React.FC<TDetailsCardProps> = ({ id, image, lessons, rating, name, price, totalEnrolled, duration }) => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
+    const [isLoading2, setIsLoading2] = useState(false);
     const [isAdded, setIsAdded] = useState(false);
-    const { cartData: cartInfo, addCourseToCart } = useCart();
+    console.log(isAdded);
+    const [isRemoved, setIsRemoved] = useState(false);
+    const { cartData: cartInfo, addCourseToCart, removeCourseFromCart } = useCart();
     const isCourseAlreadyInCart = cartInfo?.some((item) => item?._id === id);
 
     const details = [
@@ -72,23 +74,70 @@ const DetailsCard: React.FC<TDetailsCardProps> = ({ id, image, lessons, rating, 
             }
 
             addCourseToCart(cartData);
-            router.push("/cart")
+            toast.success("Programme added to cart!");
+            // router.push("/cart")
             setIsLoading(false);
             setIsAdded(true);
         }, 1000);
     };
 
+    const handleAddToCartAndNavigate = () => {
+        setIsLoading2(true);
+        setIsAdded(false);
+        const cartData = {
+            _id: id,
+            name: name,
+            image: image,
+            rating: rating,
+            lessons: lessons,
+            duration: duration,
+            price: price,
+        };
+
+        if (isCourseAlreadyInCart) {
+            router.push("/cart");
+            return;
+        }
+
+        addCourseToCart(cartData);
+        router.push("/cart");
+        setIsLoading2(false);
+        setIsAdded(true);
+    };
+
+    const handleRemoveCourseFromCart = () => {
+        setIsLoading(true);
+        setTimeout(() => {
+            removeCourseFromCart(id);
+            setIsRemoved(true);
+            setIsLoading(false);
+        }, 1000);
+    };
     return (
         <div className="bg-white px-4 py-7 w-full max-w-[395px] h-[508px] mt-20 flex flex-col gap-[22px] shadow-course-details">
             <h1 className="text-neutral-45 text-xl md:text-[36px] font-bold leading-normal">
                 ₹{price}
             </h1>
             <div className="flex flex-col gap-4">
-                <Button2 handleClick={handleAddCourseToCart} variant="primary" title="Add to Cart" classNames="w-full font-normal">
-                    {
-                        isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : isAdded || isCourseAlreadyInCart ? <SuccessWithTick message="Added" /> : "Add to Cart"}
+                <Button2
+                    handleClick={isRemoved || !isCourseAlreadyInCart ? handleAddCourseToCart : handleRemoveCourseFromCart}
+                    variant="primary"
+                    title=""
+                    classNames="w-full font-normal"
+                >
+                    {isLoading ? (
+                        <LoadingSpinner fontSize="text-[15px]" />
+                    ) : isRemoved || !isCourseAlreadyInCart ? (
+                        "Add to Cart"
+                    ) : (
+                        "Remove"
+                    )}
                 </Button2>
-                <button className="border px-6 py-3 font-Inter text-lg font-medium rounded border-primary-20 text-primary-20 w-full">Buy Now</button>
+                <button onClick={handleAddToCartAndNavigate} className="border px-6 py-3 font-Inter text-lg font-medium rounded border-primary-20 text-primary-20 w-full">
+                    {
+                        isLoading2 ? "Loading..." : "Buy Now"
+                    }
+                </button>
             </div>
             <div className="bg-neutral-65 w-full h-[1px]"></div>
 
