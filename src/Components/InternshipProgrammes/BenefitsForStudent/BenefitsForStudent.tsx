@@ -5,29 +5,29 @@ import Image from "next/image";
 const BenefitsForStudent = () => {
     const benefitsForStudents = [
         {
-            title : "AI-driven practice interviews",
-            description : "Elevate your resume and get personalized 1:1 resume vetting sessions."
+            title: "Learn from the experts",
+            description: "Follow a well-designed roadmap created by experts to enhance your skills and stay ahead in your field."
         },
         {
-            title : "AI-driven practice interviews",
-            description : "Elevate your resume and get personalized 1:1 resume vetting sessions."
+            title: "Comprehensive career guidance",
+            description: "Receive expert advice on job search strategies, career growth, and interview techniques."
         },
         {
-            title : "AI-driven practice interviews",
-            description : "Elevate your resume and get personalized 1:1 resume vetting sessions."
+            title: "Personalized learning pathways",
+            description: "Access curated learning resources and skill assessments tailored to your career goals."
         },
         {
-            title : "AI-driven practice interviews",
-            description : "Elevate your resume and get personalized 1:1 resume vetting sessions."
+            title: "Real-world project experience",
+            description: "Work on industry-level projects to build a strong portfolio and gain practical experience."
         },
     ];
-    
+
     return (
         <div className="font-Inter py-[60px] md:py-20 xl:py-[98px] bg-primary-40">
             <Container>
-                <div className="flex flex-col xl:flex-row items-center gap-8">
+                <div className="flex flex-col lg:flex-row items-center gap-8">
                     <div>
-                        <h1 className="text-neutral-10 text-[36px] font-bold leading-[57px] capitalize">Benefits for Students</h1>
+                        <h1 className="section-heading text-center xl:text-start">Benefits for Students</h1>
                         <div className="flex flex-col gap-5 mt-9">
                             {
                                 benefitsForStudents?.map((benefit) =>
