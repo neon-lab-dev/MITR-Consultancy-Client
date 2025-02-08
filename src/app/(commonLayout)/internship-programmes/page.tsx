@@ -17,7 +17,7 @@ const InternshipProgrammes = () => {
             <KeyTechnologies/>
             <Tools/>
             <ProgramHighlights/>
-            {/* <LearningOutcomes/> */}
+            <LearningOutcomes/>
             {/* <BenefitsForStudent/> */}
             {/* <FAQ/> */}
         </div>

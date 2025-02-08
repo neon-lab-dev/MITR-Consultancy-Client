@@ -17,22 +17,22 @@ const LearningOutcomes = () => {
             icon: ICONS.realWorldProject,
             description: "Preparedness for industry roles."
         },
-    ]
+    ];
+
     return (
         <Container>
-            <div className='font-Inter py-[60px] md:py-20 xl:py-[98px] flex flex-col-reverse lg:flex-row items-center gap-6'>
+            <div className='font-Inter py-[60px] md:py-20 xl:py-[98px] flex flex-col xl:flex-row items-center gap-6'>
                 <div>
-                <h1 className="text-neutral-10 text-2xl font-bold leading-8 capitalize">What Will You get from the Training</h1>
-                <p className="text-neutral-55 font-medium leading-6 mt-[18px]">With a curriculum designed and taught by industry experts, you will get the skills
-                    and mentorship for guaranteed success.</p>
+                    <h1 className="section-heading text-center xl:text-start">What Will You get from the Training</h1>
+                    <p className="text-neutral-55 text-sm md:text-base font-medium leading-6 mt-[18px] text-center xl:text-start">With a curriculum designed and taught by industry experts, you will get the skills and mentorship for guaranteed success.</p>
 
-                <div className="mt-[34px] grid grid-cols-1 md:grid-cols-3 gap-5">
-                    {
-                        learningOutcomes?.map((outcome, index: number) =>
-                            <LearningOutcomeCard key={index} {...outcome} />
-                        )
-                    }
-                </div>
+                    <div className="mt-[34px] grid grid-cols-1 md:grid-cols-3 gap-5">
+                        {
+                            learningOutcomes?.map((outcome, index: number) =>
+                                <LearningOutcomeCard key={index} {...outcome} />
+                            )
+                        }
+                    </div>
                 </div>
                 <Image src={IMAGES.learningOutcomes} alt="MITR Consultancy" className="" />
             </div>
