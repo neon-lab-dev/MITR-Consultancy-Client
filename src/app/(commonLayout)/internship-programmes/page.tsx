@@ -15,7 +15,7 @@ const InternshipProgrammes = () => {
             <StartTraining/>
             <PurposeOfProgramme/>
             <KeyTechnologies/>
-            {/* <Tools/> */}
+            <Tools/>
             {/* <ProgramHighlights/> */}
             {/* <LearningOutcomes/> */}
             {/* <BenefitsForStudent/> */}
