@@ -25,9 +25,9 @@ const KeyTechnologies = () => {
     
     return (
         <Container>
-            <div className='font-Inter py-[60px] md:py-20 xl:py-[98px]'>
-                <h1 className="text-neutral-10 text-[36px] font-bold leading-[57px] capitalize text-center"> Key Technologies Covered</h1>
-                <div className='mt-[72px] grid grid-cols-2 md:grid-cols-3 gap-[52px]'>
+            <div className='font-Inter py-[60px] md:py-20 xl:py-[98px] flex flex-col gap-[26px] md:gap-12 lg:gap-[72px]'>
+                <h1 className="section-heading"> Key Technologies Covered</h1>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] lg:gap-[52px]'>
                     {/* Technology card */}
                     {
                         technologies?.map(technology => 
