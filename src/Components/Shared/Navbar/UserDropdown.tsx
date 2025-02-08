@@ -9,8 +9,6 @@ import { logout, useCurrentUser } from "@/redux/Features/Auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { TLoggedInUser } from "./Navbar";
 
-
-
 const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
     const user = useSelector(useCurrentUser) as TLoggedInUser;
     const dispatch = useDispatch();
@@ -58,7 +56,7 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
       };
 
     return (
-        <div ref={dropDownRef} className="relative w-fit">
+        <div ref={dropDownRef} className="relative w-fit hidden md:block">
             <button
                 onClick={() => setOpen((prev) => !prev)}
                 className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center flex items-center gap-2 ${btnStyle}`}>

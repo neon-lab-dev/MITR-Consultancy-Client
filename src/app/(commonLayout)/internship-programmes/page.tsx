@@ -14,12 +14,12 @@ const InternshipProgrammes = () => {
             <InternshipProgrammesHero/>
             <StartTraining/>
             <PurposeOfProgramme/>
-            <KeyTechnologies/>
+            {/* <KeyTechnologies/>
             <Tools/>
             <ProgramHighlights/>
             <LearningOutcomes/>
             <BenefitsForStudent/>
-            <FAQ/>
+            <FAQ/> */}
         </div>
     );
 };
