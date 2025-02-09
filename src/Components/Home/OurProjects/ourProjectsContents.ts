@@ -43,11 +43,11 @@ export const ourProjectsContent = [
     },
     {
         _id: "7",
-        projectName: "Career Hub",
+        projectName: "MeDHr+",
         description:
-            "Career Hub is a comprehensive platform designed to help job seekers and recruiters connect efficiently. It provides tools for job postings, candidate searches, and career development resources.",
+            "MeDHr+ is a comprehensive platform designed to help job seekers and recruiters connect efficiently. It provides tools for job postings, candidate searches, and career development resources.",
         image: IMAGES.careerHub,
-        liveLink: "https://career-hub-pi.vercel.app/",
+        liveLink: "http://medhr.netlify.app/",
     },
     {
         _id: "8",

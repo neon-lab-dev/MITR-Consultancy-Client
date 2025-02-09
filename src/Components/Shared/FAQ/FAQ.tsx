@@ -62,7 +62,7 @@ const FAQ = () => {
             heading="Find the answers you need"
           />
 
-          <div className="flex gap-6 flex-col items-center justify-center w-full mt-20">
+          <div className="flex gap-6 flex-col items-center justify-center w-full mt-9 md:mt-10 xl:mt-20">
             {faqs.map((faq, index) => (
               <article
                 key={index}
