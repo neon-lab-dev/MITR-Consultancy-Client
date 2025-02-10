@@ -1,10 +1,15 @@
 "use client"
 import { IMAGES } from "@/assets";
+import { logout } from "@/redux/Features/Auth/authSlice";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { toast } from "sonner";
 
 const DashboardSidebar = () => {
+    const dispatch = useDispatch();
+    const router = useRouter();
     const pathname = usePathname();
     const isActive = (path: string): boolean => pathname === path;
 
@@ -13,6 +18,24 @@ const DashboardSidebar = () => {
         { name: "All Users", link: "/admin/all-users" },
         { name: "Programmes", link: "/admin/programmes" },
     ];
+
+    const handleLogout = async () => {
+        try {
+          const response = await fetch(
+            "https://mitr-backend.vercel.app/api/v1/logout"
+          );
+    
+          if (response.ok) {
+            dispatch(logout());
+            toast.success(`See you again!!`);
+            router.push("/auth/get-started");
+          } else {
+            toast.error("Logout failed");
+          }
+        } catch {
+          toast.error("Failed to log out. Please try again.");
+        }
+      };
     return (
         <div className="w-60 min-w-60 h-screen py-6 font-Inter flex flex-col justify-between sticky left-0 top-0 bg-neutral-45">
             <div>
@@ -40,7 +63,7 @@ const DashboardSidebar = () => {
                 </div>
             </div>
             <div className="px-4">
-            <button className="bg-primary-20 hover:bg-primary-10/90 py-[10px] px-4 text-white text-sm leading-5 font-semibold w-full rounded-lg text-center flex items-center gap-2 justify-center">
+            <button onClick={handleLogout} className="bg-primary-20 hover:bg-primary-10/90 py-[10px] px-4 text-white text-sm leading-5 font-semibold w-full rounded-lg text-center flex items-center gap-2 justify-center">
                 {/* <Image src={ICONS.logout} alt="logout-icon" className="size-[18px]" /> */}
                 Logout
             </button>
