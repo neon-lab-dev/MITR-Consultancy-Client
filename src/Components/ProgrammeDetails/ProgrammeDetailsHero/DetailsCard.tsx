@@ -114,7 +114,7 @@ const DetailsCard: React.FC<TDetailsCardProps> = ({ id, image, lessons, rating, 
         }, 1000);
     };
     return (
-        <div className="bg-white px-4 py-7 w-full max-w-[395px] h-[508px] mt-20 hidden xl:flex flex-col gap-[22px] shadow-course-details">
+        <div className="bg-white px-4 py-7 w-full max-w-[395px] h-[508px] mt-20 hidden xl:flex flex-col gap-[22px] shadow-course-details rounded-2xl">
             <h1 className="text-neutral-45 text-xl md:text-[36px] font-bold leading-normal">
                 ₹{price}
             </h1>

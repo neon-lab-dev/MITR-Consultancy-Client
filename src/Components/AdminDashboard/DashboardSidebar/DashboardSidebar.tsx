@@ -36,6 +36,7 @@ const DashboardSidebar = () => {
           toast.error("Failed to log out. Please try again.");
         }
       };
+      
     return (
         <div className="w-60 min-w-60 h-screen py-6 font-Inter flex flex-col justify-between sticky left-0 top-0 bg-neutral-45">
             <div>
