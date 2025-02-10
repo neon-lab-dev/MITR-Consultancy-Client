@@ -7,7 +7,7 @@ import Container from "@/Components/Shared/Container/Container";
 import { useCart } from "@/providers/CartProvider/CartProvider";
 
 const Cart = () => {
-     const { cartData } = useCart();
+    const { cartData } = useCart();
     return (
         <Container>
             <div className="font-Inter mt-36">
@@ -18,14 +18,13 @@ const Cart = () => {
                     {cartData?.length} Items in your Cart
                 </h2>
 
-                <div className="flex flex-col xl:flex-row gap-6 mt-8">
+                <div className="flex flex-col lg:flex-row gap-6 mt-8">
                     <div className="flex flex-col gap-8 w-full lg:w-[70%]">
-
-                    {
-                        cartData?.map(data => 
-                            <CartItem key={data?._id} {...data} />
-                        )
-                    }
+                        {
+                            cartData?.map(data =>
+                                <CartItem key={data?._id} {...data} />
+                            )
+                        }
                     </div>
                     <ProceedToPay cartTotal={cartData} />
                 </div>

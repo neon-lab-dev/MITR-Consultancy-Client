@@ -33,7 +33,7 @@ const CartItem: React.FC<TCartItemProps> = ({
           height={116}
         />
         <div className="flex flex-col gap-2">
-          <h1 className="text-neutral-45 font-semibold leading-[25px] w-full max-w-[377px]">
+          <h1 className="text-neutral-45 font-semibold text-sm sm:text-base leading-[25px] w-full max-w-[377px]">
             {name}
           </h1>
           <div className="flex items-center gap-2">
@@ -70,19 +70,19 @@ const CartItem: React.FC<TCartItemProps> = ({
                 {duration}
               </p>
             </div>
-            
+
           </div>
           <div className="md:hidden  flex flex-row md:flex-col xl:flex-row items-stretch md:items-center gap-10">
-              <h2 className="text-neutral-45 text-2xl font-semibold leading-9">
-                ₹{price}
-              </h2>
-              <button
-                onClick={() => removeCourseFromCart(_id)}
-                className="text-rose-500 font-semibold leading-[25px]"
-              >
-                Remove
-              </button>
-            </div>
+            <h2 className="text-neutral-45 text-base md:text-2xl font-semibold leading-9">
+              ₹{price}
+            </h2>
+            <button
+              onClick={() => removeCourseFromCart(_id)}
+              className="text-rose-500 font-semibold leading-[25px] text-sm sm:text-base"
+            >
+              Remove
+            </button>
+          </div>
         </div>
       </div>
 
