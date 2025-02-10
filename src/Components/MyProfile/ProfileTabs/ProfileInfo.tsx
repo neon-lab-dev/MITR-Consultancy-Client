@@ -148,7 +148,7 @@ const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
                 !myProfile && <p className="text-orange-500 text-sm mt-2">Setup your profile now</p>
             }
             <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
-                <div className="flex items-center gap-[30px] w-full">
+                <div className="flex flex-col md:flex-row items-center gap-[30px] w-full">
                     <TextInput
                         label="Full Name"
                         placeholder="Enter Full Name"
@@ -166,7 +166,7 @@ const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
                                                 isDisabled={!(isEditEnabled || isNewUser)}
                     />
                 </div>
-                <div className="flex items-center gap-[30px]">
+                <div className="flex flex-col md:flex-row items-center gap-[30px]">
                     <TextInput
                         label="Phone"
                         placeholder="Enter Phone Number"
@@ -192,7 +192,7 @@ const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
                                                 isDisabled={!(isEditEnabled || isNewUser)}
                     />
                 </div>
-                <div className="flex items-center gap-7">
+                <div className="flex flex-col md:flex-row items-center gap-7">
                     <TextInput
                         label="State / Zone"
                         placeholder="Enter State / Zone"
@@ -234,7 +234,7 @@ const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
                     {...register("education.0.degree", { required: "Degree is required" })}
                                             isDisabled={!(isEditEnabled || isNewUser)}
                 />
-                <div className="flex items-center gap-[30px] w-full">
+                <div className="flex flex-col md:flex-row items-center gap-[30px] w-full">
                     <TextInput
                         label="Branch"
                         placeholder="Enter Last Name"
@@ -252,7 +252,7 @@ const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
                                                 isDisabled={!(isEditEnabled || isNewUser)}
                     />
                 </div>
-                <div className="flex items-center gap-[30px]">
+                <div className="flex flex-col md:flex-row items-center gap-[30px]">
                     <TextInput
                         label="Current Year"
                         placeholder="ex- 3rd"

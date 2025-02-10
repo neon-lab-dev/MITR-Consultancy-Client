@@ -13,7 +13,7 @@ const MyProfile = () => {
         <div className="">
             <MyProfileHero name={data?.user?.full_name} />
             <Container>
-                <div className="flex gap-10 relative">
+                <div className="flex flex-col lg:flex-row gap-10 relative">
                     <ProfileInfoCard
                     name={data?.user?.full_name}
                     location={`${data?.user?.city ? data?.user?.city : "Your"}, ${data?.user?.country ? data?.user?.country : "Location"}`}
@@ -22,7 +22,7 @@ const MyProfile = () => {
                     isEditEnabled={isEditEnabled} 
                     setIsEditEnabled={setIsEditEnabled}
                     />
-                    <div className="w-full lg:w-[25%]"></div>
+                    <div className="hidden lg:block w-full lg:w-[30%] xl:w-[25%]"></div>
                     <ProfileTabs isEditEnabled={isEditEnabled} setIsEditEnabled={setIsEditEnabled} />
                 </div>
             </Container>
