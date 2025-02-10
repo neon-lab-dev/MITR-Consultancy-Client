@@ -36,7 +36,7 @@ const ProgrammeDetailsHero : React.FC<TProgrammeDetailsHero> = ({_id, poster, le
             </div>
             {/* Content */}
             <Container>
-                <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center xl:items-start justify-center flex-col text-center xl:text-start py-10 md:py-16 xl:py-24 w-full max-w-full xl:max-w-[1300px] mx-auto">
+                <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center xl:items-start justify-center flex-col text-center xl:text-start py-10 md:py-16 xl:py-24 2xl:py-5 w-full max-w-full xl:max-w-[1300px] mx-auto h-full 2xl:h-fit">
                     <div className="flex flex-col xl:flex-row items-center justify-between w-fit xl:w-full">
                         <div className="relative w-full">
                             <h1 className="text-white text-xl md:text-[36px] font-bold max-w-[344px] md:max-w-full lg:max-w-[900px] mx-auto xl:mx-0 xl:max-w-[660px] leading-normal text-center xl:text-start">
