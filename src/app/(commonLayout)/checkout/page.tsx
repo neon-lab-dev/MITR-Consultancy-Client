@@ -14,9 +14,9 @@ const Checkout = () => {
                 Checkout
                 </h1>
                 
-                <div className="flex gap-6 mt-8">
+                <div className="flex gap-6 mt-8">              
                     <BillingInfoForm/>
-                    <div className="flex flex-col gap-[30px] w-full xl:w-[35%] mt-[60px]">
+                    <div className="xl:flex flex-col gap-[30px] w-full xl:w-[35%] mt-[60px] hidden">
                         <OrderDetails cartData={cartData}/>
                         <BillingDetails cartData={cartData} />
                     </div>

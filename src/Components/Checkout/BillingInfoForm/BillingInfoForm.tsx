@@ -2,11 +2,15 @@
 "use client"
 import TextInput from "@/Components/Reusable/TextInput/TextInput";
 import { useForm } from "react-hook-form";
+import OrderDetails from "../OrderDetails/OrderDetails";
+import { useCart } from "@/providers/CartProvider/CartProvider";
+import BillingDetails from "../BillingDetails/BillingDetails";
 
 // type TBillingFormData = {
 
 // }
 const BillingInfoForm = () => {
+    const { cartData } = useCart();
     const {
         register,
         handleSubmit,
@@ -21,11 +25,13 @@ const BillingInfoForm = () => {
         <div className="w-full xl:w-[65%]">
             <form onSubmit={handleSubmit(handleCheckout)}>
                 {/* Billing Address Info */}
-                <h2 className="text-neutral-45 text-2xl font-semibold leading-9">
+                <h2 className="text-neutral-45 text-base md:text-2xl font-semibold leading-9">
                     Billing Address
                 </h2>
+                <div className="xl:hidden">
+                <OrderDetails cartData={cartData}/></div>
                 <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
-                    <div className="flex items-center gap-[30px] w-full">
+                    <div className="flex flex-col md:flex-row items-center w-full gap-9 md:gap-[30px]">
                     <TextInput
                         label="Full Name"
                         placeholder="Enter Your Full Name"
@@ -41,7 +47,7 @@ const BillingInfoForm = () => {
                         {...register("email", { required: "Email is required" })}
                     />
                     </div>
-                    <div className="flex items-center gap-[30px]">
+                    <div className="flex flex-col md:flex-row items-center w-full gap-9 md:gap-[30px]">
                     <TextInput
                         label="Country"
                         placeholder="Enter Country Name"
@@ -57,7 +63,7 @@ const BillingInfoForm = () => {
                         {...register("streetAddress", { required: "Street address is required" })}
                     />
                     </div>
-                    <div className="flex items-center gap-7">
+                    <div className="flex flex-col md:flex-row items-center w-full gap-9 md:gap-[30px]">
                     <TextInput
                         label="Town / City"
                         placeholder="Enter Town / City"
@@ -93,7 +99,7 @@ const BillingInfoForm = () => {
                 </div>
 
                 {/* Educational Info */}
-                <h2 className="text-neutral-45 text-2xl font-semibold leading-9 mt-8">
+                <h2 className="text-neutral-45 text-base md:text-2xl font-semibold leading-9 mt-8">
                 Educational Information
                 </h2>
                 <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
@@ -111,7 +117,7 @@ const BillingInfoForm = () => {
                         error={errors.degree}
                         {...register("degree", { required: "Degree is required" })}
                     />
-                    <div className="flex items-center gap-[30px] w-full">
+                    <div className="flex flex-col md:flex-row items-center gap-9 md:gap-[30px] w-full">
                     <TextInput
                         label="Branch"
                         placeholder="Enter Last Name"
@@ -127,7 +133,7 @@ const BillingInfoForm = () => {
                         {...register("semester", { required: "semester is required" })}
                     />
                     </div>
-                    <div className="flex items-center gap-[30px]">
+                    <div className="flex flex-col md:flex-row items-center gap-9 md:gap-[30px]">
                     <TextInput
                         label="Current Year"
                         placeholder="ex- 3rd"
@@ -144,6 +150,8 @@ const BillingInfoForm = () => {
                     />
                     </div>
                 </div>
+                <div className="xl:hidden">
+                <BillingDetails cartData={cartData} /></div>
             </form>
         </div>
     );
