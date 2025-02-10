@@ -19,7 +19,7 @@ type TDetailsCardProps = {
     duration: string;
 }
 
-const DetailsCard: React.FC<TDetailsCardProps> = ({ id, image, lessons, rating, name, price, totalEnrolled, duration }) => {
+const DetailsCardSm: React.FC<TDetailsCardProps> = ({ id, image, lessons, rating, name, price, totalEnrolled, duration }) => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     const [isLoading2, setIsLoading2] = useState(false);
@@ -114,11 +114,11 @@ const DetailsCard: React.FC<TDetailsCardProps> = ({ id, image, lessons, rating, 
         }, 1000);
     };
     return (
-        <div className="bg-white px-4 py-7 w-full max-w-[395px] h-[508px] mt-20 hidden xl:flex flex-col gap-[22px] shadow-course-details">
+        <div className="bg-white px-4 py-7 w-full h-[508px] md:h-[345px] mt-20 flex flex-col xl:hidden gap-[22px] shadow-course-details">
             <h1 className="text-neutral-45 text-xl md:text-[36px] font-bold leading-normal">
                 ₹{price}
             </h1>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
                 <Button2
                     handleClick={isRemoved || !isCourseAlreadyInCart ? handleAddCourseToCart : handleRemoveCourseFromCart}
                     variant="primary"
@@ -141,7 +141,7 @@ const DetailsCard: React.FC<TDetailsCardProps> = ({ id, image, lessons, rating, 
             </div>
             <div className="bg-neutral-65 w-full h-[1px]"></div>
 
-            <div className="flex flex-col gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
                 {
                     details?.map(item =>
                         <div key={item?.title} className="flex items-center justify-between">
@@ -158,4 +158,4 @@ const DetailsCard: React.FC<TDetailsCardProps> = ({ id, image, lessons, rating, 
     );
 };
 
-export default DetailsCard;
+export default DetailsCardSm;
