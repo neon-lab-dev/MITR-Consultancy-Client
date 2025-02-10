@@ -14,7 +14,7 @@ const ProgrammeStructure = ({ phases }: { phases: any[] }) => {
 
     return (
         <div className="mt-[64px]">
-            <h1 className="text-neutral-10 text-[30px] font-semibold leading-[48px]">Program Structure</h1>
+            <h1 className="details-section-heading">Program Structure</h1>
             {/* Phases */}
             <div className="flex flex-col gap-6">
                 {/* Phases */}
@@ -22,7 +22,7 @@ const ProgrammeStructure = ({ phases }: { phases: any[] }) => {
                     phases?.map((phase, index) =>
                         <div key={phase?._id} className="flex flex-col gap-6 mt-[30px]">
                             {/* Phase title */}
-                            <h1 className="text-neutral-10 text-[28px] leading-[48px]"><span className="font-bold">Phase {index + 1}</span> : {phase?.title}</h1>
+                            <h1 className="details-section-subHeading md:text-2xl"><span className="font-bold">Phase {index + 1}</span> : {phase?.title}</h1>
                             {/* Modules */}
                             {
                                 phase?.modules?.map((module:any) =>
@@ -42,11 +42,11 @@ const ProgrammeStructure = ({ phases }: { phases: any[] }) => {
                                                             "rotate-[180deg]"
                                                             }`}
                                                     />
-                                                    <h2 className={`font-medium leading-6 ${isAccordingOpen === module?._id ? "text-white" : "text-black"}`}>
+                                                    <h2 className={`text-sm md:text-base font-medium leading-6 ${isAccordingOpen === module?._id ? "text-white" : "text-black"}`}>
                                                         {module?.title}
                                                     </h2>
                                                 </div>
-                                                <h2 className={`font-medium text-xl leading-8 pr-3 ${isAccordingOpen === module?._id ? "text-white" : "text-neutral-90"}`}>
+                                                <h2 className={`text-sm md:text-base font-medium  leading-8 pr-3 ${isAccordingOpen === module?._id ? "text-white" : "text-neutral-90"}`}>
                                                     {module?.duration}
                                                 </h2>
                                             </div>
@@ -67,7 +67,7 @@ const ProgrammeStructure = ({ phases }: { phases: any[] }) => {
                                                                         <br />
                                                                         {
                                                                             topic?.contents?.map((content: string, index: number) => (
-                                                                                <p key={content} className="ml-7 font-normal">
+                                                                                <p key={content} className="details-section-paragraph ml-7 font-normal">
                                                                                     {String.fromCharCode(97 + index)}. {content}
                                                                                 </p>
                                                                             ))

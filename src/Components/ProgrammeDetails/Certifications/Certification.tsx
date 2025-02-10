@@ -4,8 +4,8 @@ import Image from "next/image";
 const Certification = () => {
     return (
         <div className="font-Inter flex flex-col gap-4 mt-20">
-            <h1 className="text-neutral-10 text-[30px] font-semibold leading-[48px]">Certification</h1>
-            <p className="text-neutral-90 text-sm w-full max-w-[832px]">Upon successful completion of the program, you will receive a Full Stack Development Placement Guarantee Course certificate from MITR Consultency.</p>
+            <h1 className="details-section-heading">Certification</h1>
+            <p className="details-section-paragraph w-full max-w-[832px]">Upon successful completion of the program, you will receive a Full Stack Development Placement Guarantee Course certificate from MITR Consultency.</p>
             <Image src={IMAGES.certification} alt="certificate-MITR Consultancy" className="w-full md:w-[371px] h-[265px]" />
         </div>
     );

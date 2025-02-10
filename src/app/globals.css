@@ -8,6 +8,16 @@
   @apply text-neutral-10 text-lg md:text-2xl lg:text-[36px] text-center font-bold leading-[28px] md:leading-[38px] lg:leading-[57px] capitalize
 }
 
+.details-section-heading {
+  @apply text-neutral-10 text-lg md:text-2xl xl:text-[30px] font-semibold leading-normal xl:leading-[48px]
+}
+.details-section-subHeading {
+  @apply text-neutral-90 text-sm md:text-base xl:text-xl font-semibold leading-normal xl:leading-8
+}
+.details-section-paragraph {
+  @apply text-neutral-90 font-semibold text-xs md:text-sm leading-6
+}
+
 
 ::-webkit-scrollbar {
     width: 6px; /* Set the width of the scrollbar */
