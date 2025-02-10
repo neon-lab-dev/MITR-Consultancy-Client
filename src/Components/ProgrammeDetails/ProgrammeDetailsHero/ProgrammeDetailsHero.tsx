@@ -51,7 +51,9 @@ const ProgrammeDetailsHero : React.FC<TProgrammeDetailsHero> = ({_id, poster, le
                     </div>
                 </div>
             </Container>
+            <div className="px-5 md:px-7s">
             <DetailsCardSm id={_id} name={courseName} image={poster?.url} rating={rating} price={price} duration={duration} lessons={lessons} totalEnrolled={totalEnrolled} />
+            </div>
         </div>
     );
 };
