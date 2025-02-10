@@ -8,10 +8,10 @@ const OrderDetails = ({ cartData } : {cartData:TProceedToPayProps[]}) => {
             <div className="flex flex-col gap-5">
                 {
                     cartData?.map((data) =>
-                        <div key={data?._id} className="flex items-center justify-between gap-5 border-b border-neutral-100 pb-[17px]">
+                        <div key={data?._id} className="flex  items-center justify-between gap-5 border-b border-neutral-100 pb-[17px]">
                             <div className="flex items-center gap-[14px]">
                                 <Image src={data?.image} alt="lessons" className="rounded-lg size-[95px]" width={95} height={95} />
-                                <h1 className="text-neutral-45 text-xs md:text-base font-semibold leading-[25px] text-sm">{data?.name}</h1>
+                                <h1 className="text-neutral-45 text-xs md:text-base font-semibold leading-[25px]">{data?.name}</h1>
 
                             </div>
                             <h2 className="text-neutral-105 text-base md:text-xl font-semibold leading-8">

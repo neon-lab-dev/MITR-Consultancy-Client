@@ -14,8 +14,8 @@ const Cart = () => {
                 <h1 className="text-neutral-45 text-xl md:text-[36px] font-bold leading-normal">
                     Programmes You've Added
                 </h1>
-                <h2 className="text-neutral-45 text-lg md:text-2xl font-semibold leading-9 mt-[14px]">
-                    {cartData?.length} Items in your Cart
+                <h2 className="text-neutral-45 text-lg md:text-2xl font-semibold leading-9 mt-[14px] capitalize">
+                    {cartData?.length} items in your cart
                 </h2>
 
                 <div className="flex flex-col lg:flex-row gap-6 mt-8">

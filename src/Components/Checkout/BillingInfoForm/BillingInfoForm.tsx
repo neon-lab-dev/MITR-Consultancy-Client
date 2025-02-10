@@ -22,13 +22,13 @@ const BillingInfoForm = () => {
     };
     
     return (
-        <div className="w-full xl:w-[65%]">
+        <div className="w-full lg:w-[65%]">
             <form onSubmit={handleSubmit(handleCheckout)}>
                 {/* Billing Address Info */}
                 <h2 className="text-neutral-45 text-base md:text-2xl font-semibold leading-9">
                     Billing Address
                 </h2>
-                <div className="xl:hidden">
+                <div className="lg:hidden mt-5">
                 <OrderDetails cartData={cartData}/></div>
                 <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
                     <div className="flex flex-col md:flex-row items-center w-full gap-9 md:gap-[30px]">
