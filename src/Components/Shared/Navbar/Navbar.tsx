@@ -122,8 +122,6 @@ const Navbar = () => {
               ))}
             </div>
 
-
-
             <div className="flex items-center gap-6">
               {pathname !== "/" && (
                 <>
@@ -137,7 +135,7 @@ const Navbar = () => {
                   {user ? (
                     <UserDropdown btnStyle={btnStyle} />
                   ) : (
-                    <Link href="/auth/get-started">
+                    <Link href="/auth/get-started" className="hidden md:block">
                       <button className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}>
                         Sign Up / Sign In
                       </button>

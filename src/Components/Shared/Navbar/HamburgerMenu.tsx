@@ -1,9 +1,12 @@
 import { IMAGES } from "@/assets";
 import Button from "@/Components/Reusable/Button/Button";
+import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
+import { TLoggedInUser } from "./Navbar";
 
 interface HamburgerMenuProps {
   isSidebarOpen: boolean;
@@ -16,6 +19,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
   setIsSidebarOpen,
   setIsContactUsModalOpen,
 }) => {
+  const user = useSelector(useCurrentUser) as TLoggedInUser;
   const router = useRouter();
   const pathname = usePathname();
   const sidebarRef = useRef<HTMLDivElement>(null);
@@ -78,9 +82,8 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
       {/* Sidebar */}
       <div
         ref={sidebarRef}
-        className={`fixed top-0 right-0 h-full w-2/3 max-w-[250px] bg-neutral-40 text-white z-50 shadow-lg transform transition-transform duration-500 ${
-          isSidebarOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full w-2/3 max-w-[250px] bg-neutral-40 text-white z-50 shadow-lg transform transition-transform duration-500 ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex flex-col h-full">
           <div className="flex justify-between p-4">
@@ -119,7 +122,15 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
             )}
           </div>
 
-          <div className="mt-auto p-4">
+          <div className="mt-auto p-4 flex flex-col gap-3">
+            {
+              !user && 
+              <Link href="/auth/get-started">
+            <button className={`border px-6 w-full h-[36px] font-Inter text-sm md:text-lg font-medium rounded justify-center`}>
+              Sign Up / Sign In
+            </button>
+            </Link>
+            }
             <Button
               handleClick={() => {
                 setIsContactUsModalOpen(true);

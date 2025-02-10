@@ -25,7 +25,7 @@ const ProgrammeStructure = ({ phases }: { phases: any[] }) => {
                             <h1 className="details-section-subHeading md:text-2xl"><span className="font-bold">Phase {index + 1}</span> : {phase?.title}</h1>
                             {/* Modules */}
                             {
-                                phase?.modules?.map((module:any) =>
+                                phase?.modules?.map((module: any) =>
                                     <div key={module?._id} className="flex gap-3 flex-col w-full">
                                         <article
                                             className={`shadow-course-details bg-white`}
@@ -42,7 +42,7 @@ const ProgrammeStructure = ({ phases }: { phases: any[] }) => {
                                                             "rotate-[180deg]"
                                                             }`}
                                                     />
-                                                    <h2 className={`text-sm md:text-base font-medium leading-6 ${isAccordingOpen === module?._id ? "text-white" : "text-black"}`}>
+                                                    <h2 className={`text-xs md:text-base font-medium leading-6 ${isAccordingOpen === module?._id ? "text-white" : "text-black"}`}>
                                                         {module?.title}
                                                     </h2>
                                                 </div>
