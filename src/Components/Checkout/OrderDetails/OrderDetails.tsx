@@ -14,7 +14,7 @@ const OrderDetails = ({ cartData } : {cartData:TProceedToPayProps[]}) => {
                                 <h1 className="text-neutral-45 text-xs md:text-base font-semibold leading-[25px] text-sm">{data?.name}</h1>
 
                             </div>
-                            <h2 className="text-neutral-105 text-xl font-semibold leading-8">
+                            <h2 className="text-neutral-105 text-base md:text-xl font-semibold leading-8">
                                 ₹{data?.price}
                             </h2>
                         </div>
