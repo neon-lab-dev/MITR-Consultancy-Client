@@ -2,19 +2,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import Table from "@/Components/Reusable/Table/Table";
+import { useGetAllUserQuery } from "@/redux/Features/Admin/adminApi";
 
 const AllUsers = () => {
+  const {data:allUsers} = useGetAllUserQuery({});
+  console.log(allUsers);
     const columns = [
         { key: "id", label: "ID" },
-        { key: "name", label: "Name" },
+        { key: "full_name", label: "Name" },
         { key: "email", label: "Email" },
-        { key: "phone", label: "Phone" },
         { key: "country", label: "Country" },
-      ];
-      
-      const data = [
-        { id: 1, name: "John Doe", email: "john@example.com", phone: "01608249337", country: "Bangladesh" },
-        { id: 1, name: "John Doe", email: "john@example.com", phone: "01608249337", country: "Bangladesh" },
+        { key: "role", label: "Role" },
       ];
       
       const actions = [
@@ -24,8 +22,7 @@ const AllUsers = () => {
       
     return (
         <div>
-             
-            <Table columns={columns} data={data} actions={actions} />
+            <Table columns={columns} data={allUsers?.users} actions={actions} />
         </div>
     );
 };
