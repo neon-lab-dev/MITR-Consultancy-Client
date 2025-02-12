@@ -41,13 +41,13 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
           const response = await fetch(
             "https://mitr-backend.vercel.app/api/v1/logout"
           );
+          console.log(response);
     
           if (response.ok) {
             dispatch(logout());
-            Cookies.set("role","guest")
+            Cookies.set("role" , "guest")
             toast.success(`See you again ${user?.name}`);
             router.push("/auth/get-started");
-            window.location.reload();
           } else {
             toast.error("Logout failed");
           }

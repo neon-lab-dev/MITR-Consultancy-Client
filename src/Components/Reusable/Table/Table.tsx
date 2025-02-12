@@ -22,7 +22,7 @@ const Table: React.FC<TableProps> = ({ columns, data, actions }) => {
         {/* Table Head */}
         <thead className="bg-primary-20 text-white">
           <tr>
-            {columns.map((col) => (
+            {columns?.map((col) => (
               <th key={col.key} className="px-6 py-3 text-left font-medium">
                 {col.label}
               </th>
@@ -33,7 +33,7 @@ const Table: React.FC<TableProps> = ({ columns, data, actions }) => {
 
         {/* Table Body */}
         <tbody>
-          {data.map((row, rowIndex) => (
+          {data?.map((row, rowIndex) => (
             <tr key={rowIndex} className="border-t">
               {columns.map((col) => (
                 <td key={col.key} className="px-6 py-4 whitespace-nowrap">

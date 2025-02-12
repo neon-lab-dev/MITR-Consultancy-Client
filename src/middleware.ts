@@ -4,16 +4,15 @@ export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   const userRole = req.cookies.get("role")?.value || "guest";
-  console.log("user role",userRole);
-  console.log(pathname);
 
   if (pathname.startsWith("/admin")) {
     if (userRole === "user" && (pathname.includes("/admin"))) {
       return NextResponse.redirect(new URL("/", req.url));
     }
 
-    if (userRole === "guest" || userRole === "" && (pathname.includes("/my-pofile") )) {
-      return NextResponse.redirect(new URL("/login", req.url));
+    // If user is not loggedin then navigate to login page
+    if (userRole === "guest" || userRole === "" && (pathname.includes("/my-profile") )) {
+      return NextResponse.redirect(new URL("/auth/get-started", req.url));
     }
   }
 
@@ -28,6 +27,6 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin", "/my-pofile"],
+  matcher: ["/admin/:path*"],
 };
 //    "/cart", "/cart/place-order"
