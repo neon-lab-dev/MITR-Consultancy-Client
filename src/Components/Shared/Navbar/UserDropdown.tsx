@@ -30,6 +30,9 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
         document.addEventListener("mousedown", close);
         return () => document.removeEventListener("mousedown", close);
     }, []);
+    useEffect(()=>{
+
+    })
 
     const userMenuItems = [
         { label: "My Profile", path: "/my-profile", },
@@ -47,6 +50,7 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
             dispatch(logout());
             Cookies.set("role" , "guest")
             toast.success(`See you again ${user?.name}`);
+            setOpen(false);
             router.push("/auth/get-started");
           } else {
             toast.error("Logout failed");
@@ -84,6 +88,7 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
                         style={{
                             transform: `translateY(${open ? 0 : (index + 1) * 10}px)`,
                         }}
+                        onClick={()=>setOpen(false)}
                     >
                         {item.label}
                     </Link>
