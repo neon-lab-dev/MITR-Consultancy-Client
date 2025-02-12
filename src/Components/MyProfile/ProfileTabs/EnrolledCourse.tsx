@@ -1,4 +1,4 @@
-import TrainingCard from "@/Components/InternshipProgrammes/StartTraining/TrainingCard";
+// import TrainingCard from "@/Components/InternshipProgrammes/StartTraining/TrainingCard";
 
 const EnrolledCourse = () => {
     return (
