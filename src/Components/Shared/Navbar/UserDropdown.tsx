@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { logout, useCurrentUser } from "@/redux/Features/Auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { TLoggedInUser } from "./Navbar";
+import Cookies from "js-cookie"
 
 const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
     const user = useSelector(useCurrentUser) as TLoggedInUser;
@@ -43,6 +44,7 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
     
           if (response.ok) {
             dispatch(logout());
+            Cookies.set("role","guest")
             toast.success(`See you again ${user?.name}`);
             router.push("/auth/get-started");
             window.location.reload();

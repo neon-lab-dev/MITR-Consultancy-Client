@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { toast } from "sonner";
+import Cookies from "js-cookie"
 
 interface FormData {
     otp: string;
@@ -68,7 +69,12 @@ const VerifyOtp = () => {
                         name: response?.user?.full_name,
                         role: response?.user?.role,
                         email: response?.user?.email
-                    }
+                    }               
+                    Cookies.set("role", response?.user?.role, {
+                        expires: 60,
+                        secure: window.location.protocol === "https:",
+                        sameSite: "strict",
+                      })
                     dispatch(setUser({ user }));
                     if (response?.user?.role === "admin") {
                         router.push("/admin/all-users");
