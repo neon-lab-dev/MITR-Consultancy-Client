@@ -9,14 +9,14 @@ const TermsAndConditions = () => {
             description: "",
             pointers: [
                 "We offer website and app development services.",
-                "We provide internship programs for students in their 5th to 7th semester."
+                "We provide training programmes for students in their 5th to 7th semester."
             ]
         },
         {
             title: "2. Payment &amp; Refunds",
             description: "",
             pointers: [
-                "Internship programs are priced at ₹990, payable online via Razorpay.",
+                "training programmes are priced at ₹990, payable online via Razorpay.",
                 "No refunds will be issued for any payments made.",
             ]
         },

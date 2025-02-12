@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
             description: "",
             pointers: [
                 "To provide website and app development services.",
-                "To enroll students in internship programs.",
+                "To enroll students in training programmes.",
                 "To process payments and manage transactions.",
                 "To improve website functionality and customer experience."
             ]

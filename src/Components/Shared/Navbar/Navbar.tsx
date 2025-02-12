@@ -90,7 +90,7 @@ const Navbar = () => {
     { label: "Services", action: () => handleNavigation("services") },
     { label: "About Us", action: () => handleNavigation("aboutUs") },
     { label: "Portfolio", action: () => handleNavigation("portfolio") },
-    { label: "Internship Programmes", path: "/internship-programmes" },
+    { label: "Training Programmes", path: "/internship-programmes" },
   ];
 
   return (
