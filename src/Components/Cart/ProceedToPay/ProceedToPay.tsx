@@ -1,4 +1,5 @@
 import Button from "@/Components/Reusable/Button/Button";
+import Link from "next/link";
 
 export type TProceedToPayProps = {
     _id: string;
@@ -11,32 +12,7 @@ export type TProceedToPayProps = {
   }
 const ProceedToPay = ({cartTotal} : {cartTotal:TProceedToPayProps[]}) => {
     const totalPrice = cartTotal && cartTotal?.reduce((acc, currVal) => acc + currVal.price, 0);
-    // const handleCheckout = () => {
-    //     try{
-    //         const options = {
-    //             key: keyData?.data?.key, // Razorpay key_id
-    //             amount: response?.data?.order?.amount,
-    //             currency: 'INR',
-    //             name: 'Spaceframe',
-    //             description: 'Test Transaction',
-    //             image: "https://i.ibb.co.com/SmbFbDC/footer-Logo.png",
-    //             order_id: response?.data?.order?.id, // the order id
-    //             callback_url: 'https://interior-design-backend-nine.vercel.app/api/v1/paymentverification', // success URL
-    //             prefill: {
-    //               name: userData?.user?.full_name,
-    //               email: userData?.user?.email,
-    //               contact: userData?.user?.phoneNo,
-    //             },
-    //             theme: {
-    //               color: '#7E77D6'
-    //             },
-    //           };
-    //           const rzp = new window.Razorpay(options);
-    //           rzp.open();
-    //     } catch(error){
-    //         console.log(error);
-    //     }
-    // }
+    
     return (
         <div className="py-8 px-4 bg-white shadow-course-details w-full lg:w-[30%] flex flex-col gap-6 font-Inter">
             <div className="w-full" >
@@ -57,7 +33,7 @@ const ProceedToPay = ({cartTotal} : {cartTotal:TProceedToPayProps[]}) => {
                 <p>Total</p>
                 <p>₹{totalPrice}</p>
             </div>
-            <Button variant="primary" title="Proceed To Pay" classNames="" />
+            <Link href={"/checkout"} className="w-full"><Button variant="primary" title="Proceed To Pay" classNames="w-full" /></Link>
         </div>
     );
 };

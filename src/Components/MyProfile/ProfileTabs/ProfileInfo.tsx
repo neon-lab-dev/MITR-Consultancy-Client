@@ -12,7 +12,7 @@ import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
 import { setUser } from "@/redux/Features/Auth/authSlice";
 import { useDispatch } from "react-redux";
 
-type TEducation = {
+export type TEducation = {
     institute: string;
     degree: string;
     branch: string;
@@ -20,7 +20,7 @@ type TEducation = {
     year: string;
     endDate: string;
 }
-type TProfileData = {
+export type TProfileData = {
     full_name: string;
     email: string;
     mobileNumber: string;

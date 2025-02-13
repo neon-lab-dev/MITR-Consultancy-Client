@@ -7,6 +7,7 @@ import { useCart } from "@/providers/CartProvider/CartProvider";
 
 const Checkout = () => {
     const { cartData } = useCart();
+    
     return (
         <Container>
             <div className="font-Inter mt-36">

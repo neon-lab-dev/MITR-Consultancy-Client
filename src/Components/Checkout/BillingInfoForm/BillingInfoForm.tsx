@@ -5,17 +5,45 @@ import { useForm } from "react-hook-form";
 import OrderDetails from "../OrderDetails/OrderDetails";
 import { useCart } from "@/providers/CartProvider/CartProvider";
 import BillingDetails from "../BillingDetails/BillingDetails";
+import { useGetMeQuery } from "@/redux/Features/User/userApi";
+import { useEffect } from "react";
+import { TEducation, TProfileData } from "@/Components/MyProfile/ProfileTabs/ProfileInfo";
 
 // type TBillingFormData = {
 
 // }
 const BillingInfoForm = () => {
+    const {data:myProfile} = useGetMeQuery({});
     const { cartData } = useCart();
     const {
         register,
         handleSubmit,
+        setValue,
         formState: { errors },
     } = useForm();
+
+     useEffect(() => {
+            if (myProfile) {
+                setValue("full_name", myProfile?.user?.full_name);
+                setValue("email", myProfile?.user?.email);
+                setValue("mobileNumber", myProfile?.user?.mobileNumber);
+                setValue("city", myProfile?.user?.city);
+                setValue("state", myProfile?.user?.state);
+                setValue("country", myProfile?.user?.country);
+                setValue("pinCode", myProfile?.user?.pinCode);
+                if (myProfile?.user?.education) {
+                    myProfile?.user?.education?.forEach((item: TEducation, index: number) => {
+                        console.log(item);
+                        setValue(`education.${index}.institute` as keyof TProfileData, item.institute);
+                        setValue(`education.${index}.degree` as keyof TProfileData, item.degree);
+                        setValue(`education.${index}.branch` as keyof TProfileData, item.branch);
+                        setValue(`education.${index}.semester` as keyof TProfileData, item.semester);
+                        setValue(`education.${index}.year` as keyof TProfileData, item.year);
+                        setValue(`education.${index}.endDate` as keyof TProfileData, item.endDate);
+                    });
+                }
+            }
+        }, [myProfile, setValue]);
 
     const handleCheckout = (data:any) => {
         console.log(data);

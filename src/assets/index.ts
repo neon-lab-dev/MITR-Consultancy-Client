@@ -51,6 +51,7 @@ import skillLevel from "../assets/Icons/skill-level.svg";
 import training from "../assets/Icons/training.svg";
 import rating from "../assets/Icons/rating.svg";
 import users from "../assets/Icons/user-group.svg";
+import paymentSuccess from "../assets/Icons/paymentSuccess.svg";
 
 import reactjs from "../assets/Icons/Technologies/reactjs.svg";
 import mongoDB from "../assets/Icons/Technologies/mongodb.svg";
@@ -220,6 +221,7 @@ export const ICONS = {
     training,
     rating,
     users,
+    paymentSuccess,
 
     mongoDB,
     reactJs,

@@ -15,11 +15,11 @@ const MyProfile = () => {
     const user = useSelector(useCurrentUser) as TLoggedInUser;
     const {data} = useGetMeQuery({});
     const [isEditEnabled, setIsEditEnabled] = useState<boolean>(false);
-    useEffect(() => {
-        if(!user){
-            router.push("/auth/get-started");
-        }
-    }, [router, user]);
+    // useEffect(() => {
+    //     if(!user){
+    //         router.push("/auth/get-started");
+    //     }
+    // }, [router, user]);
     return (
         <div className="">
             <MyProfileHero name={data?.user?.full_name} />

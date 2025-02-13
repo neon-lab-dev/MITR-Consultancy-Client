@@ -55,6 +55,7 @@ const Navbar = () => {
     "/privacy-policy",
     "/terms-and-conditions",
     "/refund-policy",
+    "/payment-success",
   ];
 
   const textColor = neutralPages.includes(pathname) || pathname.startsWith("/internship-programmes/") || pathname.startsWith("/auth/")
