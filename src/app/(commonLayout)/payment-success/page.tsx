@@ -51,7 +51,7 @@ const PaymentSuccess = () => {
         }
     }, [orderedCourses, referenceName]);
 
-    if (!loading) {
+    if (loading) {
         return (
             <div className="flex flex-col items-center text-center mt-32">
                 <p className="text-neutral-10 text-lg">Processing your order...</p>
@@ -60,20 +60,20 @@ const PaymentSuccess = () => {
         );
     }
 
-    return !success ? (
+    return success ? (
         <div className="flex flex-col items-center text-center mt-36">
             <Image
                 src={ICONS.paymentSuccess}
                 alt="Payment Success"
-                width={200}
-                height={200}
+                width={150}
+                height={150}
                 className="mb-4"
             />
             <h1 className="text-green-600 font-bold text-2xl lg:text-3xl">
                 Payment Successful!!
             </h1>
             <p className="text-neutral-10 mt-4 text-lg max-w-[500px] mx-auto text-center">
-            Welcome to the professional world! 🎉 Embrace professionalism and take your journey to the next level!
+                Welcome to the professional world! 🎉 Embrace professionalism and take your journey to the next level!
             </p>
             <Link
                 href="/my-profile"
