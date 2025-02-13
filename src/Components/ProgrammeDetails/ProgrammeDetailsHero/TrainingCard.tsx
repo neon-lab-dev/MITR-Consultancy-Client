@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const TrainingCard = ({totalEnrolled, rating} : {totalEnrolled ?:string | number; rating? : string}) => {
     return (
-        <div className="flex rounded-lg mx-auto w-full xl:w-[796px] absolute top-[330px] xl:top-[280px]">
+        <div className="flex rounded-lg mx-auto w-full xl:w-[796px] absolute top-[370px] md:top-[350px] xl:top-[280px]">
             <div className="bg-primary-20 py-3 px-4 rounded-l-lg hidden xl:flex flex-col items-center justify-center">
                 <Image src={ICONS.training} alt="training" className="size-6" />
                 <p className="text-white font-semibold">Training</p>
