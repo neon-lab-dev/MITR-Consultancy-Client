@@ -42,7 +42,6 @@ const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
         const result = localStorage.getItem("isNewUser");
         setIsNewUser(result === "true");
     }, []);
-    console.log(isNewUser);
 
     const { data: myProfile } = useGetMeQuery({});
     const [otpData] = useOtpDataFromLocalStorage<any>("otpData");

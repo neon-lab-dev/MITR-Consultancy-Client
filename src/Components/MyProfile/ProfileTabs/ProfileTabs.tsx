@@ -23,13 +23,13 @@ const ProfileTabs: React.FC<TProfileTabsProps> = ({ isEditEnabled, setIsEditEnab
                 setLeftOffset(200); // sm screens
             }
         };
-    
+
         updateOffset(); // Set initial value
         window.addEventListener("resize", updateOffset);
         return () => window.removeEventListener("resize", updateOffset);
     }, []);
-    
-    
+
+
 
     return (
         <div className="w-full lg:w-[75%] mt-[480px] md:mt-24 lg:mt-12">
