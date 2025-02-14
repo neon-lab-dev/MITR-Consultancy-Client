@@ -57,7 +57,7 @@ const PaymentSuccess = () => {
     if (loading) {
         return (
             <div className="flex flex-col items-center text-center mt-32">
-                <p className="text-neutral-10 text-lg">Processing your order...</p>
+                <p className="text-neutral-10 text-lg">Processing your payment...</p>
             </div>
 
         );

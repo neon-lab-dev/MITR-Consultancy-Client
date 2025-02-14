@@ -132,8 +132,8 @@ const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
                         secure: window.location.protocol === "https:",
                         sameSite: "strict",
                       })
-                    window.location.reload();
-                    window.scrollTo(0, 0);
+                    // window.location.reload();
+                    // window.scrollTo(0, 0);
                 }
             }
         } catch (error: any) {
