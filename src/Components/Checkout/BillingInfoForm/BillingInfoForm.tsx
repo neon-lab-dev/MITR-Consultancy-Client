@@ -174,7 +174,7 @@ const BillingInfoForm = () => {
                     </div>
                 </div>
                 <div className="xl:hidden">
-                    <BillingDetails cartData={cartData} /></div>
+                    <BillingDetails /></div>
             </form>
         </div>
     );
