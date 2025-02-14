@@ -11,6 +11,7 @@ import Button2 from "@/Components/Reusable/Button/Button2";
 import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
 import { setUser } from "@/redux/Features/Auth/authSlice";
 import { useDispatch } from "react-redux";
+import Cookies from "js-cookie";
 
 export type TEducation = {
     institute: string;
@@ -38,12 +39,15 @@ type ProfileInfoProps = {
 const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
     const dispatch = useDispatch();
     const [isNewUser, setIsNewUser] = useState<boolean>(false);
+    console.log(isNewUser);
     useEffect(() => {
-        const result = localStorage.getItem("isNewUser");
-        setIsNewUser(result === "true");
+        // const result = localStorage.getItem("isNewUser");
+        const result = Cookies.get("role");
+        setIsNewUser(result === "newUser");
     }, []);
 
     const { data: myProfile } = useGetMeQuery({});
+    console.log(myProfile);
     const [otpData] = useOtpDataFromLocalStorage<any>("otpData");
     const [setupProfile, { isLoading }] = useSetupProfileMutation();
     const [updateProfile, { isLoading: isProfileUpdating }] = useUpdateProfileMutation();
@@ -56,7 +60,6 @@ const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
 
     useEffect(() => {
         if (otpData) {
-            setValue("mobileNumber", otpData.mobileNumber);
             setValue("email", otpData.email);
         }
     }, [otpData, setValue]);
@@ -126,7 +129,12 @@ const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
                         email: response?.user?.email
                     }
                     dispatch(setUser({ user }));
-                    localStorage.removeItem("isNewUser");
+                    // localStorage.removeItem("isNewUser");
+                    Cookies.set("role", response?.user?.role, {
+                        expires: 60,
+                        secure: window.location.protocol === "https:",
+                        sameSite: "strict",
+                      })
                     window.location.reload();
                     window.scrollTo(0, 0);
                 }

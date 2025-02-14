@@ -11,9 +11,9 @@ export function middleware(req: NextRequest) {
     }
 
     // If user is not loggedin then navigate to login page
-    // if (userRole === "guest" || userRole === "" && (pathname.includes("/my-profile") )) {
-    //   return NextResponse.redirect(new URL("/auth/get-started", req.url));
-    // }
+    if (userRole === "guest" || userRole === "" && (pathname.includes("/my-profile") )) {
+      return NextResponse.redirect(new URL("/auth/get-started", req.url));
+    }
   }
 
   // Add condition to redirect for cart and place-order routes for guests

@@ -11,6 +11,7 @@ const ProfileTabs: React.FC<TProfileTabsProps> = ({ isEditEnabled, setIsEditEnab
     const [selectedTab, setSelectedTab] = useState("Profile");
     const tabButtons = ["Profile", "Enrolled Courses"];
 
+    // Tab sliding animation
     const [leftOffset, setLeftOffset] = useState(225); // Default for xl screens
 
     useEffect(() => {

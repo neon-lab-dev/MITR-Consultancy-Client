@@ -14,13 +14,18 @@ const EnrolledCourse = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 mt-9">
+            {
+                coursesData?.length > 0 ?
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 mt-9">
                 {
                     coursesData.map((course: any) => (
                         <TrainingCard key={course?.data?.course?._id} isDescriptionVisible={true} isPriceVisible={false} imageHeight="h-[268px]" {...course?.data?.course} />
                     ))
                 }
             </div>
+            :
+            <p className="mt-5">Not enrolled in any course yet.</p>
+            }
         </div>
     );
 };

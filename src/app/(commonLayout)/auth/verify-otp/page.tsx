@@ -62,7 +62,12 @@ const VerifyOtp = () => {
                 toast.success(response?.message);
                 if (response?.newUser) {
                     router.push("/my-profile");
-                    localStorage.setItem("isNewUser", "true");
+                    // localStorage.setItem("isNewUser", "true");
+                    Cookies.set("role", "newUser", {
+                        expires: 1,
+                        secure: window.location.protocol === "https:",
+                        sameSite: "strict",
+                      })
                 } else {
                     const user = {
                         _id: response?.user?._id,

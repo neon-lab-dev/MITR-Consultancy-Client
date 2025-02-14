@@ -38,31 +38,31 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
     // Logout function
     const handleLogout = async () => {
         try {
-          const response = await fetch(
-            "https://mitr-backend.vercel.app/api/v1/logout"
-          );
-          console.log(response);
-    
-          if (response.ok) {
-            dispatch(logout());
-            Cookies.set("role" , "guest")
-            toast.success(`See you again ${user?.name}`);
-            router.push("/auth/get-started");
-          } else {
-            toast.error("Logout failed");
-          }
+            const response = await fetch(
+                "https://mitr-backend.vercel.app/api/v1/logout"
+            );
+
+            if (response.ok) {
+                dispatch(logout());
+
+                Cookies.set("role", "guest");
+                toast.success(`See you again ${user?.name}`);
+                router.push("/auth/get-started");
+            } else {
+                toast.error("Logout failed");
+            }
         } catch (err) {
-          toast.error("Failed to log out. Please try again.");
-          console.log(err);
+            toast.error("Failed to log out. Please try again.");
+            console.log(err);
         }
-      };
+    };
 
     return (
         <div ref={dropDownRef} className="relative w-fit hidden md:block">
             <button
                 onClick={() => setOpen((prev) => !prev)}
                 className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center flex items-center gap-2 ${btnStyle}`}>
-                    {user ? user?.name : "Sign Up / Sign In"}
+                {user ? user?.name : "Sign Up / Sign In"}
                 <Image
                     src={ICONS.downArrowBlue}
                     alt="Profile icon"
@@ -77,6 +77,7 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
             >
                 {userMenuItems.map((item, index) => (
                     <Link
+                        onClick={() => setOpen(!open)}
                         href={item.path}
                         key={index}
                         className={`rounded-sm px-3 py-2 ${open ? "opacity-100 duration-500" : "opacity-0 duration-150"
