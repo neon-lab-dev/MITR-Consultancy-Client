@@ -44,7 +44,6 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
 
             if (response.ok) {
                 dispatch(logout());
-
                 Cookies.set("role", "guest");
                 toast.success(`See you again ${user?.name}`);
                 router.push("/auth/get-started");
@@ -98,8 +97,7 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
                     style={{
                         transform: `translateY(${open ? 0 : (userMenuItems.length + 1) * 10
                             }px)`,
-                    }}
-                >
+                    }}>
                     Logout
                 </button>
             </div>
