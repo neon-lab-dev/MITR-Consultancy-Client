@@ -41,7 +41,6 @@ export type TInternshipProgramme = {
 
 const StartTraining = () => {
   const { data } = useGetAllProgrammesQuery({});
-  console.log(data);
   return (
     <Container>
       <div id="programmes" className="font-Inter py-[60px] md:py-20 xl:py-[98px] flex flex-col gap-7">

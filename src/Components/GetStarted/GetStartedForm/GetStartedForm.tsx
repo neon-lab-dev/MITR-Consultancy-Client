@@ -37,7 +37,6 @@ const GetStartedForm = () => {
             const otpData = {
                 email: data.email,
             };
-            console.log(otpData);
             const response = await sendOtp(otpData).unwrap();
             if (response?.success) {
                 toast.success(response?.message);

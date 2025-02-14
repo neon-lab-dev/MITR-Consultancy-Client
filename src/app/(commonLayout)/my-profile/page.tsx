@@ -22,9 +22,6 @@ const MyProfile = () => {
     //`isNewUser` is set before checking `user`
     useEffect(() => {
         if (user === null && isNewUser === false) {
-            console.log(user);
-            console.log(isNewUser);
-            console.log("Redirecting to login...");
             router.push("/auth/get-started"); 
         }
     }, [router, user, isNewUser]);

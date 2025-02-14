@@ -28,17 +28,12 @@ const BillingDetails = ({ cartData }: { cartData: TProceedToPayProps[] }) => {
     const handleCheckout = async () => {
         try {
             const keyData = await axios.get('https://mitr-backend.vercel.app/api/v1/getkey');
-            console.log(keyData)
-            const courseIds = cartData?.map(data => data?._id);
-            console.log(courseIds);
 
             const response = await axios.post(
                 'https://mitr-backend.vercel.app/api/v1/checkout',
                 { amount: Number(totalPrice) },
                 { withCredentials: true }
             );
-            console.log(totalPrice);
-            console.log(response);
 
             const options = {
                 key: keyData?.data?.key, // Razorpay key_id

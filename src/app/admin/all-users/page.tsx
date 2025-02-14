@@ -6,7 +6,6 @@ import { useGetAllUserQuery } from "@/redux/Features/Admin/adminApi";
 
 const AllUsers = () => {
   const {data:allUsers} = useGetAllUserQuery({});
-  console.log(allUsers);
     const columns = [
         { key: "id", label: "ID" },
         { key: "full_name", label: "Name" },

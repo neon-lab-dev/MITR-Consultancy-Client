@@ -33,7 +33,6 @@ const BillingInfoForm = () => {
                 setValue("pinCode", myProfile?.user?.pinCode);
                 if (myProfile?.user?.education) {
                     myProfile?.user?.education?.forEach((item: TEducation, index: number) => {
-                        console.log(item);
                         setValue(`education.${index}.institute` as keyof TProfileData, item.institute);
                         setValue(`education.${index}.degree` as keyof TProfileData, item.degree);
                         setValue(`education.${index}.branch` as keyof TProfileData, item.branch);
