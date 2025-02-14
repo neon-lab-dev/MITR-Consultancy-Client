@@ -13,7 +13,8 @@ import { TEducation, TProfileData } from "@/Components/MyProfile/ProfileTabs/Pro
 
 // }
 const BillingInfoForm = () => {
-    const {data:myProfile} = useGetMeQuery({});
+    const { data: myProfile } = useGetMeQuery({});
+    console.log(myProfile)
     const { cartData } = useCart();
     const {
         register,
@@ -22,32 +23,32 @@ const BillingInfoForm = () => {
         formState: { errors },
     } = useForm();
 
-     useEffect(() => {
-            if (myProfile) {
-                setValue("full_name", myProfile?.user?.full_name);
-                setValue("email", myProfile?.user?.email);
-                setValue("mobileNumber", myProfile?.user?.mobileNumber);
-                setValue("city", myProfile?.user?.city);
-                setValue("state", myProfile?.user?.state);
-                setValue("country", myProfile?.user?.country);
-                setValue("pinCode", myProfile?.user?.pinCode);
-                if (myProfile?.user?.education) {
-                    myProfile?.user?.education?.forEach((item: TEducation, index: number) => {
-                        setValue(`education.${index}.institute` as keyof TProfileData, item.institute);
-                        setValue(`education.${index}.degree` as keyof TProfileData, item.degree);
-                        setValue(`education.${index}.branch` as keyof TProfileData, item.branch);
-                        setValue(`education.${index}.semester` as keyof TProfileData, item.semester);
-                        setValue(`education.${index}.year` as keyof TProfileData, item.year);
-                        setValue(`education.${index}.endDate` as keyof TProfileData, item.endDate);
-                    });
-                }
+    useEffect(() => {
+        if (myProfile) {
+            setValue("full_name", myProfile?.user?.full_name);
+            setValue("email", myProfile?.user?.email);
+            setValue("mobileNumber", myProfile?.user?.mobileNumber);
+            setValue("city", myProfile?.user?.city);
+            setValue("state", myProfile?.user?.state);
+            setValue("country", myProfile?.user?.country);
+            setValue("pinCode", myProfile?.user?.pinCode);
+            if (myProfile?.user?.education) {
+                myProfile?.user?.education?.forEach((item: TEducation, index: number) => {
+                    setValue(`education.${index}.institute` as keyof TProfileData, item.institute);
+                    setValue(`education.${index}.degree` as keyof TProfileData, item.degree);
+                    setValue(`education.${index}.branch` as keyof TProfileData, item.branch);
+                    setValue(`education.${index}.semester` as keyof TProfileData, item.semester);
+                    setValue(`education.${index}.year` as keyof TProfileData, item.year);
+                    setValue(`education.${index}.endDate` as keyof TProfileData, item.endDate);
+                });
             }
-        }, [myProfile, setValue]);
+        }
+    }, [myProfile, setValue]);
 
-    const handleCheckout = (data:any) => {
+    const handleCheckout = (data: any) => {
         console.log(data);
     };
-    
+
     return (
         <div className="w-full lg:w-[65%]">
             <form onSubmit={handleSubmit(handleCheckout)}>
@@ -56,129 +57,124 @@ const BillingInfoForm = () => {
                     Billing Address
                 </h2>
                 <div className="lg:hidden mt-5">
-                <OrderDetails cartData={cartData}/></div>
+                    <OrderDetails cartData={cartData} /></div>
                 <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
                     <div className="flex flex-col md:flex-row items-center w-full gap-9 md:gap-[30px]">
-                    <TextInput
-                        label="Full Name"
-                        placeholder="Enter Your Full Name"
-                        type="text"
-                        error={errors.full_name}
-                        {...register("full_name", { required: "Full name is required" })}
-                    />
-                    <TextInput
-                        label="Email Address"
-                        placeholder="Enter Your Email"
-                        type="text"
-                        error={errors.email}
-                        {...register("email", { required: "Email is required" })}
-                    />
+                        <TextInput
+                            label="Full Name"
+                            placeholder="Enter Your Full Name"
+                            type="text"
+                            error={errors.full_name}
+                            {...register("full_name", { required: "Full name is required" })}
+                            isDisabled={true}
+                        />
+                        <TextInput
+                            label="Email Address"
+                            placeholder="Enter Your Email"
+                            type="text"
+                            error={errors.email}
+                            {...register("email", { required: "Email is required" })}
+                            isDisabled={true}
+                        />
                     </div>
                     <div className="flex flex-col md:flex-row items-center w-full gap-9 md:gap-[30px]">
-                    <TextInput
-                        label="Country"
-                        placeholder="Enter Country Name"
-                        type="text"
-                        error={errors.country}
-                        {...register("country", { required: "Country name is required" })}
-                    />
-                    <TextInput
-                        label="Street Address"
-                        placeholder="Enter Street Address"
-                        type="text"
-                        error={errors.streetAddress}
-                        {...register("streetAddress", { required: "Street address is required" })}
-                    />
+                        <TextInput
+                            label="Country"
+                            placeholder="Enter Country Name"
+                            type="text"
+                            error={errors.country}
+                            {...register("country", { required: "Country name is required" })}
+                            isDisabled={true}
+                        />
+                        <TextInput
+                            label="Phone"
+                            placeholder="Enter Phone Number"
+                            type="text"
+                            error={errors.phoneNumber}
+                            {...register("phoneNumber", { required: "Phone number is required" })}
+                            isDisabled={true}
+                        />
                     </div>
                     <div className="flex flex-col md:flex-row items-center w-full gap-9 md:gap-[30px]">
-                    <TextInput
-                        label="Town / City"
-                        placeholder="Enter Town / City"
-                        type="text"
-                        error={errors.city}
-                        {...register("city", { required: "City is required" })}
-                    />
-                    <TextInput
-                        label="State / Zone"
-                        placeholder="Enter State / Zone"
-                        type="text"
-                        error={errors.state}
-                        {...register("state", { required: "State is required" })}
-                    />
-                    <TextInput
-                        label="Postal Code / Zip"
-                        placeholder="Enter Postal Code / Zip"
-                        type="text"
-                        error={errors.postCode}
-                        {...register("postCode", { required: "Post code is required" })}
-                    />
-                    </div>
-                    <div className="flex items-center gap-[30px]">
-                    <TextInput
-                        label="Phone"
-                        placeholder="Enter Phone Number"
-                        type="text"
-                        error={errors.phoneNumber}
-                        {...register("phoneNumber", { required: "Phone number is required" })}
-                    />
-                    
+                        <TextInput
+                            label="Town / City"
+                            placeholder="Enter Town / City"
+                            type="text"
+                            error={errors.city}
+                            {...register("city", { required: "City is required" })}
+                            isDisabled={true}
+                        />
+                        <TextInput
+                            label="State / Zone"
+                            placeholder="Enter State / Zone"
+                            type="text"
+                            error={errors.state}
+                            {...register("state", { required: "State is required" })}
+                            isDisabled={true}
+                        />
                     </div>
                 </div>
 
                 {/* Educational Info */}
                 <h2 className="text-neutral-45 text-base md:text-2xl font-semibold leading-9 mt-8">
-                Educational Information
+                    Educational Information
                 </h2>
                 <div className="py-8 px-[18px] bg-white rounded-2xl shadow-course-details mt-6 flex flex-col gap-9">
-                <TextInput
+                    <TextInput
                         label="Institute Name"
                         placeholder="Enter Your Institute Name"
                         type="text"
                         error={errors.Institute}
-                        {...register("Institute", { required: "Institute name is required" })}
+                        {...register("education.0.institute", { required: "Institute name is required" })}
+                        isDisabled={true}
                     />
                     <TextInput
                         label="Degree"
                         placeholder="ex- Computer Science & Engineering"
                         type="text"
                         error={errors.degree}
-                        {...register("degree", { required: "Degree is required" })}
+                        {...register("education.0.degree", { required: "Degree is required" })}
+                        isDisabled={true}
                     />
                     <div className="flex flex-col md:flex-row items-center gap-9 md:gap-[30px] w-full">
-                    <TextInput
-                        label="Branch"
-                        placeholder="Enter Last Name"
-                        type="text"
-                        error={errors.branch}
-                        {...register("branch", { required: "Branch is required" })}
-                    />
-                    <TextInput
-                        label="Semester"
-                        placeholder="ex- 7th"
-                        type="text"
-                        error={errors.semester}
-                        {...register("semester", { required: "semester is required" })}
-                    />
+                        <TextInput
+                            label="Branch"
+                            placeholder="Enter Last Name"
+                            type="text"
+                            error={errors.branch}
+                            {...register("education.0.branch", { required: "Branch is required" })}
+                            isDisabled={true}
+                        />
+                        <TextInput
+                            label="Semester"
+                            placeholder="ex- 7th"
+                            type="text"
+                            error={errors.semester}
+                            {...register("education.0.semester", { required: "semester is required" })}
+                            isDisabled={true}
+                        />
                     </div>
                     <div className="flex flex-col md:flex-row items-center gap-9 md:gap-[30px]">
-                    <TextInput
-                        label="Current Year"
-                        placeholder="ex- 3rd"
-                        type="text"
-                        error={errors.year}
-                        {...register("year", { required: "Current year is required" })}
-                    />
-                    <TextInput
-                        label="End Year"
-                        placeholder="ex- 2027"
-                        type="text"
-                        error={errors.endDate}
-                        {...register("endDate", { required: "End year is required" })}
-                    />
+                        <TextInput
+                            label="Current Year"
+                            placeholder="ex- 3rd"
+                            type="text"
+                            error={errors.year}
+                            {...register("education.0.year", { required: "Current year is required" })}
+                            isDisabled={true}
+                        />
+                        <TextInput
+                            label="End Year"
+                            placeholder="ex- 2027"
+                            type="text"
+                            error={errors.endDate}
+                            {...register("education.0.endDate", { required: "End year is required" })}
+                            isDisabled={true}
+                        />
                     </div>
                 </div>
                 <div className="xl:hidden">
-                <BillingDetails cartData={cartData} /></div>
+                    <BillingDetails cartData={cartData} /></div>
             </form>
         </div>
     );

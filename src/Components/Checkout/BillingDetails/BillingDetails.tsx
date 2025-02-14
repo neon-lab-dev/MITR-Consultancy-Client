@@ -1,15 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { TProceedToPayProps } from "@/Components/Cart/ProceedToPay/ProceedToPay";
-import Button from "@/Components/Reusable/Button/Button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Script from "next/script";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
 import { TLoggedInUser } from "@/Components/Shared/Navbar/Navbar";
+import Button2 from "@/Components/Reusable/Button/Button2";
+import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
 
 const BillingDetails = ({ cartData }: { cartData: TProceedToPayProps[] }) => {
+    const [loading, setLoading] = useState<boolean>(false);
     const user = useSelector(useCurrentUser) as TLoggedInUser;
 
     const totalPrice = cartData && cartData?.reduce((acc, currVal) => acc + currVal.price, 0);
@@ -27,6 +29,7 @@ const BillingDetails = ({ cartData }: { cartData: TProceedToPayProps[] }) => {
 
     const handleCheckout = async () => {
         try {
+            setLoading(true);
             const keyData = await axios.get('https://mitr-backend.vercel.app/api/v1/getkey');
 
             const response = await axios.post(
@@ -45,7 +48,7 @@ const BillingDetails = ({ cartData }: { cartData: TProceedToPayProps[] }) => {
                 order_id: response?.data?.order?.id, // the order id
                 callback_url: 'https://mitr-backend.vercel.app/api/v1/paymentverification', // success URL
                 prefill: {
-                    id : user?._id,
+                    id: user?._id,
                     name: user?.name,
                     email: user?.email,
                 },
@@ -60,6 +63,8 @@ const BillingDetails = ({ cartData }: { cartData: TProceedToPayProps[] }) => {
 
         } catch (error) {
             console.log(error);
+        } finally {
+            setLoading(false);
         }
     }
 
@@ -78,7 +83,14 @@ const BillingDetails = ({ cartData }: { cartData: TProceedToPayProps[] }) => {
                     <p>Total</p>
                     <p>₹{totalPrice}</p>
                 </div>
-                <Button variant="primary" title="Checkout" classNames="" handleClick={handleCheckout} />
+                <Button2 variant="primary" title="" handleClick={handleCheckout} classNames="">
+                    {
+                        loading ?
+                            <LoadingSpinner />
+                            :
+                            "Checkout"
+                    }
+                </Button2>
             </div>
         </>
     );
