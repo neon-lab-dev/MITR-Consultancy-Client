@@ -121,7 +121,7 @@ const VerifyOtp = () => {
                             <Link href={"/auth/get-started"} className="text-primary-20 text-sm leading-5 font-medium text-center">Resend OTP</Link>
                             :
                             <p className="font-Inter text-neutral-10 text-center">
-                                0:{timeLeft.toString().padStart(2, "0")}
+                                Resend OTP in <strong>0:{timeLeft.toString().padStart(2, "0")}</strong>
                             </p>
                     }
                 </form>
