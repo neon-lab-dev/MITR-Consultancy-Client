@@ -39,7 +39,6 @@ type ProfileInfoProps = {
 const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
     const dispatch = useDispatch();
     const [isNewUser, setIsNewUser] = useState<boolean>(false);
-    console.log(isNewUser);
     useEffect(() => {
         // const result = localStorage.getItem("isNewUser");
         const result = Cookies.get("role");
@@ -47,7 +46,6 @@ const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
     }, []);
 
     const { data: myProfile } = useGetMeQuery({});
-    console.log(myProfile);
     const [otpData] = useOtpDataFromLocalStorage<any>("otpData");
     const [setupProfile, { isLoading }] = useSetupProfileMutation();
     const [updateProfile, { isLoading: isProfileUpdating }] = useUpdateProfileMutation();
@@ -76,7 +74,6 @@ const ProfileInfo = ({ isEditEnabled, setIsEditEnabled }: ProfileInfoProps) => {
             setValue("pinCode", myProfile?.user?.pinCode);
             if (myProfile?.user?.education) {
                 myProfile?.user?.education?.forEach((item: TEducation, index: number) => {
-                    console.log(item);
                     setValue(`education.${index}.institute` as keyof TProfileData, item.institute);
                     setValue(`education.${index}.degree` as keyof TProfileData, item.degree);
                     setValue(`education.${index}.branch` as keyof TProfileData, item.branch);

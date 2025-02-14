@@ -74,8 +74,7 @@ const VerifyOtp = () => {
                         name: response?.user?.full_name,
                         role: response?.user?.role,
                         email: response?.user?.email
-                    }   
-                    console.log(response?.user?.role);            
+                    }
                     Cookies.set("role", response?.user?.role, {
                         expires: 60,
                         secure: window.location.protocol === "https:",
