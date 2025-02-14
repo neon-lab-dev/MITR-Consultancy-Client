@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -16,14 +17,15 @@ const PaymentSuccess = () => {
     const [success, setSuccess] = useState(false);
 
     useEffect(() => {
-        const courses = JSON.parse(localStorage.getItem("orderedCourses")) || [];
+        const storedCourses = localStorage.getItem("orderedCourses");
+        const courses = storedCourses ? JSON.parse(storedCourses) : [];
         setOrderedCourses(courses);
     }, []);
 
     useEffect(() => {
         const handlePushOrderedItems = async () => {
             try {
-                const courseIds = orderedCourses?.map(data => data?._id)
+                const courseIds = orderedCourses?.map((data:any) => data?._id);
                 const orderInfo = {
                     courseId: courseIds,
                     razorpay_payment_id: referenceName,
@@ -39,6 +41,7 @@ const PaymentSuccess = () => {
                     }
                 );
                 setSuccess(true);
+                localStorage.removeItem("orderedCourses");
             } catch (error) {
                 console.error("Error placing order:", error);
             } finally {
