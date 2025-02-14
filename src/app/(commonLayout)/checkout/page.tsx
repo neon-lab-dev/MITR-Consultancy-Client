@@ -19,7 +19,7 @@ const Checkout = () => {
                     <BillingInfoForm/>
                     <div className="lg:flex flex-col gap-[30px] w-full lg:w-[35%] mt-[60px] hidden">
                         <OrderDetails cartData={cartData}/>
-                        <BillingDetails cartData={cartData} />
+                        <BillingDetails/>
                     </div>
                 </div>
             </div>

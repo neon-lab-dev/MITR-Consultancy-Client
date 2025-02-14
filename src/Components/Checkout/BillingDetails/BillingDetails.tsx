@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { TProceedToPayProps } from "@/Components/Cart/ProceedToPay/ProceedToPay";
 import { useEffect, useState } from "react";
 import Script from "next/script";
 import axios from "axios";
@@ -9,8 +8,14 @@ import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
 import { TLoggedInUser } from "@/Components/Shared/Navbar/Navbar";
 import Button2 from "@/Components/Reusable/Button/Button2";
 import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
+import { useGetMeQuery } from "@/redux/Features/User/userApi";
+import { toast } from "sonner";
+import { useCart } from "@/providers/CartProvider/CartProvider";
 
-const BillingDetails = ({ cartData }: { cartData: TProceedToPayProps[] }) => {
+const BillingDetails = () => {
+    const { cartData } = useCart();
+    const { data: myProfile } = useGetMeQuery({});
+    console.log(myProfile);
     const [loading, setLoading] = useState<boolean>(false);
     const user = useSelector(useCurrentUser) as TLoggedInUser;
 
@@ -30,6 +35,16 @@ const BillingDetails = ({ cartData }: { cartData: TProceedToPayProps[] }) => {
     const handleCheckout = async () => {
         try {
             setLoading(true);
+        const purchasedCourseIds = myProfile?.user?.purchasedCourses || [];
+
+        // Filter out purchased courses from cartData
+        const newCartData = cartData?.filter((course: any) => !purchasedCourseIds.includes(course._id));
+
+        if (newCartData.length === 0) {
+            toast.error("You have already purchased all selected courses!");
+            setLoading(false);
+            return;
+        }
             const keyData = await axios.get('https://mitr-backend.vercel.app/api/v1/getkey');
 
             const response = await axios.post(
