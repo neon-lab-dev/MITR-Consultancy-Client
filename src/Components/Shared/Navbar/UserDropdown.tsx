@@ -42,7 +42,7 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
                 "https://mitr-backend.vercel.app/api/v1/logout"
             );
 
-            if (response.ok) {
+            if (response.ok) { 
                 dispatch(logout());
                 Cookies.set("role", "guest");
                 toast.success(`See you again ${user?.name}`);

@@ -11,28 +11,9 @@ const userApi = baseApi.injectEndpoints({
       }),
       providesTags: ["user"],
     }),
-
-    myReferralSummary: builder.query({
-      query: () => ({
-        url: "/refral/summary",
-        method: "GET",
-        credentials: "include",
-      }),
-      providesTags: ["user"],
-    }),
-
     getMe: builder.query({
       query: () => ({
         url: "/myprofile",
-        method: "GET",
-        credentials: "include",
-      }),
-      providesTags: ["user"],
-    }),
-
-    myOrders: builder.query({
-      query: () => ({
-        url: "/myorder",
         method: "GET",
         credentials: "include",
       }),
@@ -53,8 +34,6 @@ const userApi = baseApi.injectEndpoints({
 
 export const {
   useGetMyPurchasedCoursesQuery,
-  useMyReferralSummaryQuery,
   useGetMeQuery,
-  useMyOrdersQuery,
   useUpdateProfileMutation,
 } = userApi;
