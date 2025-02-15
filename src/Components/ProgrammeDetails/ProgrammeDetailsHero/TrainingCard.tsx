@@ -20,7 +20,7 @@ const TrainingCard = ({totalEnrolled, rating} : {totalEnrolled ?:string | number
                             )
                         }
                     </div>
-                    <p className="text-neutral-95 text-[10px] lg:text-sm">422,249 ratings</p>
+                    <p className="text-neutral-95 text-[10px] lg:text-sm">322 ratings</p>
                 </div>
                 <div className="bg-neutral-65 h-full w-[1px]"></div>
                 <div className="flex flex-col items-center gap-2">
