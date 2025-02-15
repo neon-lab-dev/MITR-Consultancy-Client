@@ -46,7 +46,7 @@ const TrainingCard: React.FC<TTrainingCard> = ({ _id, poster, courseName, descri
                 {
                     isPriceVisible &&
                     <div className="flex items-center justify-between mt-4">
-                        <Link href={`/internship-programme/${_id}`} className="text-primary-10 font-bold xl:text-lg text-xs leading-5 border-b-2 border-primary-10">
+                        <Link href={`/internship-programmes/${_id}`} className="text-primary-10 font-bold xl:text-lg text-xs leading-5 border-b-2 border-primary-10">
                             View Details
                         </Link>
                         <h1 className="text-neutral-45 font-bold xl:text-lg text-xs leading-5">
