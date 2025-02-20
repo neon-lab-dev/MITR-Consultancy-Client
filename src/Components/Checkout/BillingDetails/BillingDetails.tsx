@@ -15,11 +15,11 @@ import { useCart } from "@/providers/CartProvider/CartProvider";
 const BillingDetails = () => {
     const { cartData } = useCart();
     const { data: myProfile } = useGetMeQuery({});
-    console.log(myProfile);
     const [loading, setLoading] = useState<boolean>(false);
     const user = useSelector(useCurrentUser) as TLoggedInUser;
 
     const totalPrice = cartData && cartData?.reduce((acc, currVal) => acc + currVal.price, 0);
+    const GST = totalPrice * 18 / 100;
 
     useEffect(() => {
         const script = document.createElement("script");
@@ -94,9 +94,13 @@ const BillingDetails = () => {
                     <p>Subtotal</p>
                     <p>₹{totalPrice}</p>
                 </div>
+                <div className="flex items-center justify-between border-b border-neutral-100 pb-[13px] text-neutral-105 text-base md:text-xl font-semibold leading-8">
+                    <p>18% GST</p>
+                    <p>₹{GST.toFixed(0)}</p>
+                </div>
                 <div className="flex items-center justify-between text-neutral-105 text-base md:text-xl font-semibold leading-8">
                     <p>Total</p>
-                    <p>₹{totalPrice}</p>
+                    <p>₹{(totalPrice + GST).toFixed(0)}</p>
                 </div>
                 <Button2 variant="primary" title="" handleClick={handleCheckout} classNames="">
                     {
