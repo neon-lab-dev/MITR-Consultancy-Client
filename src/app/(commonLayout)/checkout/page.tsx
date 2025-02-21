@@ -3,10 +3,24 @@ import BillingDetails from "@/Components/Checkout/BillingDetails/BillingDetails"
 import BillingInfoForm from "@/Components/Checkout/BillingInfoForm/BillingInfoForm";
 import OrderDetails from "@/Components/Checkout/OrderDetails/OrderDetails";
 import Container from "@/Components/Shared/Container/Container";
+import { TLoggedInUser } from "@/Components/Shared/Navbar/Navbar";
 import { useCart } from "@/providers/CartProvider/CartProvider";
+import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 const Checkout = () => {
+    const router = useRouter();
+    const user = useSelector(useCurrentUser) as TLoggedInUser;
     const { cartData } = useCart();
+
+    // If user is nnot logged in then redirect to login page
+    useEffect(() => {
+        if (!user) {
+            router.push("/auth/get-started");
+        }
+    }, [router, user])
     
     return (
         <Container>
