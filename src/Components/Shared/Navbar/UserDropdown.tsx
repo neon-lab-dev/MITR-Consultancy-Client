@@ -42,7 +42,7 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
                 "https://mitr-backend.vercel.app/api/v1/logout"
             );
 
-            if (response.ok) { 
+            if (response.ok) {
                 dispatch(logout());
                 Cookies.set("role", "guest");
                 toast.success(`See you again ${user?.name}`);
@@ -74,6 +74,17 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
                 className={`${open ? "visible" : "invisible"
                     } absolute top-14 z-50 w-full space-y-1 bg-white py-3 rounded-xl flex flex-col`}
             >
+                {
+                    user?.role === "admin" &&
+                    <Link
+                        onClick={() => setOpen(!open)}
+                        href={"/admin"}
+                        className={`rounded-sm px-3 py-2 ${open ? "opacity-100 duration-500" : "opacity-0 duration-150"
+                            } hover:bg-primary-gradient hover:text-primary-10 flex items-center gap-3 text-neutral-10`}>
+                        Dashboard
+                    </Link>
+                }
+
                 {userMenuItems.map((item, index) => (
                     <Link
                         onClick={() => setOpen(!open)}
@@ -88,6 +99,8 @@ const UserDropdown = ({ btnStyle }: { btnStyle: string }) => {
                         {item.label}
                     </Link>
                 ))}
+
+
 
                 {/* Logout button */}
                 <button
