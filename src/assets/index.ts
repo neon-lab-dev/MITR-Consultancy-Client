@@ -109,6 +109,7 @@ import blog from "../assets/Images/Clients/image 7.png";
 import interior from "../assets/Images/Clients/image 8.png";
 import studentTiffin from "../assets/Images/Clients/image 9.png";
 import dentistClinic from "../assets/Images/Clients/image 10.png";
+import bootcamp1 from "../assets/Images/bootcamp1.jpg";
 
 // Technologies
 import reactJs from "../assets/Images/Technologies/image 16.png";
@@ -153,6 +154,7 @@ export const IMAGES = {
     interior,
     studentTiffin,
     dentistClinic,
+    bootcamp1,
 
     // Technologies
     reactJs,

@@ -7,6 +7,7 @@ import OurServices from "@/Components/Home/OurServices/OurServices";
 import Technologies from "@/Components/Home/Technologies/Technologies";
 import Testimonials from "@/Components/Home/Testimonials/Testimonials";
 import OurProjects from './../../Components/Home/OurProjects/OurProjects';
+import SessionAnnouncement from "@/Components/Shared/SessionAnnouncement/SessionAnnouncement";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <OurServices/>
       <OurProjects/>
       <Technologies/>
+      <SessionAnnouncement/>
       <Testimonials/>
       <FAQ/>
       <LetsTalk/>
