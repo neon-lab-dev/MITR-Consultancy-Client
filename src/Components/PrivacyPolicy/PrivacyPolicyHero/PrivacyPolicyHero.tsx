@@ -10,7 +10,7 @@ const PrivacyPolicyHero = ({title} : {title:string}) => {
         <div className="absolute inset-0 z-0">
             <Image
                 src={IMAGES.internshipProgrammeBg}
-                alt="MITR Consultancy"
+                alt="MITRA Consultancy"
                 layout="fill"
                 objectFit="cover"
                 priority

@@ -89,7 +89,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           <div className="flex justify-between p-4">
             <Image
               src={IMAGES.MITRConsoltancyLogo}
-              alt="MITR Consultancy"
+              alt="MITRA Consultancy"
               className="h-[36px] w-[72px]"
             />
             <button

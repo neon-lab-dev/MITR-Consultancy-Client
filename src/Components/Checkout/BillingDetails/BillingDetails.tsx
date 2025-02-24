@@ -57,7 +57,7 @@ const BillingDetails = () => {
                 key: keyData?.data?.key, // Razorpay key_id
                 amount: response?.data?.order?.amount,
                 currency: 'INR',
-                name: 'MITR Consultancy',
+                name: 'MITRA Consultancy',
                 description: 'Test Transaction',
                 image: "https://i.ibb.co.com/fzB3sKkh/mitr-consultancy.png",
                 order_id: response?.data?.order?.id, // the order id

@@ -26,7 +26,7 @@ const ProgrammeDetailsHero : React.FC<TProgrammeDetailsHero> = ({_id, poster, le
             <div className="relative w-full h-[470px]">
                 <Image
                     src={IMAGES.frontendDevelopmentBgImg}
-                    alt="MITR Consultancy"
+                    alt="MITRA Consultancy"
                     layout="fill"
                     objectFit="cover"
                     priority

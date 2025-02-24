@@ -12,7 +12,7 @@ const SessionAnnouncement = () => {
                     <div className="w-full lg:w-[60%]">
                         <Heading
                             align="left"
-                            subHeading="Our Upcoming Webinar"
+                            subHeading="Our Upcoming Webinar on 1st March, 2025"
                             heading="From Chaos to clarity  : Crafting a Professional Codebase in React & Next.js"/>
                         <p className={`text-neutral-20 mt-6 text-justify`}>
                             Building a scalable and maintainable React & Next.js codebase requires structure, best practices, and efficiency. Our webinar, <strong>"From Chaos to Clarity: Crafting a Professional Codebase in React & Next.js,"</strong> will help you master modular architecture, state management, and performance optimization to transform messy projects into clean, high-quality applications with industry standards.
@@ -29,7 +29,7 @@ const SessionAnnouncement = () => {
                     <a className="w-full lg:w-[40%]" href={"https://docs.google.com/forms/d/e/1FAIpQLSd_NA5uzm2tgyrTlgeMiPafy6Z0oe24rggkRrxj0pNVneTvSA/viewform"} target="_blank">
                     <Image
                         src={IMAGES.bootcamp1}
-                        alt="about -MITR"
+                        alt="about -MITRA"
                         className=""
                     />
                     </a>

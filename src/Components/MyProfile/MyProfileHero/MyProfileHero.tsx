@@ -8,7 +8,7 @@ const MyProfileHero = ({ name }: { name: string }) => {
             <div className="relative w-full h-[265px]">
                 <Image
                     src={IMAGES.myProfileBg}
-                    alt="MITR Consultancy"
+                    alt="MITRA Consultancy"
                     layout="fill"
                     objectFit="cover"
                     priority

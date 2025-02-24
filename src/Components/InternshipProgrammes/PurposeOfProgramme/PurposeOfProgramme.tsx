@@ -30,7 +30,7 @@ const PurposeOfProgramme = () => {
         <div className="font-Inter py-[60px] md:py-20 xl:py-[98px] bg-primary-40">
             <Container>
                 <div className="flex flex-col-reverse xl:flex-row items-center gap-7">
-                    <Image src={IMAGES.purposeOfProgramme} alt="MITR Consultancy" className="" />
+                    <Image src={IMAGES.purposeOfProgramme} alt="MITRA Consultancy" className="" />
                     <div>
                         <h1 className="section-heading text-center xl:text-start">Purpose of <span className="text-primary-10">industry Ready</span> program </h1>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-9 mt-9">

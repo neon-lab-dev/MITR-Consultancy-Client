@@ -16,8 +16,8 @@ const FAQ = () => {
 
   const faqs: FAQItem[] = [
     {
-      question: "What services does MITR Consultancy offer?",
-      answer: "At MITR Consultancy, we specialize in a range of digital solutions, including web application development, frontend and backend development, UI/UX design, and more. Our goal is to deliver user-friendly, high-performing, and visually stunning digital products.",
+      question: "What services does MITRA Consultancy offer?",
+      answer: "At MITRA Consultancy, we specialize in a range of digital solutions, including web application development, frontend and backend development, UI/UX design, and more. Our goal is to deliver user-friendly, high-performing, and visually stunning digital products.",
     },
     {
       question: "Do you provide end-to-end development services?",

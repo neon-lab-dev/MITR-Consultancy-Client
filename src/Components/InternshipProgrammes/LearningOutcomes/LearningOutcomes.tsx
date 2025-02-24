@@ -34,7 +34,7 @@ const LearningOutcomes = () => {
                         }
                     </div>
                 </div>
-                <Image src={IMAGES.learningOutcomes} alt="MITR Consultancy" className="" />
+                <Image src={IMAGES.learningOutcomes} alt="MITRA Consultancy" className="" />
             </div>
         </Container>
     );

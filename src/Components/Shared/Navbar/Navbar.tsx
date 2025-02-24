@@ -104,7 +104,7 @@ const Navbar = () => {
             <Link href={"/"}>
               <Image
                 src={IMAGES.MITRConsoltancyLogo}
-                alt="MITR Consultancy"
+                alt="MITRA Consultancy"
                 className="xl:w-[134px] xl:h-[64px] md:w-[90px] md:h-[45px] h-[36px] w-[72px]"
               />
             </Link>

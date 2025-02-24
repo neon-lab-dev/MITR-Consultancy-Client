@@ -45,7 +45,7 @@ const PrivacyPolicy = () => {
             <Container>
                 <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 mt-10">
 
-                    <p className="font-normal text-lg mt-2">MITR Consultancy (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates <a href="https://mitraconsultancy.co.in/" className="font-semibold text-primary-20">https://mitraconsultancy.co.in/</a> (the &quot;Website&quot;).
+                    <p className="font-normal text-lg mt-2">MITRA Consultancy (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates <a href="https://mitraconsultancy.co.in/" className="font-semibold text-primary-20">https://mitraconsultancy.co.in/</a> (the &quot;Website&quot;).
                         This Privacy Policy explains how we collect, use, and protect your personal information when
                         you use our services.</p>
                     {

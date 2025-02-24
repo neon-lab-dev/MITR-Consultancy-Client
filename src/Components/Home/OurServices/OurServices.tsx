@@ -43,7 +43,7 @@ const OurServices = () => {
     <div id="services" className="relative pb-[128px]  bg-white section">
       <Image
         src={IMAGES.gradientBg}
-        alt="MITR Consultancy Services"
+        alt="MITRA Consultancy Services"
         className="w-full h-full object-cover rounded-b-[50px] absolute z-0"
       />
       <div className='relative z-20 pt-[100px]'>

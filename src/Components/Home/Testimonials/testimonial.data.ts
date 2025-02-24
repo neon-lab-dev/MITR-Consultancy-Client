@@ -2,7 +2,7 @@ export const testimonials = [
     {
         _id: "1",
         rating: 5,
-        review: "Fantastic service from MITR Consultancy. We successfully launched our Domain-Hosting provider. Really appreciate this service.",
+        review: "Fantastic service from MITRA Consultancy. We successfully launched our Domain-Hosting provider. Really appreciate this service.",
         name: "Gobinath",
         designation: "Digital Solutions Expert"
     },

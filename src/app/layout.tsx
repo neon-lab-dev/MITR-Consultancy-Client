@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MITR Consultancy",
-  description: "Bring your thoughts to reality with Mitr Consultancy",
+  title: "MITRA Consultancy",
+  description: "Bring your thoughts to reality with MITRA Consultancy",
 };
 
 export default function RootLayout({

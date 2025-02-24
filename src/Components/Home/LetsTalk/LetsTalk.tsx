@@ -16,7 +16,7 @@ const LetsTalk = () => {
           {/* Background Image */}
           <Image
             src={IMAGES.letsTalkBgImg}
-            alt="MITR Consultancy"
+            alt="MITRA Consultancy"
             className="w-full h-full object-cover"
           />
 
