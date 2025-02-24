@@ -13,21 +13,21 @@ const AboutUs = () => {
   return (
     <div id="aboutUs" className="bg-primary-40 py-[60px] md:py-20 xl:py-[128px]">
       <Container>
-        <div className="flex flex-col-reverse  lg:flex-row items-center gap-[54px] ">
+        <div className="flex flex-col-reverse xl:flex-row items-center gap-[54px] ">
           
         <Image
             src={IMAGES.aboutUs}
-            alt="about -MITRA"
+            alt="about -MITR"
             className="w-full h-full"
           />
           <div className="">
             <Heading
               align="left"
-              subHeading="About MITRA"
+              subHeading="About MITR"
               heading="Most trusted Business Consulting"
             />
             <p className={`text-neutral-20 mt-6 text-justify`}>
-              At MITRA Consulting, we are a team of passionate professionals
+              At MITR Consulting, we are a team of passionate professionals
               dedicated to transforming ideas into impactful digital solutions.
               With expertise spanning UI/UX design, app development, back-end
               systems, software development, and front-end technologies, we
