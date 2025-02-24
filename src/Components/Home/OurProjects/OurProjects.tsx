@@ -37,7 +37,7 @@ const OurProjects = () => {
 
                     <Swiper
                         spaceBetween={20}
-                        slidesPerView={4}
+                        slidesPerView={1}
                         navigation={{
                             prevEl: "#prevProjectButton",
                             nextEl: "#nextProjectButton",

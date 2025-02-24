@@ -21,7 +21,7 @@ export const ourProjectsContent = [
         _id: "3",
         projectName: "Now Digital Easy",
         description:
-            "Now Digital Easy provides domain hosting and Google Workspace services, empowering businesses with reliable infrastructure. It offers seamless hosting, email solutions, and productivity tools for efficient operations.",
+            "Now Digital Easy provides domain hosting and Google Workspace services, empowering businesses with reliable infrastructure. It offers seamless hosting, email solutions, and productivity tools for efficiency.",
         image: IMAGES.ndeWebsite,
         liveLink : "https://www.nowdigitaleasy.com/"
     },
@@ -37,7 +37,7 @@ export const ourProjectsContent = [
         _id: "5",
         projectName: "Agriculture",
         description:
-            "Agriculture focuses on promoting sustainable and organic farming practices. The website offers products, insights, and resources for farmers and consumers, driving awareness of eco-friendly agricultural methods.",
+            "Agriculture promotes sustainable farming with products, insights, and resources, raising awareness of eco-friendly methods.",
         image: IMAGES.agri,
         liveLink: "https://dhanlakshmiherbalorganics.com/",
     },
