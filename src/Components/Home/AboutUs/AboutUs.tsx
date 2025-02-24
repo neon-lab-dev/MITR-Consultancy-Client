@@ -17,17 +17,17 @@ const AboutUs = () => {
           
         <Image
             src={IMAGES.aboutUs}
-            alt="about -MITR"
+            alt="about -MITRA"
             className="w-full h-full"
           />
           <div className="">
             <Heading
               align="left"
-              subHeading="About MITR"
+              subHeading="About MITRA"
               heading="Most trusted Business Consulting"
             />
             <p className={`text-neutral-20 mt-6 text-justify`}>
-              At MITR Consulting, we are a team of passionate professionals
+              At MITRA Consulting, we are a team of passionate professionals
               dedicated to transforming ideas into impactful digital solutions.
               With expertise spanning UI/UX design, app development, back-end
               systems, software development, and front-end technologies, we
