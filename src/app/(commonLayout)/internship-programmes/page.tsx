@@ -7,13 +7,13 @@ import LearningOutcomes from "@/Components/InternshipProgrammes/LearningOutcomes
 import BenefitsForStudent from "@/Components/InternshipProgrammes/BenefitsForStudent/BenefitsForStudent";
 import FAQ from "@/Components/Shared/FAQ/FAQ";
 import ProgramHighlights from "@/Components/InternshipProgrammes/ProgramHighlights/ProgramHighlights";
-import SessionAnnouncement from "@/Components/Shared/SessionAnnouncement/SessionAnnouncement";
+// import SessionAnnouncement from "@/Components/Shared/SessionAnnouncement/SessionAnnouncement";
 
 const InternshipProgrammes = () => {
     return (
         <div>
             <InternshipProgrammesHero/>
-            <SessionAnnouncement/>
+            {/* <SessionAnnouncement/> */}
             <StartTraining/>
             <PurposeOfProgramme/>
             <KeyTechnologies/>
