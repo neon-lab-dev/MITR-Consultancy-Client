@@ -1,10 +1,12 @@
 import { FormProvider, useForm, SubmitHandler } from "react-hook-form";
 import Button from "../../Reusable/Button/Button";
-import { useRef } from "react";
-import { toast, Toaster } from "sonner";
+import { useRef, useState } from "react";
+import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import { ICONS } from "@/assets";
+import Button2 from "@/Components/Reusable/Button/Button2";
+import LoadingSpinner from "@/Components/LoadingSpinner/LoadingSpinner";
 
 type FormValues = {
   fullName: string;
@@ -23,6 +25,8 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
     },
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     handleSubmit,
     register,
@@ -34,6 +38,7 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
 
   // Send email function
   const sendEmail: SubmitHandler<FormValues> = () => {
+    setIsLoading(true);
     if (!form.current) return;
 
     emailjs
@@ -52,6 +57,8 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
             },
             duration: 3000,
           });
+          setIsContactUsModalOpen(false);
+          setIsLoading(false);
           methods.reset();
         },
         (error) => {
@@ -62,7 +69,8 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
 
   };
 
-  const inputFieldStyle = "md:py-[18px] py-3 px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20 focus:border-primary-10 transition duration-300 focus:outline-none"
+  const inputFieldStyle = "md:py-[18px] py-3 px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20 focus:border-primary-10 transition duration-300 focus:outline-none";
+  const labelStyle = "text-neutral-60 font-medium md:text-base text-[10px] leading-[14px]";
 
   return (
     <FormProvider {...methods}>
@@ -82,7 +90,7 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
           <div className="flex flex-col gap-2">
             <label
               htmlFor="fullName"
-              className="text-neutral-60 font-medium md:text-base text-[10px] leading-[14px]"
+              className={labelStyle}
             >
               Name
             </label>
@@ -104,7 +112,7 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
             <div className="flex flex-col gap-2 w-full lg:w-1/2">
               <label
                 htmlFor="email"
-                className="text-neutral-60 font-medium md:text-base text-[10px] leading-[14px]"
+                className={labelStyle}
               >
                 Email
               </label>
@@ -131,17 +139,13 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
             <div className="flex flex-col gap-2 w-full lg:w-1/2">
               <label
                 htmlFor="mobileNumber"
-                className="text-neutral-60 font-medium md:text-base text-[10px] leading-[14px]"
+                className={labelStyle}
               >
                 Phone
               </label>
               <input
                 {...register("mobileNumber", {
                   required: "Phone number is required",
-                  pattern: {
-                    value: /^[0-9]{10}$/,
-                    message: "Enter a valid phone number",
-                  },
                 })}
                 type="text"
                 id="mobileNumber"
@@ -159,7 +163,7 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
           <div className="flex flex-col gap-2">
             <label
               htmlFor="message"
-              className="text-neutral-60 font-medium md:text-base text-[10px] leading-[14px] "
+              className="text-neutral-60 font-medium md:text-base text-[10px] leading-[14px]"
             >
               Message
             </label>
@@ -177,10 +181,11 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
             )}
           </div>
 
-          <Button variant="primary" title="Contact Us" classNames="w-full" />
+          <Button2 variant="primary" title="">
+            {
+              isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Contact Us"}
+          </Button2>
         </form>
-
-        <Toaster position="top-center" />
       </div>
     </FormProvider>
   );

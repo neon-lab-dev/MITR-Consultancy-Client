@@ -145,9 +145,6 @@ const Navbar = () => {
                 </>
               )}
 
-
-
-
               <Button
                 handleClick={() => setIsContactUsModalOpen(true)}
                 variant="primary"

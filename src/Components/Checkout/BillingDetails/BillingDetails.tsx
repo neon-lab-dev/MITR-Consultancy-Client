@@ -35,16 +35,16 @@ const BillingDetails = () => {
     const handleCheckout = async () => {
         try {
             setLoading(true);
-        const purchasedCourseIds = myProfile?.user?.purchasedCourses || [];
+            const purchasedCourseIds = myProfile?.user?.purchasedCourses || [];
 
-        // Filter out purchased courses from cartData
-        const newCartData = cartData?.filter((course: any) => !purchasedCourseIds.includes(course._id));
+            // Filter out purchased courses from cartData
+            const newCartData = cartData?.filter((course: any) => !purchasedCourseIds.includes(course._id));
 
-        if (newCartData.length === 0) {
-            toast.error("You have already purchased all selected courses!");
-            setLoading(false);
-            return;
-        }
+            if (newCartData.length === 0) {
+                toast.error("You have already purchased all selected courses!");
+                setLoading(false);
+                return;
+            }
             const keyData = await axios.get('https://mitr-backend.vercel.app/api/v1/getkey');
 
             const response = await axios.post(
