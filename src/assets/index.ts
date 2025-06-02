@@ -10,6 +10,8 @@ import myProfileBg from "../assets/Images/my-profile-bg.png";
 import learningOutcomes from "../assets/Images/learning-outcome.png";
 import benefits from "../assets/Images/benefits.png";
 import certification from "../assets/Images/ist-certificate.png.png";
+import cybersecurityComplianceHeroImg from "../assets/Images/CybersecurityComplianceHeroimg.svg";
+import cyberSecurity from "../assets/Images/cyber-security.png";
 
 
 // Services
@@ -141,6 +143,8 @@ export const IMAGES = {
     learningOutcomes,
     benefits,
     certification,
+    cybersecurityComplianceHeroImg,
+    cyberSecurity,
 
     // Clients
     abhirami,

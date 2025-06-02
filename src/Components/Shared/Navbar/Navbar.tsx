@@ -29,7 +29,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { cartData } = useCart();
 
-
   // Handle scroll event to change navbar background
   useEffect(() => {
     const handleScroll = () => {
@@ -58,20 +57,27 @@ const Navbar = () => {
     "/payment-success",
   ];
 
-  const textColor = neutralPages.includes(pathname) || pathname.startsWith("/internship-programmes/") || pathname.startsWith("/auth/")
-    ? "text-neutral-85"
-    : "text-white";
+  const textColor =
+    neutralPages.includes(pathname) ||
+    pathname.startsWith("/internship-programmes/") ||
+    pathname.startsWith("/auth/")
+      ? "text-neutral-85"
+      : "text-white";
 
-  const btnStyle = neutralPages.includes(pathname) || pathname.startsWith("/internship-programmes/") || pathname.startsWith("/auth/")
-    ? "text-primary-20 border-primary-20"
-    : "text-white border-white";
-
+  const btnStyle =
+    neutralPages.includes(pathname) ||
+    pathname.startsWith("/internship-programmes/") ||
+    pathname.startsWith("/auth/")
+      ? "text-primary-20 border-primary-20"
+      : "text-white border-white";
 
   useEffect(() => {
     const storedSection = sessionStorage.getItem("scrollToSection");
     if (storedSection) {
       setTimeout(() => {
-        document.getElementById(storedSection)?.scrollIntoView({ behavior: "smooth" });
+        document
+          .getElementById(storedSection)
+          ?.scrollIntoView({ behavior: "smooth" });
         sessionStorage.removeItem("scrollToSection");
       }, 300);
     }
@@ -92,13 +98,16 @@ const Navbar = () => {
     { label: "About Us", action: () => handleNavigation("aboutUs") },
     { label: "Portfolio", action: () => handleNavigation("portfolio") },
     { label: "Training Programmes", path: "/internship-programmes" },
+    { label: "Cybersecurity Compliance", path: "/cybersecurity-compliance" },
   ];
 
   return (
     <div id="home">
       <div
-        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 py-2 ${isScrolled ? "bg-neutral-40" : "backdrop-blur-sm bg-transparent"
-          }`}>
+        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 py-2 ${
+          isScrolled ? "bg-neutral-40" : "backdrop-blur-sm bg-transparent"
+        }`}
+      >
         <Container>
           <div className="flex w-full justify-between items-center font-Inter">
             <Link href={"/"}>
@@ -110,24 +119,40 @@ const Navbar = () => {
             </Link>
             {/* Desktop Nav */}
             <div className="hidden xl:flex items-center gap-10">
-              {navlinks.map((link, index) => (
-                link?.action ?
+              {navlinks.map((link, index) =>
+                link?.action ? (
                   <button
                     key={index}
                     onClick={link.action}
-                    className={`text-lg font-medium hover:text-primary-10 transition duration-300 ${isScrolled && "text-white"} ${textColor}`}
+                    className={`text-lg font-medium hover:text-primary-10 transition duration-300 ${
+                      isScrolled && "text-white"
+                    } ${textColor}`}
                   >
                     {link.label}
                   </button>
-                  : <Link key={index} href={link.path} className={`text-lg font-medium hover:text-primary-10 transition duration-300  ${isScrolled && "text-white"} ${textColor}`}>{link.label}</Link>
-              ))}
+                ) : (
+                  <Link
+                    key={index}
+                    href={link.path}
+                    className={`text-lg font-medium hover:text-primary-10 transition duration-300  ${
+                      isScrolled && "text-white"
+                    } ${textColor}`}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </div>
 
             <div className="flex items-center gap-6">
-              {pathname !== "/" && (
+              {pathname !== "/" && pathname !== "/cybersecurity-compliance" && (
                 <>
                   <Link href={"/cart"} className="relative">
-                    <Image src={ICONS.cart} alt="cart-icon" className="size-8" />
+                    <Image
+                      src={ICONS.cart}
+                      alt="cart-icon"
+                      className="size-8"
+                    />
                     <div className="size-4 rounded-full bg-primary-20 text-white flex items-center justify-center absolute -top-1 -right-2 text-[9px]">
                       {cartData?.length}
                     </div>
@@ -137,7 +162,9 @@ const Navbar = () => {
                     <UserDropdown btnStyle={btnStyle} />
                   ) : (
                     <Link href="/auth/get-started" className="hidden md:block">
-                      <button className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}>
+                      <button
+                        className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}
+                      >
                         Sign Up / Sign In
                       </button>
                     </Link>
@@ -154,7 +181,11 @@ const Navbar = () => {
               {/* Hamburger Menu for Small Screens */}
               <div className="xl:hidden flex items-center">
                 <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-                  <Image src={ICONS.hamburgerMenuBlue} alt="menu icon" className="size-7" />
+                  <Image
+                    src={ICONS.hamburgerMenuBlue}
+                    alt="menu icon"
+                    className="size-7"
+                  />
                 </button>
               </div>
             </div>
