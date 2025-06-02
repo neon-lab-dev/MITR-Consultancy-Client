@@ -13,6 +13,7 @@ import certification from "../assets/Images/ist-certificate.png.png";
 import cybersecurityComplianceHeroImg from "../assets/Images/CybersecurityComplianceHeroimg.svg";
 import cyberSecurity from "../assets/Images/cyber-security.png";
 
+import featureIcon from "../assets/Icons/featureIcon.svg";
 
 // Services
 import cart from "../assets/Icons/cart.svg";
@@ -261,5 +262,6 @@ export const ICONS = {
     twitter,
     linkedin,
     instagram,
+    featureIcon,
 
 }

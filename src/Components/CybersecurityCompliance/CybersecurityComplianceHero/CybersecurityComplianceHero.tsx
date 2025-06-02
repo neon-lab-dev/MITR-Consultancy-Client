@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import { IMAGES } from "@/assets";
+import { ICONS, IMAGES } from "@/assets";
 import ContactUs from "@/Components/Home/ContactUs/ContactUs";
 import Button from "@/Components/Reusable/Button/Button";
 import Container from "@/Components/Shared/Container/Container";
@@ -10,6 +10,13 @@ import { useState } from "react";
 const CybersecurityComplianceHero = () => {
   const [isContactUsModalOpen, setIsContactUsModalOpen] =
     useState<boolean>(false);
+
+  const features = [
+    "Trusted Cybersecurity Experts",
+    "Verified Protocols",
+    "Custom Solutions",
+    "Robust Updation",
+  ];
   return (
     <div className="font-Inter relative h-screen">
       {/* Background Image */}
@@ -28,39 +35,58 @@ const CybersecurityComplianceHero = () => {
 
       {/* Content */}
       <Container>
-        <div className="flex items-center justify-between absolute top-0 bottom-0 z-20">
-          <div>
-            <h1 className="text-white leading-6 md:leading-[40px] xl:leading-[80px] text-xl md:text-[32px] xl:text-[68px] font-bold max-w-[344px] md:max-w-[550px] xl:max-w-[1071px]">
-              Comprehensive{" "}
-              <span className="text-primary-20">Cybersecurity</span> Compliance
-              for Growth and Resilience
-            </h1>
-            <p className="text-white text-[11px] md:text-sm xl:text-lg leading-[18px] xl:leading-7 max-w-[1071px] mt-3 xl:mt-6 px-4">
-              Unlock your business's full potential with our comprehensive
-              cybersecurity strategies. Safeguard your growth and resilience in
-              the digital age.
-            </p>
-            <div className="flex flex-col md:flex-row items-center justify-start gap-4 xl:gap-6 mt-4 md:mt-9 xl:mt-[62px]">
-              <Button
-                handleClick={() => setIsContactUsModalOpen(true)}
-                variant="secondary"
-                title="Speak to an Expert"
-                classNames="w-auto"
-              />
-              <Button
-                handleClick={() =>
-                  document
-                    .getElementById("portfolio")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                variant="primary"
-                title="Take Compliance Assessment"
-                classNames="w-auto"
-              />
+        <div className="flex flex-col gap-[117px] items-center justify-center absolute top-0 bottom-0 z-20 max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-white leading-6 md:leading-[40px] xl:leading-[67px] text-xl md:text-[32px] xl:text-[56px] font-bold max-w-[344px] md:max-w-[550px] xl:max-w-[1071px]">
+                Comprehensive{" "}
+                <span className="text-primary-20">Cybersecurity</span>{" "}
+                Compliance for Growth and Resilience
+              </h1>
+              <p className="text-white text-[11px] md:text-sm xl:text-lg leading-[18px] xl:leading-7 max-w-[1071px] mt-3 xl:mt-6 px-4">
+                Unlock your business's full potential with our comprehensive
+                cybersecurity strategies. Safeguard your growth and resilience
+                in the digital age.
+              </p>
+              <div className="flex flex-col md:flex-row items-center justify-start gap-4 xl:gap-6 mt-4 md:mt-9 xl:mt-[62px]">
+                <Button
+                  handleClick={() => setIsContactUsModalOpen(true)}
+                  variant="secondary"
+                  title="Speak to an Expert"
+                  classNames="w-auto"
+                />
+                <Button
+                  handleClick={() =>
+                    document
+                      .getElementById("portfolio")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  variant="primary"
+                  title="Take Compliance Assessment"
+                  classNames="w-auto"
+                />
+              </div>
             </div>
+
+            <Image
+              src={IMAGES.cyberSecurity}
+              alt="MITRA Consultancy"
+              className="max-w-[600px]"
+            />
           </div>
 
-          <Image src={IMAGES.cyberSecurity} alt="MITRA Consultancy" />
+          {/* Features */}
+          <div className="grid grid-cols-4 gap-4 z-10">
+            {features?.map((feature) => (
+              <div
+                key={feature}
+                className="bg-[#ffffff1a] rounded border border-[#ffffff1a] text-white/75 px-4 py-3 flex items-center gap-[10px]"
+              >
+                <Image src={ICONS.featureIcon} alt="" className="size-8" />
+                <p>{feature}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
       <ContactUs
