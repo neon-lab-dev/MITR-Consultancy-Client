@@ -77,7 +77,6 @@ const ComplianceSolutions = () => {
         ],
       },
     },
-    // Add more with dummy data
     {
       icon: ICONS.logistics,
       title: "Logistics",

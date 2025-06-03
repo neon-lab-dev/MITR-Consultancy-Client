@@ -12,6 +12,7 @@ import benefits from "../assets/Images/benefits.png";
 import certification from "../assets/Images/ist-certificate.png.png";
 import cybersecurityComplianceHeroImg from "../assets/Images/CybersecurityComplianceHeroimg.svg";
 import cyberSecurity from "../assets/Images/cyber-security.png";
+import secureCompliance from "../assets/Images/Frame 38127.png";
 
 import featureIcon from "../assets/Icons/featureIcon.svg";
 
@@ -160,6 +161,7 @@ export const IMAGES = {
     certification,
     cybersecurityComplianceHeroImg,
     cyberSecurity,
+    secureCompliance,
 
     // Clients
     abhirami,
