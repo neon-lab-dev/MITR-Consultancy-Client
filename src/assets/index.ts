@@ -73,6 +73,20 @@ import jwt from "../assets/Icons/Technologies/jwt.png";
 import html5 from "../assets/Icons/Technologies/html5.svg";
 import css3 from "../assets/Icons/Technologies/css3.svg";
 
+
+import fintech from "../assets/Icons/fintech.svg";
+import healthTech from "../assets/Icons/medical_services.svg";
+import b2b from "../assets/Icons/bar_chart.svg";
+import consumerTech from "../assets/Icons/bar_chart.svg";
+import logistics from "../assets/Icons/delivery_truck_speed.svg";
+import manufacturing from "../assets/Icons/factory.svg";
+import marketplace from "../assets/Icons/storefront.svg";
+import b2c from "../assets/Icons/account_tree.svg";
+import d2c from "../assets/Icons/shopping_cart_checkout.svg";
+import realEstate from "../assets/Icons/apartment.svg";
+import retailEcom from "../assets/Icons/local_mall.svg";
+import nonProfits from "../assets/Icons/volunteer_activism.svg";
+
 // Tools
 import vscode from "../assets/Icons/Tools/vscode.svg";
 import git from "../assets/Icons/Tools/git.svg";
@@ -263,5 +277,18 @@ export const ICONS = {
     linkedin,
     instagram,
     featureIcon,
+
+    fintech,
+    healthTech,
+    b2b,
+    consumerTech,
+    logistics,
+    manufacturing,
+    marketplace,
+    b2c,
+    d2c,
+    realEstate,
+    retailEcom,
+    nonProfits
 
 }
