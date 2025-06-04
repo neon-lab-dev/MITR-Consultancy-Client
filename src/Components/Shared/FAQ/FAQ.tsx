@@ -11,7 +11,7 @@ type FAQItem = {
   answer: string;
 };
 
-const FAQ = () => {
+const FAQ = ({faqsData} : {faqsData?: FAQItem[]}) => {
   const [isAccordionOpen, setIsAccordionOpen] = useState<number>(0);
 
   const faqs: FAQItem[] = [
@@ -63,7 +63,7 @@ const FAQ = () => {
           />
 
           <div className="flex gap-6 flex-col items-center justify-center w-full mt-9 md:mt-10 xl:mt-20">
-            {faqs.map((faq, index) => (
+            {(faqsData ?? faqs).map((faq, index) => (
               <article
                 key={index}
                 className="shadow-faq-box-shadow bg-white rounded p-8 max-w-[956px] mx-auto"
@@ -78,8 +78,8 @@ const FAQ = () => {
                   <Image
                     src={ICONS.downArrow}
                     alt="right-arrow"
-                    className={`${
-                      isAccordionOpen === index && "rotate-[180deg]"
+                    className={`transition-transform duration-300 ${
+                      isAccordionOpen === index ? "rotate-180" : ""
                     }`}
                   />
                 </div>
@@ -90,7 +90,9 @@ const FAQ = () => {
                       : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
-                  <p className="text-neutral-20 overflow-hidden text-xs md:text-base ">{faq.answer}</p>
+                  <p className="text-neutral-20 overflow-hidden text-xs md:text-base">
+                    {faq.answer}
+                  </p>
                 </div>
               </article>
             ))}
