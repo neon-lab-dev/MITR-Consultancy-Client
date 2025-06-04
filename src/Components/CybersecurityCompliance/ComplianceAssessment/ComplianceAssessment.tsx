@@ -5,7 +5,7 @@ import ComplianceAssessmentForm from "./ComplianceAssessmentForm";
 
 const ComplianceAssessment = () => {
   return (
-    <div className="font-Inter">
+    <div className="font-Inter relative">
       <Image
         src={IMAGES.secureCompliance}
         alt=""
@@ -15,13 +15,13 @@ const ComplianceAssessment = () => {
       <Container>
         <div className="relative py-[100px]">
           <h1
-            className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[64px] leading-6 md:leading-[49.68px] capitalize text-center`}
+            className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
           >
             Take Your Compliance Assessment
           </h1>
 
-          <div className="flex items-center justify-between gap-5 mt-[60px]">
-            <div className="flex gap-24 items-center w-[40%]">
+          <div className="flex flex-col xl:flex-row gap-10 xl:gap-5 items-center justify-between mt-[60px]">
+            <div className="flex gap-24 items-center justify-center w-full xl:w-[40%]">
               <div className="text-neutral-145">
                 <Image src={ICONS.medal} alt="medal" className="" />
                 <h1 className={`font-extrabold text-[36px] text-center mt-6`}>

@@ -42,7 +42,9 @@ const CyberSecurityTestimonials = () => {
   return (
     <div className="pt-[130px] pb-20 bg-neutral-155">
       <Container>
-        <h1 className="font-bold text-neutral-10 text-lg md:text-2xl xl:text-[64px] leading-6 md:leading-[49.68px] capitalize text-center">
+        <h1
+          className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
+        >
           Testimonials
         </h1>
 
@@ -65,14 +67,14 @@ const CyberSecurityTestimonials = () => {
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <div className="bg-white border border-neutral-25/20 p-5 rounded-2xl h-[276px] w-full flex flex-col justify-between">
-                  <p className="text-neutral-145 font-medium leading-9 text-2xl">
+                  <p className="text-neutral-145 font-medium leading-6 lg:leading-9 text-base lg:text-2xl">
                     “{testimonial.message}”
                   </p>
                   <div>
-                    <h3 className="text-neutral-145 text-xl font-medium">
+                    <h3 className="text-neutral-145 text-base lg:text-xl font-medium">
                       {testimonial.name}
                     </h3>
-                    <p className="text-neutral-145 text-lg mt-1">
+                    <p className="text-neutral-145 text-sm md:text-lg mt-1">
                       {testimonial.role}
                     </p>
                   </div>
@@ -94,7 +96,7 @@ const CyberSecurityTestimonials = () => {
               />
             </button>
 
-            <div className="custom-pagination flex gap-2 [&>span]:w-3 [&>span]:h-3 [&>span]:rounded-full [&>span]:inline-block [&>span]:bg-gray-400 [&>span]:cursor-pointer [&>.swiper-pagination-bullet-active]:bg-blue-500"></div>
+            <div className="custom-pagination flex gap-2 [&>span]:w-3 [&>span]:h-3 [&>span]:rounded-full [&>span]:inline-block [&>span]:bg-gray-400 [&>span]:cursor-pointer [&>.swiper-pagination-bullet-active]:bg-blue-500 mx-auto"></div>
 
             <button
               onClick={() => swiperRef.current?.slideNext()}

@@ -12,8 +12,8 @@ const CybersecurityCompliance = () => {
       <ComplianceSolutions />
       <SecureCompliance />
       <TrustAndResults />
-      {/* <ComplianceAssessment /> */}
-      {/* <CyberSecurityTestimonials/> */}
+      <ComplianceAssessment />
+      <CyberSecurityTestimonials/>
     </div>
   );
 };

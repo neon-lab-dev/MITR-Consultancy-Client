@@ -31,14 +31,14 @@ const ComplianceAssessmentForm = () => {
     }`;
 
   return (
-    <div className="bg-neutral-150 rounded-xl p-6 font-Inter shadow-[0px_0px_50px_-13px_rgba(0,0,0,0.20)] w-[60%]">
+    <div className="bg-neutral-150 rounded-xl p-6 font-Inter shadow-[0px_0px_50px_-13px_rgba(0,0,0,0.20)] w-full xl:w-[60%]">
       <h1 className="text-xl text-neutral-145 font-medium mb-6">
         Start Your Quick Compliance Check
       </h1>
 
       <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 gap-4">
         {/* Name */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-neutral-145 text-[15px] font-medium mb-1">Name</label>
             <input
@@ -81,7 +81,7 @@ const ComplianceAssessmentForm = () => {
         </div>
 
         {/* Challenge & Location */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-neutral-145 text-[15px] font-medium mb-1">Cybersecurity Challenge</label>
             <select
@@ -109,7 +109,7 @@ const ComplianceAssessmentForm = () => {
         </div>
 
         {/* Revenue & Website */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-neutral-145 text-[15px] font-medium mb-1">Annual Revenue</label>
             <select
