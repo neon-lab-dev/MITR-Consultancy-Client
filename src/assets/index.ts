@@ -33,6 +33,7 @@ import downArrowBlue from "../assets/Icons/down-arrow-blue.svg";
 import tickMark from "../assets/Icons/tick-mark.svg";
 import rightArrow2 from "../assets/Icons/right-arrow2.svg";
 import rightArrowDark from "../assets/Icons/right-arrow-dark.svg";
+import rightArrowBlue from "../assets/Icons/right-arrow-blue.svg";
 
 import rightArrow from "../assets/Icons/right-arrow.svg";
 import downArrow from "../assets/Icons/down-arrow.svg";
@@ -226,6 +227,7 @@ export const ICONS = {
     rightArrow,
     rightArrow2,
     rightArrowDark,
+    rightArrowBlue,
     downArrow,
     downArrow2,
     downArrowWhite,
