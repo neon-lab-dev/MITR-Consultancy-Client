@@ -18,7 +18,7 @@ const CybersecurityComplianceHero = () => {
     "Robust Updation",
   ];
   return (
-    <div className="font-Inter relative h-screen">
+    <div className="font-Inter relative h-[1200px] xl:h-screen">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -35,25 +35,25 @@ const CybersecurityComplianceHero = () => {
 
       {/* Content */}
       <Container>
-        <div className="flex flex-col gap-[117px] items-center justify-center absolute top-0 bottom-0 z-20 max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0">
-          <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-8 xl:gap-[117px] items-center justify-center absolute top-0 bottom-0 z-20 max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0">
+          <div className="flex flex-col xl:flex-row gap-10 xl:gap-0 items-center justify-between">
             <div>
-              <h1 className="text-white leading-6 md:leading-[40px] xl:leading-[67px] text-xl md:text-[32px] xl:text-[56px] font-bold max-w-[344px] md:max-w-[550px] xl:max-w-[1071px]">
+              <h1 className="text-white text-center xl:text-start leading-[48px] xl:leading-[67px] text-[40px] xl:text-[56px] font-bold max-w-[344px] md:max-w-[1071px] lg:max-w-[800px] mx-auto">
                 Comprehensive{" "}
                 <span className="text-primary-20">Cybersecurity</span>{" "}
                 Compliance for Growth and Resilience
               </h1>
-              <p className="text-white text-[11px] md:text-sm xl:text-lg leading-[18px] xl:leading-7 max-w-[1071px] mt-3 xl:mt-6 px-4">
+              <p className="text-white text-center xl:text-start text-[11px] md:text-sm xl:text-lg leading-[18px] xl:leading-7 max-w-full md_maw-w-[850px] lg:max-w-[1071px] mt-5 xl:mt-6">
                 Unlock your business's full potential with our comprehensive
                 cybersecurity strategies. Safeguard your growth and resilience
                 in the digital age.
               </p>
-              <div className="flex flex-col md:flex-row items-center justify-start gap-4 xl:gap-6 mt-4 md:mt-9 xl:mt-[62px]">
+              <div className="flex flex-col md:flex-row items-center justify-center xl:justify-start gap-4 xl:gap-6 mt-5 md:mt-9 xl:mt-[62px]">
                 <Button
                   handleClick={() => setIsContactUsModalOpen(true)}
                   variant="secondary"
                   title="Speak to an Expert"
-                  classNames="w-auto"
+                  classNames="w-full md:w-auto"
                 />
                 <Button
                   handleClick={() =>
@@ -71,12 +71,12 @@ const CybersecurityComplianceHero = () => {
             <Image
               src={IMAGES.cyberSecurity}
               alt="MITRA Consultancy"
-              className="max-w-[600px]"
+              className="max-w-full xl:max-w-[600px]"
             />
           </div>
 
           {/* Features */}
-          <div className="grid grid-cols-4 gap-4 z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 z-10">
             {features?.map((feature) => (
               <div
                 key={feature}
