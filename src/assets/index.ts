@@ -22,6 +22,7 @@ import vaptSecurity from "../assets/Icons/vapt-security.svg";
 import cloudSecurity from "../assets/Icons/cloud-security.svg";
 import endpointSecurity from "../assets/Icons/endpoint-security.svg";
 import mailLock from "../assets/Icons/mail_lock.svg";
+import tickCircleGreen from "../assets/Icons/check-circle-green.svg";
 
 // Services
 import cart from "../assets/Icons/cart.svg";
@@ -230,6 +231,7 @@ export const ICONS = {
     tickMark,
     medal,
     satisfied,
+    tickCircleGreen,
     mailLock,
     vaptSecurity,
     networkSecurity,
