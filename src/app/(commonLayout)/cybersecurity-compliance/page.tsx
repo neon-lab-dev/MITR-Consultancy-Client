@@ -9,11 +9,11 @@ const CybersecurityCompliance = () => {
   return (
     <div>
       <CybersecurityComplianceHero />
-      {/* <ComplianceSolutions />
-      <SecureCompliance />
-      <TrustAndResults />
-      <ComplianceAssessment />
-      <CyberSecurityTestimonials/> */}
+      <ComplianceSolutions />
+      {/* <SecureCompliance /> */}
+      {/* <TrustAndResults /> */}
+      {/* <ComplianceAssessment /> */}
+      {/* <CyberSecurityTestimonials/> */}
     </div>
   );
 };

@@ -204,23 +204,29 @@ const ComplianceSolutions = () => {
       <Container>
         <div>
           <h1
-            className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[64px] leading-6 md:leading-[49.68px] capitalize text-center`}
+            className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
           >
             Compliance Solutions Across Sectors
           </h1>
 
-          <div className="flex items-center gap-6 mt-[60px]">
+          <div className="flex flex-col xl:flex-row items-center gap-6 mt-[60px]">
             {/* Compliance Solutions */}
-            <div className="grid grid-cols-3 gap-[18px] w-[50%]">
+            <div
+              className="
+                flex gap-[18px] w-full overflow-x-auto 
+                xl:grid xl:grid-cols-3 xl:gap-[18px] xl:w-[50%] 
+                xl:overflow-visible"
+            >
               {complianceSolutions?.map((item) => (
                 <button
                   onClick={() => setActiveTab(item.title)}
                   key={item.title}
-                  className={`px-5 py-4 rounded-lg border flex items-center flex-col justify-center ${
-                    activeTab === item.title
-                      ? "bg-primary-75 border-primary-10"
-                      : "bg-white border-neutral-125"
-                  }`}
+                  className={`min-w-[200px] min-h-[120px] flex-shrink-0 px-5 py-4 rounded-lg border flex items-center flex-col justify-center
+        ${
+          activeTab === item.title
+            ? "bg-primary-75 border-primary-10"
+            : "bg-white border-neutral-125"
+        }`}
                 >
                   <div className="flex items-center justify-center size-10 bg-neutral-120 rounded-full">
                     <Image src={item.icon} alt="fintech" className="size-8" />
@@ -231,8 +237,8 @@ const ComplianceSolutions = () => {
             </div>
 
             {/* Data */}
-            <div className="bg-neutral-135 border border-neutral-130 rounded-xl p-6 h-[500px] w-[50%]">
-              <h1 className="text-black text-[36px] font-semibold text-center">
+            <div className="bg-neutral-135 border border-neutral-130 rounded-xl p-6 h-full xl:h-[500px] w-full xl:w-[50%]">
+              <h1 className="text-black text-2xl md:text-[36px] font-semibold text-center">
                 {" "}
                 <span className="text-secondary-20">
                   {activeData?.title}
@@ -252,7 +258,7 @@ const ComplianceSolutions = () => {
                         <h1 className="text-secondary-20 text-2xl font-extrabold text-center">
                           {detail.value}
                         </h1>
-                        <p className="text-black text-sm mt-3 text-center">
+                        <p className="text-black text-sm mt-3 text-start xl:text-center">
                           {detail.description}
                         </p>
                       </div>
