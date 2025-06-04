@@ -1,0 +1,15 @@
+<svg width="586" height="534" viewBox="0 0 586 534" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="-51" width="585" height="585" rx="292.5" fill="url(#paint0_radial_41_1101)"/>
+<mask id="mask0_41_1101" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="189" y="138" width="207" height="207">
+<rect x="189" y="138" width="207" height="207" fill="black"/>
+</mask>
+<g mask="url(#mask0_41_1101)">
+<path d="M292.907 331.671L230.807 285.096C228.651 283.514 226.962 281.502 225.74 279.058C224.518 276.614 223.907 274.027 223.907 271.296V167.796C223.907 163.052 225.596 158.991 228.974 155.613C232.352 152.235 236.413 150.546 241.157 150.546H344.657C349.401 150.546 353.462 152.235 356.84 155.613C360.218 158.991 361.907 163.052 361.907 167.796V271.296C361.907 274.027 361.296 276.614 360.074 279.058C358.852 281.502 357.163 283.514 355.007 285.096L292.907 331.671ZM292.907 310.108L344.657 271.296V167.796H241.157V271.296L292.907 310.108ZM283.851 262.671L332.582 213.939L320.507 201.433L283.851 238.089L265.738 219.977L253.232 232.052L283.851 262.671Z" fill="black" fill-opacity="0.18" style="mix-blend-mode:difference"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_41_1101" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(293 241.5) rotate(90) scale(130)">
+<stop stop-color="#253DAB" stop-opacity="0.16"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

@@ -17,6 +17,11 @@ import secureCompliance from "../assets/Images/Frame 38127.png";
 import featureIcon from "../assets/Icons/featureIcon.svg";
 import satisfied from "../assets/Icons/satisfied.svg";
 import medal from "../assets/Icons/medel.svg";
+import networkSecurity from "../assets/Icons/network-security.svg";
+import vaptSecurity from "../assets/Icons/vapt-security.svg";
+import cloudSecurity from "../assets/Icons/cloud-security.svg";
+import endpointSecurity from "../assets/Icons/endpoint-security.svg";
+import mailLock from "../assets/Icons/mail_lock.svg";
 
 // Services
 import cart from "../assets/Icons/cart.svg";
@@ -147,6 +152,7 @@ import backendDevelopmentImg from "../assets/Images/backend-development.png";
 import frontendDevelopmentImg from "../assets/Images/frontend-development.jpg";
 import uiUxImg from "../assets/Images/ui-ux.jpg";
 import purposeOfProgramme from "../assets/Images/purpose-of-programme.png";
+import security from "../assets/Images/security.svg";
 
 
 export const IMAGES = {
@@ -165,6 +171,7 @@ export const IMAGES = {
     cybersecurityComplianceHeroImg,
     cyberSecurity,
     secureCompliance,
+    security,
 
     // Clients
     abhirami,
@@ -223,6 +230,11 @@ export const ICONS = {
     tickMark,
     medal,
     satisfied,
+    mailLock,
+    vaptSecurity,
+    networkSecurity,
+    endpointSecurity,
+    cloudSecurity,
 
     rightArrow,
     rightArrow2,

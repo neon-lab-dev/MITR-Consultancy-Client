@@ -1,5 +1,6 @@
 import ComplianceSolutions from "@/Components/CybersecurityCompliance/ComplianceSolutions/ComplianceSolutions";
 import SecurityHero from "@/Components/Security/SecurityHero/SecurityHero";
+import SecurityService from "@/Components/Security/SecurityService/SecurityService";
 
 
 const SecurityPage = () => {
@@ -7,6 +8,7 @@ const SecurityPage = () => {
         <div>
             <SecurityHero/>
             <ComplianceSolutions />
+            <SecurityService/>
         </div>
     );
 };
