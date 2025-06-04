@@ -241,7 +241,7 @@ const ComplianceSolutions = () => {
                 {activeData?.subTitle}
               </h1>
 
-              <div className="flex flex-col gap-6 mt-8">
+              <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-6 mt-8">
                   {activeData?.details?.map((detail, index) => (
                     <div key={index} className="flex">

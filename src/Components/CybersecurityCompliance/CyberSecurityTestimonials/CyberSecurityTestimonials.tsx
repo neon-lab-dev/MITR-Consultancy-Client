@@ -59,7 +59,6 @@ const CyberSecurityTestimonials = () => {
               1024: { slidesPerView: 3 },
             }}
             pagination={{ clickable: true, el: ".custom-pagination" }}
-
             loop={true}
             className="pb-16"
           >
@@ -83,24 +82,31 @@ const CyberSecurityTestimonials = () => {
           </Swiper>
 
           {/* Custom bottom controls */}
-         <div className="flex items-center justify-center gap-4 mt-6 max-w-[300px] mx-auto">
-  <button
-    onClick={() => swiperRef.current?.slidePrev()}
-    className="text-primary-10 hover:text-primary-10/80 transition"
-  >
-    <Image src={ICONS.rightArrowBlue} alt='' className='size-14 rotate-180' />
-  </button>
+          <div className="flex items-center justify-center gap-4 mt-6 max-w-[300px] mx-auto">
+            <button
+              onClick={() => swiperRef.current?.slidePrev()}
+              className="text-primary-10 hover:text-primary-10/80 transition"
+            >
+              <Image
+                src={ICONS.rightArrowBlue}
+                alt=""
+                className="size-14 rotate-180"
+              />
+            </button>
 
-  <div className="custom-pagination flex gap-2 [&>span]:w-3 [&>span]:h-3 [&>span]:rounded-full [&>span]:inline-block [&>span]:bg-gray-400 [&>span]:cursor-pointer [&>.swiper-pagination-bullet-active]:bg-blue-500"></div>
+            <div className="custom-pagination flex gap-2 [&>span]:w-3 [&>span]:h-3 [&>span]:rounded-full [&>span]:inline-block [&>span]:bg-gray-400 [&>span]:cursor-pointer [&>.swiper-pagination-bullet-active]:bg-blue-500"></div>
 
-  <button
-    onClick={() => swiperRef.current?.slideNext()}
-    className="text-primary-10 hover:text-primary-10/80 transition"
-  >
-    <Image src={ICONS.rightArrowBlue} alt='' className='size-14 -rotate-[180]' />
-  </button>
-</div>
-
+            <button
+              onClick={() => swiperRef.current?.slideNext()}
+              className="text-primary-10 hover:text-primary-10/80 transition"
+            >
+              <Image
+                src={ICONS.rightArrowBlue}
+                alt=""
+                className="size-14 -rotate-[180]"
+              />
+            </button>
+          </div>
         </div>
       </Container>
     </div>

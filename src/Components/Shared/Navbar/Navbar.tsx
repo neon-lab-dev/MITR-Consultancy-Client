@@ -99,6 +99,7 @@ const Navbar = () => {
     { label: "Portfolio", action: () => handleNavigation("portfolio") },
     { label: "Training Programmes", path: "/internship-programmes" },
     { label: "Cybersecurity Compliance", path: "/cybersecurity-compliance" },
+    { label: "Security", path: "/security" },
   ];
 
   return (
@@ -145,7 +146,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center gap-6">
-              {pathname !== "/" && pathname !== "/cybersecurity-compliance" && (
+              {pathname !== "/" && pathname !== "/cybersecurity-compliance" && pathname !== "/security" && (
                 <>
                   <Link href={"/cart"} className="relative">
                     <Image
