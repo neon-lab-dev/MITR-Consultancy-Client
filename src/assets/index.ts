@@ -15,6 +15,8 @@ import cyberSecurity from "../assets/Images/cyber-security.png";
 import secureCompliance from "../assets/Images/Frame 38127.png";
 
 import featureIcon from "../assets/Icons/featureIcon.svg";
+import satisfied from "../assets/Icons/satisfied.svg";
+import medal from "../assets/Icons/medel.svg";
 
 // Services
 import cart from "../assets/Icons/cart.svg";
@@ -218,6 +220,8 @@ export const ICONS = {
     cross,
     downArrowBlue,
     tickMark,
+    medal,
+    satisfied,
 
     rightArrow,
     rightArrow2,

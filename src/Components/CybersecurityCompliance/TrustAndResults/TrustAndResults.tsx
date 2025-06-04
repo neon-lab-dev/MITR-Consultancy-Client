@@ -43,9 +43,9 @@ const TrustAndResults = () => {
   ];
 
   return (
-    <div className="py-[100px">
+    <div className="my-20">
       <Container>
-        <div>
+        <div className="py-[100px">
           <h1
             className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[64px] leading-6 md:leading-[78px] capitalize text-center z-10 max-w-[983px] mx-auto`}
           >

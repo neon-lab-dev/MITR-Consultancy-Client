@@ -57,6 +57,7 @@ export default {
           135 : "#fafbfd",
           140 : "#F4F4F4",
           145 : "#111",
+          150 : "#f2f3f5",
         },
       },
       fontFamily: {
