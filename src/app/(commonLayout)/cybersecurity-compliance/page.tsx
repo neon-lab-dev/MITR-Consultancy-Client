@@ -10,7 +10,7 @@ const CybersecurityCompliance = () => {
     <div>
       <CybersecurityComplianceHero />
       <ComplianceSolutions />
-      {/* <SecureCompliance /> */}
+      <SecureCompliance />
       {/* <TrustAndResults /> */}
       {/* <ComplianceAssessment /> */}
       {/* <CyberSecurityTestimonials/> */}

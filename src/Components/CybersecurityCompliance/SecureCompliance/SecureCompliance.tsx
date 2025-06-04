@@ -319,12 +319,12 @@ const tabs = [
       <Container>
         <div className="z-10 relative py-[100px]">
           <h1
-            className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[64px] leading-6 md:leading-[49.68px] capitalize text-center z-10`}
+            className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
           >
             Secure Compliance, Simplified
           </h1>
 
-          <div className="flex items-center gap-6 mt-[60px]">
+          <div className="flex items-center gap-6 mt-[60px] w-full overflow-x-auto text-nowrap">
             {tabButtons?.map((item) => (
               <button
                 key={item}
@@ -340,11 +340,11 @@ const tabs = [
             ))}
           </div>
 
-          <div className="bg-neutral-135 border border-neutral-130 rounded-t-xl p-6 grid grid-cols-2 gap-12 mt-8">
+          <div className="bg-neutral-135 border border-neutral-130 rounded-t-xl p-6 grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
             {activeData?.map((item, index) => (
               <div key={index}>
                 {item?.title}
-                <div className={`${index > 1 ? "grid grid-cols-2" : "grid-cols-1"} gap-1`}>
+                <div className={`${index > 1 ? "grid grid-cols-1 md:grid-cols-2" : "grid-cols-1"} gap-1`}>
                   {item?.details?.map((details, index2) => (
                     <div key={details} className="flex mt-4">
                       <div className="bg-neutral-140 border border-l-neutral-140 rounded-l-xl px-2 py-3 flex items-center justify-center">
