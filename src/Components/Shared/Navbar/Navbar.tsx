@@ -176,7 +176,7 @@ const Navbar = () => {
                 </button>
 
                 {isSecurityDropdownOpen && (
-                  <div className="absolute top-12 -left-20 bg-secondary-20 shadow-lg rounded-lg w-[300px] 2xl:w-[620px] p-5 z-50 flex flex-col 2xl:flex-row gap-5">
+                  <div className="absolute top-12 -left-20 2xl:-left-56 bg-secondary-20 shadow-lg rounded-lg w-[300px] 2xl:w-[620px] p-5 z-50 flex flex-col 2xl:flex-row gap-5">
                     <div>
                       <Link
                         href="/cybersecurity-compliance"
