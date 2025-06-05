@@ -56,6 +56,8 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
     { label: "About Us", action: () => handleNavigation("aboutUs") },
     { label: "Portfolio", action: () => handleNavigation("portfolio") },
     { label: "Training Programmes", path: "/internship-programmes" },
+    { label: "Cybersecurity Compliance", path: "/cybersecurity-compliance" },
+    { label: "Security", path: "/security" },
   ];
 
   // Close sidebar when clicking outside
@@ -75,15 +77,20 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
   }, [isSidebarOpen]);
 
   return (
-    <div className={`fixed inset-0 z-50 ${isSidebarOpen ? "visible" : "invisible"}`}>
+    <div
+      className={`fixed inset-0 z-50 ${
+        isSidebarOpen ? "visible" : "invisible"
+      }`}
+    >
       {/* Overlay (click outside to close) */}
       <div className="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"></div>
 
       {/* Sidebar */}
       <div
         ref={sidebarRef}
-        className={`fixed top-0 right-0 h-full w-2/3 max-w-[250px] bg-neutral-40 text-white z-50 shadow-lg transform transition-transform duration-500 ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+        className={`fixed top-0 right-0 h-full w-2/3 max-w-[250px] bg-neutral-40 text-white z-50 shadow-lg transform transition-transform duration-500 ${
+          isSidebarOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         <div className="flex flex-col h-full">
           <div className="flex justify-between p-4">
@@ -123,14 +130,15 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           </div>
 
           <div className="mt-auto p-4 flex flex-col gap-3">
-            {
-              !user && 
+            {!user && (
               <Link href="/auth/get-started">
-            <button className={`border px-6 w-full h-[36px] font-Inter text-sm md:text-lg font-medium rounded justify-center`}>
-              Sign Up / Sign In
-            </button>
-            </Link>
-            }
+                <button
+                  className={`border px-6 w-full h-[36px] font-Inter text-sm md:text-lg font-medium rounded justify-center`}
+                >
+                  Sign Up / Sign In
+                </button>
+              </Link>
+            )}
             <Button
               handleClick={() => {
                 setIsContactUsModalOpen(true);

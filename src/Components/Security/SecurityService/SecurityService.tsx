@@ -14,16 +14,16 @@ const SecurityService = () => {
       />
 
       <Container>
-        <div className="relative py-[100px]">
+        <div className="relative py-10 xl:py-[100px]">
           <h1
-            className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[64px] leading-6 md:leading-[49.68px] capitalize text-center z-10`}
+            className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
           >
             Security Services by{" "}
             <span className="text-secondary-20">mitra consultancy</span>
           </h1>
 
-          <div className="space-y-[100px] w-full relative">
-            <div className="absolute left-1/2 top-[35%] -translate-x-1/2 -translate-y-1/2 z-0">
+          <div className="space-y-5 xl:space-y-[100px] w-full relative mt-[60px]">
+            <div className="hidden xl:block absolute left-1/2 top-[35%] -translate-x-1/2 -translate-y-1/2 z-0">
               <Image
                 src={IMAGES.security}
                 alt="security"
@@ -31,7 +31,7 @@ const SecurityService = () => {
               />
             </div>
 
-            <div className="flex items-center justify-between max-w-[85%] mx-auto">
+            <div className="flex flex-col lg:flex-row gap-5 xl:gap-0 items-center justify-between max-w-full xl:max-w-[85%] mx-auto">
               <SecurityServiceCard
                 icon={ICONS.mailLock}
                 title="Email Security"
@@ -44,7 +44,7 @@ const SecurityService = () => {
               />
             </div>
 
-            <div className="flex items-center justify-between max-w-[75%] mx-auto">
+            <div className="flex flex-col lg:flex-row gap-5 xl:gap-0 items-center justify-between  max-w-full xl:max-w-[75%] mx-auto">
               <SecurityServiceCard
                 icon={ICONS.cloudSecurity}
                 title="Cloud Security"
@@ -56,7 +56,7 @@ const SecurityService = () => {
                 description="Identify and remediate vulnerabilities through comprehensive testing."
               />
             </div>
-            <div className="flex items-center justify-between max-w-[30%] mx-auto">
+            <div className="flex flex-col lg:flex-row gap-5 xl:gap-0 items-center justify-between  max-w-full xl:max-w-[30%] mx-auto">
               <SecurityServiceCard
                 icon={ICONS.networkSecurity}
                 title="Network Security"

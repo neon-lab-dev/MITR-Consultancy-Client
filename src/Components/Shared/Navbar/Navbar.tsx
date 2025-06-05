@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ICONS, IMAGES } from "@/assets";
 import Image from "next/image";
 import Container from "../Container/Container";
@@ -28,8 +28,9 @@ const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { cartData } = useCart();
+  const [isSecurityDropdownOpen, setIsSecurityDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-  // Handle scroll event to change navbar background
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -38,11 +39,21 @@ const Navbar = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsSecurityDropdownOpen(false);
+      }
     };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const neutralPages = [
@@ -98,8 +109,6 @@ const Navbar = () => {
     { label: "About Us", action: () => handleNavigation("aboutUs") },
     { label: "Portfolio", action: () => handleNavigation("portfolio") },
     { label: "Training Programmes", path: "/internship-programmes" },
-    { label: "Cybersecurity Compliance", path: "/cybersecurity-compliance" },
-    { label: "Security", path: "/security" },
   ];
 
   return (
@@ -119,7 +128,7 @@ const Navbar = () => {
               />
             </Link>
             {/* Desktop Nav */}
-            <div className="hidden xl:flex items-center gap-10">
+            <div className="hidden xl:flex items-center gap-10 relative">
               {navlinks.map((link, index) =>
                 link?.action ? (
                   <button
@@ -135,7 +144,7 @@ const Navbar = () => {
                   <Link
                     key={index}
                     href={link.path}
-                    className={`text-lg font-medium hover:text-primary-10 transition duration-300  ${
+                    className={`text-lg font-medium hover:text-primary-10 transition duration-300 ${
                       isScrolled && "text-white"
                     } ${textColor}`}
                   >
@@ -143,35 +152,96 @@ const Navbar = () => {
                   </Link>
                 )
               )}
+
+              {/* Security Dropdown */}
+              {/* Security Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setIsSecurityDropdownOpen(true)}
+                ref={dropdownRef}
+              >
+                <button
+                  className={`flex items-center gap-1 text-lg font-medium hover:text-primary-10 transition duration-300 ${
+                    isScrolled ? "text-white" : textColor
+                  }`}
+                >
+                  Security
+                  <Image
+                    src={ICONS.downArrowWhite}
+                    alt="down arrow"
+                    className={`size-7 mt-1 transition-transform duration-300 ${
+                      isSecurityDropdownOpen ? "rotate-0" : "rotate-180"
+                    }`}
+                  />
+                </button>
+
+                {isSecurityDropdownOpen && (
+                  <div className="absolute top-10 -left-6 bg-secondary-20 shadow-lg rounded-lg w-[300px] 2xl:w-[620px] p-5 z-50 flex flex-col 2xl:flex-row gap-5">
+                    <div>
+                      <Link
+                        href="/cybersecurity-compliance"
+                        onClick={() => setIsSecurityDropdownOpen(false)}
+                        className="text-neutral-80/90 hover:text-white hover:underline transition font-medium"
+                      >
+                        Cybersecurity Compliance
+                      </Link>
+                      <p className="text-neutral-35/70 text-xs mt-2 max-w-[300px]">
+                        Comprehensive solutions to meet industry regulations,
+                        including GDPR, HIPAA, and PCI DSS, ensuring data
+                        security and legal compliance.
+                      </p>
+                    </div>
+                    <div>
+                      <Link
+                        href="/security"
+                        onClick={() => setIsSecurityDropdownOpen(false)}
+                        className="text-neutral-80/90 hover:text-white hover:underline transition font-medium"
+                      >
+                        Security Services
+                      </Link>
+                      <p className="text-neutral-35/70 text-xs mt-2 max-w-[300px]">
+                        Advanced security offerings, including vulnerability
+                        assessments, penetration testing, and threat monitoring,
+                        to proactively identify and mitigate cyber threats.
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className="flex items-center gap-6">
-              {pathname !== "/" && pathname !== "/cybersecurity-compliance" && pathname !== "/security" && (
-                <>
-                  <Link href={"/cart"} className="relative">
-                    <Image
-                      src={ICONS.cart}
-                      alt="cart-icon"
-                      className="size-8"
-                    />
-                    <div className="size-4 rounded-full bg-primary-20 text-white flex items-center justify-center absolute -top-1 -right-2 text-[9px]">
-                      {cartData?.length}
-                    </div>
-                  </Link>
-
-                  {user ? (
-                    <UserDropdown btnStyle={btnStyle} />
-                  ) : (
-                    <Link href="/auth/get-started" className="hidden md:block">
-                      <button
-                        className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}
-                      >
-                        Sign Up / Sign In
-                      </button>
+              {pathname !== "/" &&
+                pathname !== "/cybersecurity-compliance" &&
+                pathname !== "/security" && (
+                  <>
+                    <Link href={"/cart"} className="relative">
+                      <Image
+                        src={ICONS.cart}
+                        alt="cart-icon"
+                        className="size-8"
+                      />
+                      <div className="size-4 rounded-full bg-primary-20 text-white flex items-center justify-center absolute -top-1 -right-2 text-[9px]">
+                        {cartData?.length}
+                      </div>
                     </Link>
-                  )}
-                </>
-              )}
+
+                    {user ? (
+                      <UserDropdown btnStyle={btnStyle} />
+                    ) : (
+                      <Link
+                        href="/auth/get-started"
+                        className="hidden md:block"
+                      >
+                        <button
+                          className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}
+                        >
+                          Sign Up / Sign In
+                        </button>
+                      </Link>
+                    )}
+                  </>
+                )}
 
               <Button
                 handleClick={() => setIsContactUsModalOpen(true)}
