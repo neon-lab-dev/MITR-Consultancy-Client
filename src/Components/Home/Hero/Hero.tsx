@@ -16,9 +16,9 @@ const Hero = () => {
                 <Image
                     src={IMAGES.heroImg}
                     alt="MITRA Consultancy"
-                    layout="fill" // Ensures the image fills the container
-                    objectFit="cover" // Ensures the image maintains aspect ratio and covers the area
-                    priority // Optimizes loading for above-the-fold content
+                    layout="fill"
+                    objectFit="cover"
+                    priority
                 />
             </div>
 
@@ -32,7 +32,7 @@ const Hero = () => {
                         Bring your thoughts to reality with{" "}
                         <span className="text-primary-20">MITRA Consultancy</span>
                     </h1>
-                    <p className="text-white text-[11px] md:text-sm xl:text-lg leading-[18px] xl:leading-7 max-w-[1071px] mt-3 xl:mt-6 px-4">
+                    <p className="text-white text-[11px] md:text-sm xl:text-lg leading-[18px] xl:leading-7 max-w-[1071px] mt-3 xl:mt-6 px-4 2xl:px-0">
                         Welcome to MITRA Consulting – where innovation and excellence converge. We provide tailored digital solutions designed to bring your ideas to life and drive your business success.
                     </p>
                     <div className="flex flex-col md:flex-row items-center justify-start gap-4 xl:gap-6 mt-4 md:mt-9 xl:mt-[62px]">

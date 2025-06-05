@@ -106,7 +106,7 @@ const Navbar = () => {
   const navlinks = [
     { label: "Home", action: () => handleNavigation("home") },
     { label: "Services", action: () => handleNavigation("services") },
-    { label: "About Us", action: () => handleNavigation("aboutUs") },
+    { label: "About Us",  path : "/about-us" },
     { label: "Portfolio", action: () => handleNavigation("portfolio") },
     { label: "Training Programmes", path: "/internship-programmes" },
   ];
@@ -213,7 +213,9 @@ const Navbar = () => {
             <div className="flex items-center gap-6">
               {pathname !== "/" &&
                 pathname !== "/cybersecurity-compliance" &&
-                pathname !== "/security" && (
+                pathname !== "/security" &&
+                pathname !== "/about-us" &&
+                (
                   <>
                     <Link href={"/cart"} className="relative">
                       <Image
@@ -243,12 +245,14 @@ const Navbar = () => {
                   </>
                 )}
 
-              <Button
-                handleClick={() => setIsContactUsModalOpen(true)}
-                variant="primary"
-                title="Contact Us"
-                classNames="w-[148px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
-              />
+              {pathname !== "/internship-programmes" && (
+                <Button
+                  handleClick={() => setIsContactUsModalOpen(true)}
+                  variant="primary"
+                  title="Contact Us"
+                  classNames="w-[148px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
+                />
+              )}
               {/* Hamburger Menu for Small Screens */}
               <div className="xl:hidden flex items-center">
                 <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
