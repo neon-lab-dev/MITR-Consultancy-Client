@@ -58,7 +58,7 @@ const SecurityHero = () => {
               <Button
                 handleClick={() =>
                   document
-                    .getElementById("portfolio")
+                    .getElementById("complianceAssessment")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
                 variant="primary"

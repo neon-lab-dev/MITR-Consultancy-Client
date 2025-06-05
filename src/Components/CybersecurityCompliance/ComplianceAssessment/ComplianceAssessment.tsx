@@ -5,7 +5,7 @@ import ComplianceAssessmentForm from "./ComplianceAssessmentForm";
 
 const ComplianceAssessment = () => {
   return (
-    <div className="font-Inter relative">
+    <div id="complianceAssessment" className="font-Inter relative">
       <Image
         src={IMAGES.secureCompliance}
         alt=""

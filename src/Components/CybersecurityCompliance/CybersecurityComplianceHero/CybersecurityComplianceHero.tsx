@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const CybersecurityComplianceHero = () => {
+
   const [isContactUsModalOpen, setIsContactUsModalOpen] =
     useState<boolean>(false);
 
@@ -17,6 +18,7 @@ const CybersecurityComplianceHero = () => {
     "Custom Solutions",
     "Robust Updation",
   ];
+  
   return (
     <div className="font-Inter relative h-[1200px] xl:h-screen">
       {/* Background Image */}
@@ -58,7 +60,7 @@ const CybersecurityComplianceHero = () => {
                 <Button
                   handleClick={() =>
                     document
-                      .getElementById("portfolio")
+                      .getElementById("complianceAssessment")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                   variant="primary"
