@@ -176,7 +176,7 @@ const Navbar = () => {
                 </button>
 
                 {isSecurityDropdownOpen && (
-                  <div className="absolute top-10 -left-6 bg-secondary-20 shadow-lg rounded-lg w-[300px] 2xl:w-[620px] p-5 z-50 flex flex-col 2xl:flex-row gap-5">
+                  <div className="absolute top-12 -left-20 bg-secondary-20 shadow-lg rounded-lg w-[300px] 2xl:w-[620px] p-5 z-50 flex flex-col 2xl:flex-row gap-5">
                     <div>
                       <Link
                         href="/cybersecurity-compliance"
@@ -185,7 +185,7 @@ const Navbar = () => {
                       >
                         Cybersecurity Compliance
                       </Link>
-                      <p className="text-neutral-35/70 text-xs mt-2 max-w-[300px]">
+                      <p className="text-neutral-35/70 text-xs mt-2 max-w-[300px] text-justify">
                         Comprehensive solutions to meet industry regulations,
                         including GDPR, HIPAA, and PCI DSS, ensuring data
                         security and legal compliance.
@@ -199,7 +199,7 @@ const Navbar = () => {
                       >
                         Security Services
                       </Link>
-                      <p className="text-neutral-35/70 text-xs mt-2 max-w-[300px]">
+                      <p className="text-neutral-35/70 text-xs mt-2 max-w-[300px] text-justify">
                         Advanced security offerings, including vulnerability
                         assessments, penetration testing, and threat monitoring,
                         to proactively identify and mitigate cyber threats.

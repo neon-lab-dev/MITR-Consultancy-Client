@@ -14,8 +14,9 @@ const AboutUsHero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={IMAGES.heroImg}
+          src={IMAGES.aboutUsHeroImg}
           alt="MITRA Consultancy"
+          className=""
           layout="fill"
           objectFit="cover"
           priority
@@ -23,7 +24,7 @@ const AboutUsHero = () => {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-neutral-50 bg-opacity-50 z-10"></div>
+      <div className="absolute inset-0 bg-neutral-50 bg-opacity-80 z-10"></div>
 
       {/* Content */}
       <Container>
