@@ -1,10 +1,10 @@
-import { IMAGES } from "@/assets";
+import { ICONS, IMAGES } from "@/assets";
 import Button from "@/Components/Reusable/Button/Button";
 import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { TLoggedInUser } from "./Navbar";
 
@@ -23,6 +23,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
   const router = useRouter();
   const pathname = usePathname();
   const sidebarRef = useRef<HTMLDivElement>(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const storedSection = sessionStorage.getItem("scrollToSection");
@@ -36,10 +37,8 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
     }
   }, [pathname]);
 
-  // Handle navigation & close sidebar
   const handleNavigation = (id: string) => {
-    setIsSidebarOpen(false); // Close sidebar
-
+    setIsSidebarOpen(false);
     if (pathname === "/") {
       setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -53,14 +52,16 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
   const navlinks = [
     { label: "Home", action: () => handleNavigation("home") },
     { label: "Services", action: () => handleNavigation("services") },
-    { label: "About Us", action: () => handleNavigation("aboutUs") },
+    { label: "About Us", path : "/about-us"},
     { label: "Portfolio", action: () => handleNavigation("portfolio") },
     { label: "Training Programmes", path: "/internship-programmes" },
+  ];
+
+  const serviceDropdownLinks = [
     { label: "Cybersecurity Compliance", path: "/cybersecurity-compliance" },
     { label: "Security", path: "/security" },
   ];
 
-  // Close sidebar when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -82,10 +83,8 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
         isSidebarOpen ? "visible" : "invisible"
       }`}
     >
-      {/* Overlay (click outside to close) */}
       <div className="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"></div>
 
-      {/* Sidebar */}
       <div
         ref={sidebarRef}
         className={`fixed top-0 right-0 h-full w-2/3 max-w-[250px] bg-neutral-40 text-white z-50 shadow-lg transform transition-transform duration-500 ${
@@ -106,7 +105,8 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
               &times;
             </button>
           </div>
-          <div className="flex flex-col gap-6 p-4">
+
+          <div className="flex flex-col gap-6 p-4 mt-3">
             {navlinks.map((link, index) =>
               link.action ? (
                 <button
@@ -121,20 +121,46 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
                   key={index}
                   href={link.path}
                   className="text-lg font-medium hover:text-primary-10 transition duration-300"
-                  onClick={() => setIsSidebarOpen(false)} // Close sidebar on link click
+                  onClick={() => setIsSidebarOpen(false)}
                 >
                   {link.label}
                 </Link>
               )
             )}
+
+            {/* Dropdown */}
+            <div>
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="text-start text-lg font-medium hover:text-primary-10 transition duration-300 w-full flex items-center justify-between"
+              >
+                Services
+                <Image src={ICONS.downArrowWhite} alt="" className={`${isDropdownOpen ? "rotate-0" : "rotate-180"} transition-all duration-300`} />
+              </button>
+
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  isDropdownOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                } flex flex-col pl-4 gap-4 mt-4`}
+              >
+                {serviceDropdownLinks.map((item, idx) => (
+                  <Link
+                    key={idx}
+                    href={item.path}
+                    onClick={() => setIsSidebarOpen(false)}
+                    className="text-base font-normal hover:text-primary-10 transition duration-300"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="mt-auto p-4 flex flex-col gap-3">
             {!user && (
               <Link href="/auth/get-started">
-                <button
-                  className={`border px-6 w-full h-[36px] font-Inter text-sm md:text-lg font-medium rounded justify-center`}
-                >
+                <button className="border px-6 w-full h-[36px] font-Inter text-sm md:text-lg font-medium rounded justify-center">
                   Sign Up / Sign In
                 </button>
               </Link>

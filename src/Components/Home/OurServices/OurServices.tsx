@@ -14,28 +14,28 @@ const OurServices = () => {
     },
     {
       icon: ICONS.appDevelopment,
-      title: "App development",
-      description: "From idea to launch, we build apps that are fast, reliable, and tailored to your needs."
+      title: "Mobile App development",
+      description: "Android, iOS, and cross-platform apps that function flawlessly and engage users."
     },
     {
       icon: ICONS.backendDevelopment,
       title: "Backed Development",
-      description: "Our robust backend solutions ensure your applications run smoothly and securely."
+      description: "Scalable, secure server-side systems built for reliability and efficiency."
     },
     {
       icon: ICONS.frontendDevelopment,
       title: "Frontend Development",
-      description: "We craft responsive and attractive interfaces that your users will love."
+      description: "Modern, intuitive interfaces crafted for speed, engagement, and accessibility."
     },
     {
       icon: ICONS.softwareDevelopment,
-      title: "Software Development",
-      description: " Get custom software solutions designed to simplify and enhance your business operations."
+      title: "Full Stack Web Solutions",
+      description: "Integrated development from frontend to backend — one solution, fully connected."
     },
     {
       icon: ICONS.webDevelopment,
       title: "Web Development",
-      description: "Let us build a website that’s not just beautiful but also drives results for your business."
+      description: "Custom-designed, responsive websites aligned with user experience and business goals."
     },
   ];
   
