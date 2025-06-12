@@ -7,6 +7,7 @@ import OurServices from "@/Components/Home/OurServices/OurServices";
 import Technologies from "@/Components/Home/Technologies/Technologies";
 import Testimonials from "@/Components/Home/Testimonials/Testimonials";
 import OurProjects from './../../Components/Home/OurProjects/OurProjects';
+import AboutSecurityService from "@/Components/Home/AboutSecurityService/AboutSecurityService";
 // import SessionAnnouncement from "@/Components/Shared/SessionAnnouncement/SessionAnnouncement";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Achievements/>
       <AboutUs/>
       <OurServices/>
+      <AboutSecurityService/>
       <OurProjects/>
       <Technologies/>
       {/* <SessionAnnouncement/> */}

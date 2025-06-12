@@ -155,6 +155,7 @@ import frontendDevelopmentImg from "../assets/Images/frontend-development.jpg";
 import uiUxImg from "../assets/Images/ui-ux.jpg";
 import purposeOfProgramme from "../assets/Images/purpose-of-programme.png";
 import security from "../assets/Images/security.svg";
+import cybersecurityBanner from "../assets/Images/cybersecurity.jpg";
 
 
 export const IMAGES = {
@@ -175,6 +176,7 @@ export const IMAGES = {
     cyberSecurity,
     secureCompliance,
     security,
+    cybersecurityBanner,
 
     // Clients
     abhirami,
