@@ -11,28 +11,24 @@ import { ICONS } from "@/assets";
 
 const testimonials = [
   {
-    name: "Jenny Wilson",
+    name: "Arjun Patel",
     role: "Solar energy service",
-    message:
-      "Flow transformed my energy use. Efficient, green tech, outstanding service!",
+    message: "Flow made my energy use greener and more efficient.",
   },
   {
-    name: "Dianne Russell",
+    name: "Priya Sharma",
     role: "EV service",
-    message:
-      "Flow redefined my energy game – green, efficient, and top-notch service!",
+    message: "Flow changed how I use energy—efficient and eco-friendly.",
   },
   {
-    name: "Cody Fisher",
+    name: "Ravi Kumar",
     role: "Solar energy service",
-    message:
-      "Thanks to Flow, my energy bills dropped. A powerful and efficient service!",
+    message: "Thanks to Flow, my energy bills are much lower.",
   },
   {
-    name: "Courtney Henry",
+    name: "Anjali Mehta",
     role: "Home energy consultant",
-    message:
-      "I recommend Flow to all my clients – reliable, affordable, and green.",
+    message: "I suggest Flow for affordable, reliable green energy solutions.",
   },
 ];
 

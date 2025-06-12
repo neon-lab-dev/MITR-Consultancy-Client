@@ -5,42 +5,43 @@ import TrustAndResultCard from "./TrustAndResultCard";
 const TrustAndResults = () => {
   // featuresData.ts
   const featuresData = [
-    {
-      title: "All-in-One Compliance Support",
-      description:
-        "Mitigata offers a complete range of compliance services, from GDPR and HIPAA to PCI DSS and ISO 27001, ensuring that all your needs are met in one place. No juggling between multiple vendors—Mitigata has it all covered.",
-    },
-    {
-      title: "Easy and Tailored Solutions",
-      description:
-        "We understand that every business is different. That’s why our services are customized based on the size and type of your business. Whether you’re a startup or a large enterprise, we create a compliance plan that fits perfectly.",
-    },
-    {
-      title: "Industry Experts on Your Side",
-      description:
-        "Our team has in-depth knowledge of compliance standards and real-world experience. They don’t just check the boxes—they ensure your business truly understands and benefits from compliance.",
-    },
-    {
-      title: "Save Time and Effort",
-      description:
-        "With automated tools and streamlined processes, we make compliance simpler and faster for you. This means less manual work and more focus on running your business.",
-    },
-    {
-      title: "Protect Your Data and Reputation",
-      description:
-        "Our solutions are designed to secure your sensitive information and safeguard your brand’s reputation. Avoid data breaches and build trust with your customers.",
-    },
-    {
-      title: "Stay Ahead of Regulations",
-      description:
-        "Regulations keep changing, and keeping up can be a headache. With Mitigata, you’re always a step ahead. We ensure you’re compliant today and ready for tomorrow’s rules.",
-    },
-    {
-      title: "Affordable and Transparent Plans",
-      description:
-        "Compliance shouldn’t break the bank. We offer flexible pricing tailored to your business size, so you get the best value without hidden charges.",
-    },
-  ];
+  {
+    title: "Comprehensive Compliance Assistance",
+    description:
+      "Mitra Consultancy delivers an extensive suite of compliance services covering GDPR, HIPAA, PCI DSS, ISO 27001, and more—so you can manage everything in one place without dealing with multiple providers.",
+  },
+  {
+    title: "Customized and Simple Solutions",
+    description:
+      "Recognizing the uniqueness of every company, our offerings are tailored according to your business scale and sector. From startups to large corporations, we design compliance strategies that align perfectly with your needs.",
+  },
+  {
+    title: "Experienced Compliance Professionals",
+    description:
+      "Our experts bring thorough knowledge of compliance frameworks combined with practical experience. They go beyond mere compliance checklists to ensure your organization gains real value and understanding.",
+  },
+  {
+    title: "Efficiency Through Automation",
+    description:
+      "Leveraging automated systems and optimized workflows, we streamline your compliance efforts, reducing manual tasks and allowing you to concentrate on core business activities.",
+  },
+  {
+    title: "Safeguard Data and Brand Integrity",
+    description:
+      "Our approaches focus on protecting your confidential data and maintaining your company’s reputation, helping you prevent breaches and strengthen customer confidence.",
+  },
+  {
+    title: "Proactive Regulatory Compliance",
+    description:
+      "Regulatory landscapes evolve constantly, which can be challenging to track. Mitra Consultancy keeps you compliant with current standards and prepares you for future changes.",
+  },
+  {
+    title: "Cost-Effective and Clear Pricing",
+    description:
+      "We believe compliance should be affordable and transparent. Our pricing plans are adaptable to your business size, ensuring excellent value with no unexpected fees.",
+  },
+];
+
 
   return (
     <div className="my-20">
