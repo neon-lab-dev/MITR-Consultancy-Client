@@ -455,7 +455,7 @@ const SecureCompliance = () => {
             Secure Compliance, Simplified
           </h1>
 
-          <div className="flex items-center justify-center gap-6 mt-[60px] w-full overflow-x-auto text-nowrap">
+          <div className="flex items-center justify-center gap-6 mt-[60px] w-full overflow-x-auto custom-section-scrollbar text-nowrap">
             {tabButtons?.map((item) => (
               <button
                 key={item}

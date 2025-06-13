@@ -8,7 +8,7 @@ const TrustAndResults = () => {
   {
     title: "Comprehensive Compliance Assistance",
     description:
-      "Mitra Consultancy delivers an extensive suite of compliance services covering GDPR, HIPAA, PCI DSS, ISO 27001, and more—so you can manage everything in one place without dealing with multiple providers.",
+      "MITRA Consultancy delivers an extensive suite of compliance services covering GDPR, HIPAA, PCI DSS, ISO 27001, and more—so you can manage everything in one place without dealing with multiple providers.",
   },
   {
     title: "Customized and Simple Solutions",
@@ -33,7 +33,7 @@ const TrustAndResults = () => {
   {
     title: "Proactive Regulatory Compliance",
     description:
-      "Regulatory landscapes evolve constantly, which can be challenging to track. Mitra Consultancy keeps you compliant with current standards and prepares you for future changes.",
+      "Regulatory landscapes evolve constantly, which can be challenging to track. MITRA Consultancy keeps you compliant with current standards and prepares you for future changes.",
   },
   {
     title: "Cost-Effective and Clear Pricing",
@@ -50,7 +50,7 @@ const TrustAndResults = () => {
           <h1
             className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] lg:leading-[80px] capitalize text-center`}
           >
-            <span className="text-secondary-20">Mitra Consultancy</span>{" "}
+            <span className="text-secondary-20">MITRA Consultancy</span>{" "}
             Compliance: Built for Trust & Results
           </h1>
 

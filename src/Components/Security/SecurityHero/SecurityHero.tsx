@@ -43,7 +43,7 @@ const SecurityHero = () => {
               All Industries
             </h1>
             <p className="text-white text-center xl:text-start text-[11px] md:text-sm xl:text-lg leading-[18px] xl:leading-7 max-w-full md_maw-w-[850px] lg:max-w-[1071px] mt-5 xl:mt-6">
-              Mitra Consultancy delivers end-to-end cybersecurity solutions —
+              MITRA Consultancy delivers end-to-end cybersecurity solutions —
               from risk assessments to incident response — helping your business
               stay secure, compliant, and resilient in a dynamic digital
               landscape.

@@ -47,3 +47,25 @@
   .custom-scrollbar::-webkit-scrollbar-track {
     background: transparent;
   }
+
+
+  /* global.css */
+
+.custom-section-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #a3a3a3 transparent; /* gray thumb, transparent track */
+}
+
+.custom-section-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px; /* for horizontal scroll */
+}
+
+.custom-section-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #a3a3a3; /* gray thumb */
+  border-radius: 10px;
+}
+
+.custom-section-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}

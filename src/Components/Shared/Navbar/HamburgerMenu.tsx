@@ -51,15 +51,35 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
 
   const navlinks = [
     { label: "Home", action: () => handleNavigation("home") },
-    { label: "Services", action: () => handleNavigation("services") },
-    { label: "About Us", path : "/about-us"},
+    { label: "About Us", path: "/about-us" },
     { label: "Portfolio", action: () => handleNavigation("portfolio") },
     { label: "Training Programmes", path: "/internship-programmes" },
   ];
 
   const serviceDropdownLinks = [
-    { label: "Cybersecurity Compliance", path: "/cybersecurity-compliance" },
-    { label: "Security", path: "/security" },
+    { label: "Compliance Services", path: "/compliance-services" },
+    { label: "Security Services", path: "/security-services" },
+    {
+      label: "Website Development",
+      action: () => handleNavigation("services"),
+    },
+    {
+      label: "Mobile App Development",
+      action: () => handleNavigation("services"),
+    },
+    { label: "UI/UX Design", action: () => handleNavigation("services") },
+    {
+      label: "Frontend Development",
+      action: () => handleNavigation("services"),
+    },
+    {
+      label: "Backend Development",
+      action: () => handleNavigation("services"),
+    },
+    {
+      label: "Full Stack Development",
+      action: () => handleNavigation("services"),
+    },
   ];
 
   useEffect(() => {
@@ -135,24 +155,40 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
                 className="text-start text-lg font-medium hover:text-primary-10 transition duration-300 w-full flex items-center justify-between"
               >
                 Services
-                <Image src={ICONS.downArrowWhite} alt="" className={`${isDropdownOpen ? "rotate-0" : "rotate-180"} transition-all duration-300`} />
+                <Image
+                  src={ICONS.downArrowWhite}
+                  alt=""
+                  className={`${
+                    isDropdownOpen ? "rotate-0" : "rotate-180"
+                  } transition-all duration-300`}
+                />
               </button>
 
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  isDropdownOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-                } flex flex-col pl-4 gap-4 mt-4`}
+                  isDropdownOpen ? "max-h-fit opacity-100" : "max-h-0 opacity-0"
+                } flex flex-col pl-4 gap-6 mt-4 text-sm overflow-y-auto custom-section-scrollbar`}
               >
-                {serviceDropdownLinks.map((item, idx) => (
-                  <Link
-                    key={idx}
-                    href={item.path}
-                    onClick={() => setIsSidebarOpen(false)}
-                    className="text-base font-normal hover:text-primary-10 transition duration-300"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {serviceDropdownLinks.map((item, idx) =>
+                  item?.action ? (
+                    <button
+                      key={idx}
+                      onClick={item.action}
+                      className="font-normal hover:text-primary-10 transition duration-300 text-start"
+                    >
+                      {item.label}
+                    </button>
+                  ) : (
+                    <Link
+                      key={idx}
+                      href={item.path}
+                      onClick={() => setIsSidebarOpen(false)}
+                      className="font-normal hover:text-primary-10 transition duration-300"
+                    >
+                      {item.label}
+                    </Link>
+                  )
+                )}
               </div>
             </div>
           </div>

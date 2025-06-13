@@ -84,7 +84,7 @@ const Services = () => {
         <AboutUsDetailsSection
           title="Cybersecurity Solutions"
           subTitle="Key Features"
-          description="In today’s digital environment, security is not optional — it's essential. At Mitra Consultancy, we offer our own in-house cybersecurity platform, designed to give businesses of all sizes the protection they need without unnecessary complexity. Whether you're a startup managing customer data or an enterprise scaling operations, our security system fits seamlessly into your workflow."
+          description="In today’s digital environment, security is not optional — it's essential. At MITRA Consultancy, we offer our own in-house cybersecurity platform, designed to give businesses of all sizes the protection they need without unnecessary complexity. Whether you're a startup managing customer data or an enterprise scaling operations, our security system fits seamlessly into your workflow."
           features={cyberSecurityKeyFeatures}
           footerText="We’re committed to building not just functional tech, but protected environments where your data, users, and operations remain safe — always."
         />
@@ -93,14 +93,14 @@ const Services = () => {
         <AboutUsDetailsSection
           title="Training Programs"
           subTitle="Each program includes"
-          description="We believe today’s students need more than academic theory — they need real skills for real careers. That’s why Mitra Consultancy offers structured, intensive training programs in core tech domains. These 3-month programs are specifically designed for students in their 5th to 7th semesters, priced at only ₹990 per course."
+          description="We believe today’s students need more than academic theory — they need real skills for real careers. That’s why MITRA Consultancy offers structured, intensive training programs in core tech domains. These 3-month programs are specifically designed for students in their 5th to 7th semesters, priced at only ₹990 per course."
           features={trainingFeatures}
           footerText="Our aim is to help students step confidently into the professional world — with skills that are practical, competitive, and aligned with industry needs."
         />
 
         {/* Why choose us section */}
         <AboutUsDetailsSection
-          title="Why Choose Mitra Consultancy"
+          title="Why Choose MITRA Consultancy"
           features={whyChooseFeatures}
         />
 
@@ -108,7 +108,7 @@ const Services = () => {
         <h1 className="font-bold text-neutral-10 text-lg md:text-2xl xl:text-[36px] leading-6 md:leading-[49.68px] capitalize mt-10">
         Get Started Today
       </h1>
-      <p className="text-neutral-20 mt-3 text-justify">Whether you're looking to build a secure digital product, gain job-ready skills, or protect your business from growing cyber threats, Mitra Consultancy is here to support your vision. We develop. We train. We secure. And we do it with precision.</p>
+      <p className="text-neutral-20 mt-3 text-justify">Whether you're looking to build a secure digital product, gain job-ready skills, or protect your business from growing cyber threats, MITRA Consultancy is here to support your vision. We develop. We train. We secure. And we do it with precision.</p>
       <p className="text-neutral-20 mt-5 text-justify font-bold">Let’s build something meaningful — and secure — together.</p>
       </div>
     </Container>

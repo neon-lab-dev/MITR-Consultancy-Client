@@ -106,7 +106,7 @@ const Navbar = () => {
   const navlinks = [
     { label: "Home", action: () => handleNavigation("home") },
     { label: "Services", action: () => handleNavigation("services") },
-    { label: "About Us",  path : "/about-us" },
+    { label: "About Us", path: "/about-us" },
     { label: "Portfolio", action: () => handleNavigation("portfolio") },
     { label: "Training Programmes", path: "/internship-programmes" },
   ];
@@ -176,16 +176,16 @@ const Navbar = () => {
                 </button>
 
                 {isSecurityDropdownOpen && (
-                  <div className="absolute top-12 -left-20 2xl:-left-56 bg-secondary-20 shadow-lg rounded-lg w-[300px] 2xl:w-[620px] p-5 z-50 flex flex-col 2xl:flex-row gap-5">
+                  <div className="absolute top-12 -left-20 2xl:-left-56 bg-neutral-80 shadow-lg rounded-lg w-[300px] 2xl:w-[620px] p-5 z-50 flex flex-col 2xl:flex-row gap-5">
                     <div>
                       <Link
-                        href="/cybersecurity-compliance"
+                        href="/compliance-services"
                         onClick={() => setIsSecurityDropdownOpen(false)}
-                        className="text-neutral-80/90 hover:text-white hover:underline transition font-medium"
+                        className="text-neutral-50 hover:text-primary-20 hover:underline transition font-medium"
                       >
-                        Cybersecurity Compliance
+                        Compliance Services
                       </Link>
-                      <p className="text-neutral-35/70 text-xs mt-2 max-w-[300px] text-justify">
+                      <p className="text-neutral-25/90 text-xs mt-2 max-w-[300px]">
                         Comprehensive solutions to meet industry regulations,
                         including GDPR, HIPAA, and PCI DSS, ensuring data
                         security and legal compliance.
@@ -193,13 +193,13 @@ const Navbar = () => {
                     </div>
                     <div>
                       <Link
-                        href="/security"
+                        href="/security-services"
                         onClick={() => setIsSecurityDropdownOpen(false)}
-                        className="text-neutral-80/90 hover:text-white hover:underline transition font-medium"
+                        className="text-neutral-50 hover:text-primary-20 hover:underline transition font-medium"
                       >
                         Security Services
                       </Link>
-                      <p className="text-neutral-35/70 text-xs mt-2 max-w-[300px] text-justify">
+                      <p className="text-neutral-25/90 text-xs mt-2 max-w-[300px]">
                         Advanced security offerings, including vulnerability
                         assessments, penetration testing, and threat monitoring,
                         to proactively identify and mitigate cyber threats.
@@ -212,10 +212,9 @@ const Navbar = () => {
 
             <div className="flex items-center gap-6">
               {pathname !== "/" &&
-                pathname !== "/cybersecurity-compliance" &&
-                pathname !== "/security" &&
-                pathname !== "/about-us" &&
-                (
+                pathname !== "/compliance-services" &&
+                pathname !== "/security-services" &&
+                pathname !== "/about-us" && (
                   <>
                     <Link href={"/cart"} className="relative">
                       <Image
@@ -245,14 +244,16 @@ const Navbar = () => {
                   </>
                 )}
 
-              {pathname !== "/internship-programmes" && (
-                <Button
-                  handleClick={() => setIsContactUsModalOpen(true)}
-                  variant="primary"
-                  title="Contact Us"
-                  classNames="w-[148px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
-                />
-              )}
+              {!pathname.startsWith("/internship-programmes/") &&
+                pathname !== "/internship-programmes" && (
+                  <Button
+                    handleClick={() => setIsContactUsModalOpen(true)}
+                    variant="primary"
+                    title="Contact Us"
+                    classNames="w-[148px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
+                  />
+                )}
+
               {/* Hamburger Menu for Small Screens */}
               <div className="xl:hidden flex items-center">
                 <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>

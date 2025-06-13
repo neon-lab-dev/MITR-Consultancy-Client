@@ -7,7 +7,7 @@ import Image from "next/image";
 const InternshipProgrammesHero = () => {
 
     return (
-        <div className="font-Inter relative h-screen">
+        <div className="font-Inter relative h-[600px] xl:h-screen">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image

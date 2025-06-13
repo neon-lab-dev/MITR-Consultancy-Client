@@ -326,7 +326,7 @@ const ComplianceSolutions = () => {
             {/* Compliance Solutions */}
             <div
               className="
-                flex gap-[18px] w-full overflow-x-auto 
+                flex gap-[18px] w-full overflow-x-auto custom-section-scrollbar
                 xl:grid xl:grid-cols-3 xl:gap-[18px] xl:w-[50%] 
                 xl:overflow-visible"
             >
@@ -335,11 +335,11 @@ const ComplianceSolutions = () => {
                   onClick={() => setActiveTab(item.title)}
                   key={item.title}
                   className={`min-w-[200px] min-h-[120px] flex-shrink-0 px-5 py-4 rounded-lg border flex items-center flex-col justify-center
-        ${
-          activeTab === item.title
-            ? "bg-primary-75 border-primary-10"
-            : "bg-white border-neutral-125"
-        }`}
+                  ${
+                    activeTab === item.title
+                      ? "bg-primary-75 border-primary-10"
+                      : "bg-white border-neutral-125"
+                  }`}
                 >
                   <div className="flex items-center justify-center size-10 bg-neutral-120 rounded-full">
                     <Image src={item.icon} alt="fintech" className="size-8" />
@@ -361,7 +361,7 @@ const ComplianceSolutions = () => {
               </h1>
 
               <div className="flex flex-col gap-6">
-                <div className="flex flex-col gap-6 mt-8 max-h-[350px] overflow-y-auto">
+                <div className="flex flex-col gap-6 mt-8 max-h-[350px] overflow-y-auto custom-section-scrollbar">
                   {activeData?.details?.map((detail, index) => (
                     <div key={index} className="flex">
                       <div className="bg-neutral-140 border border-neutral-140 rounded-l-xl p-5 flex items-center justify-center text-2xl">

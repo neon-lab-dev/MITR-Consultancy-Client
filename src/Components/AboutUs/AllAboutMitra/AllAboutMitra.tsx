@@ -9,7 +9,7 @@ const AllAboutMitra = () => {
           About Us
         </h1>
         <p className={`text-neutral-20 mt-6 text-justify`}>
-          At Mitra Consultancy, we combine innovation, practicality, and
+          At MITRA Consultancy, we combine innovation, practicality, and
           performance to empower businesses and learners in the digital world.
           We specialize in delivering end-to-end technology solutions, smart
           cybersecurity services, and affordable, hands-on tech training.

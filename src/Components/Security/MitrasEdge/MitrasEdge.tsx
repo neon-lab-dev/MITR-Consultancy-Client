@@ -29,7 +29,7 @@ const MitrasEdge = () => {
           <h1
             className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
           >
-            <span className="text-secondary-20">Mitra’s</span> Edge for Your
+            <span className="text-secondary-20">MITRA’s</span> Edge for Your
             Secure Growth
           </h1>
 

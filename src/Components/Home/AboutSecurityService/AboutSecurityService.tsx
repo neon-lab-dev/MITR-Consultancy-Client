@@ -20,11 +20,11 @@ const AboutSecurityService = () => {
           <div className="w-full xl:w-[50%]">
             <Heading
               align="left"
-              subHeading="Secure Your Future with Mitra Consultancy"
+              subHeading="Secure Your Future with MITRA Consultancy"
               heading="Protecting Modern Businesses with Trusted Solutions"
             />
             <p className={`text-neutral-20 mt-6 text-justify`}>
-              At Mitra Consultancy, we specialize in delivering cutting-edge
+              At MITRA Consultancy, we specialize in delivering cutting-edge
               cybersecurity and security compliance services tailored to the
               evolving needs of today’s digital enterprises. With a deep
               understanding of industry standards and regulatory frameworks, we

@@ -19,7 +19,7 @@ const SecurityService = () => {
             className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
           >
             Security Services by{" "}
-            <span className="text-secondary-20">mitra consultancy</span>
+            <span className="text-secondary-20">MITRA Consultancy</span>
           </h1>
 
           <div className="space-y-5 xl:space-y-[100px] w-full relative mt-[60px]">
