@@ -12,23 +12,27 @@ import { ICONS } from "@/assets";
 const testimonials = [
   {
     name: "Arjun Patel",
-    role: "Solar energy service",
-    message: "Flow made my energy use greener and more efficient.",
+    role: "IT Manager",
+    message:
+      "Their security audit exposed risks we never knew existed. Highly professional service.",
   },
   {
     name: "Priya Sharma",
-    role: "EV service",
-    message: "Flow changed how I use energy—efficient and eco-friendly.",
+    role: "Startup Founder",
+    message:
+      "Reliable and fast incident response—helped us contain a data breach quickly.",
   },
   {
     name: "Ravi Kumar",
-    role: "Solar energy service",
-    message: "Thanks to Flow, my energy bills are much lower.",
+    role: "System Administrator",
+    message:
+      "Network security improved drastically after implementing their firewall and monitoring solutions.",
   },
   {
     name: "Anjali Mehta",
-    role: "Home energy consultant",
-    message: "I suggest Flow for affordable, reliable green energy solutions.",
+    role: "Compliance Officer",
+    message:
+      "Their penetration testing helped us meet regulatory standards with clear, actionable reports.",
   },
 ];
 
