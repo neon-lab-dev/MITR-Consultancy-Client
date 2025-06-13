@@ -166,8 +166,8 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
 
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  isDropdownOpen ? "max-h-fit opacity-100" : "max-h-0 opacity-0"
-                } flex flex-col pl-4 gap-6 mt-4 text-sm overflow-y-auto custom-section-scrollbar`}
+                  isDropdownOpen ? "max-h-56 opacity-100" : "max-h-0 opacity-0"
+                } flex flex-col pl-4 gap-6 mt-4 text-sm overflow-y-scroll custom-section-scrollbar`}
               >
                 {serviceDropdownLinks.map((item, idx) =>
                   item?.action ? (
