@@ -65,7 +65,7 @@ const CybersecurityComplianceHero = () => {
                   }
                   variant="primary"
                   title="Take Compliance Assessment"
-                  classNames="w-auto"
+                  classNames="w-full sm:w-auto"
                 />
               </div>
             </div>

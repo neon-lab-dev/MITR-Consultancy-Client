@@ -1,3 +1,4 @@
+"use client";
 import { ICONS } from "@/assets";
 import Button from "@/Components/Reusable/Button/Button";
 import Container from "@/Components/Shared/Container/Container";
@@ -61,6 +62,11 @@ const MitrasEdge = () => {
             </div>
             <div className="bg-neutral-130 h-[100px] flex items-center justify-center rounded-b-xl">
               <Button
+              handleClick={() =>
+                  document
+                    .getElementById("complianceAssessment")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
                 variant="primary"
                 title="Take Compliance Assessment"
                 classNames="w-auto px-16 py-[10px]"
