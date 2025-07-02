@@ -214,6 +214,14 @@ const Navbar = () => {
               {pathname !== "/" &&
                 pathname !== "/compliance-services" &&
                 pathname !== "/security-services" &&
+                pathname !== "/cart" &&
+                pathname !== "/auth/get-started" &&
+                pathname !== "/checkout" &&
+                pathname !== "/auth/verify-otp" &&
+                pathname !== "/privacy-policy" &&
+                pathname !== "/refund-policy" &&
+                pathname !== "/terms-and-conditions" &&
+                pathname !== "/payment-success" &&
                 pathname !== "/about-us" && (
                   <>
                     <Link href={"/cart"} className="relative">
@@ -244,15 +252,16 @@ const Navbar = () => {
                   </>
                 )}
 
-              {!pathname.startsWith("/internship-programmes/") &&
-                pathname !== "/internship-programmes" && (
-                  <Button
-                    handleClick={() => setIsContactUsModalOpen(true)}
-                    variant="primary"
-                    title="Contact Us"
-                    classNames="w-[148px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
-                  />
-                )}
+            {!pathname.startsWith("/internship-programmes") &&
+ pathname !== "/my-profile" && (
+  <Button
+    handleClick={() => setIsContactUsModalOpen(true)}
+    variant="primary"
+    title="Contact Us"
+    classNames="w-[148px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
+  />
+)}
+
 
               {/* Hamburger Menu for Small Screens */}
               <div className="xl:hidden flex items-center">

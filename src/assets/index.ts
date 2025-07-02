@@ -156,6 +156,10 @@ import uiUxImg from "../assets/Images/ui-ux.jpg";
 import purposeOfProgramme from "../assets/Images/purpose-of-programme.png";
 import security from "../assets/Images/security.svg";
 import cybersecurityBanner from "../assets/Images/cybersecurity.jpg";
+import iso27001 from "../assets/Images/iso-iec-27001.png";
+import soc2 from "../assets/Images/soc-2.png";
+import hippa from "../assets/Images/hippa.png";
+import gdpr from "../assets/Images/gdpr.png";
 
 
 export const IMAGES = {
@@ -219,6 +223,11 @@ export const IMAGES = {
     frontendDevelopmentImg,
     uiUxImg,
     purposeOfProgramme,
+
+    iso27001,
+    soc2,
+    hippa,
+    gdpr
 };
 
 export const ICONS = {

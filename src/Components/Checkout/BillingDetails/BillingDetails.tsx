@@ -18,8 +18,9 @@ const BillingDetails = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const user = useSelector(useCurrentUser) as TLoggedInUser;
 
-    const totalPrice = cartData && cartData?.reduce((acc, currVal) => acc + currVal.price, 0);
-    const GST = totalPrice * 18 / 100;
+    const totalPriceBeforeGst = cartData && cartData?.reduce((acc, currVal) => acc + currVal.price, 0);
+    const GST = totalPriceBeforeGst * 18 / 100;
+    const totalPrice = totalPriceBeforeGst + GST;
 
     useEffect(() => {
         const script = document.createElement("script");
@@ -100,7 +101,7 @@ const BillingDetails = () => {
                 </div>
                 <div className="flex items-center justify-between text-neutral-105 text-base md:text-xl font-semibold leading-8">
                     <p>Total</p>
-                    <p>₹{(totalPrice + GST).toFixed(0)}</p>
+                    <p>₹{(totalPrice).toFixed(0)}</p>
                 </div>
                 <Button2 variant="primary" title="" handleClick={handleCheckout} classNames="">
                     {

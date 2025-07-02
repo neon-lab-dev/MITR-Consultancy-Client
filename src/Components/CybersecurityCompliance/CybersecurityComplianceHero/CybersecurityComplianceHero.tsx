@@ -18,9 +18,28 @@ const CybersecurityComplianceHero = () => {
     "Custom Solutions",
     "Robust Updation",
   ];
+
+  const images = [
+    {
+      image : IMAGES.iso27001,
+      size : "w-32 xl:w-52"
+    },
+    {
+      image : IMAGES.soc2,
+      size : "w-32 xl:w-64"
+    },
+    {
+      image : IMAGES.hippa,
+      size : "w-32 xl:w-72"
+    },
+    {
+      image : IMAGES.gdpr,
+      size : "w-32 xl:w-64"
+    },
+  ];
   
   return (
-    <div className="font-Inter relative h-[1200px] xl:h-[1000px] 2xl:h-[1200px]">
+    <div className="font-Inter relative h-[1900px] xl:h-[1300px] 2xl:h-[1200px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -89,6 +108,20 @@ const CybersecurityComplianceHero = () => {
               </div>
             ))}
           </div>
+
+          {/* Images */}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 z-10 bg-white rounded-xl p-5">
+            {images?.map((image, index) => (
+              <Image
+              key={index}
+              src={image.image}
+              alt="MITRA Consultancy"
+              className={`${image.size}`}
+            />
+            ))}
+          </div>
+
+
         </div>
       </Container>
       <ContactUs
