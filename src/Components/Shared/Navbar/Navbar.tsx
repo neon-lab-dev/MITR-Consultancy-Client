@@ -107,7 +107,7 @@ const Navbar = () => {
     { label: "Home", action: () => handleNavigation("home") },
     { label: "Services", action: () => handleNavigation("services") },
     { label: "About Us", path: "/about-us" },
-    { label: "Portfolio", action: () => handleNavigation("portfolio") },
+    // { label: "Portfolio", action: () => handleNavigation("portfolio") },
     { label: "Training Programmes", path: "/internship-programmes" },
   ];
 
@@ -165,7 +165,7 @@ const Navbar = () => {
                     isScrolled ? "text-white" : textColor
                   }`}
                 >
-                  Security
+                  Cyber Security Services
                   <Image
                     src={ICONS.downArrowWhite}
                     alt="down arrow"
@@ -252,16 +252,15 @@ const Navbar = () => {
                   </>
                 )}
 
-            {!pathname.startsWith("/internship-programmes") &&
- pathname !== "/my-profile" && (
-  <Button
-    handleClick={() => setIsContactUsModalOpen(true)}
-    variant="primary"
-    title="Contact Us"
-    classNames="w-[148px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
-  />
-)}
-
+              {!pathname.startsWith("/internship-programmes") &&
+                pathname !== "/my-profile" && (
+                  <Button
+                    handleClick={() => setIsContactUsModalOpen(true)}
+                    variant="primary"
+                    title="Contact Us"
+                    classNames="w-[148px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
+                  />
+                )}
 
               {/* Hamburger Menu for Small Screens */}
               <div className="xl:hidden flex items-center">
