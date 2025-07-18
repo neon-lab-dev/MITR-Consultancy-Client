@@ -13,7 +13,7 @@ const SecureCompliance = () => {
     "HIPAA",
     "GDPR",
     "DPDP’23",
-    "GRP Automation",
+    "GRC Automation",
     "PCI DSS",
     "CCPA",
   ];
@@ -280,22 +280,22 @@ const SecureCompliance = () => {
       ],
     },
     {
-      key: "GRP Automation",
+      key: "GRC Automation",
       sections: [
         {
           title: (
             <h1 className="text-black font-semibold">
               About{" "}
               <span className="text-secondary-20 text-2xl font-extrabold">
-                GRP Automation
+                GRC Automation
               </span>
             </h1>
           ),
           details: [
             "Automate governance, risk, and compliance workflows to optimize operations",
-            "Deploy GRP automation solutions to maintain regulatory adherence and minimize manual tasks",
+            "Deploy GRC Automation solutions to maintain regulatory adherence and minimize manual tasks",
             "Increase efficiency and precision in handling governance, risk, and compliance processes",
-            "Reduce risks and enhance decision-making with real-time insights from GRP automation",
+            "Reduce risks and enhance decision-making with real-time insights from GRC Automation",
           ],
         },
         {
@@ -305,7 +305,7 @@ const SecureCompliance = () => {
           details: [
             "Boost productivity and cut operational expenses through GRP process automation",
             "Maintain uniformity and standardization in compliance activities throughout the organisation",
-            "Remain flexible and adaptive to evolving regulatory demands using GRP automation",
+            "Remain flexible and adaptive to evolving regulatory demands using GRC Automation",
             "Utilize technology to proactively detect and manage risks within your business environment",
           ],
         },

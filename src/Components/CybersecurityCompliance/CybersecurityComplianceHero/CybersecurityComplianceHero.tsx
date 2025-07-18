@@ -39,7 +39,7 @@ const CybersecurityComplianceHero = () => {
   ];
   
   return (
-    <div className="font-Inter relative h-[1900px] xl:h-[1300px] 2xl:h-[1200px]">
+    <div className="font-Inter relative h-[1400px] xl:h-[1300px] 2xl:h-[1200px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -56,7 +56,7 @@ const CybersecurityComplianceHero = () => {
 
       {/* Content */}
       <Container>
-        <div className="flex flex-col gap-8 xl:gap-[117px] items-center justify-center absolute top-0 bottom-0 z-20 max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0">
+        <div className="flex flex-col gap-8 xl:gap-20 items-center justify-center absolute top-0 bottom-0 z-20 max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0">
           <div className="flex flex-col xl:flex-row gap-10 xl:gap-0 items-center justify-between">
             <div>
               <h1 className="text-white text-center xl:text-start leading-8 md:leading-[48px] xl:leading-[67px] text-[24px] md:text-[40px] xl:text-[56px] font-bold max-w-[344px] md:max-w-[1071px] lg:max-w-[800px] mx-auto">
@@ -110,7 +110,7 @@ const CybersecurityComplianceHero = () => {
           </div>
 
           {/* Images */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 z-10 bg-white rounded-xl p-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-4 z-10 bg-white rounded-xl p-5">
             {images?.map((image, index) => (
               <Image
               key={index}

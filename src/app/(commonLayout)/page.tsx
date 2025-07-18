@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <div >
       <Hero/>
-      <Achievements/>
       <AboutUs/>
       <OurServices/>
       <AboutSecurityService/>
+      <Achievements/>
       <OurProjects/>
       <Technologies/>
       {/* <SessionAnnouncement/> */}

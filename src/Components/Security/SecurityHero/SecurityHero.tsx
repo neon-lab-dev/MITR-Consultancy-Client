@@ -17,8 +17,27 @@ const SecurityHero = () => {
     "Fortify Systems",
     "Thrive Safely",
   ];
+
+  const images = [
+    {
+      image: IMAGES.emailSecurity,
+      size: "w-32 xl:w-52",
+    },
+    {
+      image: IMAGES.endpointSecurity2,
+      size: "w-32 xl:w-64",
+    },
+    {
+      image: IMAGES.cloudSecurity2,
+      size: "w-32 xl:w-64",
+    },
+    {
+      image: IMAGES.networkSecurity2,
+      size: "w-32 xl:w-[220px]",
+    },
+  ];
   return (
-    <div className="font-Inter relative h-[900px] md:h-[1200px] xl:h-[1000px] 2xl:h-[1200px]">
+    <div className="font-Inter relative h-[1200px] md:h-[1200px] xl:h-[1000px] 2xl:h-[1200px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -35,7 +54,7 @@ const SecurityHero = () => {
 
       {/* Content */}
       <Container>
-        <div className="flex flex-col gap-8 xl:gap-[117px] items-start justify-center absolute top-0 bottom-0 z-20 max-w-full xl:max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0 w-auto 2xl:w-full">
+        <div className="flex flex-col gap-8 xl:gap-20 items-start justify-center absolute top-0 bottom-0 z-20 max-w-full xl:max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0 w-auto 2xl:w-full">
           <div>
             <h1 className="text-white text-center xl:text-start leading-8 md:leading-[48px] xl:leading-[67px] text-[24px] md:text-[40px] xl:text-[56px] font-bold max-w-[344px] md:max-w-[1071px] lg:max-w-[800px] mx-auto xl:mx-0">
               End-to-End{" "}
@@ -62,7 +81,7 @@ const SecurityHero = () => {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
                 variant="primary"
-                title="Take Compliance Assessment"
+                title="Take Security Assessment"
                 classNames="w-full md:w-auto"
               />
             </div>
@@ -79,6 +98,20 @@ const SecurityHero = () => {
                 <p>{feature}</p>
               </div>
             ))}
+          </div>
+
+          {/* Images */}
+          <div className="flex items-center justify-center w-full">
+            <div className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-4 z-10 bg-white rounded-xl p-5">
+              {images?.map((image, index) => (
+                <Image
+                  key={index}
+                  src={image.image}
+                  alt="MITRA Consultancy"
+                  className={`${image.size}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </Container>

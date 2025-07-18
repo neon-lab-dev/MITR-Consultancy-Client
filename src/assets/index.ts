@@ -160,6 +160,10 @@ import iso27001 from "../assets/Images/iso-iec-27001.png";
 import soc2 from "../assets/Images/soc-2.png";
 import hippa from "../assets/Images/hippa.png";
 import gdpr from "../assets/Images/gdpr.png";
+import emailSecurity from "../assets/Images/email-security.png";
+import endpointSecurity2 from "../assets/Images/endpoint-security.png";
+import cloudSecurity2 from "../assets/Images/cloud-security.png";
+import networkSecurity2 from "../assets/Images/network-security.png";
 
 
 export const IMAGES = {
@@ -227,7 +231,11 @@ export const IMAGES = {
     iso27001,
     soc2,
     hippa,
-    gdpr
+    gdpr,
+    emailSecurity,
+    endpointSecurity2,
+    cloudSecurity2,
+    networkSecurity2,
 };
 
 export const ICONS = {
