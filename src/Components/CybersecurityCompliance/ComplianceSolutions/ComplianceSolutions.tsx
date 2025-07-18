@@ -35,9 +35,9 @@ const ComplianceSolutions = () => {
     },
     {
       icon: ICONS.healthTech,
-      title: "Health Tech",
+      title: "Health",
       data: {
-        title: "Health Tech",
+        title: "Health",
         subTitle: "A Wake-Up Call",
         details: [
           {

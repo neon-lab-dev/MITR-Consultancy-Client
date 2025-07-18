@@ -36,11 +36,11 @@ const Hero = () => {
                         Welcome to MITRA Consulting – where innovation and excellence converge. We provide tailored digital solutions designed to bring your ideas to life and drive your business success.
                     </p>
                     <div className="flex flex-col md:flex-row items-center justify-start gap-4 xl:gap-6 mt-4 md:mt-9 xl:mt-[62px]">
-                        <Button handleClick={() => setIsContactUsModalOpen(true)} variant="primary" title="Start a Project" classNames="w-[200px]" />
+                        <Button handleClick={() => setIsContactUsModalOpen(true)} variant="primary" title="Talk to us" classNames="w-[200px]" />
                         <Button handleClick={() =>
                             document
-                                .getElementById("portfolio")
-                                ?.scrollIntoView({ behavior: "smooth" })} variant="secondary" title="View Our Works" classNames="w-[200px]" />
+                                .getElementById("services")
+                                ?.scrollIntoView({ behavior: "smooth" })} variant="secondary" title="View Our Services" classNames="w-[250px]" />
                     </div>
                 </div>
             </Container>

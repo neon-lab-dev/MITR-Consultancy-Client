@@ -26,7 +26,7 @@ const InternshipProgrammesHero = () => {
             <Container>
                 <div className="flex items-center xl:items-start justify-center absolute top-0 bottom-0 flex-col z-20 text-center xl:text-start">
                     <h1 className="text-white leading-6 md:leading-[40px] xl:leading-[80px] text-xl md:text-[32px] xl:text-[68px] font-bold max-w-[344px] md:max-w-[550px] xl:max-w-[1071px]">
-                        Industry Ready Training Program By{" "}
+                        Industry Ready Training Programs By{" "}
                         <span className="text-primary-20">MITRA Consultancy</span>
                     </h1>
                     <p className="text-white text-[11px] md:text-sm xl:text-lg leading-[18px] xl:leading-7 max-w-[1071px] mt-3 xl:mt-6">
