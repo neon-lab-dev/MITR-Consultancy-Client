@@ -11,16 +11,18 @@ import { useState } from "react";
 const AboutUs = () => {
   const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
   return (
-    <div id="aboutUs" className="bg-primary-40 py-[60px] md:py-20 xl:py-[128px]">
+    <div id="aboutUs" className=" py-[60px] md:py-20 xl:py-[128px]">
       <Container>
         <div className="flex flex-col-reverse xl:flex-row items-center gap-[54px] ">
           
-        <Image
-            src={IMAGES.aboutUs}
+       <div className="relative">
+         <Image
+            src={IMAGES.aboutUsBg}
             alt="about -MITRA"
             className="w-full h-full"
           />
-          <div className="">
+
+           <div className=" absolute top-28 right-20 max-w-[500px]">
             <Heading
               align="left"
               subHeading="About MITRA"
@@ -51,6 +53,8 @@ const AboutUs = () => {
               />
             </div>
           </div>
+       </div>
+         
         </div>
       </Container>
       <ContactUs

@@ -1,7 +1,8 @@
 import MITRConsoltancyLogo from "../assets/Images/mitr-consultancy.png";
 import heroImg from "../assets/Images/hero-image.png";
 import internshipProgrammeBg from "../assets/Images/internshipProgrammeBg.png";
-import aboutUs from "../assets/Images/about-us.png";
+import aboutUs from "../assets/Images/about-us.webp";
+import aboutUsBg from "../assets/Images/bg.png";
 import aboutUsHeroImg from "../assets/Images/about-us-hero.jpg";
 import gradientBg from "../assets/Images/gradient-bg.png";
 import letsTalkBgImg from "../assets/Images/lets-talk-bg.png";
@@ -174,6 +175,7 @@ export const IMAGES = {
     heroImg,
     internshipProgrammeBg,
     aboutUs,
+    aboutUsBg,
     aboutUsHeroImg,
     gradientBg,
     letsTalkBgImg,

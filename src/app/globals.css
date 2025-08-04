@@ -69,3 +69,7 @@
 .custom-section-scrollbar::-webkit-scrollbar-track {
   background: transparent;
 }
+
+.custom-shape {
+  clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 80%);
+}
