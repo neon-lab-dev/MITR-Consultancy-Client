@@ -1,10 +1,14 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Heading from "../../Reusable/Heading/Heading";
 import Image from "next/image";
 import { ICONS, IMAGES } from "@/assets";
 import OurServiceCard from "./OurServiceCard";
 import Container from "../../Shared/Container/Container";
+// At the top of your file
+// @ts-ignore
+import mixitup from "mixitup";
 
 const OurServices = () => {
   const developmentServices = [
@@ -110,11 +114,35 @@ const OurServices = () => {
     },
   ];
 
-  const [activeTab, setActiveTab] = useState("Cyber Security");
-  const tabButtons = ["Cyber Security", "Development", "Design"];
+  const [activeTab, setActiveTab] = useState(".cyber");
+
+   const mixerRef = useRef(null);
+
+useEffect(() => {
+  if (mixerRef.current) {
+    const mixer = mixitup(mixerRef.current, {
+      selectors: {
+        target: ".mix",
+      },
+      animation: {
+        duration: 400,
+      },
+    });
+
+    // 👉 Manually filter to ".cyber" on first load
+    mixer.filter('.cyber');
+  }
+}, []);
+
+
+  const allServices = [
+    ...securityServices.map((s) => ({ ...s, category: "cyber" })),
+    ...developmentServices.map((s) => ({ ...s, category: "dev" })),
+    ...designServices.map((s) => ({ ...s, category: "design" })),
+  ];
 
   return (
-    <div id="services" className="relative pb-[128px]  bg-white section">
+    <div id="services" className="relative pb-[128px]  bg-white section h-[1100px]">
       <Image
         src={IMAGES.gradientBg}
         alt="MITRA Consultancy Services"
@@ -129,41 +157,36 @@ const OurServices = () => {
             description="Discover our diverse range of top-quality services, tailored to meet your needs with excellence."
           />
           <div className="flex items-center gap-6 justify-center mt-14">
-            {tabButtons?.map((button) => (
+            {[
+              { label: "Cyber Security", filter: ".cyber" },
+              { label: "Development", filter: ".dev" },
+              { label: "Design", filter: ".design" },
+            ].map((btn) => (
               <button
-                key={button}
-                onClick={() => setActiveTab(button)}
-                className={`px-6 py-3 font-medium leading-5 rounded-lg ${
-                  activeTab === button
+                key={btn.label}
+                data-filter={btn.filter}
+                onClick={() => setActiveTab(btn.filter)}
+                className={`px-6 py-3 font-medium leading-5 rounded-lg transition-colors duration-300 ${
+                  activeTab === btn.filter
                     ? "text-white bg-primary-10"
-                    : "text-primary-10 bg-white"
+                    : "text-primary-10"
                 }`}
               >
-                {button}
+                {btn.label}
               </button>
             ))}
           </div>
-          {activeTab === "Cyber Security" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[46px] mt-[62px]">
-              {securityServices.map((service, index) => (
-                <OurServiceCard key={index} {...service} />
-              ))}
-            </div>
-          )}
-          {activeTab === "Development" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[46px] mt-[62px]">
-              {developmentServices.map((service, index) => (
-                <OurServiceCard key={index} {...service} />
-              ))}
-            </div>
-          )}
-          {activeTab === "Design" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[46px] mt-[62px]">
-              {designServices.map((service, index) => (
-                <OurServiceCard key={index} {...service} />
-              ))}
-            </div>
-          )}
+
+          <div
+        ref={mixerRef}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-[62px]"
+      >
+        {allServices.map((service, index) => (
+          <div key={index} className={`mix ${service.category}`}>
+            <OurServiceCard {...service} />
+          </div>
+        ))}
+      </div>
         </Container>
       </div>
     </div>

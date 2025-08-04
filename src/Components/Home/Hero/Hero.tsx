@@ -50,7 +50,7 @@ const Hero = () => {
             <Button
               handleClick={() =>
                 document
-                  .getElementById("portfolio")
+                  .getElementById("aboutUs")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
               variant="secondary"

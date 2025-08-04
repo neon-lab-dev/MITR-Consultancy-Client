@@ -31,67 +31,6 @@ const Footer = () => {
     },
   ];
 
-  const footerLinks = [
-    {
-      label: "Home",
-      path: "/",
-      action: () => {
-        // router.push("/");
-        const homeSection = document.getElementById("home");
-        homeSection?.scrollIntoView({ behavior: "smooth" });
-      },
-    },
-    {
-      label: "Services",
-      path: "/",
-      action: () => {
-        // router.push("/");
-        const servicesSection = document.getElementById("services");
-        servicesSection?.scrollIntoView({ behavior: "smooth" });
-      },
-    },
-    {
-      label: "About Us",
-      path: "/",
-      action: () => {
-        // router.push("/");
-        const aboutUsSection = document.getElementById("aboutUs");
-        aboutUsSection?.scrollIntoView({ behavior: "smooth" });
-      },
-    },
-    {
-      label: "Portfolio",
-      path: "/",
-      action: () => {
-        // router.push("/");
-        const portfolioSection = document.getElementById("portfolio");
-        portfolioSection?.scrollIntoView({ behavior: "smooth" });
-      },
-    },
-    {
-      label: "Contact Us",
-      path: "/",
-      action: () => {
-        setIsContactUsModalOpen(true);
-      },
-    },
-  ];
-
-  const footerLinks2 = [
-    {
-      label: "Privacy Policy",
-      path: "/privacy-policy",
-    },
-    {
-      label: "Terms And Conditions",
-      path: "/terms-and-conditions",
-    },
-    {
-      label: "Refund Policy",
-      path: "/refund-policy",
-    },
-  ];
-
   const quickLinks = [
     {
       heading: "Quick Links",
@@ -175,11 +114,13 @@ const Footer = () => {
       <Container>
         <div className="flex flex-col gap-6 font-Inter mt-[151px] py-10">
           <div className="flex items-center justify-start gap-5">
+            <Link href="/">
             <Image
               src={IMAGES.MITRConsoltancyLogo}
               alt="MITRA Consultancy"
               className="w-[68px] h-[33px]"
             />
+            </Link>
             <div className="w-[2px] h-[26px] bg-neutral-10/40"></div>
             {/* Social Links */}
             <div className="flex items-center gap-4 md:gap-7">

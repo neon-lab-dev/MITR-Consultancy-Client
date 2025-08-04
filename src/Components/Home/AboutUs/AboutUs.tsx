@@ -5,11 +5,9 @@ import Heading from "../../Reusable/Heading/Heading";
 import Container from "../../Shared/Container/Container";
 import { IMAGES } from "@/assets";
 import Button from "../../Reusable/Button/Button";
-import ContactUs from "../ContactUs/ContactUs";
-import { useState } from "react";
+import Link from "next/link";
 
 const AboutUs = () => {
-  const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
   return (
     <div id="aboutUs" className=" py-[60px] md:py-20 xl:py-[128px]">
       <Container>
@@ -44,23 +42,20 @@ const AboutUs = () => {
               technology.
             </p>
 
-            <div className="mt-[68px]">
+            <div className="mt-9">
+             <Link href="/about-us">
               <Button
-                handleClick={()=>setIsContactUsModalOpen(true)}
                 variant="primary"
-                title="Start A Project"
+                title="Learn More"
                 classNames="w-[200px]"
               />
+             </Link>
             </div>
           </div>
        </div>
          
         </div>
       </Container>
-      <ContactUs
-        isContactUsModalOpen={isContactUsModalOpen}
-        setIsContactUsModalOpen={setIsContactUsModalOpen}
-      />
     </div>
   );
 };
