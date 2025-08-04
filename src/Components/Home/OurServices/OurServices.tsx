@@ -58,7 +58,7 @@ const ourServices = [
           <Heading
             align='center'
             subHeading='Services'
-            heading='Our List of Best services'
+            heading='Our List of Services'
             description='Discover our diverse range of top-quality services, tailored to meet your needs with excellence.'
           />
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[46px] mt-[62px]'>
