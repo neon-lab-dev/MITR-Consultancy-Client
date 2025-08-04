@@ -14,7 +14,6 @@ import certification from "../assets/Images/ist-certificate.png.png";
 import cybersecurityComplianceHeroImg from "../assets/Images/CybersecurityComplianceHeroimg.svg";
 import cyberSecurity from "../assets/Images/cyber-security.png";
 import secureCompliance from "../assets/Images/Frame 38127.png";
-
 import featureIcon from "../assets/Icons/featureIcon.svg";
 import satisfied from "../assets/Icons/satisfied.svg";
 import medal from "../assets/Icons/medel.svg";
@@ -24,6 +23,10 @@ import cloudSecurity from "../assets/Icons/cloud-security.svg";
 import endpointSecurity from "../assets/Icons/endpoint-security.svg";
 import mailLock from "../assets/Icons/mail_lock.svg";
 import tickCircleGreen from "../assets/Icons/check-circle-green.svg";
+import projects from "../assets/Icons/projects.svg";
+import experience from "../assets/Icons/experience.svg";
+import secured from "../assets/Icons/secured.svg";
+import partners from "../assets/Icons/partners.svg";
 
 // Services
 import cart from "../assets/Icons/cart.svg";
@@ -258,6 +261,10 @@ export const ICONS = {
     networkSecurity,
     endpointSecurity,
     cloudSecurity,
+    experience,
+    secured,
+    projects,
+    partners,
 
     rightArrow,
     rightArrow2,

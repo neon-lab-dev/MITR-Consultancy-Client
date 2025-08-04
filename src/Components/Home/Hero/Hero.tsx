@@ -47,10 +47,16 @@ const Hero = () => {
               title="Talk to Us"
               classNames="w-[200px]"
             />
-            {/* <Button handleClick={() =>
-                            document
-                                .getElementById("portfolio")
-                                ?.scrollIntoView({ behavior: "smooth" })} variant="secondary" title="View Our Works" classNames="w-[200px]" /> */}
+            <Button
+              handleClick={() =>
+                document
+                  .getElementById("portfolio")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              variant="secondary"
+              title="Learn More"
+              classNames="w-[200px]"
+            />
           </div>
         </div>
       </Container>
