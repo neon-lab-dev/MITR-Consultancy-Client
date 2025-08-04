@@ -18,8 +18,8 @@ export default function Home() {
       <Counters/>
       <AboutUs/>
       <OurServices/>
-      <AboutSecurityService/>
       <Achievements/>
+      <AboutSecurityService/>
       <OurProjects/>
       <Technologies/>
       {/* <SessionAnnouncement/> */}
