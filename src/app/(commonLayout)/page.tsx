@@ -9,7 +9,7 @@ import Testimonials from "@/Components/Home/Testimonials/Testimonials";
 import OurProjects from './../../Components/Home/OurProjects/OurProjects';
 import AboutSecurityService from "@/Components/Home/AboutSecurityService/AboutSecurityService";
 import Counters from "@/Components/Home/Counters/Counters";
-import CommonThreats from "@/Components/SecurityServices/CommonThreats/CommonThreats";
+import KeyFeatures from "@/Components/SecurityServices/KeyFeatures/KeyFeatures";
 // import SessionAnnouncement from "@/Components/Shared/SessionAnnouncement/SessionAnnouncement";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
       <Testimonials/>
       <FAQ/>
       <LetsTalk/>
-      <CommonThreats/>
+      <KeyFeatures/>
     </div>
   );
 }

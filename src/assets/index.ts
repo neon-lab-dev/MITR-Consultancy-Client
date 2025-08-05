@@ -28,6 +28,7 @@ import projects from "../assets/Icons/projects.svg";
 import experience from "../assets/Icons/experience.svg";
 import secured from "../assets/Icons/secured.svg";
 import partners from "../assets/Icons/partners.svg";
+import verified from "../assets/Icons/verified.svg";
 
 // Services
 import cart from "../assets/Icons/cart.svg";
@@ -346,6 +347,8 @@ export const ICONS = {
     d2c,
     realEstate,
     retailEcom,
-    nonProfits
+    nonProfits,
+
+    verified
 
 }

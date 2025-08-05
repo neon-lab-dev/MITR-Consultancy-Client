@@ -62,6 +62,7 @@ export default {
           150: "#f2f3f5",
           155: "#f4f5f5",
           160: "#71717B",
+          165: "#111111BF",
         },
       },
       fontFamily: {
@@ -78,6 +79,7 @@ export default {
         "gradient-counters": "linear-gradient(180deg, rgba(219, 234, 254, 0.27) 0%, rgba(131, 140, 152, 0.00) 100%);",
         "gradient-threats": "linear-gradient(180deg, #FFF5F3 0%, #FFF 100%);",
         "gradient-threats-card": "linear-gradient(270deg, #FFF -0.6%, #FFB2B2 99.23%);",
+        "gradient-key-features": "linear-gradient(180deg, #F0FAF4 0%, #FFF 100%);",
 
       },
     },
