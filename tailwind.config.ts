@@ -80,6 +80,8 @@ export default {
         "gradient-threats": "linear-gradient(180deg, #FFF5F3 0%, #FFF 100%);",
         "gradient-threats-card": "linear-gradient(270deg, #FFF -0.6%, #FFB2B2 99.23%);",
         "gradient-key-features": "linear-gradient(180deg, #F0FAF4 0%, #FFF 100%);",
+        "gradient-compliance": "linear-gradient(180deg, #FCF9F2 0%, #FFF 100%);" ,
+        "gradient-compliance-card": "linear-gradient(270deg, #FFF -0.6%, #B2E0FF 99.23%);" 
 
       },
     },

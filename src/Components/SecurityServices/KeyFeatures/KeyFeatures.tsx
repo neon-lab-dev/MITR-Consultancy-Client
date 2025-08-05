@@ -1,6 +1,6 @@
 import Container from "@/Components/Shared/Container/Container";
 import React from "react";
-import KeyFeatureCard from "../KeyFeatureCard/KeyFeatureCard";
+import KeyFeatureCard from "./KeyFeatureCard/KeyFeatureCard";
 import { ICONS } from "@/assets";
 import Button from "@/Components/Reusable/Button/Button";
 const features = [
