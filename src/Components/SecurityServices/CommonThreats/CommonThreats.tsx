@@ -13,33 +13,38 @@ const threats: Threat[] = [
   {
     number: "1",
     title: "Phishing",
-    description: "Deceptive emails tricking users into revealing sensitive data"
+    description:
+      "Deceptive emails tricking users into revealing sensitive data",
   },
   {
     number: "2",
     title: "Spear Phishing",
-    description: "Targeted phishing attacks aimed at specific individuals (e.g., CFOs)"
+    description:
+      "Targeted phishing attacks aimed at specific individuals (e.g., CFOs)",
   },
   {
     number: "3",
     title: "Business Email Compromise (BEC)",
-    description: "Attackers impersonate executives or vendors to request fund transfers"
+    description:
+      "Attackers impersonate executives or vendors to request fund transfers",
   },
   {
     number: "4",
     title: "Malware/Ransomware",
-    description: "Malicious attachments or links that infect systems"
+    description: "Malicious attachments or links that infect systems",
   },
   {
     number: "5",
     title: "Spoofing & Email Forgery",
-    description: "Fake sender identities to gain trust or impersonate internal contacts"
+    description:
+      "Fake sender identities to gain trust or impersonate internal contacts",
   },
   {
     number: "6",
     title: "Data Leakage",
-    description: "Accidental or malicious exposure of confidential information via email"
-  }
+    description:
+      "Accidental or malicious exposure of confidential information via email",
+  },
 ];
 
 const CommonThreats = () => {
@@ -62,16 +67,17 @@ const CommonThreats = () => {
               className="w-[45%]"
             />
             <div className="w-[55%]">
-               <div className="flex flex-col gap-6">
-      {threats.map((item) => (
-        <ServiceCard
-          key={item.number}
-          number={item.number}
-          title={item.title}
-          description={item.description}
-        />
-      ))}
-    </div>
+              <div className="flex flex-col gap-6">
+                {threats.map((item) => (
+                  <ServiceCard
+                    key={item.number}
+                    number={item.number}
+                    title={item.title}
+                    description={item.description}
+                    gradient="bg-gradient-threats-card"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

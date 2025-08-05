@@ -9,7 +9,7 @@ import Testimonials from "@/Components/Home/Testimonials/Testimonials";
 import OurProjects from './../../Components/Home/OurProjects/OurProjects';
 import AboutSecurityService from "@/Components/Home/AboutSecurityService/AboutSecurityService";
 import Counters from "@/Components/Home/Counters/Counters";
-import ComplianceSection from "@/Components/SecurityServices/ComplianceSection/ComplianceSection";
+import DeploymentOption from "@/Components/SecurityServices/DeploymentOption/DeploymentOption";
 // import SessionAnnouncement from "@/Components/Shared/SessionAnnouncement/SessionAnnouncement";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
       <Testimonials/>
       <FAQ/>
       <LetsTalk/>
-     <ComplianceSection/>
+    <DeploymentOption/>
     </div>
   );
 }
