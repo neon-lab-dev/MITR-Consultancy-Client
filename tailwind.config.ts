@@ -27,6 +27,7 @@ export default {
           80: "#BFE5FF",
           85: "#DBEAFE",
           90: "#253DAB05",
+          95: "#D4D3D805",
         },
         secondary: {
           10: "#FF9900",
@@ -64,6 +65,10 @@ export default {
           155: "#f4f5f5",
           160: "#71717B",
           165: "#111111BF",
+          170: "#253DAB40",
+        },
+        error: {
+          10: "#FC464663",
         },
       },
       fontFamily: {
@@ -77,13 +82,17 @@ export default {
         "course-details": "0px 0px 70px 0px rgba(164, 217, 253, 0.20)",
       },
       backgroundImage: {
-        "gradient-counters": "linear-gradient(180deg, rgba(219, 234, 254, 0.27) 0%, rgba(131, 140, 152, 0.00) 100%);",
+        "gradient-counters":
+          "linear-gradient(180deg, rgba(219, 234, 254, 0.27) 0%, rgba(131, 140, 152, 0.00) 100%);",
         "gradient-threats": "linear-gradient(180deg, #FFF5F3 0%, #FFF 100%);",
-        "gradient-threats-card": "linear-gradient(270deg, #FFF -0.6%, #FFB2B2 99.23%);",
-        "gradient-key-features": "linear-gradient(180deg, #F0FAF4 0%, #FFF 100%);",
-        "gradient-compliance": "linear-gradient(180deg, #FCF9F2 0%, #FFF 100%);" ,
-        "gradient-compliance-card": "linear-gradient(270deg, #FFF -0.6%, #B2E0FF 99.23%);" 
-
+        "gradient-threats-card":
+          "linear-gradient(270deg, #FFF -0.6%, #FFB2B2 99.23%);",
+        "gradient-key-features":
+          "linear-gradient(180deg, #F0FAF4 0%, #FFF 100%);",
+        "gradient-compliance":
+          "linear-gradient(180deg, #FCF9F2 0%, #FFF 100%);",
+        "gradient-compliance-card":
+          "linear-gradient(270deg, #FFF -0.6%, #B2E0FF 99.23%);",
       },
     },
   },

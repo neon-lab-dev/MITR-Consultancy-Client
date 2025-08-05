@@ -172,6 +172,7 @@ import networkSecurity2 from "../assets/Images/network-security.png";
 import emailCommonThreats from "../assets/Images/email-theats.webp";
 import developmentSection from "../assets/Images/developmet.-section.webp";
 import emailSecurityHero from "../assets/Images/email-security-hero.png";
+import emailSecurityImportance from "../assets/Images/emial-security-importance.webp";
 
 
 
@@ -251,7 +252,8 @@ export const IMAGES = {
 
     emailCommonThreats,
     developmentSection,
-    emailSecurityHero
+    emailSecurityHero,
+    emailSecurityImportance
 };
 
 export const ICONS = {

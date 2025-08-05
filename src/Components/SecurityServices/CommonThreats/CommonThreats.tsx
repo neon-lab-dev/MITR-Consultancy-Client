@@ -52,7 +52,7 @@ const CommonThreats = () => {
     <div className="py-[120px] bg-gradient-threats font-Inter">
       <Container>
         <div className="flex flex-col justify-center items-center text-center w-full gap-20">
-          <h2 className="text-neutral-145 text-[32px] md:text-[40px] xl:text-[48px] font-semibold mb-4">
+          <h2 className="text-neutral-145 text-[32px] md:text-[48px] 2xl:text-[64px] font-semibold text-center">
             Common Email Threats
           </h2>
           <div className="relative flex flex-row justify-center items-center w-full">
@@ -75,6 +75,7 @@ const CommonThreats = () => {
                     title={item.title}
                     description={item.description}
                     gradient="bg-gradient-threats-card"
+                    textColor="#FC464663"
                   />
                 ))}
               </div>

@@ -11,7 +11,7 @@ const features = [
     title: "Phishing & Tailored solutions for businesses of all sizes Protection",
   },
   {
-    title: "Support across Bangalore, Mumbai, Delhi NCR, patna, and pan-India",
+    title: "Support across Bangalore, Mumbai, Delhi , Patna, and pan-India",
   },
   {
     title: "Work with leading platforms such as Microsoft, Google, Cisco, Fortinet, Mimecast, Proofpoint, more",
@@ -26,7 +26,7 @@ const WhyUs = () => {
     <div className="py-[100px] font-Inter">
       <Container>
         <div className="flex flex-col justify-center items-center text-center w-full gap-20">
-          <h2 className="text-neutral-145 text-[32px] md:text-[40px] xl:text-[48px] font-semibold mb-4">
+          <h2 className="text-neutral-145 text-[32px] md:text-[48px] 2xl:text-[64px] font-semibold text-center">
             Why Choose Mitra Consultancy?
           </h2>
 

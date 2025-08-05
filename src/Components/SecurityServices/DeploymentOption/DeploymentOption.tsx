@@ -9,7 +9,7 @@ interface DeploymentOptions {
   description: string;
 }
 
-const threats: DeploymentOptions[] = [
+const developmentOptions: DeploymentOptions[] = [
   {
     number: "1",
     title: "Cloud-Based Security",
@@ -30,25 +30,21 @@ const DeploymentOption = () => {
   return (
     <div className="py-[120px] bg-gradient-compliance font-Inter">
       <Container>
-        <div className="flex flex-col justify-center items-center text-center w-full gap-20">
-          <h2 className="text-neutral-145 text-[32px] md:text-[40px] xl:text-[48px] font-semibold mb-4">
-            Compliance & Regulatory Alignment
+        <div className="flex flex-col justify-center items-center text-center w-full gap-16">
+          <h2 className="text-neutral-145 text-[32px] md:text-[48px] 2xl:text-[64px] font-semibold text-center">
+            Deployment Option
           </h2>
-          <div className="relative flex flex-row justify-center items-center w-full">
-            {/* <Image
-              src={IMAGES.emailCommonThreats}
-              alt="Common Threats"
-              className="absolute left-0 top-0 bottom-0 w-[45%]"
-            /> */}
+          <div className="relative flex flex-row justify-center items-center gap-[60px w-full">
             <div className="w-[55%]">
               <div className="flex flex-col gap-6">
-                {threats.map((item) => (
+                {developmentOptions.map((item) => (
                   <ServiceCard
                     key={item.number}
                     number={item.number}
                     title={item.title}
                     description={item.description}
                     gradient="bg-gradient-compliance-card"
+                    textColor="#213FAC2B"
                   />
                 ))}
               </div>

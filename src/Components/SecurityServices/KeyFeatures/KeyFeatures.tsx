@@ -52,10 +52,10 @@ const KeyFeatures = () => {
     <div className="py-[120px] bg-gradient-key-features font-Inter">
       <Container>
         <div className="flex flex-col justify-center items-center text-center w-full gap-20">
-          <h2 className="text-neutral-145 text-[32px] md:text-[40px] xl:text-[48px] font-semibold mb-4">
+          <h2 className="text-neutral-145 text-[32px] md:text-[48px] 2xl:text-[64px] font-semibold text-center">
             Key Features of Email Security Services
           </h2>
-          <div className="h-full w-full p-6 rounded-xl border-2 border-neutral-130 bg-primary-90 flex flex-col items-center justify-center gap-12">
+          <div className="h-full w-full p-6 rounded-xl border-2 border-neutral-130 bg-white  flex flex-col items-center justify-center gap-12">
             <div className=" grid lg:grid-cols-4 gap-6 ">
               {features.map((feature, index) => (
                 <KeyFeatureCard

@@ -14,7 +14,7 @@ const KeyFeatureCard: React.FC<KeyFeatureCardProps> = ({
   points
 }) => {
   return (
-    <div className='bg-white rounded-xl flex flex-col items-center justify-center gap-12 pb-12 border border-neutral-125'>
+    <div className='bg-white rounded-xl flex flex-col items-center justify-start gap-12 pb-12 border border-neutral-125'>
       <div className='size-[68px] bg-neutral-140 flex items-center justify-center p-4'>
         <Image src={icon} alt={title} className='w-[38px] h-10' />
       </div>
