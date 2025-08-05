@@ -76,6 +76,9 @@ export default {
       },
       backgroundImage: {
         "gradient-counters": "linear-gradient(180deg, rgba(219, 234, 254, 0.27) 0%, rgba(131, 140, 152, 0.00) 100%);",
+        "gradient-threats": "linear-gradient(180deg, #FFF5F3 0%, #FFF 100%);",
+        "gradient-threats-card": "linear-gradient(270deg, #FFF -0.6%, #FFB2B2 99.23%);",
+
       },
     },
   },
