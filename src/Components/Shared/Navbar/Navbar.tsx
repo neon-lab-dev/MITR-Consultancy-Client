@@ -222,7 +222,9 @@ const Navbar = () => {
                 pathname !== "/refund-policy" &&
                 pathname !== "/terms-and-conditions" &&
                 pathname !== "/payment-success" &&
-                pathname !== "/about-us" && (
+                pathname !== "/about-us" && 
+                pathname !== "/security/email-security" && 
+                (
                   <>
                     <Link href={"/cart"} className="relative">
                       <Image
