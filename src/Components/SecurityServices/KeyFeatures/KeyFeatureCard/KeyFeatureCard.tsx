@@ -5,7 +5,7 @@ import React from 'react'
 interface KeyFeatureCardProps {
   icon?: string;
   title: string;
-  points: string[];
+  points?: string[];
 }
 
 const KeyFeatureCard: React.FC<KeyFeatureCardProps> = ({
@@ -20,7 +20,7 @@ const KeyFeatureCard: React.FC<KeyFeatureCardProps> = ({
       </div>
       <div className='flex flex-col items-center justify-center gap-5 px-6'>
         <h2 className='text-neutral-145 text-lg h-11 font-medium'>{title}</h2>
-        {points.map((point, index) => (
+        {points && points.map((point, index) => (
           <div
             key={index}
             className='flex flex-row items-start justify-center gap-[10px]'

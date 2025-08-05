@@ -55,7 +55,7 @@ const KeyFeatures = () => {
           <h2 className="text-neutral-145 text-[32px] md:text-[40px] xl:text-[48px] font-semibold mb-4">
             Key Features of Email Security Services
           </h2>
-          <div className="h-full w-full p-6 rounded-xl border-2 border-neutral-130 bg-white flex flex-col items-center justify-center gap-12">
+          <div className="h-full w-full p-6 rounded-xl border-2 border-neutral-130 bg-primary-90 flex flex-col items-center justify-center gap-12">
             <div className=" grid lg:grid-cols-4 gap-6 ">
               {features.map((feature, index) => (
                 <KeyFeatureCard
