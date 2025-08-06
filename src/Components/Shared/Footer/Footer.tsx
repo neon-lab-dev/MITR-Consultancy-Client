@@ -19,11 +19,11 @@ const Footer = () => {
       link: "https://www.linkedin.com/company/mitr-consulting/",
       icon: ICONS.linkedin,
     },
-    {
-      name: "twitter",
-      link: "https://www.facebook.com/MITR-Consultancy-100190372261098",
-      icon: ICONS.twitter,
-    },
+    // {
+    //   name: "twitter",
+    //   link: "https://www.facebook.com/MITR-Consultancy-100190372261098",
+    //   icon: ICONS.twitter,
+    // },
     {
       name: "instagram",
       link: "https://www.instagram.com/_mitr_consultancy/?hl=en",
@@ -185,16 +185,16 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-6">
-              <a href="tel:+91 12345678" className="flex items-center gap-2 hover:underline">
+              <a href="tel:+918210464851" className="flex items-center gap-2 hover:underline">
                 <Image src={ICONS.phone} alt="" className="size-5" />
                 <p className="text-neutral-20 text-xs md:text-base text-center">
-                  +91 12345678
+                  +91 8210464851
                 </p>
               </a>
-              <a href="mailto:test@gmail.com" className="flex items-center gap-2 hover:underline">
+              <a href="mailto:business@mitraconsultancy.co.in" className="flex items-center gap-2 hover:underline">
                 <Image src={ICONS.email} alt="" className="size-5" />
                 <p className="text-neutral-20 text-xs md:text-base text-center">
-                  test@gmail.com
+                  business@mitraconsultancy.co.in
                 </p>
               </a>
             </div>
