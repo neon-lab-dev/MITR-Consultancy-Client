@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ICONS, IMAGES } from "@/assets";
 
-export const allSecurityData = {
+export type SecuritySlug = "email-security" | "endpoint-security" | "cloud-security" | "vapt-security";
+export const allSecurityData:Record<SecuritySlug, any> = {
   // Email Security Data
   "email-security": {
     heroDetails: {
