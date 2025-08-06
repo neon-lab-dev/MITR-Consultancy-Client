@@ -1,31 +1,33 @@
-import AboutUs from "@/Components/Home/AboutUs/AboutUs";
-import Achievements from "@/Components/Home/Achievements/Achievements";
-import FAQ from "@/Components/Shared/FAQ/FAQ";
-import Hero from "@/Components/Home/Hero/Hero";
-import LetsTalk from "@/Components/Home/LetsTalk/LetsTalk";
-import OurServices from "@/Components/Home/OurServices/OurServices";
-import Technologies from "@/Components/Home/Technologies/Technologies";
-import Testimonials from "@/Components/Home/Testimonials/Testimonials";
-import OurProjects from './../../Components/Home/OurProjects/OurProjects';
-import AboutSecurityService from "@/Components/Home/AboutSecurityService/AboutSecurityService";
-import Counters from "@/Components/Home/Counters/Counters";
-// import SessionAnnouncement from "@/Components/Shared/SessionAnnouncement/SessionAnnouncement";
+import dynamic from "next/dynamic";
+
+const Hero = dynamic(() => import("@/Components/Home/Hero/Hero"));
+const Counters = dynamic(() => import("@/Components/Home/Counters/Counters"));
+const AboutUs = dynamic(() => import("@/Components/Home/AboutUs/AboutUs"));
+const OurServices = dynamic(() => import("@/Components/Home/OurServices/OurServices"));
+const Achievements = dynamic(() => import("@/Components/Home/Achievements/Achievements"));
+const AboutSecurityService = dynamic(() => import("@/Components/Home/AboutSecurityService/AboutSecurityService"));
+const OurProjects = dynamic(() => import("@/Components/Home/OurProjects/OurProjects"));
+const Technologies = dynamic(() => import("@/Components/Home/Technologies/Technologies"));
+// const SessionAnnouncement = dynamic(() => import("@/Components/Shared/SessionAnnouncement/SessionAnnouncement"));
+const Testimonials = dynamic(() => import("@/Components/Home/Testimonials/Testimonials"));
+const FAQ = dynamic(() => import("@/Components/Shared/FAQ/FAQ"));
+const LetsTalk = dynamic(() => import("@/Components/Home/LetsTalk/LetsTalk"));
 
 export default function Home() {
   return (
-    <div >
-      <Hero/>
-      <Counters/>
-      <AboutUs/>
-      <OurServices/>
-      <Achievements/>
-      <AboutSecurityService/>
-      <OurProjects/>
-      <Technologies/>
-      {/* <SessionAnnouncement/> */}
-      <Testimonials/>
-      <FAQ/>
-      <LetsTalk/>
+    <div>
+      <Hero />
+      <Counters />
+      <AboutUs />
+      <OurServices />
+      <Achievements />
+      <AboutSecurityService />
+      <OurProjects />
+      <Technologies />
+      {/* <SessionAnnouncement /> */}
+      <Testimonials />
+      <FAQ />
+      <LetsTalk />
     </div>
   );
 }

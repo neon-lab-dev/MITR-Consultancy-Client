@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 import React, { useEffect, useRef, useState } from "react";
@@ -8,7 +9,7 @@ import OurServiceCard from "./OurServiceCard";
 import Container from "../../Shared/Container/Container";
 // At the top of your file
 // @ts-ignore
-import mixitup from "mixitup";
+// const mixitup = (await import("mixitup")).default;
 
 const OurServices = () => {
   const developmentServices = [
@@ -115,25 +116,36 @@ const OurServices = () => {
   ];
 
   const [activeTab, setActiveTab] = useState(".cyber");
+  const mixerRef = useRef(null);
 
-   const mixerRef = useRef(null);
+  useEffect(() => {
+    let mixerInstance: any;
 
-useEffect(() => {
-  if (mixerRef.current) {
-    const mixer = mixitup(mixerRef.current, {
-      selectors: {
-        target: ".mix",
-      },
-      animation: {
-        duration: 400,
-      },
-    });
+    const initMixitup = async () => {
+      if (!mixerRef.current) return;
 
-    // 👉 Manually filter to ".cyber" on first load
-    mixer.filter('.cyber');
-  }
-}, []);
+      const mixitup = (await import("mixitup")).default;
 
+      mixerInstance = mixitup(mixerRef.current, {
+        selectors: {
+          target: ".mix",
+        },
+        animation: {
+          duration: 400,
+        },
+      });
+
+      mixerInstance.filter(".cyber");
+    };
+
+    initMixitup();
+
+    return () => {
+      if (mixerInstance) {
+        mixerInstance.destroy();
+      }
+    };
+  }, []);
 
   const allServices = [
     ...securityServices.map((s) => ({ ...s, category: "cyber" })),
@@ -142,7 +154,10 @@ useEffect(() => {
   ];
 
   return (
-    <div id="services" className="relative pb-[128px]  bg-white section h-[1100px]">
+    <div
+      id="services"
+      className="relative pb-[128px]  bg-white section h-[1100px]"
+    >
       <Image
         src={IMAGES.gradientBg}
         alt="MITRA Consultancy Services"
@@ -178,15 +193,15 @@ useEffect(() => {
           </div>
 
           <div
-        ref={mixerRef}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-[62px]"
-      >
-        {allServices.map((service, index) => (
-          <div key={index} className={`mix ${service.category}`}>
-            <OurServiceCard {...service} />
+            ref={mixerRef}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-[62px]"
+          >
+            {allServices.map((service, index) => (
+              <div key={index} className={`mix ${service.category}`}>
+                <OurServiceCard {...service} />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
         </Container>
       </div>
     </div>
