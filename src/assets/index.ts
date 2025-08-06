@@ -171,11 +171,15 @@ import cloudSecurity2 from "../assets/Images/cloud-security.png";
 import networkSecurity2 from "../assets/Images/network-security.png";
 import emailCommonThreats from "../assets/Images/email-theats.webp";
 import developmentSection from "../assets/Images/developmet.-section.webp";
-import emailSecurityHero from "../assets/Images/email-security-hero.png";
 import emailSecurityImportance from "../assets/Images/emial-security-importance.webp";
 
 
 
+import emailSecurityHero from "../assets/Images/email-security-hero.png";
+import vaptSecurityHero from "../assets/Images/vapt-security.webp";
+import cloudSecurityHero from "../assets/Images/cloud-security-hero4.png";
+import networkSecurityHero from "../assets/Images/network-security-hero.jpeg";
+import endpointSecurityHero from "../assets/Images/endpoint-security-hero.png";
 
 
 export const IMAGES = {
@@ -198,6 +202,11 @@ export const IMAGES = {
     secureCompliance,
     security,
     cybersecurityBanner,
+    emailSecurityHero,
+    vaptSecurityHero,
+    cloudSecurityHero,
+    networkSecurityHero,
+    endpointSecurityHero,
 
     // Clients
     abhirami,
@@ -252,7 +261,6 @@ export const IMAGES = {
 
     emailCommonThreats,
     developmentSection,
-    emailSecurityHero,
     emailSecurityImportance
 };
 

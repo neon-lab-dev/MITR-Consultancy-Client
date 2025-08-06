@@ -10,11 +10,11 @@ const SecurityDetailsHero = () => {
   const [isContactUsModalOpen, setIsContactUsModalOpen] =
     useState<boolean>(false);
   return (
-    <div className="font-Inter relative h-[1400px] xl:h-[800px]">
+    <div className="font-Inter relative h-[500px] xl:h-[800px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={IMAGES.emailSecurityHero}
+          src={IMAGES.endpointSecurityHero}
           alt="MITRA Consultancy"
           layout="fill"
           objectFit="cover"
@@ -23,7 +23,7 @@ const SecurityDetailsHero = () => {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-neutral-50 bg-opacity-50 z-10"></div>
+      <div className="absolute inset-0 bg-neutral-50 bg-opacity-80 xl:bg-opacity-50 z-10"></div>
 
       {/* Content */}
       <Container>
@@ -35,7 +35,7 @@ const SecurityDetailsHero = () => {
             <p className="text-neutral-65 text-center xl:text-start text-xl xl:text-[39px] max-w-full md:max-w-[600px] leading-normal mt-5">
               Protecting Your Business From Digital Threats
             </p>
-            <div className="mt-5 md:mt-9 xl:mt-[60px]">
+            <div className="mt-5 md:mt-9 xl:mt-[60px] flex items-center justify-center">
               <Button
                 handleClick={() => setIsContactUsModalOpen(true)}
                 variant="primary"
