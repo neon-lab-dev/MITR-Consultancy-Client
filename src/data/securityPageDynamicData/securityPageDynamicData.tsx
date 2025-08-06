@@ -203,7 +203,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
     // Why security
     whySecurityMatters: {
       heading: "Why Endpoint Security Matters?",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.endpointSecurity1,
       pointers: [
         {
           title: "Decentralized Workforces",
@@ -233,7 +233,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
       heading: "How Our Endpoint Security Works",
       description:
         "Mitra Consultancy’s solution is agent-based, meaning a lightweight security agent is installed on every endpoint to:",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.endpointSecurity4,
       pointers: [
         {
           title: "Real-Time Monitoring",
@@ -350,7 +350,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
     // Deployment Options
     deploymentOptions: {
       heading: "Our Approach",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.endpointSecurity3,
       pointers: [
         {
           title: "Assessment",

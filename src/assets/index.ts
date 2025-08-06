@@ -192,6 +192,9 @@ import cloudSecurity3 from "../assets/Images/cloud-security3.webp";
 import vaptSecurity1 from "../assets/Images/vapt-security1.webp";
 import vaptSecurity2 from "../assets/Images/vapt-security2.webp";
 import vaptSecurity3 from "../assets/Images/vapt-security3.webp";
+import endpointSecurity1 from "../assets/Images/endpoint-security1.webp";
+import endpointSecurity4 from "../assets/Images/endpoint-security2.webp";
+import endpointSecurity3 from "../assets/Images/endpoint-security3.webp";
 
 
 
@@ -231,6 +234,9 @@ export const IMAGES = {
     vaptSecurity1,
     vaptSecurity2,
     vaptSecurity3,
+    endpointSecurity1,
+    endpointSecurity4,
+    endpointSecurity3,
 
     
     // Clients
