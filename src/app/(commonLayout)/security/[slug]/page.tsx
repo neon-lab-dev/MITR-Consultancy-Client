@@ -25,12 +25,12 @@ const EmailSecurity = () => {
   return (
     <div>
       <SecurityDetailsHero {...content.heroDetails} />
-      <WhySecurityMatters />
-      <CommonThreats />
-      <KeyFeatures />
-      <ComplianceSection />
-      <DeploymentOption />
-      <WhyUs />
+      <WhySecurityMatters {...content.whySecurityMatters} />
+      <CommonThreats {...content.commonSecurityThreats} />
+      <KeyFeatures {...content.keyFeatures} />
+      <ComplianceSection {...content.complianceAndRegulatoryAlignment} />  
+      <DeploymentOption {...content.deploymentOptions} />
+      <WhyUs {...content.whyChooseMITRAConsultancy} />
     </div>
   );
 };

@@ -1,21 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ICONS, IMAGES } from "@/assets";
 
-export type SecuritySlug = "email-security" | "endpoint-security" | "cloud-security" | "vapt-security";
+export type SecuritySlug = "email-security" | "endpoint-security" | "cloud-security" | "vapt-security" | "network-security";
 export const allSecurityData:Record<SecuritySlug, any> = {
   // Email Security Data
   "email-security": {
     heroDetails: {
       page: "Email Security",
       heroImg: IMAGES.emailSecurityHero,
-      heading: "Email Security",
-      subHeading: "Protecting Your Business from Digital Threats",
+      heading: "Email Security for Your Business",
+      subHeading: "Safeguarding your business against modern and evolving digital cyber threats.",
     },
 
     // Why security
     whySecurityMatters: {
       heading: "Why Email Security Matters?",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.emailSecurityImportance,
       pointers: [
         {
           title: "91%",
@@ -42,7 +42,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
     // Common security threats
     commonSecurityThreats: {
       heading: "Common Email Threats",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.emailCommonThreats,
       pointers: [
         {
           title: "Phishing",
@@ -129,12 +129,27 @@ export const allSecurityData:Record<SecuritySlug, any> = {
     complianceAndRegulatoryAlignment: {
       heading: "Compliance & Regulatory Alignment",
       subHeading: "Our email security solutions support compliance with,",
+      pointers: [
+        {
+          title:
+            "SEBI Cybersecurity Framework",
+        },
+        {
+          title: "RBI IT & Cybersecurity Guidelines",
+        },
+        {
+          title: " ISO 27001",
+        },
+        {
+          title: "GDPR / HIPAA / PCI-DSS (for international clients)",
+        },
+      ],
     },
 
     // Deployment Options
     deploymentOptions: {
       heading: "Deployment Options",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.developmentSection,
       pointers: [
         {
           title: "Cloud-Based Security",
@@ -406,7 +421,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
     // Why security
     whySecurityMatters: {
       heading: "Why Cloud Security is Important?",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.cloudSecurity1,
       pointers: [
         {
           title: "Data Protection",
@@ -433,10 +448,10 @@ export const allSecurityData:Record<SecuritySlug, any> = {
 
     // Common security threats
     commonSecurityThreats: {
-      heading: "How Our Endpoint Security Works",
+      heading: "How Our Cloud Security Works",
       description:
         "Mitra Consultancy’s solution is agent-based, meaning a lightweight security agent is installed on every endpoint to:",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.cloudSecurity4,
       pointers: [
         {
           title: "Real-Time Monitoring",
@@ -539,7 +554,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
     // Deployment Options
     deploymentOptions: {
       heading: "Our Approach",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.cloudSecurity3,
       pointers: [
         {
           title: "Assess",
@@ -565,7 +580,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
 
     // Why Choose MITRA Consultancy
     whyChooseMITRAConsultancy: {
-      heading: "Why Choose Mitra Consultancy?",
+      heading: "Why Choose MITRA Consultancy?",
       pointers: [
         {
           title: "Expertise across AWS, Azure, and GCP environments.",
@@ -595,7 +610,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
     // Why security
     whySecurityMatters: {
       heading: "Types of VAPT Services Offered",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.vaptSecurity2,
       pointers: [
         {
           title: "Web Application Testing",
@@ -634,7 +649,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
     // Common security threats
     commonSecurityThreats: {
       heading: "Compliance Support",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.vaptSecurity1,
       pointers: [
         {
           title: "ISO 27001",
@@ -737,7 +752,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
       heading: "Our VAPT Approach",
       description:
         "We follow industry-standard frameworks like OWASP, NIST, MITRE ATT&CK, and PTES to deliver a structured, risk-based assessment:",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.vaptSecurity3,
       pointers: [
         {
           title: "Scoping",
@@ -794,7 +809,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
     // Why security
     whySecurityMatters: {
       heading: "Why Network Security Matters?",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.networkSecurity1,
       pointers: [
         {
           title: "Protect Sensitive Data",
@@ -823,7 +838,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
       heading: "How Our Network Security Works",
       description:
         "Mitra Consultancy’s network security solution safeguards your infrastructure by continuously monitoring and protecting network traffic to prevent breaches and attacks.",
-      image: IMAGES.networkSecurityImage,
+      image: IMAGES.networkSecurity4,
       pointers: [
         {
           title: "Traffic Monitoring",
@@ -928,7 +943,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
     // Deployment Options
     deploymentOptions: {
       heading: "Our Approach",
-      image: IMAGES.emailSecurityImage,
+      image: IMAGES.networkSecurity3,
       pointers: [
         {
           title: "Consult",

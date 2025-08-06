@@ -11,41 +11,52 @@ type FAQItem = {
   answer: string;
 };
 
-const FAQ = ({faqsData} : {faqsData?: FAQItem[]}) => {
+const FAQ = ({ faqsData }: { faqsData?: FAQItem[] }) => {
   const [isAccordionOpen, setIsAccordionOpen] = useState<number>(0);
 
   const faqs: FAQItem[] = [
     {
       question: "What services does MITRA Consultancy offer?",
-      answer: "At MITRA Consultancy, we specialize in a range of digital solutions, including web application development, frontend and backend development, UI/UX design, and more. Our goal is to deliver user-friendly, high-performing, and visually stunning digital products.",
+      answer:
+        "MITRA Consultancy offers expert web and app development, UI/UX design, cybersecurity and compliance solutions, along with exclusive 3-month online training programs for students — your all-in-one destination for building, securing, and growing in the digital world.",
     },
     {
       question: "Do you provide end-to-end development services?",
-      answer: "Yes, we offer end-to-end development services. From conceptualization and design to development, deployment, and maintenance, we ensure a seamless experience for our clients.",
+      answer:
+        "Yes, we offer end-to-end development services. From conceptualization and design to development, deployment, and maintenance, we ensure a seamless experience for our clients.",
     },
     {
       question: "What industries do you serve?",
-      answer: "We work with clients across various industries, including e-commerce, education, healthcare, finance, and more. Our expertise allows us to adapt to the unique needs of each industry.",
+      answer:
+        "We work with clients across various industries, including e-commerce, education, healthcare, finance, and more. Our expertise allows us to adapt to the unique needs of each industry.",
+    },
+
+    {
+      question: "Why is email security crucial for businesses today?",
+      answer:
+        "Email remains the primary entry point for cyberattacks like phishing and BEC scams. Our email security services protect your organization from malicious emails, data breaches, and compliance violations through advanced filtering, encryption, and real-time monitoring.",
     },
     {
-      question: "How long does it take to develop a web application?",
-      answer: "The development timeline depends on the project’s complexity and scope. Simple applications can take a few weeks, while more complex projects may take several months. We provide a detailed timeline after assessing your requirements.",
+      question:
+        "How do your security services protect our network, endpoints, and cloud infrastructure?",
+      answer:
+        "MITRA Consultancy offers layered security solutions including firewall protection, endpoint detection and response (EDR), and cloud access security broker (CASB) tools. This ensures comprehensive protection across your network, devices, and cloud environments.",
     },
     {
-      question: "Do you offer UI/UX design as a standalone service?",
-      answer: "Absolutely! If you’re only looking for UI/UX design services, our expert team can help create engaging and user-friendly interfaces that align with your brand.",
+      question: "What is VAPT, and why does my company need it?",
+      answer:
+        "Vulnerability Assessment and Penetration Testing (VAPT) identifies and exploits security weaknesses before attackers can. It’s essential for maintaining strong defenses, meeting compliance requirements, and proactively securing applications, networks, and cloud systems.",
+    },
+    {
+      question:
+        "How do your cybersecurity services help us meet regulatory compliance?",
+      answer:
+        "Our security solutions are designed with compliance in mind — whether it’s GDPR, HIPAA, ISO, or local data protection laws. We help implement policies, controls, and audits to ensure you meet all regulatory requirements confidently.",
     },
     {
       question: "Can you work with my existing development team?",
-      answer: "Yes, we can collaborate with your existing team to complement their efforts. Whether you need assistance with frontend, backend, or UI/UX, we’re here to help.",
-    },
-    {
-      question: "What technologies do you use?",
-      answer: "We work with a variety of modern technologies, including React, Angular, Node.js, Express, MongoDB, Figma, and more, to deliver cutting-edge solutions.",
-    },
-    {
-      question: "Do you provide post-launch support?",
-      answer: "Yes, we provide ongoing maintenance and support services to ensure your application runs smoothly and stays up-to-date with the latest technologies and trends.",
+      answer:
+        "Yes, we can collaborate with your existing team to complement their efforts. Whether you need assistance with frontend, backend, or UI/UX, we’re here to help.",
     },
   ];
 

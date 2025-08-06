@@ -36,6 +36,10 @@ const Footer = () => {
       heading: "Quick Links",
       links: [
         {
+          label: "Home",
+          path: "/",
+        },
+        {
           label: "About Us",
           path: "/about-us",
         },
@@ -51,10 +55,6 @@ const Footer = () => {
           label: "Refund & Cancellation policy",
           path: "/refund-cancellation-policy",
         },
-        {
-          label: "Client Grievance Redressal Mechanism",
-          path: "/client-grievance-mechanism",
-        },
       ],
     },
     {
@@ -66,27 +66,27 @@ const Footer = () => {
         },
         {
           label: "Security Services",
-          path: "/compliance-services",
+          path: "/security-services",
         },
         {
           label: "VAPT Security",
-          path: "/compliance-services",
+          path: "/security/vapt-security",
         },
         {
           label: "Email Security",
-          path: "/compliance-services",
+          path: "/security/email-security",
         },
         {
           label: "Cloud Security",
-          path: "/compliance-services",
+          path: "/security/cloud-security",
         },
         {
           label: "Network Security",
-          path: "/compliance-services",
+          path: "/security/network-security",
         },
         {
           label: "Endpoint Security",
-          path: "/compliance-services",
+          path: "/security/endpoint-security",
         },
       ],
     },
@@ -94,16 +94,28 @@ const Footer = () => {
       heading: "Industrial Training Programs",
       links: [
         {
+          label: "Full Stack Web Development",
+          path: "/internship-programmes/67a19b646269f19097fb2bfa",
+        },
+        {
           label: "Frontend Development",
-          path: "/internship-programmes",
+          path: "/internship-programmes/67a19f7a7ce841729b59f52c",
         },
         {
           label: "Backend Development",
-          path: "/internship-programmes",
+          path: "/internship-programmes/67a18b9b5f74e79df59625c1",
+        },
+        {
+          label: "App Development",
+          path: "/internship-programmes/68722c26e620583ce87f130d",
+        },
+        {
+          label: "Cyber Security Mastery Program",
+          path: "/internship-programmes/6864409a80f98f62637e7e04",
         },
         {
           label: "UX/UI Design",
-          path: "/internship-programmes",
+          path: "/internship-programmes/67a1a75225335e95874bb562",
         },
       ],
     },
@@ -113,56 +125,36 @@ const Footer = () => {
     <div className="bg-primary-50">
       <Container>
         <div className="flex flex-col gap-6 font-Inter mt-[151px] py-10">
-          <div className="flex items-center justify-start gap-5">
-            <Link href="/">
-            <Image
-              src={IMAGES.MITRConsoltancyLogo}
-              alt="MITRA Consultancy"
-              className="w-[68px] h-[33px]"
-            />
-            </Link>
-            <div className="w-[2px] h-[26px] bg-neutral-10/40"></div>
-            {/* Social Links */}
-            <div className="flex items-center gap-4 md:gap-7">
-              {socialLinks?.map((item) => (
-                <a
-                  key={item?.name}
-                  href={item.link}
-                  target="_blank"
-                  className="size-8 flex items-center justify-center"
-                >
-                  <Image
-                    src={item.icon}
-                    alt={`MITRA Consultancy - ${item?.name}`}
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
           <div className="flex justify-between w-full mt-8">
             {/* Address */}
             <div className="flex flex-col gap-9 max-w-[350px]">
               <div>
-                <h1 className="text-neutral-10 font-semibold">
-                  Registered Office
-                </h1>
-                <p className="text-neutral-20 mt-[10px]">
-                  Mitra Creative Studio
-                  <br />
-                  3rd Floor, Sai Corporate Tower,Opp. Maurya Lok Complex, Fraser
-                  Road, Patna – 800001, <br /> Bihar, India
+                <Link href="/">
+                  <Image
+                    src={IMAGES.MITRConsoltancyLogo}
+                    alt="MITRA Consultancy"
+                    className="w-32"
+                  />
+                </Link>
+                <p className="text-neutral-20 mt-4">
+                 MITRA Consultancy provides development, design, cybersecurity, compliance, and 3-month training programs for digital success.
                 </p>
-              </div>
-              <div>
-                <h1 className="text-neutral-10 font-semibold">
-                  Registered Office
-                </h1>
-                <p className="text-neutral-20 mt-[10px]">
-                  Other Address
-                  <br />
-                  3rd Floor, Sai Corporate Tower,Opp. Maurya Lok Complex, Fraser
-                  Road, Patna – 800001, <br /> Bihar, India
-                </p>
+
+                <div className="flex items-center gap-4 md:gap-7 mt-7">
+                  {socialLinks?.map((item) => (
+                    <a
+                      key={item?.name}
+                      href={item.link}
+                      target="_blank"
+                      className="size-8 flex items-center justify-center"
+                    >
+                      <Image
+                        src={item.icon}
+                        alt={`MITRA Consultancy - ${item?.name}`}
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -187,9 +179,26 @@ const Footer = () => {
           </div>
 
           <hr className="border border-neutral-neutral my-4" />
-          <p className="text-neutral-20 text-xs md:text-base text-center">
-            © All Rights Reserved by MITRA Consultancy 2025{" "}
-          </p>
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <p className="text-neutral-20 text-xs md:text-base text-center">
+              © All Rights Reserved by MITRA Consultancy 2025{" "}
+            </p>
+
+            <div className="flex items-center gap-6">
+              <a href="tel:+91 12345678" className="flex items-center gap-2 hover:underline">
+                <Image src={ICONS.phone} alt="" className="size-5" />
+                <p className="text-neutral-20 text-xs md:text-base text-center">
+                  +91 12345678
+                </p>
+              </a>
+              <a href="mailto:test@gmail.com" className="flex items-center gap-2 hover:underline">
+                <Image src={ICONS.email} alt="" className="size-5" />
+                <p className="text-neutral-20 text-xs md:text-base text-center">
+                  test@gmail.com
+                </p>
+              </a>
+            </div>
+          </div>
 
           {/* Contact Us Modal */}
         </div>

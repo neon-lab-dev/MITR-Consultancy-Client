@@ -13,16 +13,16 @@ const ComplienceCard: React.FC<ComplianceCardProps> = ({
   title,
 }) => {
   return (
-    <div className="flex flex-col border border-neutral-125 items-center justify-start w-[302px] rounded-xl bg-white pb-6">
-      <div className="relative flex items-center justify-center w-full h-25 bg-gradient-compliance rounded-t-xl">
-  <div className="absolute inset-0 overlay-gradient-compliance-card rounded-t-xl" />
-  <Image src={image} alt={title} className="h-20 relative" />
-</div>
-      <div className="py-6">
-        <h2 className="text-secondary-20 text-2xl font-medium px-[10px]">
+    <div className="flex flex-col gap-6 p-6 border border-neutral-125 items-center justify-center w-[302px] rounded-xl bg-white">
+      {image && (
+        <div className="relative flex items-center justify-center w-full h-25 bg-gradient-compliance rounded-t-xl">
+          <div className="absolute inset-0 overlay-gradient-compliance-card rounded-t-xl" />
+          <Image src={image} alt={title} className="h-20 relative" />
+        </div>
+      )}
+        <h2 className="text-secondary-20 text-2xl font-medium">
           {title}
         </h2>
-      </div>
     </div>
   );
 };

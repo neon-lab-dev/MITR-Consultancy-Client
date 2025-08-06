@@ -3,44 +3,36 @@ import React from "react";
 import KeyFeatureCard from "../KeyFeatures/KeyFeatureCard/KeyFeatureCard";
 import { ICONS } from "@/assets";
 import Button from "@/Components/Reusable/Button/Button";
-const features = [
-  {
-    title: "Industry expertise in BFSI & regulatory compliance",
-  },
-  {
-    title: "Phishing & Tailored solutions for businesses of all sizes Protection",
-  },
-  {
-    title: "Support across Bangalore, Mumbai, Delhi , Patna, and pan-India",
-  },
-  {
-    title: "Work with leading platforms such as Microsoft, Google, Cisco, Fortinet, Mimecast, Proofpoint, more",
-  },
-  {
-    title: "Certified cybersecurity professionals",
-  },
-];
 
-const WhyUs = () => {
+type TPointers = {
+  title: string;
+  description: string;
+};
+
+type TWhyUs = {
+  heading: string;
+  pointers: TPointers[];
+};
+
+const WhyUs:React.FC<TWhyUs> = ({heading, pointers}) => {
   return (
     <div className="py-[100px] font-Inter">
       <Container>
         <div className="flex flex-col justify-center items-center text-center w-full gap-20">
           <h2 className="text-neutral-145 text-[32px] md:text-[48px] 2xl:text-[64px] font-semibold text-center">
-            Why Choose Mitra Consultancy?
+            {heading}
           </h2>
 
           <div className="h-full w-full p-6 rounded-xl border-2 border-neutral-130 bg-primary-90 flex flex-col items-center justify-center gap-12">
             <div className="w-full grid lg:grid-cols-3 gap-6 ">
-              {features.map((feature, index) => (
+              {pointers?.map((feature, index:number) => (
                 <KeyFeatureCard
                   key={index}
                   icon={ICONS.tickCircleGreen}
                   title={feature.title}
                 />
               ))}{" "}
-            </div>{" "}
-            {/* Button Section */}
+            </div>
             <Button
               variant="primary"
               title="Get Your Email Secure Today"

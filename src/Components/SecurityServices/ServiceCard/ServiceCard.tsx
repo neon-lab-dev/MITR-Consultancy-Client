@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ServiceCardProps {
-  number: string;
+  number: string | number;
   title: string;
   description: string;
   gradient?: string;

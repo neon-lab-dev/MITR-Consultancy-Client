@@ -71,6 +71,8 @@ import training from "../assets/Icons/training.svg";
 import rating from "../assets/Icons/rating.svg";
 import users from "../assets/Icons/user-group.svg";
 import paymentSuccess from "../assets/Icons/paymentSuccess.svg";
+import email from "../assets/Icons/email.svg";
+import phone from "../assets/Icons/phone.svg";
 
 import reactjs from "../assets/Icons/Technologies/reactjs.svg";
 import mongoDB from "../assets/Icons/Technologies/mongodb.svg";
@@ -174,12 +176,24 @@ import developmentSection from "../assets/Images/developmet.-section.webp";
 import emailSecurityImportance from "../assets/Images/emial-security-importance.webp";
 
 
-
+// Security details hero
 import emailSecurityHero from "../assets/Images/email-security-hero.png";
 import vaptSecurityHero from "../assets/Images/vapt-security.webp";
 import cloudSecurityHero from "../assets/Images/cloud-security-hero4.png";
 import networkSecurityHero from "../assets/Images/network-security-hero.jpeg";
 import endpointSecurityHero from "../assets/Images/endpoint-security-hero.png";
+
+import networkSecurity1 from "../assets/Images/network-security1.webp";
+import networkSecurity4 from "../assets/Images/network-security2.webp";
+import networkSecurity3 from "../assets/Images/network-security3.webp";
+import cloudSecurity1 from "../assets/Images/cloud-security1.webp";
+import cloudSecurity4 from "../assets/Images/cloud-security2.webp";
+import cloudSecurity3 from "../assets/Images/cloud-security3.webp";
+import vaptSecurity1 from "../assets/Images/vapt-security1.webp";
+import vaptSecurity2 from "../assets/Images/vapt-security2.webp";
+import vaptSecurity3 from "../assets/Images/vapt-security3.webp";
+
+
 
 
 export const IMAGES = {
@@ -208,6 +222,17 @@ export const IMAGES = {
     networkSecurityHero,
     endpointSecurityHero,
 
+    networkSecurity1,
+    networkSecurity3,
+    networkSecurity4,
+    cloudSecurity1,
+    cloudSecurity4,
+    cloudSecurity3,
+    vaptSecurity1,
+    vaptSecurity2,
+    vaptSecurity3,
+
+    
     // Clients
     abhirami,
     ramsun,
@@ -316,6 +341,8 @@ export const ICONS = {
     rating,
     users,
     paymentSuccess,
+    email,
+    phone,
 
     mongoDB,
     reactJs,

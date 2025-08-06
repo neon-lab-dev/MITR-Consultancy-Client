@@ -111,6 +111,8 @@ const Navbar = () => {
     { label: "Training Programmes", path: "/internship-programmes" },
   ];
 
+  console.log(pathname);
+
   return (
     <div id="home">
       <div
@@ -222,9 +224,8 @@ const Navbar = () => {
                 pathname !== "/refund-policy" &&
                 pathname !== "/terms-and-conditions" &&
                 pathname !== "/payment-success" &&
-                pathname !== "/about-us" && 
-                pathname !== "/security/email-security" && 
-                (
+                pathname !== "/about-us" &&
+                !pathname.startsWith("/security/") && (
                   <>
                     <Link href={"/cart"} className="relative">
                       <Image
