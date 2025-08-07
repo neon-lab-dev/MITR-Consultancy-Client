@@ -79,7 +79,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
 
     // Key features
     keyFeatures: {
-      heading: "Key Features of Our Email Security Services",
+      heading: "Core Capabilities of Our Email Protection Services",
       pointers: [
         {
           title: "Email GatewayProtection",

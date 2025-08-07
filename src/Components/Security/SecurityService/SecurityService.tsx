@@ -36,11 +36,13 @@ const SecurityService = () => {
                 icon={ICONS.mailLock}
                 title="Email Security"
                 description="Defend against email phishing and malware attacks effectively."
+                path="/security/email-security"
               />
               <SecurityServiceCard
                 icon={ICONS.endpointSecurity}
                 title="Endpoint Security"
                 description="Secure all endpoint devices against advanced cyber threats proactively."
+                path="/security/endpoint-security"
               />
             </div>
 
@@ -49,11 +51,13 @@ const SecurityService = () => {
                 icon={ICONS.cloudSecurity}
                 title="Cloud Security"
                 description="Protect sensitive data in cloud environments with robust measures."
+                path="/security/cloud-security"
               />
               <SecurityServiceCard
                 icon={ICONS.vaptSecurity}
                 title="VAPT Security"
                 description="Identify and remediate vulnerabilities through comprehensive testing."
+                path="/security/vapt-security"
               />
             </div>
             <div className="flex flex-col lg:flex-row gap-5 xl:gap-0 items-center justify-between  max-w-full xl:max-w-[30%] mx-auto">
@@ -61,6 +65,7 @@ const SecurityService = () => {
                 icon={ICONS.networkSecurity}
                 title="Network Security"
                 description="PSafeguard your network infrastructure from cyber threats comprehensively."
+                path="/security/network-security"
               />
             </div>
           </div>

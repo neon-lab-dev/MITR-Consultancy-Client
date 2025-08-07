@@ -1,15 +1,17 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 interface SecurityServiceCardProps {
   icon: StaticImageData;
   title: string;
   description: string;
+  path: string;
 }
 
-const SecurityServiceCard: React.FC<SecurityServiceCardProps> = ({ icon, title, description }) => {
+const SecurityServiceCard: React.FC<SecurityServiceCardProps> = ({ icon, title, description, path }) => {
   return (
-    <div className="flex max-w-[400px]">
+    <Link href={path} className="flex max-w-[400px] border border-white hover:border-primary-10 transition duration-300 rounded-xl relative">
       <div className="bg-neutral-140 border border-r-neutral-125 px-4 flex items-center justify-center rounded-l-xl">
         <Image src={icon} alt="" className="size-10" />
       </div>
@@ -17,7 +19,7 @@ const SecurityServiceCard: React.FC<SecurityServiceCardProps> = ({ icon, title, 
         <h1 className="text-secondary-20 text-2xl font-extrabold">{title}</h1>
         <p className="text-neutral-145 text-sm">{description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

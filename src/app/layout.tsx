@@ -52,6 +52,24 @@ export default function RootLayout({
           `}
         </Script>
 
+        <Script
+        id="tawk-to"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+              s1.async=true;
+              s1.src='https://embed.tawk.to/68944c2c655b4e1928d1d51b/1j21kj4hr';
+              s1.charset='UTF-8';
+              s1.setAttribute('crossorigin','*');
+              s0.parentNode.insertBefore(s1,s0);
+            })();
+          `,
+        }}
+      />
+
         {/* App Content */}
         <ClientProvider>
           <CartProvider>{children}</CartProvider>
