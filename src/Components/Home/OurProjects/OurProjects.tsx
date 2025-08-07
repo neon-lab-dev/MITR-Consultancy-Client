@@ -22,7 +22,7 @@ const OurProjects = () => {
             <Heading
               align="left"
               subHeading="Projects"
-              heading="A collection of our latest works"
+              heading="Our Latest Client Engagements"
               description="Explore our curated collection of top-notch projects showcasing innovation and excellence."
             />
             <div className="hidden lg:flex items-center gap-4">

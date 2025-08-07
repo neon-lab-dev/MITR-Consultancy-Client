@@ -221,7 +221,7 @@ const OurServices = () => {
           <Heading
             align="center"
             subHeading="Services"
-            heading="Our List of Services"
+            heading="Our Core Offerings"
             description="Discover our diverse range of top-quality services, tailored to meet your needs with excellence."
           />
           <div className="w-full mt-14 overflow-x-auto custom-section-scrollbar flex justify-center">

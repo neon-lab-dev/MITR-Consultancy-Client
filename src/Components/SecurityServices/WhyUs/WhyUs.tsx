@@ -19,6 +19,7 @@ type TWhyUs = {
 const WhyUs: React.FC<TWhyUs> = ({ heading, pointers }) => {
   const [isContactUsModalOpen, setIsContactUsModalOpen] =
     useState<boolean>(false);
+    console.log(heading);
   return (
     <div className="py-[100px] font-Inter">
       <Container>
@@ -26,7 +27,7 @@ const WhyUs: React.FC<TWhyUs> = ({ heading, pointers }) => {
           <h1
             className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[48px] leading-6 md:leading-[49.68px] capitalize text-center`}
           >
-            {heading}
+            What Sets MITRA Consultancy Apart?
           </h1>
 
           <div className="h-full w-full p-6 rounded-xl border-2 border-neutral-130 bg-primary-90 flex flex-col items-center justify-center gap-12">

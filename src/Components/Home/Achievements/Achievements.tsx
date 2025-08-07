@@ -14,7 +14,7 @@ const Achievements = () => {
                 <Heading
                     align='center'
                     subHeading='They Trust Us'
-                    heading='Our Customers are Our Biggest achievements'
+                    heading='Building Success Through Client Appreciation.'
                 />
 
                 <Marquee className="mt-16" speed={70}>

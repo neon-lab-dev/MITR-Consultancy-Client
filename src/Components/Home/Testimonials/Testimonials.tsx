@@ -20,7 +20,7 @@ const Testimonials = () => {
                         <Heading
                             align='left'
                             subHeading='Testimonials'
-                            heading='Customer testimonials'
+                            heading='What Our Clients Say'
                             description='Real feedback from satisfied clients sharing their positive experiences with our services.'
                         />
                         <div className='hidden lg:flex items-center gap-4'>

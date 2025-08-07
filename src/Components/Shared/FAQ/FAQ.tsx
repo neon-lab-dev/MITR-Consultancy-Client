@@ -70,7 +70,7 @@ const FAQ = ({ faqsData }: { faqsData?: FAQItem[] }) => {
           <Heading
             align="center"
             subHeading="FAQ’S"
-            heading="Find the answers you need"
+            heading="Find Quick Answers to Common Questions"
           />
 
           <div className="flex gap-6 flex-col items-center justify-center w-full mt-9 md:mt-10 xl:mt-20">

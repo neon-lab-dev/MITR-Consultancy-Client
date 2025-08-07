@@ -13,7 +13,7 @@ const Technologies = () => {
                 <Heading
                     align='center'
                     subHeading='Technologies'
-                    heading='Tools and Technologies We Leverage'
+                    heading='Powered by Leading Technologies'
                 />
                 <Marquee className="mt-16" speed={70}>
                     {technologies1.map((tech, index) => (
