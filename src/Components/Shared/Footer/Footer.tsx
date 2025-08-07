@@ -125,8 +125,8 @@ const Footer = () => {
     <div className="bg-primary-50">
       <Container>
         <div className="flex flex-col gap-6 font-Inter mt-[151px] py-10">
-          <div className="flex justify-between w-full mt-8">
-            {/* Address */}
+          <div className="flex flex-col lg:flex-row gap-14 lg:gap-0 justify-between w-full mt-8">
+            {/* Company info and social links */}
             <div className="flex flex-col gap-9 max-w-[350px]">
               <div>
                 <Link href="/">
@@ -179,21 +179,21 @@ const Footer = () => {
           </div>
 
           <hr className="border border-neutral-neutral my-4" />
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <p className="text-neutral-20 text-xs md:text-base text-center">
+          <div className="flex flex-col lg:flex-row gap-5 lg:gap-0 items-start md:items-center justify-between">
+            <p className="text-neutral-20 text-start md:text-center">
               © All Rights Reserved by MITRA Consultancy 2025{" "}
             </p>
 
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
               <a href="tel:+918210464851" className="flex items-center gap-2 hover:underline">
                 <Image src={ICONS.phone} alt="" className="size-5" />
-                <p className="text-neutral-20 text-xs md:text-base text-center">
+                <p className="text-neutral-20 text-center">
                   +91 8210464851
                 </p>
               </a>
               <a href="mailto:business@mitraconsultancy.co.in" className="flex items-center gap-2 hover:underline">
                 <Image src={ICONS.email} alt="" className="size-5" />
-                <p className="text-neutral-20 text-xs md:text-base text-center">
+                <p className="text-neutral-20 text-center">
                   business@mitraconsultancy.co.in
                 </p>
               </a>

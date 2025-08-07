@@ -11,7 +11,7 @@ const AboutUs = () => {
   return (
     <div id="aboutUs" className=" py-[60px] md:py-20 xl:py-[128px]">
       <Container>
-        <div className="flex flex-col-reverse xl:flex-row items-center gap-[54px] ">
+        <div className="">
           <div className="relative">
             <Image
               src={IMAGES.aboutUsBg}
@@ -21,10 +21,10 @@ const AboutUs = () => {
             <Image
               src={IMAGES.aboutUs}
               alt="about -MITRA"
-              className="w-full h-full"
+              className="max-w-full lg:max-w-w-[500px] block xl:hidden"
             />
 
-            <div className="relative xl:absolute top-0 xl:top-28 right-0 xl:right-20 max-w-[500px] mt-10 xl:mt-0">
+            <div className="relative xl:absolute top-0 xl:top-28 right-0 xl:right-20 max-w-[500px] md:max-w-full xl:max-w-[500px] mt-10 xl:mt-0">
               <Heading
                 align="left"
                 subHeading="About MITRA"

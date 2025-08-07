@@ -171,25 +171,27 @@ const OurServices = () => {
             heading="Our List of Services"
             description="Discover our diverse range of top-quality services, tailored to meet your needs with excellence."
           />
-          <div className="flex items-center gap-6 justify-center mt-14">
-            {[
-              { label: "Cyber Security", filter: ".cyber" },
-              { label: "Development", filter: ".dev" },
-              { label: "Design", filter: ".design" },
-            ].map((btn) => (
-              <button
-                key={btn.label}
-                data-filter={btn.filter}
-                onClick={() => setActiveTab(btn.filter)}
-                className={`px-6 py-3 font-medium leading-5 rounded-lg transition-colors duration-300 ${
-                  activeTab === btn.filter
-                    ? "text-white bg-primary-10"
-                    : "text-primary-10"
-                }`}
-              >
-                {btn.label}
-              </button>
-            ))}
+          <div className="w-full mt-14 overflow-x-auto custom-section-scrollbar">
+            <div className="flex items-center gap-6 justify-start min-w-max px-4">
+              {[
+                { label: "Cyber Security", filter: ".cyber" },
+                { label: "Development", filter: ".dev" },
+                { label: "Design", filter: ".design" },
+              ].map((btn) => (
+                <button
+                  key={btn.label}
+                  data-filter={btn.filter}
+                  onClick={() => setActiveTab(btn.filter)}
+                  className={`px-6 py-3 font-medium leading-5 rounded-lg transition-colors duration-300 whitespace-nowrap ${
+                    activeTab === btn.filter
+                      ? "text-white bg-primary-10"
+                      : "text-primary-10"
+                  }`}
+                >
+                  {btn.label}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div
