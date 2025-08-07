@@ -114,6 +114,7 @@ const OurServices = () => {
   const securityServices = [
     {
       icon: ICONS.complainceService,
+      path : "/compliance-services",
       title: "Compliance Services",
       description:
         "Comprehensive suite for assessments, penetration testing, and threat monitoring.",
@@ -122,6 +123,7 @@ const OurServices = () => {
     },
     {
       icon: ICONS.securityService,
+      path : "/security-services",
       title: "Security Services",
       description:
         "Security suite with assessments, testing, and threat monitoring.",
@@ -130,6 +132,7 @@ const OurServices = () => {
     },
     {
       icon: ICONS.emailSecurity2,
+      path : "/security/email-security",
       title: "Email Security",
       description:
         "Protect your organization from phishing, spam, and email-based attacks.",
@@ -138,6 +141,7 @@ const OurServices = () => {
     },
     {
       icon: ICONS.endpointSecurity5,
+      path : "/security/endpoint-security",
       title: "Endpoint Security",
       description:
         "Secure endpoints with antivirus, firewall, and device control solutions.",
@@ -146,6 +150,7 @@ const OurServices = () => {
     },
     {
       icon: ICONS.networkSecurity5,
+      path : "/security/network-security",
       title: "Network Security",
       description:
         "Protect your network infrastructure from unauthorized access and threats.",
@@ -154,6 +159,7 @@ const OurServices = () => {
     },
     {
       icon: ICONS.vaptSecurity4,
+      path : "/security/vapt-security",
       title: "VAPT Security",
       description:
         "Identify and remediate vulnerabilities with penetration testing and assessments.",
