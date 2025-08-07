@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ICONS, IMAGES } from "@/assets";
+import { IMAGES } from "@/assets";
 
 export type SecuritySlug = "email-security" | "endpoint-security" | "cloud-security" | "vapt-security" | "network-security";
 export const allSecurityData:Record<SecuritySlug, any> = {
@@ -323,27 +323,21 @@ export const allSecurityData:Record<SecuritySlug, any> = {
       pointers: [
         {
           title: "Microsoft Defender for Endpoint",
-          logo: ICONS.endpointSecurity,
         },
         {
           title: "SentinelOne",
-          logo: ICONS.endpointSecurity,
         },
         {
           title: "Sophos Intercept X",
-          logo: ICONS.endpointSecurity,
         },
         {
           title: "CrowdStrike Falcon",
-          logo: ICONS.endpointSecurity,
         },
         {
           title: "Bitdefender GravityZone",
-          logo: ICONS.endpointSecurity,
         },
         {
           title: "Trend Micro Apex One",
-          logo: ICONS.endpointSecurity,
         },
       ],
     },

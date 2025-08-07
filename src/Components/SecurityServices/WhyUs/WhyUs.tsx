@@ -19,12 +19,14 @@ const WhyUs:React.FC<TWhyUs> = ({heading, pointers}) => {
     <div className="py-[100px] font-Inter">
       <Container>
         <div className="flex flex-col justify-center items-center text-center w-full gap-20">
-          <h2 className="text-neutral-145 text-[32px] md:text-[48px] 2xl:text-[64px] font-semibold text-center">
+          <h1
+            className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[48px] leading-6 md:leading-[49.68px] capitalize text-center`}
+          >
             {heading}
-          </h2>
+          </h1>
 
           <div className="h-full w-full p-6 rounded-xl border-2 border-neutral-130 bg-primary-90 flex flex-col items-center justify-center gap-12">
-            <div className="w-full grid lg:grid-cols-3 gap-6 ">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2   lg:grid-cols-3 gap-6 ">
               {pointers?.map((feature, index:number) => (
                 <KeyFeatureCard
                   key={index}
@@ -35,8 +37,8 @@ const WhyUs:React.FC<TWhyUs> = ({heading, pointers}) => {
             </div>
             <Button
               variant="primary"
-              title="Get Your Email Secure Today"
-              classNames="w-[560px] h-[44px] md:h-auto"
+              title="Contact Us Today"
+              classNames=""
             />
           </div>
         </div>

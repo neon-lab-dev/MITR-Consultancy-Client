@@ -17,9 +17,11 @@ const ComplianceSection: React.FC<TComplianceSection> = ({
     <div className="py-[120px] bg-gradient-compliance font-Inter">
       <Container>
         <div className="flex flex-col justify-center items-center text-center w-full gap-20">
-          <h2 className="text-neutral-145 text-[32px] md:text-[48px] 2xl:text-[64px] font-semibold text-center">
+          <h1
+            className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[48px] leading-6 md:leading-[49.68px] capitalize text-center`}
+          >
             {heading}
-          </h2>
+          </h1>
 
           <div className="flex flex-col gap-12">
             {subHeading && <p className="text-black text-2xl">{subHeading}</p>}

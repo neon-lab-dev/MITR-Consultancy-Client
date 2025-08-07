@@ -23,12 +23,14 @@ const CommonThreats: React.FC<TCommonThreats> = ({
     <div className="py-[120px] bg-gradient-threats font-Inter">
       <Container>
         <div className="flex flex-col justify-center items-center text-center w-full gap-20">
-          <h2 className="text-neutral-145 text-[32px] md:text-[48px] 2xl:text-[64px] font-semibold text-center">
+          <h1
+            className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[48px] leading-6 md:leading-[49.68px] capitalize text-center`}
+          >
             {heading}
-          </h2>
-          <div className="relative flex flex-row justify-center items-center w-full">
-            <Image src={image} alt="Common Threats" className="w-[45%]" />
-            <div className="w-[55%]">
+          </h1>
+          <div className="relative flex flex-col lg:flex-row justify-center items-center w-full">
+            <Image src={image} alt="Common Threats" className="w-full lg:w-[45%]" />
+            <div className="w-full lg:w-[55%]">
               <div className="flex flex-col gap-6">
                 {pointers?.map((item: TPointers, index: number) => (
                   <ServiceCard

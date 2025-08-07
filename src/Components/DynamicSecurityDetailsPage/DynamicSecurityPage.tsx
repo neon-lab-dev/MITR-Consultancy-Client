@@ -12,6 +12,7 @@ import KeyFeatures from "../SecurityServices/KeyFeatures/KeyFeatures";
 import ComplianceSection from "../SecurityServices/ComplianceSection/ComplianceSection";
 import DeploymentOption from "../SecurityServices/DeploymentOption/DeploymentOption";
 import WhyUs from "../SecurityServices/WhyUs/WhyUs";
+import LetsTalk from "../Home/LetsTalk/LetsTalk";
 
 const DynamicSecurityPage = () => {
   const params = useParams();
@@ -31,6 +32,7 @@ const DynamicSecurityPage = () => {
       <ComplianceSection {...content.complianceAndRegulatoryAlignment} />
       <DeploymentOption {...content.deploymentOptions} />
       <WhyUs {...content.whyChooseMITRAConsultancy} />
+      <LetsTalk />
     </div>
   );
 };

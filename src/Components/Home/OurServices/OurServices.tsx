@@ -218,7 +218,7 @@ const OurServices = () => {
             heading="Our List of Services"
             description="Discover our diverse range of top-quality services, tailored to meet your needs with excellence."
           />
-          <div className="w-full mt-14 overflow-x-auto custom-section-scrollbar">
+          <div className="w-full mt-14 overflow-x-auto custom-section-scrollbar flex justify-center">
             <div className="flex items-center gap-6 justify-start min-w-max px-4">
               {[
                 { label: "Cyber Security", filter: ".cyber" },
