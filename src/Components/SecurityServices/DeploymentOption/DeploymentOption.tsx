@@ -28,7 +28,7 @@ const DeploymentOption: React.FC<TDeploymentOption> = ({
           >
             {heading}
           </h1>
-          <div className="relative flex flex-col lg:flex-row justify-center items-center gap-[60px w-full">
+          <div className="relative flex flex-col lg:flex-row justify-center items-center gap-10 xl:gap-[60px] w-full">
             <div className="w-full lg:w-[55%]">
               <div className="flex flex-col gap-6">
                 {pointers?.map((item, index: number) => (

@@ -28,7 +28,7 @@ const CommonThreats: React.FC<TCommonThreats> = ({
           >
             {heading}
           </h1>
-          <div className="relative flex flex-col lg:flex-row justify-center items-center w-full">
+          <div className="relative flex flex-col lg:flex-row justify-center items-center w-full gap-10">
             <Image src={image} alt="Common Threats" className="w-full lg:w-[45%]" />
             <div className="w-full lg:w-[55%]">
               <div className="flex flex-col gap-6">
