@@ -53,6 +53,14 @@ const OurServices = () => {
       details:
         "Design responsive websites, implement custom features, integrate CMS, optimize for SEO, ensure fast loading, deploy securely, manage hosting, analyze traffic, and align visual strategy with business conversion goals.",
     },
+    {
+      icon: ICONS.customSoftware,
+      title: "Custom Software Solutions",
+      description:
+        "Tailored software, SaaS, and scalable solutions for unique business needs.",
+      details:
+        "Develop custom software applications, SaaS platforms, internal tools, and enterprise systems tailored to specific business workflows. Ensure scalability, security, cloud integration, and seamless user experience while aligning with strategic objectives.",
+    },
   ];
   const designServices = [
     {
@@ -67,51 +75,90 @@ const OurServices = () => {
       icon: ICONS.uiUx,
       title: "Graphic Design",
       description:
-        "We craft visual identities, marketing assets, and digital-first designs that elevate brands-delivering logos, brand systems, print collaterals, and high-performance creatives across every channel.",
+        "Crafting identities, assets, and digital designs to elevate brands.",
       details:
-        "Craft intuitive user interfaces, enhance user journeys, boost engagement, ensure brand consistency, optimize usability, design wireframes, and prototype experiences for websites, mobile apps, SaaS tools, and enterprise-level applications.",
+        "We craft visual identities, marketing assets, and digital-first designs that elevate brands-delivering logos, brand systems, print collaterals, and high-performance creatives across every channel.",
     },
     {
       icon: ICONS.uiUx,
       title: "3D Design Walkthroughs ",
       description:
-        "Transforming blueprints into breathtaking realities with expert architectural design and immersive 3D walkthroughs that sell your vision before it's built.",
+        "Transforming blueprints with expert design and immersive 3D walkthroughs.",
       details:
-        "Craft intuitive user interfaces, enhance user journeys, boost engagement, ensure brand consistency, optimize usability, design wireframes, and prototype experiences for websites, mobile apps, SaaS tools, and enterprise-level applications.",
+        "Transforming blueprints into breathtaking realities with expert architectural design and immersive 3D walkthroughs that sell your vision before it's built.",
     },
     {
       icon: ICONS.uiUx,
       title: "CGI works",
-      description:
-        "We bring ideas to life through cutting-edge CGI -delivering photorealistic visuals, product renders, architectural walkthroughs, and immersive 3D animations that captivate and convert",
+      description: "Bringing ideas to life with CGI, renders, and animations.",
       details:
-        "Craft intuitive user interfaces, enhance user journeys, boost engagement, ensure brand consistency, optimize usability, design wireframes, and prototype experiences for websites, mobile apps, SaaS tools, and enterprise-level applications.",
+        "We bring ideas to life through cutting-edge CGI -delivering photorealistic visuals, product renders, architectural walkthroughs, and immersive 3D animations that captivate and convert.",
     },
     {
       icon: ICONS.uiUx,
       title: "Brand Folios",
       description:
-        "Get your brand folio crafted to impress, connect, and convert all your potential business clients and customers, all in one powerful design",
+        "Design a brand folio to impress, connect, and convert clients.",
       details:
-        "Craft intuitive user interfaces, enhance user journeys, boost engagement, ensure brand consistency, optimize usability, design wireframes, and prototype experiences for websites, mobile apps, SaaS tools, and enterprise-level applications.",
+        "Get your brand folio crafted to impress, connect, and convert all your potential business clients and customers, all in one powerful designs.",
     },
+     {
+    icon: ICONS.uiUx,
+    title: "Product Design",
+    description:
+      "From concept to creation—designing products that users love.",
+    details:
+      "We shape physical and digital products from ideation to execution—combining UX, UI, and design thinking to build user-centered, market-ready products that drive real-world impact.",
+  },
   ];
   const securityServices = [
     {
-      icon: ICONS.uiUx,
+      icon: ICONS.complainceService,
       title: "Compliance Services",
       description:
-        "Comprehensive solutions to meet industry regulations, including GDPR, HIPAA, and PCI DSS, ensuring data security and legal compliance.",
+        "Comprehensive suite for assessments, penetration testing, and threat monitoring.",
       details:
-        "Craft intuitive user interfaces, enhance user journeys, boost engagement, ensure brand consistency, optimize usability, design wireframes, and prototype experiences for websites, mobile apps, SaaS tools, and enterprise-level applications.",
+        "Comprehensive solutions to meet industry regulations, including GDPR, HIPAA, and PCI DSS, ensuring data security and legal compliance.",
     },
     {
-      icon: ICONS.uiUx,
+      icon: ICONS.securityService,
       title: "Security Services",
       description:
-        "Comprehensive security suite offering vulnerability assessments, penetration testing, and continuous threat monitoring to detect and mitigate risks proactively",
+        "Security suite with assessments, testing, and threat monitoring.",
       details:
-        "Craft intuitive user interfaces, enhance user journeys, boost engagement, ensure brand consistency, optimize usability, design wireframes, and prototype experiences for websites, mobile apps, SaaS tools, and enterprise-level applications.",
+        "Comprehensive security suite offering vulnerability assessments, penetration testing, and continuous threat monitoring to detect and mitigate risks proactively.",
+    },
+    {
+      icon: ICONS.emailSecurity2,
+      title: "Email Security",
+      description:
+        "Protect your organization from phishing, spam, and email-based attacks.",
+      details:
+        "Advanced email filtering, encryption, threat detection, and phishing prevention to safeguard communications and sensitive data.",
+    },
+    {
+      icon: ICONS.endpointSecurity5,
+      title: "Endpoint Security",
+      description:
+        "Secure endpoints with antivirus, firewall, and device control solutions.",
+      details:
+        "Comprehensive endpoint protection including malware defense, device management, intrusion detection, and continuous monitoring across all user devices.",
+    },
+    {
+      icon: ICONS.networkSecurity5,
+      title: "Network Security",
+      description:
+        "Protect your network infrastructure from unauthorized access and threats.",
+      details:
+        "Implement firewalls, intrusion prevention systems, secure VPNs, and network segmentation to ensure secure and reliable data flow.",
+    },
+    {
+      icon: ICONS.vaptSecurity4,
+      title: "VAPT Security",
+      description:
+        "Identify and remediate vulnerabilities with penetration testing and assessments.",
+      details:
+        "Perform vulnerability assessments and penetration testing to detect security flaws, validate defenses, and enhance overall security posture.",
     },
   ];
 

@@ -13,11 +13,13 @@ const OurServiceCard: React.FC<TOurServiceCard> = ({ icon, title, description, d
     <div className="relative group rounded-2xl overflow-hidden bg-white shadow-service-card transition-transform duration-500 ease-in-out hover:scale-[1.03] hover:shadow-2xl cursor-pointer font-Inter">
       {/* Main Content */}
       <div className="p-10 transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:scale-95">
-        <Image
+       <div className='size-[72px] flex items-center justify-center bg-primary-30 rounded-md'>
+         <Image
           src={icon}
           alt="service-icon"
-          className="size-[72px] transition-transform duration-500 ease-in-out group-hover:scale-110"
+          className="size-7 transition-transform duration-500 ease-in-out group-hover:scale-110"
         />
+       </div>
         <h1 className="font-bold text-neutral-10 text-xl leading-[27px] capitalize mt-9">
           {title}
         </h1>

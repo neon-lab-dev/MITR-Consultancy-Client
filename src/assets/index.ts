@@ -38,6 +38,13 @@ import backendDevelopment from "../assets/Icons/backend-development.svg";
 import frontendDevelopment from "../assets/Icons/frontend-development.svg";
 import softwareDevelopment from "../assets/Icons/software-development.svg";
 import webDevelopment from "../assets/Icons/web-development.svg";
+import customSoftware from "../assets/Icons/custom-software.svg";
+import vaptSecurity4 from "../assets/Icons/vapt-security2.svg";
+import emailSecurity2 from "../assets/Icons/email-security.svg";
+import endpointSecurity5 from "../assets/Icons/endpoin-security2.svg";
+import networkSecurity5 from "../assets/Icons/network-security2.svg";
+import securityService from "../assets/Icons/security-service.svg";
+import complainceService from "../assets/Icons/compliance-service.svg";
 
 import profile from "../assets/Icons/profile.svg";
 import cross from "../assets/Icons/cross.svg";
@@ -297,6 +304,15 @@ export const ICONS = {
   frontendDevelopment,
   softwareDevelopment,
   webDevelopment,
+  customSoftware,
+
+  emailSecurity2,
+  endpointSecurity5,
+  vaptSecurity4,
+  networkSecurity5,
+  securityService,
+  complainceService,
+  
   profile,
   cross,
   downArrowBlue,
