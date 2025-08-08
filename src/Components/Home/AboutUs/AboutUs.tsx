@@ -31,19 +31,10 @@ const AboutUs = () => {
                 heading="Most trusted Business Consulting"
               />
               <p className={`text-neutral-20 mt-6 text-justify`}>
-                At MITRA Consulting, we are a team of passionate professionals
-                dedicated to transforming ideas into impactful digital
-                solutions. With expertise spanning UI/UX design, app
-                development, back-end systems, software development, and
-                front-end technologies, we craft products that are innovative,
-                reliable, and tailored to your unique needs.
+                At MITRA Consultancy, we combine innovation, practicality, and performance to empower businesses and learners in the digital world. We specialize in delivering end-to-end technology solutions, smart cybersecurity services, and affordable, hands-on tech training. 
                 <br />
                 <br />
-                Our mission is to empower businesses with seamless and scalable
-                digital experiences, combining technical excellence with
-                creative problem-solving. Whether you're a startup or an
-                established enterprise, we partner with you to drive success
-                through technology.
+                Whether you're a student preparing for your career, a startup building your online presence, or a business looking to secure and scale operations — we provide tailored support at every stage. Our approach is simple: deliver real value through development, up skilling, and robust digital protection.
               </p>
 
               <div className="mt-9">

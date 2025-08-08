@@ -15,7 +15,7 @@ const Counters = () => {
   const counterData = [
     { icon: ICONS.experience, title: "Years in business", value: 2 },
     { icon: ICONS.partners, title: "Global Partners", value: 10 },
-    { icon: ICONS.secured, title: "Systems Secured", value: 800 },
+    { icon: ICONS.secured, title: "industry served", value: 20 },
     { icon: ICONS.projects, title: "Ongoing Projects", value: 15 },
   ];
 
@@ -48,7 +48,7 @@ const Counters = () => {
           animate={controls}
           variants={containerVariants}
         >
-          <Heading heading="Our Numbers Speak for Themselves" align="center" />
+          <Heading heading="The MITRA Milestones" align="center" />
 
           <div className="flex items-center justify-between mt-[72px] flex-wrap gap-y-12">
             {counterData.map((data, index) => (
