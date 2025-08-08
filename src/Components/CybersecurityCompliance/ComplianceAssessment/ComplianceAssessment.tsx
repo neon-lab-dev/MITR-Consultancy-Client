@@ -1,4 +1,4 @@
-import { ICONS, IMAGES } from "@/assets";
+import { IMAGES } from "@/assets";
 import Container from "@/Components/Shared/Container/Container";
 import Image from "next/image";
 import ComplianceAssessmentForm from "./ComplianceAssessmentForm";
@@ -20,27 +20,10 @@ const ComplianceAssessment = () => {
             Talk To Us Today
           </h1>
 
-          <div className="flex flex-col xl:flex-row gap-10 xl:gap-5 items-center justify-between mt-[60px]">
-            <div className="flex gap-24 items-center justify-center w-full xl:w-[40%]">
-              <div className="text-neutral-145">
-                <Image src={ICONS.medal} alt="medal" className="" />
-                <h1 className={`font-extrabold text-[36px] text-center mt-6`}>
-                  4.8/5
-                </h1>
-                <p className="text-sm mt-2">Average Rating</p>
-              </div>
-
-              <div className="text-neutral-145">
-                <Image src={ICONS.satisfied} alt="medal" className="" />
-                <h1 className={`font-extrabold text-[36px] text-center mt-6`}>
-                  99%
-                </h1>
-                <p className="text-sm mt-2">Satisfaction Rate</p>
-              </div>
-            </div>
+          <div className="flex items-center justify-between mt-[60px]">
 
             <ComplianceAssessmentForm />
-          </div>
+            </div>
         </div>
       </Container>
     </div>

@@ -4,7 +4,7 @@ import Container from "@/Components/Shared/Container/Container";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const ComplianceSolutions = () => {
+const ComplianceSolutions = ({heading} : {heading: string}) => {
   const [activeTab, setActiveTab] = useState("Fintech");
 
   const complianceSolutions = [
@@ -319,7 +319,7 @@ const ComplianceSolutions = () => {
           <h1
             className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
           >
-            Compliance Solutions Across Sectors
+            {heading}
           </h1>
 
           <div className="flex flex-col xl:flex-row items-center gap-6 mt-[60px]">

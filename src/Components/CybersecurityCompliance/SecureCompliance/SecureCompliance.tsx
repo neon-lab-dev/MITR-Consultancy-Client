@@ -505,7 +505,7 @@ const SecureCompliance = () => {
                   ?.scrollIntoView({ behavior: "smooth" })
               }
               variant="primary"
-              title="Take Compliance Assessment"
+              title="Talk To Us"
               classNames="w-auto px-16 py-[10px]"
             />
           </div>

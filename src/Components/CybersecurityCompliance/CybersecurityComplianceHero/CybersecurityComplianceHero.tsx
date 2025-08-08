@@ -51,12 +51,12 @@ const CybersecurityComplianceHero = () => {
                 in the digital age.
               </p>
               <div className="flex flex-col md:flex-row items-center justify-center xl:justify-start gap-4 xl:gap-6 mt-5 md:mt-9 xl:mt-[62px]">
-                <Button
+                {/* <Button
                   handleClick={() => setIsContactUsModalOpen(true)}
                   variant="secondary"
                   title="Speak to an Expert"
                   classNames="w-full md:w-auto"
-                />
+                /> */}
                 <Button
                   handleClick={() =>
                     document
@@ -64,7 +64,7 @@ const CybersecurityComplianceHero = () => {
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                   variant="primary"
-                  title="Take Compliance Assessment"
+                  title="Talk to an Expert"
                   classNames="w-full sm:w-auto"
                 />
               </div>

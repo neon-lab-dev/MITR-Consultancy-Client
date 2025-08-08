@@ -95,7 +95,7 @@ const SecurityPage = () => {
           </div>
         </Container>
       </div>
-      <ComplianceSolutions />
+      <ComplianceSolutions heading="Security Solutions Across Sectors" />
       <SecurityService />
       <ComplianceAssessment />
       <MitrasEdge />

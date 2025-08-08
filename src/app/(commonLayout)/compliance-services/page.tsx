@@ -45,7 +45,7 @@ const CybersecurityCompliance = () => {
           </div>
         </Container>
       </div>
-      <ComplianceSolutions />
+      <ComplianceSolutions heading="Compliance Solutions Across Sectors" />
       <SecureCompliance />
       <TrustAndResults />
       <ComplianceAssessment />

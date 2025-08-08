@@ -63,7 +63,7 @@ const ComplianceAssessmentForm = () => {
     `${baseInputClass} ${hasError ? "border-red-500" : "border-gray-300"}`;
 
   return (
-    <div className="bg-neutral-150 rounded-xl p-6 font-Inter shadow-[0px_0px_50px_-13px_rgba(0,0,0,0.20)] w-full xl:w-[60%]">
+    <div className="bg-neutral-150 rounded-xl p-6 font-Inter shadow-[0px_0px_50px_-13px_rgba(0,0,0,0.20)] w-full xl:w-[60%] mx-auto">
       <form
         ref={form}
         onSubmit={handleSubmit(sendEmail)}
