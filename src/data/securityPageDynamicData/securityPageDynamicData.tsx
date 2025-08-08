@@ -79,7 +79,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
 
     // Key features
     keyFeatures: {
-      heading: "Core Capabilities of Our Email Protection Services",
+      heading: "Email Protection - Core Functions We Offer",
       pointers: [
         {
           title: "Email GatewayProtection",
@@ -257,7 +257,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
 
     // Key features
     keyFeatures: {
-      heading: "Key Features of Our Endpoint Security Services",
+      heading: " Key capabilities of our endpoint protection solution",
       pointers: [
         {
           title: "Endpoint Protection",
@@ -469,7 +469,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
 
     // Key features
     keyFeatures: {
-      heading: "Our Cloud Security Service",
+      heading: "End-to-End Cloud Protection",
       pointers: [
         {
           title: "Cloud Security Assessments",
@@ -860,7 +860,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
 
     // Key features
     keyFeatures: {
-      heading: "Our Network Security Services",
+      heading: "End-to-End Network Protection Solutions",
       pointers: [
         {
           title: "Network Vulnerability Assessment",

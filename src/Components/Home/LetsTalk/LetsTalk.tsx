@@ -25,7 +25,7 @@ const LetsTalk = () => {
             {/* Text Section */}
             <div className="text-center lg:text-left flex flex-col gap-4 md:gap-8 w-full lg:w-[70%]">
               <h1 className="text-white text-lg md:text-[32px] font-bold">
-                Do you have a project in mind?
+                Ready to secure your business or launch your next project?
               </h1>
               <p className="text-white text-xs md:text-lg md:leading-7 leading-5 max-w-full md:max-w-[475px] mx-auto lg:mx-0">
               Do you have a project in mind? Turn your ideas into reality with expert guidance, innovative solutions, and seamless execution.
@@ -33,7 +33,7 @@ const LetsTalk = () => {
             </div>
 
             {/* Button Section */}
-            <Button  handleClick={()=>setIsContactUsModalOpen(true)} variant="primary" title="Start A Project" classNames="w-[200px] h-[44px] md:h-auto" />
+            <Button  handleClick={()=>setIsContactUsModalOpen(true)} variant="primary" title="Contact Us" classNames="w-[200px] h-[44px] md:h-auto" />
           </div>
         </div>
       </Container>

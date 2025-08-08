@@ -29,16 +29,11 @@ const Hero = () => {
       <Container>
         <div className="flex items-center xl:items-start justify-center absolute top-0 bottom-0 flex-col z-20 text-center xl:text-start">
           <h1 className="text-white leading-7 md:leading-[40px] xl:leading-[73px] text-xl md:text-[32px] xl:text-[55px] font-bold max-w-[344px] md:max-w-[550px] xl:max-w-[1071px]">
-            All-in-One Digital Partner for Development, Design, Cybersecurity,
-            and Online Training –
+           Digital Solutions From Code to Compliance – {" "}
             <span className="text-primary-20"> MITRA Consultancy</span>
           </h1>
           <p className="text-white text-[11px] md:text-sm xl:text-base leading-[18px] xl:leading-7 max-w-full  xl:max-w-[1000px] mx-auto xl:mx-0 mt-3 xl:mt-6 px-4 2xl:px-0">
-            MITRA Consultancy offers expert web and app development, UI/UX
-            design, cybersecurity and compliance solutions, along with exclusive
-            3-month online training programs for students — your all-in-one
-            destination for building, securing, and growing in the digital
-            world.
+            MITRA Consultancy – Web & App Development, UI/UX, Cybersecurity, Compliance, and 3-Month Student Training – Your All-in-One Digital Growth Partner.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-start gap-4 xl:gap-6 mt-4 md:mt-9 xl:mt-[50px]">
             <Button
