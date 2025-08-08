@@ -18,26 +18,9 @@ const SecurityHero = () => {
     "Thrive Safely",
   ];
 
-  const images = [
-    {
-      image: IMAGES.emailSecurity,
-      size: "w-32 xl:w-52",
-    },
-    {
-      image: IMAGES.endpointSecurity2,
-      size: "w-32 xl:w-64",
-    },
-    {
-      image: IMAGES.cloudSecurity2,
-      size: "w-32 xl:w-64",
-    },
-    {
-      image: IMAGES.networkSecurity2,
-      size: "w-32 xl:w-[220px]",
-    },
-  ];
+  
   return (
-    <div className="font-Inter relative h-[1200px] md:h-[1200px] xl:h-[1000px] 2xl:h-[1200px]">
+    <div className="font-Inter relative h-[850px] xl:h-[1300px] 2xl:h-[800px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -98,20 +81,6 @@ const SecurityHero = () => {
                 <p>{feature}</p>
               </div>
             ))}
-          </div>
-
-          {/* Images */}
-          <div className="flex items-center justify-center w-full">
-            <div className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-4 z-10 bg-white rounded-xl p-5">
-              {images?.map((image, index) => (
-                <Image
-                  key={index}
-                  src={image.image}
-                  alt="MITRA Consultancy"
-                  className={`${image.size}`}
-                />
-              ))}
-            </div>
           </div>
         </div>
       </Container>

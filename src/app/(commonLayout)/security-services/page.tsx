@@ -1,9 +1,12 @@
+import { IMAGES } from "@/assets";
 import ComplianceAssessment from "@/Components/CybersecurityCompliance/ComplianceAssessment/ComplianceAssessment";
 import ComplianceSolutions from "@/Components/CybersecurityCompliance/ComplianceSolutions/ComplianceSolutions";
 import MitrasEdge from "@/Components/Security/MitrasEdge/MitrasEdge";
 import SecurityHero from "@/Components/Security/SecurityHero/SecurityHero";
 import SecurityService from "@/Components/Security/SecurityService/SecurityService";
+import Container from "@/Components/Shared/Container/Container";
 import FAQ from "@/Components/Shared/FAQ/FAQ";
+import Image from "next/image";
 
 type FAQItem = {
   question: string;
@@ -55,9 +58,43 @@ const SecurityPage = () => {
     },
   ];
 
+  const images = [
+    {
+      image: IMAGES.emailSecurity,
+      size: "w-16 md:w-32 lg:w-48 xl:w-52",
+    },
+    {
+      image: IMAGES.endpointSecurity2,
+      size: "w-16 md:w-32 lg:w-48 xl:w-64",
+    },
+    {
+      image: IMAGES.cloudSecurity2,
+      size: "w-16 md:w-32 lg:w-48 xl:w-64",
+    },
+    {
+      image: IMAGES.networkSecurity2,
+      size: "w-16 md:w-32 lg:w-48 xl:w-[220px]",
+    },
+  ];
+
   return (
     <div>
       <SecurityHero />
+      {/* Images */}
+      <div className="w-full  mt-10 border-b pb-8">
+        <Container>
+          <div className="flex justify-between items-center gap-4 z-10">
+            {images?.map((image, index) => (
+              <Image
+                key={index}
+                src={image.image}
+                alt="MITRA Consultancy"
+                className={`${image.size}`}
+              />
+            ))}
+          </div>
+        </Container>
+      </div>
       <ComplianceSolutions />
       <SecurityService />
       <ComplianceAssessment />

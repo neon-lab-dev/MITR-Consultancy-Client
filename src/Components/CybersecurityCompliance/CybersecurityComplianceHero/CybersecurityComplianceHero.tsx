@@ -18,28 +18,9 @@ const CybersecurityComplianceHero = () => {
     "Custom Solutions",
     "Robust Updation",
   ];
-
-  const images = [
-    {
-      image : IMAGES.iso27001,
-      size : "w-32 xl:w-52"
-    },
-    {
-      image : IMAGES.soc2,
-      size : "w-32 xl:w-64"
-    },
-    {
-      image : IMAGES.hippa,
-      size : "w-32 xl:w-72"
-    },
-    {
-      image : IMAGES.gdpr,
-      size : "w-32 xl:w-64"
-    },
-  ];
   
   return (
-    <div className="font-Inter relative h-[1400px] xl:h-[1300px] 2xl:h-[1200px]">
+    <div className="font-Inter relative h-[1100px] xl:h-[1300px] 2xl:h-[800px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -110,7 +91,7 @@ const CybersecurityComplianceHero = () => {
           </div>
 
           {/* Images */}
-          <div className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-4 z-10 bg-white rounded-xl p-5">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-4 z-10 ">
             {images?.map((image, index) => (
               <Image
               key={index}
@@ -119,7 +100,7 @@ const CybersecurityComplianceHero = () => {
               className={`${image.size}`}
             />
             ))}
-          </div>
+          </div> */}
 
 
         </div>
