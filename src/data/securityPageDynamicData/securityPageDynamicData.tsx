@@ -2,15 +2,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { IMAGES } from "@/assets";
 
-export type SecuritySlug = "email-security" | "endpoint-security" | "cloud-security" | "vapt-security" | "network-security";
-export const allSecurityData:Record<SecuritySlug, any> = {
+export type SecuritySlug =
+  | "email-security"
+  | "endpoint-security"
+  | "cloud-security"
+  | "vapt-security"
+  | "network-security";
+export const allSecurityData: Record<SecuritySlug, any> = {
   // Email Security Data
   "email-security": {
     heroDetails: {
       page: "Email Security",
       heroImg: IMAGES.emailSecurityHero,
       heading: "Email Security for Your Business",
-      subHeading: "Safeguarding your business against modern and evolving digital cyber threats.",
+      subHeading:
+        "Safeguarding your business against modern and evolving digital cyber threats.",
     },
 
     // Why security
@@ -123,6 +129,21 @@ export const allSecurityData:Record<SecuritySlug, any> = {
             "Ensures business continuity and compliance",
           ],
         },
+        // added later
+        {
+          title: "Email Threat Intelligence Integration",
+          descriptions: [
+            "Leverages global threat feeds to block known malicious senders",
+            "Automatically updates filters based on emerging threats",
+          ],
+        },
+        {
+          title: "Email Authentication (SPF, DKIM, DMARC)",
+          descriptions: [
+            "Prevents email spoofing and brand impersonation",
+            "Enhances email deliverability and trustworthiness",
+          ],
+        },
       ],
     },
 
@@ -132,8 +153,7 @@ export const allSecurityData:Record<SecuritySlug, any> = {
       subHeading: "Our email security solutions support compliance with,",
       pointers: [
         {
-          title:
-            "SEBI Cybersecurity Framework",
+          title: "SEBI Cybersecurity Framework",
         },
         {
           title: "RBI IT & Cybersecurity Guidelines",
@@ -312,6 +332,15 @@ export const allSecurityData:Record<SecuritySlug, any> = {
           descriptions: [
             "Adds an extra layer of identity protection",
             "Ensures only authorized users access your systems",
+          ],
+        },
+        // added later
+        {
+          title: "User Behavior Analytics",
+          descriptions: [
+            "Monitors user activity to detect anomalies and insider threats",
+            "Helps identify risky behavior across endpoints",
+            "Supports proactive threat mitigation",
           ],
         },
       ],
@@ -520,6 +549,14 @@ export const allSecurityData:Record<SecuritySlug, any> = {
             "24x7 monitoring of cloud environments.",
           ],
         },
+        // added later
+        {
+          title: "Cloud Configuration & Posture Management",
+          descriptions: [
+            "Continuously monitor for misconfigurations across cloud services.",
+            "Ensure adherence to security benchmarks like CIS, NIST, and AWS Well-Architected.",
+          ],
+        },
       ],
     },
 
@@ -717,6 +754,32 @@ export const allSecurityData:Record<SecuritySlug, any> = {
             "Supports Zero Trust architecture validation.",
           ],
         },
+
+        // added later
+        {
+          title: "Internal Network Penetration Testing",
+          descriptions: [
+            "Identify risks from within the organization's internal network.",
+            "Tests firewall configurations, segmentation, and lateral movement possibilities.",
+            "Helps strengthen internal defense layers against insider threats.",
+          ],
+        },
+        {
+          title: "External Network Penetration Testing",
+          descriptions: [
+            "Focuses on internet-facing assets like web servers, APIs, and email systems.",
+            "Detects entry points that hackers could exploit remotely.",
+            "Provides insights to harden perimeter defenses.",
+          ],
+        },
+        {
+          title: "Social Engineering Assessments",
+          descriptions: [
+            "Tests human layer vulnerabilities via phishing, baiting, or impersonation.",
+            "Evaluates employee awareness and adherence to security protocols.",
+            "Strengthens the organization’s overall security culture.",
+          ],
+        },
       ],
     },
 
@@ -908,6 +971,13 @@ export const allSecurityData:Record<SecuritySlug, any> = {
           descriptions: [
             "Help in creating policies & procedures.",
             "Support for compliance audits.",
+          ],
+        },
+        {
+          title: "Wireless Network Security",
+          descriptions: [
+            "Secure configuration of Wi-Fi networks to prevent unauthorized access.",
+            "Monitoring and protection against rogue access points and wireless threats.",
           ],
         },
       ],

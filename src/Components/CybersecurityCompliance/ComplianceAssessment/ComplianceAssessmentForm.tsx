@@ -11,10 +11,7 @@ type TComplianceFormData = {
   lastName: string;
   email: string;
   companyName: string;
-  cybersecurityChallanges: string;
-  location: string;
-  annualRevenue: string;
-  website: string;
+  phoneNumber: string;
 };
 
 const ComplianceAssessmentForm = () => {
@@ -67,10 +64,6 @@ const ComplianceAssessmentForm = () => {
 
   return (
     <div className="bg-neutral-150 rounded-xl p-6 font-Inter shadow-[0px_0px_50px_-13px_rgba(0,0,0,0.20)] w-full xl:w-[60%]">
-      <h1 className="text-xl text-neutral-145 font-medium mb-6">
-        Start Your Quick Compliance Check
-      </h1>
-
       <form
         ref={form}
         onSubmit={handleSubmit(sendEmail)}
@@ -124,85 +117,21 @@ const ComplianceAssessmentForm = () => {
             className={getInputClass(!!errors.companyName)}
           />
         </div>
-
-        {/* Challenge & Location */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Company Name */}
-          <div>
-            <label className="block text-neutral-145 text-[15px] font-medium mb-1">
-              Cybersecurity Challenge
-            </label>
-            <input
-              type="text"
-              placeholder="Google, Microsoft, etc..."
-              {...register("cybersecurityChallanges", { required: true })}
-              className={getInputClass(!!errors.cybersecurityChallanges)}
-            />
-          </div>
-
-          <div>
-            <label className="block text-neutral-145 text-[15px] font-medium mb-1">
-              Location
-            </label>
-            <select
-              {...register("location", { required: true })}
-              className={getInputClass(!!errors.location)}
-            >
-              <option value="" selected disabled>
-                Select
-              </option>
-              <option value="india">India</option>
-              <option value="usa_middleeast">USA, Middle East</option>
-              <option value="canada_germany_japan">
-                Canada, Germany, Japan
-              </option>
-              <option value="france_italy_uk_southkorea">
-                France, Italy, UK, South Korea
-              </option>
-              <option value="asean_scandinavia">ASEAN, Scandinavia</option>
-              <option value="australia_southafrica">
-                Australia, South Africa
-              </option>
-              <option value="turkey_latinamerica_brazil">
-                Turkey, Latin America, Brazil
-              </option>
-              <option value="others">Others</option>
-            </select>
-          </div>
+        {/* Phone Number */}
+        <div>
+          <label className="block text-neutral-145 text-[15px] font-medium mb-1">
+            Phone Number
+          </label>
+          <input
+            type="number"
+            placeholder="Your phone number"
+            {...register("phoneNumber", { required: true })}
+            className={getInputClass(!!errors.phoneNumber)}
+          />
         </div>
 
-        {/* Revenue & Website */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-neutral-145 text-[15px] font-medium mb-1">
-              Annual Revenue
-            </label>
-            <select
-              {...register("annualRevenue", { required: true })}
-              className={getInputClass(!!errors.annualRevenue)}
-            >
-              <option value="">Select</option>
-              <option value="under1m">Less than 10CR</option>
-              <option value="1mto10m">10CR-50CR</option>
-              <option value="10mplus">51CR-100CR</option>
-              <option value="10mplus">More than 100CR</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-neutral-145 text-[15px] font-medium mb-1">
-              Website
-            </label>
-            <input
-              type="text"
-              placeholder="www.companyname.com"
-              {...register("website", { required: true })}
-              className={getInputClass(!!errors.website)}
-            />
-          </div>
-        </div>
-
-        <Button2 variant="primary" title="">
-          {isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Check Now"}
+        <Button2 variant="primary" title="" isDisabled={isLoading}>
+          {isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Submit"}
         </Button2>
       </form>
     </div>

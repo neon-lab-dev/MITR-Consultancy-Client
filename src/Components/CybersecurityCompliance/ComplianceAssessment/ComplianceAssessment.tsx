@@ -17,7 +17,7 @@ const ComplianceAssessment = () => {
           <h1
             className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
           >
-            Take Your Compliance Assessment
+            Talk To Us Today
           </h1>
 
           <div className="flex flex-col xl:flex-row gap-10 xl:gap-5 items-center justify-between mt-[60px]">
