@@ -20,7 +20,7 @@ const CybersecurityComplianceHero = () => {
   ];
   
   return (
-    <div className="font-Inter relative h-[1100px] xl:h-[1300px] 2xl:h-[800px]">
+    <div className="font-Inter relative h-[1100px] xl:h-[850px] 2xl:h-[890px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -40,7 +40,7 @@ const CybersecurityComplianceHero = () => {
         <div className="flex flex-col gap-8 xl:gap-20 items-center justify-center absolute top-0 bottom-0 z-20 max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0">
           <div className="flex flex-col xl:flex-row gap-10 xl:gap-0 items-center justify-between">
             <div>
-              <h1 className="text-white text-center xl:text-start leading-8 md:leading-[48px] xl:leading-[67px] text-[24px] md:text-[40px] xl:text-[56px] font-bold max-w-[344px] md:max-w-[1071px] lg:max-w-[800px] mx-auto">
+              <h1 className="text-white text-center xl:text-start leading-8 md:leading-[48px] xl:leading-[70px] text-[24px] md:text-[40px] xl:text-[56px] font-bold max-w-[344px] md:max-w-[1071px] lg:max-w-[800px] xl:max-w-[1200px] mx-auto">
                 Comprehensive{" "}
                 <span className="text-primary-20">Cybersecurity</span>{" "}
                 Compliance for Growth and Resilience

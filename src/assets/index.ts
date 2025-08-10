@@ -6,6 +6,7 @@ import aboutUsBg from "../assets/Images/bg.png";
 import aboutUsHeroImg from "../assets/Images/about-us-hero.jpg";
 import gradientBg from "../assets/Images/gradient-bg.png";
 import letsTalkBgImg from "../assets/Images/lets-talk-bg.png";
+import letsTalkBgImg2 from "../assets/Images/lets-talk-bg2.png";
 import contactUsBgImg from "../assets/Images/contact-us-bg.png";
 import frontendDevelopmentBgImg from "../assets/Images/Group 180448.png";
 import myProfileBg from "../assets/Images/my-profile-bg.png";
@@ -210,6 +211,7 @@ export const IMAGES = {
   aboutUsHeroImg,
   gradientBg,
   letsTalkBgImg,
+  letsTalkBgImg2,
   contactUsBgImg,
   frontendDevelopmentBgImg,
   myProfileBg,

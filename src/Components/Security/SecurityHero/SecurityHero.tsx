@@ -20,7 +20,7 @@ const SecurityHero = () => {
 
   
   return (
-    <div className="font-Inter relative h-[850px] xl:h-[1300px] 2xl:h-[800px]">
+    <div className="font-Inter relative h-[850px] xl:h-[800px] 2xl:h-[800px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

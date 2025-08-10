@@ -5,6 +5,7 @@ import CybersecurityComplianceHero from "@/Components/CybersecurityCompliance/Cy
 import CyberSecurityTestimonials from "@/Components/CybersecurityCompliance/CyberSecurityTestimonials/CyberSecurityTestimonials";
 import SecureCompliance from "@/Components/CybersecurityCompliance/SecureCompliance/SecureCompliance";
 import TrustAndResults from "@/Components/CybersecurityCompliance/TrustAndResults/TrustAndResults";
+import LetsTalk from "@/Components/Home/LetsTalk/LetsTalk";
 import Container from "@/Components/Shared/Container/Container";
 import Image from "next/image";
 
@@ -50,6 +51,7 @@ const CybersecurityCompliance = () => {
       <TrustAndResults />
       <ComplianceAssessment />
       <CyberSecurityTestimonials />
+      <LetsTalk />
     </div>
   );
 };

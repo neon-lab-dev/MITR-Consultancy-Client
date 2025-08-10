@@ -24,7 +24,7 @@ const Heading: React.FC<THeading> = ({
         {subHeading}
       </p>
       <h1
-        className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[36px] leading-6 md:leading-[49.68px] capitalize text-center ${
+        className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[40px] 2xl:text-[48px] leading-6 md:leading-[49.68px] capitalize text-center ${
           align === "center" ? "text-center" : "text-start"
         }`}
       >

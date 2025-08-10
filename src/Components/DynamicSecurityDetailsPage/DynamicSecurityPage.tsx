@@ -19,10 +19,6 @@ const DynamicSecurityPage = () => {
   const slugParam = params?.slug;
 
   const content = allSecurityData[slugParam as SecuritySlug];
-
-//   if (!content) {
-//     return <div>Page Not Found</div>;
-//   }
   return (
     <div>
       <SecurityDetailsHero {...content.heroDetails} />

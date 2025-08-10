@@ -1,6 +1,7 @@
 "use client";
 import { IMAGES } from "@/assets";
 import Button from "@/Components/Reusable/Button/Button";
+import Heading from "@/Components/Reusable/Heading/Heading";
 import Container from "@/Components/Shared/Container/Container";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -449,11 +450,7 @@ const SecureCompliance = () => {
 
       <Container>
         <div className="z-10 relative py-[100px]">
-          <h1
-            className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
-          >
-            Secure Compliance, Simplified
-          </h1>
+          <Heading heading={"Secure Compliance, Simplified"} align="center" />
 
           <div className="flex items-center justify-center gap-6 mt-[60px] w-full overflow-x-auto custom-section-scrollbar text-nowrap">
             {tabButtons?.map((item) => (

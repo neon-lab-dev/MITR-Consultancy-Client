@@ -1,5 +1,6 @@
 "use client";
 import { ICONS } from "@/assets";
+import Heading from "@/Components/Reusable/Heading/Heading";
 import Container from "@/Components/Shared/Container/Container";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -316,11 +317,7 @@ const ComplianceSolutions = ({heading} : {heading: string}) => {
     <div className="py-[100px] font-Inter">
       <Container>
         <div>
-          <h1
-            className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
-          >
-            {heading}
-          </h1>
+          <Heading heading={heading} align="center" />
 
           <div className="flex flex-col xl:flex-row items-center gap-6 mt-[60px]">
             {/* Compliance Solutions */}
@@ -351,7 +348,7 @@ const ComplianceSolutions = ({heading} : {heading: string}) => {
 
             {/* Data */}
             <div className="bg-neutral-135 border border-neutral-130 rounded-xl p-6 h-full xl:h-[500px] w-full xl:w-[50%]">
-              <h1 className="text-black text-2xl md:text-[36px] font-semibold text-center leading-10">
+              <h1 className="text-black text-2xl md:text-[28px] 2xl:text-[36px] font-semibold text-center leading-10">
                 {" "}
                 <span className="text-secondary-20">
                   {activeData?.title}

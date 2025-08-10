@@ -48,7 +48,7 @@ const TrustAndResults = () => {
       <Container>
         <div className="py-[100px">
           <h1
-            className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] lg:leading-[80px] capitalize text-center`}
+            className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[40px] 2xl:text-[48px] leading-6 md:leading-[49.68px] capitalize text-center`}
           >
             <span className="text-secondary-20">MITRA Consultancy</span>{" "}
             Compliance: Built for Trust & Results

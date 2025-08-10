@@ -1,6 +1,7 @@
 import { IMAGES } from "@/assets";
 import ComplianceAssessment from "@/Components/CybersecurityCompliance/ComplianceAssessment/ComplianceAssessment";
 import ComplianceSolutions from "@/Components/CybersecurityCompliance/ComplianceSolutions/ComplianceSolutions";
+import LetsTalk from "@/Components/Home/LetsTalk/LetsTalk";
 import MitrasEdge from "@/Components/Security/MitrasEdge/MitrasEdge";
 import SecurityHero from "@/Components/Security/SecurityHero/SecurityHero";
 import SecurityService from "@/Components/Security/SecurityService/SecurityService";
@@ -100,6 +101,7 @@ const SecurityPage = () => {
       <ComplianceAssessment />
       <MitrasEdge />
       <FAQ faqsData={faqsData} />
+      <LetsTalk/>
     </div>
   );
 };

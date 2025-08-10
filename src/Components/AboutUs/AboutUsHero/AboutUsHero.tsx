@@ -28,7 +28,7 @@ const AboutUsHero = () => {
       {/* Content */}
       {/* <Container> */}
         <div className="flex items-center justify-center absolute top-0 bottom-0 flex-col z-20 w-full px-5 md:px-7 2xl:px-0">
-          <h1 className="text-white text-center capitalize leading-6 md:leading-[40px] xl:leading-[80px] text-[32px] xl:text-[68px] font-bold max-w-[700px] mx-auto">
+          <h1 className="text-white text-center capitalize text-lg md:text-2xl xl:text-[40px] 2xl:text-[48px] leading-6 md:leading-[49.68px] font-bold">
             About Us
           </h1>
         </div>

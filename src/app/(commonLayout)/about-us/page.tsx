@@ -2,6 +2,7 @@ import AboutUsHero from './../../../Components/AboutUs/AboutUsHero/AboutUsHero';
 import FAQ from '@/Components/Shared/FAQ/FAQ';
 import AllAboutMitra from '@/Components/AboutUs/AllAboutMitra/AllAboutMitra';
 import Services from '@/Components/AboutUs/Services/Services';
+import LetsTalk from '@/Components/Home/LetsTalk/LetsTalk';
 
 const AboutUsPage = () => {
     return (
@@ -10,6 +11,7 @@ const AboutUsPage = () => {
             <AllAboutMitra/>
             <Services/>
             <FAQ/>
+            <LetsTalk/>
         </div>
     );
 };

@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import Container from "@/Components/Shared/Container/Container";
 import Image from "next/image";
 import { ICONS } from "@/assets";
+import Heading from "@/Components/Reusable/Heading/Heading";
 
 const testimonials = [
   {
@@ -42,11 +43,7 @@ const CyberSecurityTestimonials = () => {
   return (
     <div className="pt-[130px] pb-20 bg-neutral-155">
       <Container>
-        <h1
-          className={`font-bold text-neutral-10 text-[32px] md:text-[50px] xl:text-[64px] leading-normal md:leading-[49.68px] capitalize text-center`}
-        >
-          Testimonials
-        </h1>
+        <Heading align="center" heading="Testimonials" />
 
         <div className="mt-[60px]">
           <Swiper
