@@ -42,7 +42,7 @@ const LetsTalk = () => {
             <div className="button-container">
               <button
                 onClick={() => setIsContactUsModalOpen(true)}
-                className="button cursor-pointer bg-primary-10 rounded w-[140px] md:w-[200px] h-[30px] md:h-[44px] xl:h-[60px] text-center text-white text-sm"
+                className="button cursor-pointer bg-primary-10 rounded w-[140px] md:w-[200px] h-[30px] md:h-[44px] xl:h-[60px] text-center text-white text-sm xl:text-base"
               >
                 <span>Get Started</span>
               </button>
