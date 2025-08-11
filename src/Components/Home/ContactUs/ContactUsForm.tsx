@@ -172,7 +172,7 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
             <textarea
               {...register("message", { required: "Message is required" })}
               id="message"
-              rows={4}
+              rows={2}
               placeholder="Enter your message here"
               className={inputFieldStyle}
             />

@@ -67,7 +67,7 @@ const ContactUs: React.FC<TContactUs> = ({
           <motion.div
             // This is the main modal panel
             onClick={(e) => e.stopPropagation()}
-            className="w-full max-w-[1060px] h-full max-h-[90%] xl:max-h-[615px] bg-white rounded-2xl mx-auto p-5 flex flex-col-reverse md:flex-row items-center gap-9 font-Inter overflow-y-auto md:overflow-hidden scrollbar-thin scrollbar-thumb-[#03253B] scrollbar-track-transparent"
+            className="w-full max-w-[1060px] h-full max-h-[90%] xl:max-h-[550px] bg-white rounded-2xl mx-auto p-5 flex flex-col-reverse md:flex-row items-center gap-9 font-Inter overflow-y-auto md:overflow-hidden scrollbar-thin scrollbar-thumb-[#03253B] scrollbar-track-transparent"
             variants={modalVariants}
             // initial, animate, and exit are inherited from the parent motion component,
             // but we explicitly define them here with our modalVariants
