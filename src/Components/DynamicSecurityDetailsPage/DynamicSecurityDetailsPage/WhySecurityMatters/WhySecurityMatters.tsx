@@ -35,7 +35,7 @@ const WhySecurityMatters: React.FC<TWhySecurityMatters> = ({
   });
   /* eslint-enable react-hooks/rules-of-hooks */
   return (
-    <div className="pb-[120px] bg-primary-95 font-Inter">
+    <div className="pb-10 xl:pb-20 2xl:pb-[120px] bg-primary-95 font-Inter">
       <div className="w-full h-[75px] bg-neutral-170 blur-[50px]"></div>
 
       <Container>
@@ -67,7 +67,7 @@ const WhySecurityMatters: React.FC<TWhySecurityMatters> = ({
               ))}
             </div>
             {/* Right side image */}
-            <div className="w-full lg:w-[45%] h-full sticky top-32">
+            <div className="w-full md:w-[60%] lg:w-[45%] mx-auto h-full sticky top-32">
               <Image src={image} alt="Common Threats" className="h-full" />
             </div>
           </div>
