@@ -41,16 +41,17 @@ const Counters = () => {
   };
 
   return (
-    <div className="bg-gradient-counters py-[64px] font-Inter" ref={ref}>
+    <div className="bg-gradient-counters  py-[64px] font-Inter" ref={ref}>
       <Container>
         <motion.div
           initial="hidden"
           animate={controls}
           variants={containerVariants}
+          className="flex flex-col items-center justify-center"
         >
           <Heading heading="The MITRA Milestones" align="center" />
 
-          <div className="flex items-center justify-between mt-[72px] flex-wrap gap-y-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center gap-10 lg:gap-0 justify-between mt-[72px] flex-wrap gap-y-12">
             {counterData.map((data, index) => (
               <motion.div
                 key={index}
@@ -84,7 +85,7 @@ const Counters = () => {
                 </div>
 
                 {index < counterData.length - 1 && (
-                  <div className="w-1 h-16 bg-primary-85 hidden md:block" />
+                  <div className="w-1 h-16 bg-primary-85 hidden lg:block" />
                 )}
               </motion.div>
             ))}
