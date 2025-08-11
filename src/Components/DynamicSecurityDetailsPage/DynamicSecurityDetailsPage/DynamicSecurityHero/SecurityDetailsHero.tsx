@@ -46,10 +46,10 @@ const SecurityDetailsHero: React.FC<TSecurityDetailsHero> = ({
             <p className="text-primary-10 text-sm font-semibold">{page}</p>
           </div>
           <div>
-            <h1 className="text-white text-center lg:text-start text-[32px] md:text-[48px] 2xl:text-[64px] font-bold max-w-[344px] md:max-w-[1071px] lg:max-w-[900px] mx-auto xl:mx-0">
+            <h1 className="text-white text-center lg:text-start text-[32px] md:text-[48px] xl:text-[38px] 2xl:text-[64px] font-bold max-w-[344px] md:max-w-[1071px] lg:max-w-[900px] mx-auto xl:mx-0">
               {heading}
             </h1>
-            <p className="text-neutral-65 text-center lg:text-start text-xl xl:text-[39px] max-w-full md:max-w-[1000px] leading-normal mt-5">
+            <p className="text-neutral-65 text-center lg:text-start text-xl 2xl:text-[39px] max-w-full md:max-w-[1000px] leading-normal mt-5">
               {subHeading}
             </p>
             <div className="mt-5 md:mt-9 xl:mt-[60px] flex items-center justify-center lg:justify-start">
