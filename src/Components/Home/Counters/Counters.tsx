@@ -44,7 +44,7 @@ const Counters = () => {
     <div className="bg-gradient-counters  py-[64px] font-Inter" ref={ref}>
       <Container>
         <motion.div
-          initial="hidden"
+          initial="hidden"s
           animate={controls}
           variants={containerVariants}
           className="flex flex-col items-center justify-center"

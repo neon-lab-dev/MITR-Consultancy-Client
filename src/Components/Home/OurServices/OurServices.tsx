@@ -209,7 +209,7 @@ const OurServices = () => {
   return (
     <div
       id="services"
-      className="relative pb-[128px]  bg-white section h-[1100px]"
+      className="relative pb-[128px]  bg-white section h-full"
     >
       <Image
         src={IMAGES.gradientBg}
@@ -224,8 +224,8 @@ const OurServices = () => {
             heading="Our Core Offerings"
             description="Discover our diverse range of top-quality services, tailored to meet your needs with excellence."
           />
-          <div className="w-full mt-14 overflow-x-auto custom-section-scrollbar flex justify-center">
-            <div className="flex items-center gap-6 justify-start min-w-max px-4">
+          <div className="w-full mt-14 overflow-x-auto custom-section-scrollbar flex justify-center ">
+            <div className="flex items-center gap-2 md:gap-6 justify-center w-full md:min-w-max px-4">
               {[
                 { label: "Cyber Security", filter: ".cyber" },
                 { label: "Development", filter: ".dev" },
@@ -235,7 +235,7 @@ const OurServices = () => {
                   key={btn.label}
                   data-filter={btn.filter}
                   onClick={() => setActiveTab(btn.filter)}
-                  className={`px-6 py-3 font-medium leading-5 rounded-lg transition-colors duration-300 whitespace-nowrap ${
+                  className={`px-3 md:px-6 py-1 md:py-3 font-medium text-xs md:text-base leading-5 rounded-lg transition-colors duration-300 whitespace-nowrap ${
                     activeTab === btn.filter
                       ? "text-white bg-primary-10"
                       : "text-primary-10"
@@ -243,7 +243,7 @@ const OurServices = () => {
                 >
                   {btn.label}
                 </button>
-              ))}
+              ))}   
             </div>
           </div>
 
