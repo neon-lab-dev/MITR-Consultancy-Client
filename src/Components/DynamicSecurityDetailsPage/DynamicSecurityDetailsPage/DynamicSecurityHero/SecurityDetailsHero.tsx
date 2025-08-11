@@ -37,7 +37,7 @@ const SecurityDetailsHero: React.FC<TSecurityDetailsHero> = ({
 
       {/* Content */}
       <Container>
-        <div className="flex flex-col gap-8 xl:gap-20 justify-center absolute top-0 bottom-0 z-20 max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0">
+        <div className="flex flex-col gap-8 2xl:gap-20 justify-center absolute top-0 bottom-0 z-20 max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0">
           <div className="flex items-center justify-center lg:justify-start gap-2">
             <p className="text-neutral-175 text-sm font-medium">
               Security Services
