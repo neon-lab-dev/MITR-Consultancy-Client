@@ -9,7 +9,7 @@ import SecurityDetailsHero from "./DynamicSecurityDetailsPage/DynamicSecurityHer
 import WhySecurityMatters from "./DynamicSecurityDetailsPage/WhySecurityMatters/WhySecurityMatters";
 import CommonThreats from "../SecurityServices/CommonThreats/CommonThreats";
 import KeyFeatures from "../SecurityServices/KeyFeatures/KeyFeatures";
-import ComplianceSection from "../SecurityServices/ComplianceSection/ComplianceSection";
+// import ComplianceSection from "../SecurityServices/ComplianceSection/ComplianceSection";
 import DeploymentOption from "../SecurityServices/DeploymentOption/DeploymentOption";
 import WhyUs from "../SecurityServices/WhyUs/WhyUs";
 import LetsTalk from "../Home/LetsTalk/LetsTalk";
@@ -25,7 +25,7 @@ const DynamicSecurityPage = () => {
       <WhySecurityMatters {...content.whySecurityMatters} />
       <CommonThreats {...content.commonSecurityThreats} />
       <KeyFeatures {...content.keyFeatures} />
-      <ComplianceSection {...content.complianceAndRegulatoryAlignment} />
+      {/* <ComplianceSection {...content.complianceAndRegulatoryAlignment} /> */}
       <DeploymentOption {...content.deploymentOptions} />
       <WhyUs {...content.whyChooseMITRAConsultancy} />
       <LetsTalk />

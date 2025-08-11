@@ -64,14 +64,14 @@ const CyberSecurityTestimonials = () => {
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <div className="bg-white border border-neutral-25/20 p-5 rounded-2xl h-[276px] w-full flex flex-col justify-between">
-                  <p className="text-neutral-145 font-medium leading-6 lg:leading-9 text-base lg:text-2xl">
+                  <p className="text-neutral-145 font-medium leading-6 lg:leading-9 text-base xl:text-xl 2xl:text-2xl">
                     “{testimonial.message}”
                   </p>
                   <div>
                     <h3 className="text-neutral-145 text-base lg:text-xl font-medium">
                       {testimonial.name}
                     </h3>
-                    <p className="text-neutral-145 text-sm md:text-lg mt-1">
+                    <p className="text-neutral-145 text-sm 2xl:text-lg mt-1">
                       {testimonial.role}
                     </p>
                   </div>

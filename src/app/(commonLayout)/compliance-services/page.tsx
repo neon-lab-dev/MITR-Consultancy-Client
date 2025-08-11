@@ -13,19 +13,19 @@ const CybersecurityCompliance = () => {
   const images = [
     {
       image: IMAGES.iso27001,
-      size: "w-16 md:w-[120px] lg:w-48 xl:w-52",
+      size: "w-16 md:w-[120px] lg:w-48 xl:w-[150px] 2xl:w-52",
     },
     {
       image: IMAGES.soc2,
-      size: "w-16 md:w-[120px] lg:w-48 xl:w-64",
+      size: "w-16 md:w-[120px] lg:w-48 2xl:w-64",
     },
     {
       image: IMAGES.hippa,
-      size: "w-16 md:w-[120px] lg:w-48 xl:w-72",
+      size: "w-16 md:w-[120px] lg:w-48 2xl:w-72",
     },
     {
       image: IMAGES.gdpr,
-      size: "w-16 md:w-[120px] lg:w-48 xl:w-64",
+      size: "w-16 md:w-[120px] lg:w-48 2xl:w-64",
     },
   ];
   return (
@@ -34,7 +34,7 @@ const CybersecurityCompliance = () => {
       {/* Images */}
       <div className="w-full  mt-10 border-b pb-8">
         <Container>
-          <div className="flex justify-between items-center gap-4 z-10">
+          <div className="flex justify-between items-center gap-4 z-10 max-w-[1000px] 2xl:max-w-full mx-auto">
             {images?.map((image, index) => (
               <Image
                 key={index}
