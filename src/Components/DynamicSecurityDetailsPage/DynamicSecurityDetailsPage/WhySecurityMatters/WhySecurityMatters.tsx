@@ -46,7 +46,7 @@ const WhySecurityMatters: React.FC<TWhySecurityMatters> = ({
               {pointers.map((item, i) => (
                 <div
                   key={i}
-                  className="h-[15vh] sticky top-32 flex items-start"
+                  className="h-[15vh] xl:h-[18vh] 2xl:h-[15vh] sticky top-32 flex items-start"
                 >
                   <motion.div
                     className="w-full"
