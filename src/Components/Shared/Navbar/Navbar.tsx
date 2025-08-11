@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { ICONS, IMAGES } from "@/assets";
@@ -12,6 +13,7 @@ import { useSelector } from "react-redux";
 import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
 import UserDropdown from "./UserDropdown";
 import { useCart } from "@/providers/CartProvider/CartProvider";
+import { motion, AnimatePresence } from "framer-motion";
 
 export type TLoggedInUser = {
   _id: string;
@@ -111,7 +113,31 @@ const Navbar = () => {
     { label: "Training Programmes", path: "/internship-programmes" },
   ];
 
-  console.log(pathname);
+  const dropdownVariants: any = {
+    initial: {
+      opacity: 0,
+      y: -15,
+      scale: 0.95,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -15,
+      scale: 0.95,
+      transition: {
+        duration: 0.15,
+        ease: "easeIn",
+      },
+    },
+  };
 
   return (
     <div id="home">
@@ -155,11 +181,10 @@ const Navbar = () => {
                 )
               )}
 
-              {/* Security Dropdown */}
-              {/* Security Dropdown */}
               <div
                 className="relative"
                 onMouseEnter={() => setIsSecurityDropdownOpen(true)}
+                onMouseLeave={() => setIsSecurityDropdownOpen(false)}
                 ref={dropdownRef}
               >
                 <button
@@ -177,38 +202,47 @@ const Navbar = () => {
                   />
                 </button>
 
-                {isSecurityDropdownOpen && (
-                  <div className="absolute top-12 -left-20 2xl:-left-56 bg-neutral-80 shadow-lg rounded-lg w-[300px] 2xl:w-[620px] p-5 z-50 flex flex-col 2xl:flex-row gap-5">
-                    <div>
-                      <Link
-                        href="/compliance-services"
-                        onClick={() => setIsSecurityDropdownOpen(false)}
-                        className="text-neutral-50 hover:text-primary-20 hover:underline transition font-medium"
-                      >
-                        Compliance Services
-                      </Link>
-                      <p className="text-neutral-25/90 text-xs mt-2 max-w-[300px]">
-                        Comprehensive solutions to meet industry regulations,
-                        including GDPR, HIPAA, and PCI DSS, ensuring data
-                        security and legal compliance.
-                      </p>
-                    </div>
-                    <div>
-                      <Link
-                        href="/security-services"
-                        onClick={() => setIsSecurityDropdownOpen(false)}
-                        className="text-neutral-50 hover:text-primary-20 hover:underline transition font-medium"
-                      >
-                        Security Services
-                      </Link>
-                      <p className="text-neutral-25/90 text-xs mt-2 max-w-[300px]">
-                        Advanced security offerings, including vulnerability
-                        assessments, penetration testing, and threat monitoring,
-                        to proactively identify and mitigate cyber threats.
-                      </p>
-                    </div>
-                  </div>
-                )}
+                <AnimatePresence>
+                  {isSecurityDropdownOpen && (
+                    <motion.div
+                      variants={dropdownVariants}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                      className="absolute top-12 -left-20 2xl:-left-56 bg-neutral-80 shadow-lg rounded-lg w-[300px] 2xl:w-[620px] p-5 z-50 flex flex-col 2xl:flex-row gap-5"
+                    >
+                      <div>
+                        <Link
+                          href="/compliance-services"
+                          onClick={() => setIsSecurityDropdownOpen(false)}
+                          className="text-neutral-50 hover:text-primary-20 hover:underline transition font-medium"
+                        >
+                          Compliance Services
+                        </Link>
+                        <p className="text-neutral-25/90 text-xs mt-2 max-w-[300px]">
+                          Comprehensive solutions to meet industry regulations,
+                          including GDPR, HIPAA, and PCI DSS, ensuring data
+                          security and legal compliance.
+                        </p>
+                      </div>
+                      <div>
+                        <Link
+                          href="/security-services"
+                          onClick={() => setIsSecurityDropdownOpen(false)}
+                          className="text-neutral-50 hover:text-primary-20 hover:underline transition font-medium"
+                        >
+                          Security Services
+                        </Link>
+                        <p className="text-neutral-25/90 text-xs mt-2 max-w-[300px]">
+                          Advanced security offerings, including vulnerability
+                          assessments, penetration testing, and threat
+                          monitoring, to proactively identify and mitigate cyber
+                          threats.
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
 
