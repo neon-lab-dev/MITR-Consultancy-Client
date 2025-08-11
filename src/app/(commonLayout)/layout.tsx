@@ -8,9 +8,11 @@ const CommonLayout = ({ children }: { children: ReactNode }) => {
     return (
         <div>
             <Navbar />
-            <PageTransitionWrapper>
+            <div className="overflow-x-hidden">
+                <PageTransitionWrapper>
                 {children}
             </PageTransitionWrapper>
+            </div>
             <Footer />
         </div>
     );
