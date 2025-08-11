@@ -294,8 +294,8 @@ const Navbar = () => {
                   <Button
                     handleClick={() => setIsContactUsModalOpen(true)}
                     variant="primary"
-                    title="Contact Us"
-                    classNames="w-[148px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
+                    title="Connect with Us"
+                    classNames="w-[198px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
                   />
                 )}
 

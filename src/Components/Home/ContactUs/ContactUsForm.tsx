@@ -185,7 +185,7 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
 
           <Button2 variant="primary" title="">
             {
-              isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Start My Project"}
+              isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Submit"}
           </Button2>
         </form>
           <p className="text-neutral-25 text-[10px] text-sm text-center mt-2">We’ll get back to you within <span className="text-primary-10 font-semibold">24 hours</span>.</p>

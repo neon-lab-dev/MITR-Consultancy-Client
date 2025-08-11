@@ -86,14 +86,12 @@ const ContactUs: React.FC<TContactUs> = ({
                   className="w-[164px] h-[64px]"
                 />
                 <h1 className="text-white text-[25px] xl:text-[42px] text-center font-bold mt-8 uppercase">
-                  Crafting Digital Excellence
+                  From Code to Compliance
                 </h1>
                 <p className="text-white text-[10px] text-center md:text-base leading-7 mt-4">
-                  Have questions or want to discuss your next big idea?
+                  We help you design, develop, and secure your digital journey — ensuring innovation meets compliance at every step.
                 </p>
-                <p className="text-white text-[10px] text-center md:text-base leading-7 mt-[6px]">
-                  We're here to help you bring your digital vision to life.
-                </p>
+               
               </div>
             </div>
 
