@@ -20,7 +20,7 @@ const KeyFeatureCard: React.FC<KeyFeatureCardProps> = ({
         <Image src={icon} alt={title} className="w-[38px] h-10" />
       </div>
       <div className="flex flex-col gap-5 px-6">
-        <h2 className="text-neutral-145 text-lg h-11 font-medium">{title}</h2>
+        <h2 className="text-neutral-145 text-base 2xl:text-lg font-medium">{title}</h2>
         {points &&
           points.map((point: any, index: number) => (
             <div
