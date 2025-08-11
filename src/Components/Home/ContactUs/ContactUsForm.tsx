@@ -68,16 +68,19 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
 
   };
 
-  const inputFieldStyle = "md:py-[18px] py-3 px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20 focus:border-primary-10 transition duration-300 focus:outline-none";
+  const inputFieldStyle = "py-3 px-4 rounded-md border border-neutral-70 bg-neutral-80 text-neutral-20 focus:border-primary-10 transition duration-300 focus:outline-none";
   const labelStyle = "text-neutral-60 font-medium md:text-base text-[10px] leading-[14px]";
 
   return (
     <FormProvider {...methods}>
       <div className="font-Inter w-full xl:w-[55%] xl:overflow-y-scroll">
         <div className="flex items-center justify-between w-full">
-          <h1 className="text-neutral-30 text-2xl font-bold uppercase leading-[33px]">
-            Get in Touch
+          <div>
+            <h1 className="text-neutral-30 text-2xl font-bold uppercase leading-[33px]">
+            Get in Touch with Our Experts
           </h1>
+          <p className="text-neutral-25 text-[10px] text-sm max-w-[400px] mt-1">Let’s discuss how we can take your business from code to compliance — securely and efficiently.</p>
+          </div>
           <Image src={ICONS.cross} alt="cross-icon" className="size-8 cursor-pointer" onClick={() => setIsContactUsModalOpen(false)} />
         </div>
 
@@ -123,7 +126,7 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
                     message: "Enter a valid email address",
                   },
                 })}
-                type="text"
+                type="email"
                 id="email"
                 placeholder="Enter your email"
                 className={inputFieldStyle}
@@ -146,7 +149,7 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
                 {...register("mobileNumber", {
                   required: "Phone number is required",
                 })}
-                type="text"
+                type="number"
                 id="mobileNumber"
                 placeholder="Enter your phone"
                 className={inputFieldStyle}
@@ -182,9 +185,10 @@ const ContactUsForm = ({ setIsContactUsModalOpen }: { setIsContactUsModalOpen: (
 
           <Button2 variant="primary" title="">
             {
-              isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Contact Us"}
+              isLoading ? <LoadingSpinner fontSize="text-[15px]" /> : "Start My Project"}
           </Button2>
         </form>
+          <p className="text-neutral-25 text-[10px] text-sm text-center mt-2">We’ll get back to you within <span className="text-primary-10 font-semibold">24 hours</span>.</p>
       </div>
     </FormProvider>
   );

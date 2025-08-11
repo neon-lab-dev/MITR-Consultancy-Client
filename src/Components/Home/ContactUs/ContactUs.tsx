@@ -17,11 +17,11 @@ const ContactUs: React.FC<TContactUs> = ({ isContactUsModalOpen, setIsContactUsM
                 <div
                     onClick={() => setIsContactUsModalOpen(false)}
                     className={`${isContactUsModalOpen ? "visible" : "invisible"
-                        } w-full h-screen fixed top-0 left-0 z-50 bg-[#0000002a] transition-all duration-300 flex items-center justify-center`}>
+                        } w-full h-screen fixed top-0 left-0 z-50 bg-neutral-90/70 backdrop-blur-sm  transition-all duration-300 flex items-center justify-center`}>
                     <div
                         onClick={(e) => e.stopPropagation()}
                         className={`${isContactUsModalOpen ? "section scale-[1] opacity-100" : "scale-[0] opacity-0"
-                            } w-full max-w-[1060px] h-full max-h-[90%] xl:max-h-[580px] bg-white rounded-2xl transition-all duration-300 mx-auto p-5 flex flex-col-reverse md:flex-row items-center gap-9 font-Inter ${isContactUsModalOpen ? "overflow-y-auto md:overflow-hidden" : "overflow-hidden"
+                            } w-full max-w-[1060px] h-full max-h-[90%] xl:max-h-[615px] bg-white rounded-2xl transition-all duration-300 mx-auto p-5 flex flex-col-reverse md:flex-row items-center gap-9 font-Inter ${isContactUsModalOpen ? "overflow-y-auto md:overflow-hidden" : "overflow-hidden"
                             } scrollbar-thin scrollbar-thumb-[#03253B] scrollbar-track-transparent`}
                     >
                         <div className="relative h-full w-full xl:w-[45%] hidden lg:flex flex-col items-center justify-center">
