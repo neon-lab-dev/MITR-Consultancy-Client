@@ -209,12 +209,12 @@ const OurServices = () => {
   return (
     <div
       id="services"
-      className="relative pb-[128px]  bg-white section h-full"
+      className="relative pb-16 xl:pb-[128px] bg-white section h-full"
     >
       <Image
         src={IMAGES.gradientBg}
         alt="MITRA Consultancy Services"
-        className="w-full h-full object-cover rounded-b-[50px] absolute z-0"
+        className="w-full h-full object-cover rounded-b-3xl xl:rounded-b-[50px] absolute z-0"
       />
       <div className="relative z-20 pt-[100px]">
         <Container>

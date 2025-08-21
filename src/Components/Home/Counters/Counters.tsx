@@ -41,17 +41,16 @@ const Counters = () => {
   };
 
   return (
-    <div className="bg-gradient-counters  py-[64px] font-Inter" ref={ref}>
+    <div className="bg-gradient-counters py-[64px] font-Inter flex flex-col items-center justify-center" ref={ref}>
       <Container>
         <motion.div
           initial="hidden"
           animate={controls}
           variants={containerVariants}
-          className="flex flex-col items-center justify-center"
         >
           <Heading heading="The MITRA Milestones" align="center" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center gap-10 lg:gap-0 justify-between mt-[72px] flex-wrap gap-y-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 items-center justify-center mt-10 md:mt-[72px] gap-x-8 lg:gap-x-12 gap-y-12">
             {counterData.map((data, index) => (
               <motion.div
                 key={index}
@@ -79,13 +78,13 @@ const Counters = () => {
 
                   <AnimatedCounter
                     target={data.value}
-                    className="font-extrabold text-neutral-10 text-[52px] mt-6"
+                    className="font-extrabold text-neutral-10 text-2xl md:text-4xl lg:text-[52px] mt-6"
                   />
-                  <p className="text-neutral-160 text-2xl mt-1">{data.title}</p>
+                  <p className="text-neutral-160 text-sm lg:text-2xl mt-1">{data.title}</p>
                 </div>
 
                 {index < counterData.length - 1 && (
-                  <div className="w-1 h-16 bg-primary-85 hidden lg:block" />
+                  <div className="w-1 h-16 bg-primary-85 hidden md:block" />
                 )}
               </motion.div>
             ))}
