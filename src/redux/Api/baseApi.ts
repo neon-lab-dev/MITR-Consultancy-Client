@@ -2,7 +2,7 @@ import { BaseQueryFn, createApi, FetchBaseQueryError, FetchArgs, fetchBaseQuery 
 
 const baseQuery: BaseQueryFn<FetchArgs, unknown, FetchBaseQueryError> = async (args, api, extraOptions) => {
   const rawBaseQuery = fetchBaseQuery({
-    baseUrl: 'https://mitr-backend.vercel.app/api/v1',
+    baseUrl: 'https://mitra-backend.vercel.app/api/v1',
     credentials: 'include',
   });
 
