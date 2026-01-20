@@ -1,21 +1,29 @@
+import { IMAGES } from "@/assets";
+import Image from "next/image";
+
 // FeatureCard.tsx
 type TTrustAndResultCardProps = {
   title: string;
   description: string;
+  classNames?: string;
 };
 
 const TrustAndResultCard = ({
   title,
   description,
+  classNames
 }: TTrustAndResultCardProps) => {
   return (
-    <div
-      style={{ boxShadow: "0px 0px 50px -13px rgba(0, 0, 0, 0.20)" }}
-      className="p-6 bg-white rounded-2xl font-Inter flex flex-col gap-[21px]"
-    >
-      <h3 className="font-medium text-base text-neutral-145">{title}</h3>
-      <div className="w-16 h-[5px] rounded-[30px] bg-secondary-20" />
-      <p className="text-sm font-Inter text-neutral-55">{description}</p>
+    <div className={`font-Satoshi relative w-[282px] h-[448px] ${classNames}`}>
+      <Image
+        src={IMAGES.complianceSolutionCard}
+        alt=""
+        className="w-full h-full absolute z-0"
+      />
+      <div className="relative flex flex-col items-center justify-center gap-6 text-white p-4 h-full">
+        <h3 className="font-medium text-[22px]">{title}</h3>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };
