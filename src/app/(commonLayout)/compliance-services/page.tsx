@@ -13,28 +13,28 @@ const CybersecurityCompliance = () => {
   const images = [
     {
       image: IMAGES.iso27001,
-      size: "w-16 md:w-[120px] lg:w-48 xl:w-[150px] 2xl:w-52",
+      size: "",
     },
     {
       image: IMAGES.soc2,
-      size: "w-16 md:w-[120px] lg:w-48 2xl:w-64",
-    },
-    {
-      image: IMAGES.hippa,
-      size: "w-16 md:w-[120px] lg:w-48 2xl:w-72",
+      size: "",
     },
     {
       image: IMAGES.gdpr,
-      size: "w-16 md:w-[120px] lg:w-48 2xl:w-64",
+      size: "",
     },
   ];
   return (
     <div>
       <CybersecurityComplianceHero />
       {/* Images */}
-      <div className="w-full  mt-10 border-b pb-8">
+      <div className="w-full bg-gradient-compliance-logo py-[150px]">
         <Container>
-          <div className="flex justify-between items-center gap-4 z-10 max-w-[1000px] 2xl:max-w-full mx-auto">
+          <div className="flex items-center justify-between">
+            <h1 className="font-Inter text-white leading-8 md:leading-[48px] text-[24px] md:text-[38px] font-extrabold max-w-full md:max-w-[360px]">
+             Trusted by compliance-driven organizations
+            </h1>
+            <div className="flex justify-between items-center gap-12 z-10">
             {images?.map((image, index) => (
               <Image
                 key={index}
@@ -43,6 +43,7 @@ const CybersecurityCompliance = () => {
                 className={`${image.size}`}
               />
             ))}
+          </div>
           </div>
         </Container>
       </div>

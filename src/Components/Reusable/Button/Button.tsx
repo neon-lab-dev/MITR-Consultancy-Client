@@ -16,9 +16,9 @@ const Button = ({
       onClick={handleClick}
       className={`${
         variant === "primary"
-          ? "bg-primary-20 border-primary-20 text-white"
-          : "text-white border-white"
-      } border px-6 py-3 font-Inter text-base 2xl:text-lg font-medium rounded items-center justify-center flex ${classNames}`}
+          ? "bg-neutral-180 text-primary-10 hover:text-white"
+          : "text-white border hover:border-primary-10"
+      } hover:bg-primary-20 transition duration-300 px-6 py-3 font-Inter font-medium rounded-xl items-center justify-center flex ${classNames}`}
     >
       {title}
     </button>

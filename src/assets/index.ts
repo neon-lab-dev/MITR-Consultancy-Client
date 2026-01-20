@@ -13,8 +13,7 @@ import myProfileBg from "../assets/Images/my-profile-bg.png";
 import learningOutcomes from "../assets/Images/learning-outcome.png";
 import benefits from "../assets/Images/benefits.png";
 import certification from "../assets/Images/ist-certificate.png.png";
-import cybersecurityComplianceHeroImg from "../assets/Images/CybersecurityComplianceHeroimg.svg";
-import cyberSecurity from "../assets/Images/cyber-security.png";
+import complianceServiceHero from "../assets/Images/compliance-service-hero.webp";
 import secureCompliance from "../assets/Images/Frame 38127.png";
 import featureIcon from "../assets/Icons/featureIcon.svg";
 import satisfied from "../assets/Icons/satisfied.svg";
@@ -170,10 +169,10 @@ import uiUxImg from "../assets/Images/ui-ux.jpg";
 import purposeOfProgramme from "../assets/Images/purpose-of-programme.png";
 import security from "../assets/Images/security.svg";
 import cybersecurityBanner from "../assets/Images/cybersecurity.jpg";
-import iso27001 from "../assets/Images/iso-iec-27001.png";
-import soc2 from "../assets/Images/soc-2.png";
+import iso27001 from "../assets/Images/iso-iec-27001.webp";
+import soc2 from "../assets/Images/soc-2.webp";
 import hippa from "../assets/Images/hippa.png";
-import gdpr from "../assets/Images/gdpr.png";
+import gdpr from "../assets/Images/gdpr.webp";
 import emailSecurity from "../assets/Images/email-security.png";
 import endpointSecurity2 from "../assets/Images/endpoint-security.png";
 import cloudSecurity2 from "../assets/Images/cloud-security.png";
@@ -218,8 +217,7 @@ export const IMAGES = {
   learningOutcomes,
   benefits,
   certification,
-  cybersecurityComplianceHeroImg,
-  cyberSecurity,
+  complianceServiceHero,
   secureCompliance,
   security,
   cybersecurityBanner,

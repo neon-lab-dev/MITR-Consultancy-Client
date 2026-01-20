@@ -35,6 +35,7 @@ export default {
           20: "#253DAB",
         },
         neutral: {
+          5 : '#000000',
           10: "#333",
           20: "#494949",
           25: "#717179",
@@ -67,6 +68,7 @@ export default {
           165: "#111111BF",
           170: "#253DAB40",
           175: "#ffffff99",
+          180: "#E7F0FF",
         },
         error: {
           10: "#FC464663",
@@ -94,6 +96,8 @@ export default {
           "linear-gradient(180deg, #FCF9F2 0%, #FFF 100%);",
         "gradient-compliance-card":
           "linear-gradient(270deg, #FFF -0.6%, #B2E0FF 99.23%);",
+        "gradient-compliance-logo":
+          "linear-gradient(96deg, #074CB3 0%, #010A18 100%);",
       },
     },
   },
