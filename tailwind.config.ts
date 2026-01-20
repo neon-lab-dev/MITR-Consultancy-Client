@@ -28,6 +28,7 @@ export default {
           85: "#DBEAFE",
           90: "#253DAB05",
           95: "#D4D3D805",
+          100: "#71AAFF",
         },
         secondary: {
           10: "#FF9900",
@@ -69,6 +70,8 @@ export default {
           170: "#253DAB40",
           175: "#ffffff99",
           180: "#E7F0FF",
+          185: "#0D0D0D",
+          190: "#DEDEDE",
         },
         error: {
           10: "#FC464663",
@@ -76,6 +79,7 @@ export default {
       },
       fontFamily: {
         Inter: ["Inter", "serif"],
+         Satoshi: ["Satoshi", "sans-serif"],
       },
       boxShadow: {
         "service-card": " 0px 0px 65px 0px rgba(0, 153, 255, 0.12)",

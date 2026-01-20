@@ -1,6 +1,6 @@
 "use client";
 import { ICONS } from "@/assets";
-import Heading from "@/Components/Reusable/Heading/Heading";
+import StyledHeading from "@/Components/Reusable/StyledHeading/StyledHeading";
 import Container from "@/Components/Shared/Container/Container";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -314,10 +314,10 @@ const ComplianceSolutions = ({heading} : {heading: string}) => {
   )?.data;
 
   return (
-    <div className="py-[100px] font-Inter">
+    <div className="py-[100px] font-Inter bg-neutral-185">
       <Container>
         <div>
-          <Heading heading={heading} align="center" />
+          <StyledHeading heading="Compliance Solutions Across " stylesHeading="Sectors" />
 
           <div className="flex flex-col xl:flex-row items-center gap-6 mt-[60px]">
             {/* Compliance Solutions */}

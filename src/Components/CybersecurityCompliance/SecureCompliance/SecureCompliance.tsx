@@ -1,11 +1,23 @@
 "use client";
-import { IMAGES } from "@/assets";
-import Button from "@/Components/Reusable/Button/Button";
-import Heading from "@/Components/Reusable/Heading/Heading";
+import { ICONS, IMAGES } from "@/assets";
+import StyledHeading from "@/Components/Reusable/StyledHeading/StyledHeading";
 import Container from "@/Components/Shared/Container/Container";
 import Image from "next/image";
 import React, { useState } from "react";
 
+const StyledTitle = ({
+  title,
+  stylesTitle,
+}: {
+  title: string;
+  stylesTitle: string;
+}) => {
+  return (
+    <h2 className="font-Satoshi text-neutral-185 font-extrabold text-lg">
+      {title} <span className="text-primary-10">{stylesTitle}</span>
+    </h2>
+  );
+};
 const SecureCompliance = () => {
   const [activeTab, setActiveTab] = useState("ISO 27001");
   const tabButtons = [
@@ -24,14 +36,10 @@ const SecureCompliance = () => {
       key: "ISO 27001",
       sections: [
         {
-          title: (
-            <h1 className="text-black font-semibold">
-              About{" "}
-              <span className="text-secondary-20 text-2xl font-extrabold">
-                ISO 27001
-              </span>
-            </h1>
-          ),
+          title: {
+            normal: "About",
+            highlight: "ISO 27001",
+          },
           details: [
             "Establish a robust information security management system (ISMS) to protect sensitive data",
             "Implement security controls and risk management processes aligned with ISO 27001 standards",
@@ -39,10 +47,12 @@ const SecureCompliance = () => {
             "Enhance organizational resilience and safeguard against cyber threats and data breaches",
           ],
         },
+
         {
-          title: (
-            <h1 className="text-black font-semibold">Why do you need us?</h1>
-          ),
+          title: {
+            normal: "How We Strengthen Your",
+            highlight: "Security & Compliance Posture?",
+          },
           details: [
             "Ensure the confidentiality, integrity, and availability of your organisation's information assets.",
             "Mitigate risks associated with data breaches, cyber attacks, and regulatory non-compliance.",
@@ -50,24 +60,27 @@ const SecureCompliance = () => {
             "Differentiate your organisation in the marketplace and gain a competitive advantage.",
           ],
         },
+      ],
+
+      industriesAndGeographies: [
         {
-          title: <h1 className="text-black font-semibold">Geographies</h1>,
-          details: [
-            "India",
-            "United States of America",
-            "United Kingdom",
-            "European Union",
-            "Global",
-          ],
-        },
-        {
-          title: <h1 className="text-black font-semibold">Industries</h1>,
-          details: [
+          title: "Industries",
+          pointers: [
             "Finance Industries",
             "SaaS Industries",
             "Healthcare Industries",
             "B2B Industries",
             "All Industries",
+          ],
+        },
+        {
+          title: "Geographies",
+          pointers: [
+            "India",
+            "United States of America",
+            "United Kingdom",
+            "European Union",
+            "Global",
           ],
         },
       ],
@@ -76,35 +89,34 @@ const SecureCompliance = () => {
       key: "SOC2",
       sections: [
         {
-          title: (
-            <h1 className="text-black font-semibold">
-              About{" "}
-              <span className="text-secondary-20 text-2xl font-extrabold">
-                SOC2
-              </span>
-            </h1>
-          ),
+          title: {
+            normal: "About",
+            highlight: "SOC2",
+          },
           details: [
-            "Perform frequent reviews of internal controls and workflows to maintain data protection",
-            "Establish security guidelines and protocols in accordance with SOC2 standards",
-            "Strengthen client and stakeholder trust by achieving SOC2 compliance",
-            "Improve market standing and reliability through SOC2 certification",
+            "Implement a system of controls to manage and protect sensitive data",
+            "Ensure security, availability, processing integrity, confidentiality, and privacy of information",
+            "Obtain SOC2 certification to demonstrate adherence to industry-standard practices",
+            "Reduce the risk of data breaches and maintain trust with clients and partners",
           ],
         },
         {
-          title: (
-            <h1 className="text-black font-semibold">Why do you need us?</h1>
-          ),
+          title: {
+            normal: "Why do you need",
+            highlight: "us?",
+          },
           details: [
-            "Safeguard confidential data and customer details against unauthorized access",
-            "Showcase your dedication to data protection and compliance with regulations",
-            "Secure a competitive advantage and earn the confidence of prospective clients and partners",
-            "Maintain the integrity, availability, and confidentiality of your organisation's systems and information",
+            "Ensure your organization meets rigorous security and compliance standards",
+            "Build credibility and trust with clients by demonstrating control effectiveness",
+            "Mitigate risks associated with data breaches, unauthorized access, and operational failures",
+            "Maintain a competitive advantage by showcasing strong internal controls",
           ],
         },
+      ],
+      industriesAndGeographies: [
         {
-          title: <h1 className="text-black font-semibold">Geographies</h1>,
-          details: [
+          title: "Geographies",
+          pointers: [
             "India",
             "United States of America",
             "United Kingdom",
@@ -113,8 +125,8 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: <h1 className="text-black font-semibold">Industries</h1>,
-          details: [
+          title: "Industries",
+          pointers: [
             "Finance Industries",
             "SaaS Industries",
             "Healthcare Industries",
@@ -128,14 +140,10 @@ const SecureCompliance = () => {
       key: "HIPAA",
       sections: [
         {
-          title: (
-            <h1 className="text-black font-semibold">
-              About{" "}
-              <span className="text-secondary-20 text-2xl font-extrabold">
-                HIPAA
-              </span>
-            </h1>
-          ),
+          title: {
+            normal: "About",
+            highlight: "HIPAA",
+          },
           details: [
             "Secure protected health information (PHI) using encryption and controlled access",
             "Establish policies and protocols to comply with HIPAA standards",
@@ -144,9 +152,10 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: (
-            <h1 className="text-black font-semibold">Why do you need us?</h1>
-          ),
+          title: {
+            normal: "Why do you need",
+            highlight: "us?",
+          },
           details: [
             "Guarantee the protection and confidentiality of patient health data",
             "Prevent expensive fines and legal issues due to HIPAA breaches",
@@ -154,9 +163,11 @@ const SecureCompliance = () => {
             "Showcase your dedication to upholding rigorous data security standards",
           ],
         },
+      ],
+      industriesAndGeographies: [
         {
-          title: <h1 className="text-black font-semibold">Geographies</h1>,
-          details: [
+          title: "Geographies",
+          pointers: [
             "India",
             "United States of America",
             "United Kingdom",
@@ -165,8 +176,8 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: <h1 className="text-black font-semibold">Industries</h1>,
-          details: [
+          title: "Industries",
+          pointers: [
             "Finance Industries",
             "SaaS Industries",
             "Healthcare Industries",
@@ -180,14 +191,10 @@ const SecureCompliance = () => {
       key: "GDPR",
       sections: [
         {
-          title: (
-            <h1 className="text-black font-semibold">
-              About{" "}
-              <span className="text-secondary-20 text-2xl font-extrabold">
-                GDPR
-              </span>
-            </h1>
-          ),
+          title: {
+            normal: "About",
+            highlight: "GDPR",
+          },
           details: [
             "Apply data security practices such as encryption and pseudonymization",
             "Secure clear consent for data processing and maintain transparency in handling information",
@@ -196,9 +203,10 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: (
-            <h1 className="text-black font-semibold">Why do you need us?</h1>
-          ),
+          title: {
+            normal: "Why do you need",
+            highlight: "us?",
+          },
           details: [
             "Safeguard personal information and privacy rights in accordance with GDPR",
             "Strengthen data security measures to reduce the chance of breaches",
@@ -206,9 +214,11 @@ const SecureCompliance = () => {
             "Keep up with regulatory updates to retain a market advantage",
           ],
         },
+      ],
+      industriesAndGeographies: [
         {
-          title: <h1 className="text-black font-semibold">Geographies</h1>,
-          details: [
+          title: "Geographies",
+          pointers: [
             "India",
             "United States of America",
             "United Kingdom",
@@ -217,8 +227,8 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: <h1 className="text-black font-semibold">Industries</h1>,
-          details: [
+          title: "Industries",
+          pointers: [
             "Finance Industries",
             "SaaS Industries",
             "Healthcare Industries",
@@ -232,14 +242,10 @@ const SecureCompliance = () => {
       key: "DPDP’23",
       sections: [
         {
-          title: (
-            <h1 className="text-black font-semibold">
-              About{" "}
-              <span className="text-secondary-20 text-2xl font-extrabold">
-                DPDP’23
-              </span>
-            </h1>
-          ),
+          title: {
+            normal: "About",
+            highlight: "DPDP’23",
+          },
           details: [
             "Adopt data security strategies to comply with Data Protection and Privacy Regulations",
             "Protect personal information using encryption, access restrictions, and data minimization",
@@ -248,9 +254,10 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: (
-            <h1 className="text-black font-semibold">Why do you need us?</h1>
-          ),
+          title: {
+            normal: "Why do you need",
+            highlight: "us?",
+          },
           details: [
             "Safeguard personal information and privacy rights according to DPDP regulations",
             "Improve data protection measures to reduce the likelihood of breaches",
@@ -258,9 +265,11 @@ const SecureCompliance = () => {
             "Keep pace with regulatory updates to sustain a competitive advantage",
           ],
         },
+      ],
+      industriesAndGeographies: [
         {
-          title: <h1 className="text-black font-semibold">Geographies</h1>,
-          details: [
+          title: "Geographies",
+          pointers: [
             "India",
             "United States of America",
             "United Kingdom",
@@ -269,8 +278,8 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: <h1 className="text-black font-semibold">Industries</h1>,
-          details: [
+          title: "Industries",
+          pointers: [
             "Finance Industries",
             "SaaS Industries",
             "Healthcare Industries",
@@ -284,14 +293,10 @@ const SecureCompliance = () => {
       key: "GRC Automation",
       sections: [
         {
-          title: (
-            <h1 className="text-black font-semibold">
-              About{" "}
-              <span className="text-secondary-20 text-2xl font-extrabold">
-                GRC Automation
-              </span>
-            </h1>
-          ),
+          title: {
+            normal: "About",
+            highlight: "GRC Automation",
+          },
           details: [
             "Automate governance, risk, and compliance workflows to optimize operations",
             "Deploy GRC Automation solutions to maintain regulatory adherence and minimize manual tasks",
@@ -300,9 +305,10 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: (
-            <h1 className="text-black font-semibold">Why do you need us?</h1>
-          ),
+          title: {
+            normal: "Why do you need",
+            highlight: "us?",
+          },
           details: [
             "Boost productivity and cut operational expenses through GRP process automation",
             "Maintain uniformity and standardization in compliance activities throughout the organisation",
@@ -310,9 +316,11 @@ const SecureCompliance = () => {
             "Utilize technology to proactively detect and manage risks within your business environment",
           ],
         },
+      ],
+      industriesAndGeographies: [
         {
-          title: <h1 className="text-black font-semibold">Geographies</h1>,
-          details: [
+          title: "Geographies",
+          pointers: [
             "India",
             "United States of America",
             "United Kingdom",
@@ -321,8 +329,8 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: <h1 className="text-black font-semibold">Industries</h1>,
-          details: [
+          title: "Industries",
+          pointers: [
             "Finance Industries",
             "SaaS Industries",
             "Healthcare Industries",
@@ -336,14 +344,10 @@ const SecureCompliance = () => {
       key: "PCI DSS",
       sections: [
         {
-          title: (
-            <h1 className="text-black font-semibold">
-              About{" "}
-              <span className="text-secondary-20 text-2xl font-extrabold">
-                PCI DSS
-              </span>
-            </h1>
-          ),
+          title: {
+            normal: "About",
+            highlight: "PCI DSS",
+          },
           details: [
             "Protect payment card information using encryption, access restrictions, and network segmentation",
             "Adhere to PCI DSS requirements to secure sensitive cardholder data",
@@ -352,9 +356,10 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: (
-            <h1 className="text-black font-semibold">Why do you need us?</h1>
-          ),
+          title: {
+            normal: "Why do you need",
+            highlight: "us?",
+          },
           details: [
             "Safeguard sensitive payment card information and block unauthorized access to cardholder data",
             "Build customer trust and credibility by guaranteeing secure payment processing",
@@ -362,9 +367,11 @@ const SecureCompliance = () => {
             "Maintain compliance with industry standards and uphold a competitive advantage in the market",
           ],
         },
+      ],
+      industriesAndGeographies: [
         {
-          title: <h1 className="text-black font-semibold">Geographies</h1>,
-          details: [
+          title: "Geographies",
+          pointers: [
             "India",
             "United States of America",
             "United Kingdom",
@@ -373,8 +380,8 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: <h1 className="text-black font-semibold">Industries</h1>,
-          details: [
+          title: "Industries",
+          pointers: [
             "Finance Industries",
             "SaaS Industries",
             "Healthcare Industries",
@@ -388,14 +395,10 @@ const SecureCompliance = () => {
       key: "CCPA",
       sections: [
         {
-          title: (
-            <h1 className="text-black font-semibold">
-              About{" "}
-              <span className="text-secondary-20 text-2xl font-extrabold">
-                CCPA
-              </span>
-            </h1>
-          ),
+          title: {
+            normal: "About",
+            highlight: "CCPA",
+          },
           details: [
             "Safeguard consumer privacy rights and foster trust with your clientele",
             "Improve data governance and transparency in managing personal data",
@@ -404,9 +407,10 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: (
-            <h1 className="text-black font-semibold">Why do you need us?</h1>
-          ),
+          title: {
+            normal: "Why do you need",
+            highlight: "us?",
+          },
           details: [
             "Adopt data privacy practices to meet California Consumer Privacy Act (CCPA) standards",
             "Offer consumers clear visibility and control over their personal data",
@@ -414,9 +418,11 @@ const SecureCompliance = () => {
             "Reduce the risk of legal penalties and fines stemming from CCPA violations",
           ],
         },
+      ],
+      industriesAndGeographies: [
         {
-          title: <h1 className="text-black font-semibold">Geographies</h1>,
-          details: [
+          title: "Geographies",
+          pointers: [
             "India",
             "United States of America",
             "United Kingdom",
@@ -425,8 +431,8 @@ const SecureCompliance = () => {
           ],
         },
         {
-          title: <h1 className="text-black font-semibold">Industries</h1>,
-          details: [
+          title: "Industries",
+          pointers: [
             "Finance Industries",
             "SaaS Industries",
             "Healthcare Industries",
@@ -438,7 +444,7 @@ const SecureCompliance = () => {
     },
   ];
 
-  const activeData = tabs.find((item) => item.key === activeTab)?.sections;
+  const activeData = tabs.filter((item) => item.key === activeTab);
 
   return (
     <div className="font-Inter relative">
@@ -450,61 +456,86 @@ const SecureCompliance = () => {
 
       <Container>
         <div className="z-10 relative py-[100px]">
-          <Heading heading={"Secure Compliance, Simplified"} align="center" />
-
-          <div className="flex items-center justify-center gap-6 mt-[60px] w-full overflow-x-auto custom-section-scrollbar text-nowrap">
-            {tabButtons?.map((item) => (
-              <button
-                key={item}
-                onClick={() => setActiveTab(item)}
-                className={`text-primary-10 font-medium rounded-lg px-6 py-2 ${
-                  activeTab === item
-                    ? "bg-primary-10 text-white"
-                    : "bg-white text-primary-10"
-                }`}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-
-          <div className="bg-neutral-135 border border-neutral-130 rounded-t-xl p-6 grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
-            {activeData?.map((item, index) => (
-              <div key={index}>
-                {item?.title}
-                <div
-                  className={`${
-                    index > 1
-                      ? "grid grid-cols-1 md:grid-cols-2"
-                      : "grid-cols-1"
-                  } gap-1`}
-                >
-                  {item?.details?.map((details, index2) => (
-                    <div key={details} className="flex mt-4">
-                      <div className="bg-neutral-140 border border-l-neutral-140 rounded-l-xl px-2 py-3 flex items-center justify-center">
-                        <p>{index2 + 1}</p>
-                      </div>
-                      <div className=" rounded-r-xl p-2  flex items-center">
-                        <p className="text-black text-sm">{details}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+          <div className="flex w-full">
+            {/* Left side */}
+            <div className="w-[40%]">
+              <div className="max-w-[300px]">
+                <StyledHeading
+                  align="left"
+                  heading="Secure Compliance,"
+                  stylesHeading="Simplified"
+                />
               </div>
-            ))}
-          </div>
+              <div className="flex flex-col items-start gap-12 mt-12">
+                {tabButtons?.map((item) => (
+                  <button
+                    key={item}
+                    onClick={() => setActiveTab(item)}
+                    className={`text-neutral-130 font-bold text-lg`}
+                  >
+                    {item}
+                    {activeTab === item && (
+                      <div className="w-[54px] h-1 bg-primary-100 rounded-3xl"></div>
+                    )}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-          <div className="bg-neutral-130 h-[100px] flex items-center justify-center rounded-b-xl">
-            <Button
-              handleClick={() =>
-                document
-                  .getElementById("complianceAssessment")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              variant="primary"
-              title="Talk To Us"
-              classNames="w-auto px-16 py-[10px]"
-            />
+            <div className="bg-neutral-190 border border-neutral-130 pl-14 pt-14 pb-[143px] flex flex-col gap-12 w-[60%]">
+              {activeData?.map((item, index) => (
+                <div key={index} className="flex flex-col gap-6">
+                  <div>
+                    <h1 className="text-neutral-185 text-[38px] font-Satoshi font-extrabold">
+                      {item?.key}
+                    </h1>
+                    <div className="w-[124px] h-1 bg-primary-10 rounded-3xl"></div>
+                  </div>
+
+                  <div className="flex flex-col gap-12">
+                    {item?.sections?.map((section, index) => (
+                      <div key={index}>
+                        <StyledTitle
+                          title={section.title.normal}
+                          stylesTitle={section.title.highlight}
+                        />
+
+                        <div className="space-y-3 mt-3">
+                          {section?.details?.map((pointer) => (
+                            <div key={pointer} className="flex gap-2">
+                              <Image
+                                src={ICONS.tickMarkBlue}
+                                alt="blue-tick-mark"
+                              />
+                              <p className="text-black text-sm">{pointer}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Industries & Geographies */}
+
+                  <div className="flex gap-20">
+                    {item?.industriesAndGeographies?.map((info, idx) => (
+                      <div key={idx}>
+                        <h2 className="font-Satoshi text-neutral-185 font-extrabold text-lg">
+                          {info?.title}
+                        </h2>
+                        <div className="space-y-3 mt-3">
+                          {info?.pointers?.map((pointer) => (
+                            <p key={pointer} className="text-black text-sm">
+                              {pointer}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Container>

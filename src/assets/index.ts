@@ -14,7 +14,7 @@ import learningOutcomes from "../assets/Images/learning-outcome.png";
 import benefits from "../assets/Images/benefits.png";
 import certification from "../assets/Images/ist-certificate.png.png";
 import complianceServiceHero from "../assets/Images/compliance-service-hero.webp";
-import secureCompliance from "../assets/Images/Frame 38127.png";
+import secureCompliance from "../assets/Images/secure compliance-bg.webp";
 import featureIcon from "../assets/Icons/featureIcon.svg";
 import satisfied from "../assets/Icons/satisfied.svg";
 import medal from "../assets/Icons/medel.svg";
@@ -29,6 +29,7 @@ import experience from "../assets/Icons/experience.svg";
 import secured from "../assets/Icons/secured.svg";
 import partners from "../assets/Icons/partners.svg";
 import verified from "../assets/Icons/verified.svg";
+import tickMarkBlue from "../assets/Icons/tick-mark-blue.svg";
 
 // Services
 import cart from "../assets/Icons/cart.svg";
@@ -138,7 +139,7 @@ import careerHub from "../assets/Images/Projects/careerHub.png";
 import blogWebsite from "../assets/Images/Projects/blog.png";
 import bonhomie from "../assets/Images/Projects/bonhomie.png";
 
-// Cleintts
+// Clients
 import abhirami from "../assets/Images/Clients/Mask group.png";
 import ramsun from "../assets/Images/Clients/WhatsApp Image 2024-12-28 at 13.03.05_0d95a6bc 7.png";
 import agriculture from "../assets/Images/Clients/image 1.png";
@@ -407,4 +408,5 @@ export const ICONS = {
   nonProfits,
 
   verified,
+ tickMarkBlue ,
 };
