@@ -203,6 +203,7 @@ import endpointSecurity4 from "../assets/Images/endpoint-security2.webp";
 import endpointSecurity3 from "../assets/Images/endpoint-security3.webp";
 import linnerColorBg from "../assets/Images/linner-color-bg.webp";
 import complianceSolutionCard from "../assets/Images/compliance-solution-card-bg.webp";
+import dummyTestimonialImg from "../assets/Images/dummy-testimonial-img.png";
 
 export const IMAGES = {
   MITRConsoltancyLogo,
@@ -299,6 +300,7 @@ export const IMAGES = {
   emailSecurityImportance,
   linnerColorBg,
   complianceSolutionCard,
+  dummyTestimonialImg,
 };
 
 export const ICONS = {
