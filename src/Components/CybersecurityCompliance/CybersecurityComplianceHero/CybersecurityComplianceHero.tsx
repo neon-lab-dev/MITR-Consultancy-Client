@@ -4,11 +4,12 @@ import ContactUs from "@/Components/Home/ContactUs/ContactUs";
 import Button from "@/Components/Reusable/Button/Button";
 import Container from "@/Components/Shared/Container/Container";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const CybersecurityComplianceHero = () => {
   const [isContactUsModalOpen, setIsContactUsModalOpen] =
     useState<boolean>(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const features = [
     "Security Experts",
@@ -17,17 +18,50 @@ const CybersecurityComplianceHero = () => {
     "Robust Updation",
   ];
 
+  const heroImages = [
+    IMAGES.complianceServiceHero,
+    IMAGES.complianceServiceHero2,
+    IMAGES.complianceServiceHero3,
+    IMAGES.complianceServiceHero4,
+  ];
+
+  // Auto slide effect - change image every 2 seconds
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1,
+      );
+    }, 2000); // Change image every 2 seconds
+
+    return () => clearInterval(slideInterval);
+  }, [heroImages.length]);
+
   return (
-    <div className="font-Inter relative h-[1100px] xl:h-[850px] 2xl:h-[890px]">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={IMAGES.complianceServiceHero}
-          alt="MITRA Consultancy"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
+    <div className="font-Inter relative h-[1100px] xl:h-[850px] 2xl:h-[890px] overflow-hidden">
+      {/* Background Images Carousel - Continuous Left Scroll */}
+      <div
+        className="absolute inset-0 z-0 flex"
+        style={{
+          width: `${heroImages.length * 100}%`,
+          transform: `translateX(-${currentImageIndex * (100 / heroImages.length)}%)`,
+          transition: "transform 1s ease-in-out",
+        }}
+      >
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className="relative w-full h-full flex-shrink-0"
+            style={{ width: `${100 / heroImages.length}%` }}
+          >
+            <Image
+              src={image}
+              alt={`MITRA Consultancy ${index + 1}`}
+              layout="fill"
+              objectFit="cover"
+              priority={index === 0}
+            />
+          </div>
+        ))}
       </div>
 
       {/* Overlay */}
@@ -69,11 +103,8 @@ const CybersecurityComplianceHero = () => {
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-12 z-10 max-w-fit">
             {features?.map((feature, index) => (
-              <div
-                key={feature}
-                className="text-white/75 flex flex-col gap-6"
-              >
-                <span>0{index+1}</span>
+              <div key={feature} className="text-white/75 flex flex-col gap-6">
+                <span>0{index + 1}</span>
                 <p>{feature}</p>
               </div>
             ))}

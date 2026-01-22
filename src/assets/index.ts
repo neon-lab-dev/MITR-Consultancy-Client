@@ -13,7 +13,10 @@ import myProfileBg from "../assets/Images/my-profile-bg.png";
 import learningOutcomes from "../assets/Images/learning-outcome.png";
 import benefits from "../assets/Images/benefits.png";
 import certification from "../assets/Images/ist-certificate.png.png";
-import complianceServiceHero from "../assets/Images/compliance-service-hero.webp";
+import complianceServiceHero from "../assets/Images/compliance-service-hero1.webp";
+import complianceServiceHero2 from "../assets/Images/compliance-service-hero2.webp";
+import complianceServiceHero3 from "../assets/Images/compliance-service-hero3.webp";
+import complianceServiceHero4 from "../assets/Images/compliance-service-hero4.webp";
 import secureCompliance from "../assets/Images/secure compliance-bg.webp";
 import featureIcon from "../assets/Icons/featureIcon.svg";
 import satisfied from "../assets/Icons/satisfied.svg";
@@ -223,6 +226,9 @@ export const IMAGES = {
   benefits,
   certification,
   complianceServiceHero,
+  complianceServiceHero2,
+  complianceServiceHero3,
+  complianceServiceHero4,
   secureCompliance,
   security,
   cybersecurityBanner,

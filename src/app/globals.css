@@ -75,6 +75,10 @@
   clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 80%);
 }
 
+.animation {
+  slide-left: 'slide-left 20s linear infinite',
+}
+
 @font-face {
   font-family: "Satoshi";
   src: url("/fonts/satoshi/Satoshi-Regular.otf") format("opentype");
@@ -114,3 +118,14 @@
   font-style: normal;
   font-display: swap;
 }
+
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
