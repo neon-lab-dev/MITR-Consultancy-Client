@@ -3,7 +3,7 @@ import ComplianceSolutions from "@/Components/CybersecurityCompliance/Compliance
 import LetsTalk from "@/Components/Home/LetsTalk/LetsTalk";
 import MitrasEdge from "@/Components/Security/MitrasEdge/MitrasEdge";
 import SecurityHero from "@/Components/Security/SecurityHero/SecurityHero";
-import SecurityService from "@/Components/Security/SecurityService/SecurityService";
+import ManagedSecurityServices from "@/Components/SecurityServices/ManagedSecurityServices/ManagedSecurityServices";
 import FAQ from "@/Components/Shared/FAQ/FAQ";
 
 type FAQItem = {
@@ -59,8 +59,8 @@ const SecurityPage = () => {
   return (
     <div>
       <SecurityHero />
-      <ComplianceSolutions heading="Security Solutions Across Sectors" />
-      <SecurityService />
+      <ComplianceSolutions />
+      <ManagedSecurityServices />
       <ComplianceAssessment />
       <MitrasEdge />
       <FAQ faqsData={faqsData} />

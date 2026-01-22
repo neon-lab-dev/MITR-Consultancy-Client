@@ -205,6 +205,14 @@ import complianceSolutionCard from "../assets/Images/compliance-solution-card-bg
 import dummyTestimonialImg from "../assets/Images/dummy-testimonial-img.png";
 import ctaBg from "../assets/Images/cta-bg.webp";
 import securityServiceHero from "../assets/Images/security-service-hero.gif";
+import siem from "../assets/Images/siem.webp";
+import vapt from "../assets/Images/vapt.webp";
+import xdr from "../assets/Images/xdr.webp";
+import antivirus from "../assets/Images/antivirus.webp";
+import dlp from "../assets/Images/dlp.webp";
+import edr from "../assets/Images/edr.webp";
+import firewall from "../assets/Images/firewall.webp";
+
 
 export const IMAGES = {
   MITRConsoltancyLogo,
@@ -303,6 +311,13 @@ export const IMAGES = {
   dummyTestimonialImg,
   ctaBg,
   securityServiceHero,
+  siem,
+  vapt,
+  xdr,
+  antivirus,
+  dlp,
+  edr,
+  firewall,
 
 };
 

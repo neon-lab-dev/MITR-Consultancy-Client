@@ -21,7 +21,7 @@ const StyledHeading = ({
       leading-6 md:leading-[60px] capitalize max-w-[720px] mx-auto
       ${alignClasses[align]}`}
     >
-      {heading} <span className="text-primary-10">{stylesHeading}</span>
+      {heading} {" "} <span className="text-primary-10">{stylesHeading}</span>
     </h1>
   );
 };
