@@ -57,7 +57,7 @@ const testimonials = [
 
 const CyberSecurityTestimonials = () => {
   return (
-    <div className="py-20 bg-neutral-190 font-Satoshi mb-20 overflow-hidden">
+    <div className="py-24 bg-neutral-190 font-Satoshi overflow-hidden">
       <Heading align="center" heading="Testimonials" />
 
       <div className="mt-[60px]">

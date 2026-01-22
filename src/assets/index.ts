@@ -123,10 +123,10 @@ import vercel from "../assets/Icons/Tools/vercel.svg";
 import figma from "../assets/Icons/Tools/figma.svg";
 
 // Social Icons
-import facebook from "../assets/Icons/facebook logo.svg";
+import facebook from "../assets/Icons/facebook.png";
 import twitter from "../assets/Icons/Twitter logo.svg";
-import linkedin from "../assets/Icons/linkedin logo.svg";
-import instagram from "../assets/Icons/instagram logo.svg";
+import linkedin from "../assets/Icons/linkedin.png";
+import instagram from "../assets/Icons/instagram.png";
 
 import project1 from "../assets/Images/Projects/StudentTiffin.png";
 import project2 from "../assets/Images/Projects/spacefarm.png";
@@ -204,6 +204,7 @@ import endpointSecurity3 from "../assets/Images/endpoint-security3.webp";
 import linnerColorBg from "../assets/Images/linner-color-bg.webp";
 import complianceSolutionCard from "../assets/Images/compliance-solution-card-bg.webp";
 import dummyTestimonialImg from "../assets/Images/dummy-testimonial-img.png";
+import ctaBg from "../assets/Images/cta-bg.webp";
 
 export const IMAGES = {
   MITRConsoltancyLogo,
@@ -301,6 +302,7 @@ export const IMAGES = {
   linnerColorBg,
   complianceSolutionCard,
   dummyTestimonialImg,
+  ctaBg,
 };
 
 export const ICONS = {

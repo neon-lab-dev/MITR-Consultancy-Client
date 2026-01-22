@@ -5,8 +5,8 @@ import CybersecurityComplianceHero from "@/Components/CybersecurityCompliance/Cy
 import CyberSecurityTestimonials from "@/Components/CybersecurityCompliance/CyberSecurityTestimonials/CyberSecurityTestimonials";
 import SecureCompliance from "@/Components/CybersecurityCompliance/SecureCompliance/SecureCompliance";
 import TrustAndResults from "@/Components/CybersecurityCompliance/TrustAndResults/TrustAndResults";
-import LetsTalk from "@/Components/Home/LetsTalk/LetsTalk";
 import Container from "@/Components/Shared/Container/Container";
+import CTA from "@/Components/Shared/CTA/CTA";
 import Image from "next/image";
 
 const CybersecurityCompliance = () => {
@@ -52,7 +52,7 @@ const CybersecurityCompliance = () => {
       <TrustAndResults />
       <ComplianceAssessment />
       <CyberSecurityTestimonials />
-      <LetsTalk />
+      <CTA />
     </div>
   );
 };

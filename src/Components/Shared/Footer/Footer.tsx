@@ -122,53 +122,52 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-primary-50">
+    <div className="bg-neutral-185">
       <Container>
-        <div className="flex flex-col gap-6 font-Inter mt-[151px] py-10">
-          <div className="flex flex-col lg:flex-row gap-14 lg:gap-0 justify-between w-full mt-8">
-            {/* Company info and social links */}
-            <div className="flex flex-col gap-9 max-w-[350px]">
-              <div>
-                <Link href="/">
-                  <Image
-                    src={IMAGES.MITRConsoltancyLogo}
-                    alt="MITRA Consultancy"
-                    className="w-32"
-                  />
-                </Link>
-                <p className="text-neutral-20 mt-4">
-                 MITRA Consultancy provides development, design, cybersecurity, compliance, and 3-month training programs for digital success.
-                </p>
+        <div className="flex flex-col gap-6 font-Inter mt-[151px] py-10 text-neutral-130">
+          {/* Company info and social links */}
+          <div className="flex flex-col gap-9 max-w-[350px]">
+            <div>
+              <Link href="/">
+                <Image
+                  src={IMAGES.MITRConsoltancyLogo}
+                  alt="MITRA Consultancy"
+                  className="w-32"
+                />
+              </Link>
+              <p className="mt-4">
+                MITRA Consultancy provides development, design, cybersecurity,
+                compliance, and 3-month training programs for digital success.
+              </p>
 
-                <div className="flex items-center gap-4 md:gap-7 mt-7">
-                  {socialLinks?.map((item) => (
-                    <a
-                      key={item?.name}
-                      href={item.link}
-                      target="_blank"
-                      className="size-8 flex items-center justify-center"
-                    >
-                      <Image
-                        src={item.icon}
-                        alt={`MITRA Consultancy - ${item?.name}`}
-                      />
-                    </a>
-                  ))}
-                </div>
+              <div className="flex items-center gap-4 md:gap-6 mt-7">
+                {socialLinks?.map((item) => (
+                  <a
+                    key={item?.name}
+                    href={item.link}
+                    target="_blank"
+                    className="size-8 flex items-center justify-center"
+                  >
+                    <Image
+                      src={item.icon}
+                      alt={`MITRA Consultancy - ${item?.name}`}
+                    />
+                  </a>
+                ))}
               </div>
             </div>
+          </div>
 
+          <div className="flex flex-col lg:flex-row gap-14 lg:gap-0 justify-between w-full mt-8">
             {quickLinks?.map((item) => (
               <div key={item?.heading}>
-                <h1 className="text-neutral-10 font-semibold">
-                  {item?.heading}
-                </h1>
+                <h1 className="font-semibold">{item?.heading}</h1>
                 <div className="mt-5 flex flex-col gap-4">
                   {item?.links?.map((link) => (
                     <Link
                       key={link?.label}
                       href={link?.path}
-                      className="text-neutral-10 hover:underline"
+                      className="hover:underline"
                     >
                       {link?.label}
                     </Link>
@@ -178,24 +177,26 @@ const Footer = () => {
             ))}
           </div>
 
-          <hr className="border border-neutral-neutral my-4" />
+          <hr className="border border-primary-10 my-4" />
           <div className="flex flex-col lg:flex-row gap-5 lg:gap-0 items-start md:items-center justify-between">
-            <p className="text-neutral-20 text-start md:text-center">
-              © All Rights Reserved by MITRA Consultancy 2025{" "}
+            <p className="text-start md:text-center">
+              © All Rights Reserved by MITRA Consultancy 2026{" "}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
-              <a href="tel:+918210464851" className="flex items-center gap-2 hover:underline">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 text-center">
+              <a
+                href="tel:+918210464851"
+                className="flex items-center gap-2 hover:underline"
+              >
                 <Image src={ICONS.phone} alt="" className="size-5" />
-                <p className="text-neutral-20 text-center">
-                  +91 8210464851
-                </p>
+                <p>+91 8210464851</p>
               </a>
-              <a href="mailto:business@mitraconsultancy.co.in" className="flex items-center gap-2 hover:underline">
+              <a
+                href="mailto:business@mitraconsultancy.co.in"
+                className="flex items-center gap-2 hover:underline"
+              >
                 <Image src={ICONS.email} alt="" className="size-5" />
-                <p className="text-neutral-20 text-center">
-                  business@mitraconsultancy.co.in
-                </p>
+                <p>business@mitraconsultancy.co.in</p>
               </a>
             </div>
           </div>

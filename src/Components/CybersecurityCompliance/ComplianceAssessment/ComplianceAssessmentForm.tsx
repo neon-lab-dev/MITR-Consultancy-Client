@@ -58,21 +58,21 @@ const ComplianceAssessmentForm = () => {
   };
 
   const baseInputClass =
-    "w-full border rounded-md px-4 py-2 transition duration-300";
+    "w-full rounded-md px-4 py-3 transition duration-300 border border-neutral-10 bg-neutral-10 focus:outline-none focus:border focus:border-primary-10";
   const getInputClass = (hasError: boolean) =>
-    `${baseInputClass} ${hasError ? "border-red-500" : "border-gray-300"}`;
+    `${baseInputClass} ${hasError && "border border-red-500"}`;
 
   return (
-    <div className="bg-neutral-150 rounded-xl p-6 font-Inter shadow-[0px_0px_50px_-13px_rgba(0,0,0,0.20)] w-full xl:w-[60%] mx-auto">
+    <div className="font-Inter w-full xl:w-[60%] mx-auto">
       <form
         ref={form}
         onSubmit={handleSubmit(sendEmail)}
-        className="grid grid-cols-1 gap-4"
+        className="grid grid-cols-1 gap-5"
       >
         {/* Name */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
           <div>
-            <label className="block text-neutral-145 text-[15px] font-medium mb-1">
+            <label className="block text-neutral-130 text-[15px] text-sm mb-1">
               Name
             </label>
             <input
@@ -94,7 +94,7 @@ const ComplianceAssessmentForm = () => {
 
         {/* Email */}
         <div>
-          <label className="block text-neutral-145 text-[15px] font-medium mb-1">
+          <label className="block text-neutral-130 text-[15px] text-sm mb-1">
             Work Email
           </label>
           <input
@@ -107,7 +107,7 @@ const ComplianceAssessmentForm = () => {
 
         {/* Company Name */}
         <div>
-          <label className="block text-neutral-145 text-[15px] font-medium mb-1">
+          <label className="block text-neutral-130 text-[15px] text-sm mb-1">
             Company Name
           </label>
           <input
@@ -119,7 +119,7 @@ const ComplianceAssessmentForm = () => {
         </div>
         {/* Phone Number */}
         <div>
-          <label className="block text-neutral-145 text-[15px] font-medium mb-1">
+          <label className="block text-neutral-130 text-[15px] text-sm mb-1">
             Phone Number
           </label>
           <input
