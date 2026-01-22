@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Container from "../Container/Container";
+import Marquee from "react-fast-marquee";
 
 const Footer = () => {
   const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
@@ -30,6 +31,96 @@ const Footer = () => {
       icon: ICONS.instagram,
     },
   ];
+
+  // const quickLinks = [
+  //   {
+  //     heading: "Quick Links",
+  //     links: [
+  //       {
+  //         label: "Home",
+  //         path: "/",
+  //       },
+  //       {
+  //         label: "About Us",
+  //         path: "/about-us",
+  //       },
+  //       {
+  //         label: "Terms and Conditions",
+  //         path: "/terms-and-conditions",
+  //       },
+  //       {
+  //         label: "Privacy Policy",
+  //         path: "/privacy-policy",
+  //       },
+  //       {
+  //         label: "Refund & Cancellation policy",
+  //         path: "/refund-cancellation-policy",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     heading: "Cyber Security Services",
+  //     links: [
+  //       {
+  //         label: "Compliance Services",
+  //         path: "/compliance-services",
+  //       },
+  //       {
+  //         label: "Security Services",
+  //         path: "/security-services",
+  //       },
+  //       {
+  //         label: "VAPT Security",
+  //         path: "/security/vapt-security",
+  //       },
+  //       {
+  //         label: "Email Security",
+  //         path: "/security/email-security",
+  //       },
+  //       {
+  //         label: "Cloud Security",
+  //         path: "/security/cloud-security",
+  //       },
+  //       {
+  //         label: "Network Security",
+  //         path: "/security/network-security",
+  //       },
+  //       {
+  //         label: "Endpoint Security",
+  //         path: "/security/endpoint-security",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     heading: "Industrial Training Programs",
+  //     links: [
+  //       {
+  //         label: "Full Stack Web Development",
+  //         path: "/internship-programmes/67a19b646269f19097fb2bfa",
+  //       },
+  //       {
+  //         label: "Frontend Development",
+  //         path: "/internship-programmes/67a19f7a7ce841729b59f52c",
+  //       },
+  //       {
+  //         label: "Backend Development",
+  //         path: "/internship-programmes/67a18b9b5f74e79df59625c1",
+  //       },
+  //       {
+  //         label: "App Development",
+  //         path: "/internship-programmes/68722c26e620583ce87f130d",
+  //       },
+  //       {
+  //         label: "Cyber Security Mastery Program",
+  //         path: "/internship-programmes/6864409a80f98f62637e7e04",
+  //       },
+  //       {
+  //         label: "UX/UI Design",
+  //         path: "/internship-programmes/67a1a75225335e95874bb562",
+  //       },
+  //     ],
+  //   },
+  // ];
 
   const quickLinks = [
     {
@@ -58,35 +149,45 @@ const Footer = () => {
       ],
     },
     {
-      heading: "Cyber Security Services",
+      heading: "Cybersecurity & Compliance Services",
       links: [
         {
-          label: "Compliance Services",
+          label: "Managed Security Services (MSSP)",
           path: "/compliance-services",
         },
         {
-          label: "Security Services",
-          path: "/security-services",
-        },
-        {
-          label: "VAPT Security",
+          label: "VAPT Services",
           path: "/security/vapt-security",
         },
         {
-          label: "Email Security",
+          label: "GRC & Compliance (ISO 27001, SOC 2)",
           path: "/security/email-security",
         },
         {
-          label: "Cloud Security",
+          label:
+            "Cloud & Infrastructure Security, Risk Assessment & Gap Analysis",
           path: "/security/cloud-security",
         },
+      ],
+    },
+    {
+      heading: "Security Products (via MSSP Partners)",
+      links: [
         {
-          label: "Network Security",
-          path: "/security/network-security",
+          label: "Endpoint Detection & Response (EDR)",
+          path: "/compliance-services",
         },
         {
-          label: "Endpoint Security",
-          path: "/security/endpoint-security",
+          label: "Data Loss Prevention (DLP)",
+          path: "/security/vapt-security",
+        },
+        {
+          label: "SIEM & SOC Monitoring",
+          path: "/security/email-security",
+        },
+        {
+          label: "Identity & Access Managment",
+          path: "/security/cloud-security",
         },
       ],
     },
@@ -119,12 +220,34 @@ const Footer = () => {
         },
       ],
     },
+    {
+      heading: "Technology & Development",
+      links: [
+        {
+          label: "Website Development",
+          path: "",
+        },
+        {
+          label: "Mobile App Development",
+          path: "",
+        },
+        {
+          label: "UX/UI Design",
+          path: "",
+        },
+        {
+          label: "Custom Software Development",
+          path: "",
+        },
+      ],
+    },
   ];
 
   return (
     <div className="bg-neutral-185">
       <Container>
-        <div className="flex flex-col gap-6 font-Inter mt-[151px] py-10 text-neutral-130">
+        {/* mt-[151px] */}
+        <div className="flex flex-col gap-6 font-Inter py-10 text-neutral-130">
           {/* Company info and social links */}
           <div className="flex flex-col gap-9 max-w-[350px]">
             <div>
@@ -160,18 +283,23 @@ const Footer = () => {
 
           <div className="flex flex-col lg:flex-row gap-14 lg:gap-0 justify-between w-full mt-8">
             {quickLinks?.map((item) => (
-              <div key={item?.heading}>
+              <div key={item?.heading} className="max-w-[170px]">
                 <h1 className="font-semibold">{item?.heading}</h1>
+
                 <div className="mt-5 flex flex-col gap-4">
-                  {item?.links?.map((link) => (
-                    <Link
-                      key={link?.label}
-                      href={link?.path}
-                      className="hover:underline"
-                    >
-                      {link?.label}
-                    </Link>
-                  ))}
+                  {item?.links?.map((link) =>
+                    link?.path ? (
+                      <Link
+                        key={link?.label}
+                        href={link?.path}
+                        className="hover:underline"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <p key={link?.label}>{link.label}</p>
+                    ),
+                  )}
                 </div>
               </div>
             ))}
@@ -204,6 +332,13 @@ const Footer = () => {
           {/* Contact Us Modal */}
         </div>
       </Container>
+      <Marquee speed={60} gradient={false} pauseOnHover>
+        <h2 className="text-white text-3xl md:text-5xl font-extrabold whitespace-nowrap">
+          Code To Compliance * Code To Compliance * Code To Compliance * Code To
+          Compliance * Code To Compliance * Code To Compliance * Code To
+          Compliance * Code To Compliance
+        </h2>
+      </Marquee>
       <ContactUs
         isContactUsModalOpen={isContactUsModalOpen}
         setIsContactUsModalOpen={setIsContactUsModalOpen}
