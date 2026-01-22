@@ -177,10 +177,6 @@ import iso27001 from "../assets/Images/iso-iec-27001.webp";
 import soc2 from "../assets/Images/soc-2.webp";
 import hippa from "../assets/Images/hippa.png";
 import gdpr from "../assets/Images/gdpr.webp";
-import emailSecurity from "../assets/Images/email-security.png";
-import endpointSecurity2 from "../assets/Images/endpoint-security.png";
-import cloudSecurity2 from "../assets/Images/cloud-security.png";
-import networkSecurity2 from "../assets/Images/network-security.png";
 import emailCommonThreats from "../assets/Images/email-theats.webp";
 import developmentSection from "../assets/Images/developmet.-section.webp";
 import emailSecurityImportance from "../assets/Images/emial-security-importance.webp";
@@ -208,6 +204,7 @@ import linnerColorBg from "../assets/Images/linner-color-bg.webp";
 import complianceSolutionCard from "../assets/Images/compliance-solution-card-bg.webp";
 import dummyTestimonialImg from "../assets/Images/dummy-testimonial-img.png";
 import ctaBg from "../assets/Images/cta-bg.webp";
+import securityServiceHero from "../assets/Images/security-service-hero.gif";
 
 export const IMAGES = {
   MITRConsoltancyLogo,
@@ -297,10 +294,6 @@ export const IMAGES = {
   soc2,
   hippa,
   gdpr,
-  emailSecurity,
-  endpointSecurity2,
-  cloudSecurity2,
-  networkSecurity2,
 
   emailCommonThreats,
   developmentSection,
@@ -309,6 +302,8 @@ export const IMAGES = {
   complianceSolutionCard,
   dummyTestimonialImg,
   ctaBg,
+  securityServiceHero,
+
 };
 
 export const ICONS = {
