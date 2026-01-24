@@ -130,6 +130,10 @@ import facebook from "../assets/Icons/facebook.png";
 import twitter from "../assets/Icons/Twitter logo.svg";
 import linkedin from "../assets/Icons/linkedin.png";
 import instagram from "../assets/Icons/instagram.png";
+import scalableUserOnboarding from "../assets/Icons/scalable-user-onboarding.svg";
+import optimizedSecuritySpending from "../assets/Icons/optimized-security-spending.svg";
+import seamlessProtectionEcosystem from "../assets/Icons/seamless-protection-ecosystem.svg";
+import strongerBetterCompliance from "../assets/Icons/stronger-better-compliance.svg";
 
 import project1 from "../assets/Images/Projects/StudentTiffin.png";
 import project2 from "../assets/Images/Projects/spacefarm.png";
@@ -433,4 +437,9 @@ export const ICONS = {
 
   verified,
  tickMarkBlue ,
+ scalableUserOnboarding,
+  optimizedSecuritySpending,
+  seamlessProtectionEcosystem,
+  strongerBetterCompliance
+
 };

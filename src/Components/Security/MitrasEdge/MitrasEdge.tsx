@@ -8,59 +8,63 @@ const MitrasEdge = () => {
   const data = [
     {
       title: "Optimized Security Spending",
+      icon : ICONS.optimizedSecuritySpending,
       btnText: "Start Saving",
     },
     {
       title: "Seamless Protection Ecosystem",
+      icon : ICONS.seamlessProtectionEcosystem,
       btnText: "Integrate Now",
     },
     {
       title: "Stronger & Better Compliance",
+      icon : ICONS.strongerBetterCompliance,
       btnText: "Get Complaint",
     },
     {
       title: "Scalable User Onboarding",
+      icon : ICONS.optimizedSecuritySpending,
       btnText: "Accelerate Growth",
     },
   ];
   return (
-    <div className="py-[100px]">
+    <div className="py-[100px] bg-neutral-185 font-Satoshi">
       <Container>
-        <div>
-          <h1
-            className={`font-bold text-neutral-10 text-lg md:text-2xl xl:text-[40px] 2xl:text-[48px] leading-6 md:leading-[49.68px] capitalize text-center`}
+        <div className="relative">
+          <h2
+            className={`font-bold text-neutral-20 text-[248px] capitalize text-center absolute -top-32`}
           >
-            <span className="text-secondary-20">MITRA’s</span> Edge for Your
+            Compliance
+          </h2>
+          <h2
+            className={`font-bold text-neutral-130 text-lg md:text-2xl xl:text-[40px] 2xl:text-[48px] leading-6 md:leading-[65px] max-w-[740px] mx-auto capitalize text-center`}
+          >
+            <span className="text-primary-10">MITRA’s</span> Edge for Your
             Secure Growth
-          </h1>
+          </h2>
 
           <div className="flex flex-col">
-            <div className="bg-neutral-135 border border-neutral-130 rounded-t-xl p-6 mt-[60px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+            <div className="mt-[60px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
               {data?.map((item) => (
                 <div
                   key={item?.title}
-                  className="bg-white border border-neutral-65/50 rounded-xl flex flex-col items-center"
+                  className="border border-white rounded-xl flex flex-col items-center gap-6 p-6"
                 >
-                  <div className="bg-neutral-135 flex items-center justify-center size-[68px] rounded-x-lg rounded-b-lg">
                     <Image
-                      src={ICONS.tickCircleGreen}
+                      src={item?.icon}
                       alt=""
-                      className="size-9"
+                      className="size-10"
                     />
-                  </div>
 
-                  <div className="p-6 flex flex-col items-center gap-8 mt-6">
-                    <p className="text-neutral-145 text-lg font-medium text-center max-w-[200px] mx-auto">
+                    <p className="text-white text-[22px] font-extrabold text-center mt-2">
                       {item?.title}
                     </p>
-                    <button className="bg-primary-40 border border-primary-80 px-4 py-2 rounded text-primary-10 font-medium cursor-pointer">
+                    <button className="border border-white px-8 py-4 rounded-xl text-white font-medium cursor-pointer">
                       {item?.btnText}
                     </button>
-                  </div>
                 </div>
               ))}
             </div>
-            <div className="bg-neutral-130 h-[100px] flex items-center justify-center rounded-b-xl">
               <Button
               handleClick={() =>
                   document
@@ -69,9 +73,8 @@ const MitrasEdge = () => {
                 }
                 variant="primary"
                 title="Talk To Us"
-                classNames="w-auto px-16 py-[10px]"
+                classNames="w-fit"
               />
-            </div>
           </div>
         </div>
       </Container>
