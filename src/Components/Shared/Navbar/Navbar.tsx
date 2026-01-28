@@ -258,6 +258,7 @@ const Navbar = () => {
                 pathname !== "/refund-policy" &&
                 pathname !== "/terms-and-conditions" &&
                 pathname !== "/payment-success" &&
+                pathname !== "/careers" &&
                 pathname !== "/about-us" &&
                 !pathname.startsWith("/security/") && (
                   <>

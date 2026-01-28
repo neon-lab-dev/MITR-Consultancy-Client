@@ -33,6 +33,7 @@ import secured from "../assets/Icons/secured.svg";
 import partners from "../assets/Icons/partners.svg";
 import verified from "../assets/Icons/verified.svg";
 import tickMarkBlue from "../assets/Icons/tick-mark-blue.svg";
+import trianges from "../assets/Icons/triangle.svg";
 
 // Services
 import cart from "../assets/Icons/cart.svg";
@@ -184,6 +185,8 @@ import gdpr from "../assets/Images/gdpr.webp";
 import emailCommonThreats from "../assets/Images/email-theats.webp";
 import developmentSection from "../assets/Images/developmet.-section.webp";
 import emailSecurityImportance from "../assets/Images/emial-security-importance.webp";
+import careersImage from "../assets/Images/carrersimage.jpg";
+import shareResume from "../assets/Images/shareResume.jpg";
 
 // Security details hero
 import emailSecurityHero from "../assets/Images/email-security-hero.png";
@@ -322,6 +325,8 @@ export const IMAGES = {
   dlp,
   edr,
   firewall,
+  careersImage,
+  shareResume
 
 };
 
@@ -440,6 +445,7 @@ export const ICONS = {
  scalableUserOnboarding,
   optimizedSecuritySpending,
   seamlessProtectionEcosystem,
-  strongerBetterCompliance
+  strongerBetterCompliance,
+  trianges
 
 };
