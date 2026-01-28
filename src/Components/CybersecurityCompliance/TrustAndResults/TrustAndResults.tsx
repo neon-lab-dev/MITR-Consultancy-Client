@@ -67,6 +67,9 @@ const TrustAndResults = () => {
                 <section className="flex justify-between gap-6">
                   {featuresData.map((item, index) => {
                     const stagger = [
+                       "translate-y-0",
+                      "translate-y-32", // 2nd card → middle
+                      "translate-y-0",
                       "lg:translate-y-60", // 1st card → LOWEST
                       "lg:translate-y-32", // 2nd card → middle
                       "lg:translate-y-0", // 3rd card → TOPPEST

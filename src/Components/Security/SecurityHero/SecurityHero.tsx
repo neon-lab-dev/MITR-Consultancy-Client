@@ -41,7 +41,7 @@ const SecurityHero = () => {
               stay secure, compliant, and resilient in a dynamic digital
               landscape.
             </p>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 xl:gap-6 mt-5 md:mt-9 xl:mt-[66px]">
+            <div className="flex flex-col 2xl:flex-row items-center justify-center gap-4 xl:gap-6 mt-5 md:mt-9 xl:mt-[66px]">
               <Button
                 handleClick={() =>
                   document
