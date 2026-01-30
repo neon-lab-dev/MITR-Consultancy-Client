@@ -16,7 +16,7 @@ const DynamicAboutSection = ({
   image,
 }: AboutSectionProps) => {
   return (
-    <section className="bg-neutral-190 py-16">
+    <section className="bg-neutral-190 font-Satoshi py-16">
       <Container>
         {/* Top Content */}
         <div className="flex flex-col xl:flex-row justify-between gap-6 mb-10">

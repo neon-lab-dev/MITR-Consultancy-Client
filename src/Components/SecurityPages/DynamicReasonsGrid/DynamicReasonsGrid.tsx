@@ -20,7 +20,7 @@ const DynamicReasonsGrid = ({
   cards,
 }: DynamicReasonsGridProps) => {
   return (
-    <section className="bg-neutral-185 py-20">
+    <section className="bg-neutral-185 font-Satoshi py-20">
       <Container>
         {/* Heading */}
         <h2 className="text-center text-white text-2xl md:text-3xl font-black mb-12">

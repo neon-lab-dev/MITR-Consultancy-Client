@@ -20,7 +20,7 @@ const DynamicProtectsGrid = ({
   cards,
 }: DynamicProtectsGridProps) => {
   return (
-    <section className="bg-neutral-190 py-20">
+    <section className="bg-neutral-190 font-Satoshi py-20">
       <Container>
         {/* Heading */}
         <h2 className="text-center text-neutral-185 text-2xl md:text-3xl font-black mb-12">
