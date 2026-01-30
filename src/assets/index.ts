@@ -195,6 +195,28 @@ import cloudSecurityHero from "../assets/Images/cloud-security-hero4.png";
 import networkSecurityHero from "../assets/Images/network-security-hero.jpeg";
 import endpointSecurityHero from "../assets/Images/endpoint-security-hero.png";
 
+import antivirusHero from "../assets/Images/antivirus-hero.png";
+import siemHero from "../assets/Images/siem.png";
+import erdHero from "../assets/Images/erd-hero.png";
+import dlpHero from "../assets/Images/dlp-hero.png";
+import firewallHero from "../assets/Images/firewall-hero.png";
+import vaptHero from "../assets/Images/vaptHero.png";
+import xdrHero from "../assets/Images/xdrHero.png";
+import antivirusAbout from "../assets/Images/antivirusAbout.png";
+import siemAbout from "../assets/Images/siemAbout.jpg";
+import erdAbout from "../assets/Images/edrAbout.jpg";
+import dlpAbout from "../assets/Images/dlpAbout.jpg";
+import firewallAbout from "../assets/Images/firewallAbout.jpg";
+import vaptAbout from "../assets/Images/vaptAbout.jpg";
+import xdrAbout from "../assets/Images/xdrAbout.jpg";
+
+import edrReason1 from "../assets/Images/edrReason1.jpg";
+import edrReason2 from "../assets/Images/edrReason2.jpg";
+import edrReason3 from "../assets/Images/edrReason3.jpg";
+import edrReason4 from "../assets/Images/edrReason4.jpg";
+import edrReason5 from "../assets/Images/edrReason5.jpg";
+import edrReason6 from "../assets/Images/edrReason6.png";
+
 import networkSecurity1 from "../assets/Images/network-security1.webp";
 import networkSecurity4 from "../assets/Images/network-security2.webp";
 import networkSecurity3 from "../assets/Images/network-security3.webp";
@@ -220,6 +242,29 @@ import dlp from "../assets/Images/dlp.webp";
 import edr from "../assets/Images/edr.webp";
 import firewall from "../assets/Images/firewall.webp";
 
+import shield from "../assets/Icons/microsoft-admin.svg";
+import clock from "../assets/Icons/clock-02.svg";
+import clockLock from "../assets/Icons/circle-lock-remove-01.svg";
+import fireSecurity from "../assets/Icons/fire-security.svg";
+import dashboardBrowsing from "../assets/Icons/dashboard-browsing.svg";
+import dashboardSpeed from "../assets/Icons/dashboard-speed-01.svg";
+import Search from "../assets/Icons/search-02.svg";
+import alertCircle from "../assets/Icons/alert-circle.svg";
+import discoverCircle from "../assets/Icons/discover-circle.svg";
+import lockSync from "../assets/Icons/lock-sync-01.svg";
+import connect from "../assets/Icons/connect.svg";
+import fingerPrint from "../assets/Icons/finger-print.svg";
+import fileScript from "../assets/Icons/file-script.svg";
+import validationApproval from "../assets/Icons/validation-approval.svg";
+import cctvCamera from "../assets/Icons/cctv-camera.svg";
+import filter from "../assets/Icons/filter.svg";
+import cellularNetwork from "../assets/Icons/cellular-network.svg";
+import filterVertical from "../assets/Icons/filter-vertical.svg";
+import doorLock from "../assets/Icons/door-lock.svg";
+import autoConversations from "../assets/Icons/auto-conversations.svg";
+import irisScan from "../assets/Icons/iris-scan.svg";
+import access from "../assets/Icons/access.svg";
+import alert from "../assets/Icons/alert-01.svg";
 
 export const IMAGES = {
   MITRConsoltancyLogo,
@@ -326,8 +371,29 @@ export const IMAGES = {
   edr,
   firewall,
   careersImage,
-  shareResume
+  shareResume,
 
+  antivirusHero,
+  siemHero,
+  erdHero,
+  dlpHero,
+  firewallHero,
+  vaptHero,
+  xdrHero,
+  antivirusAbout,
+  siemAbout,
+  erdAbout,
+  dlpAbout,
+  firewallAbout,
+  vaptAbout,
+  xdrAbout,
+
+  edrReason1,
+  edrReason2,
+  edrReason3,
+  edrReason4,
+  edrReason5,
+  edrReason6,
 };
 
 export const ICONS = {
@@ -346,7 +412,7 @@ export const ICONS = {
   networkSecurity5,
   securityService,
   complainceService,
-  
+
   profile,
   cross,
   downArrowBlue,
@@ -441,11 +507,34 @@ export const ICONS = {
   nonProfits,
 
   verified,
- tickMarkBlue ,
- scalableUserOnboarding,
+  tickMarkBlue,
+  scalableUserOnboarding,
   optimizedSecuritySpending,
   seamlessProtectionEcosystem,
   strongerBetterCompliance,
-  trianges
+  trianges,
 
+  shield,
+  clock,
+  clockLock,
+  fireSecurity,
+  dashboardBrowsing,
+  dashboardSpeed,
+  Search,
+  alertCircle,
+  discoverCircle,
+  lockSync,
+  connect,
+  fingerPrint,
+  fileScript,
+  validationApproval,
+  cctvCamera,
+  filter,
+  cellularNetwork,
+  filterVertical,
+  doorLock,
+  autoConversations,
+  irisScan,
+  access,
+  alert,
 };

@@ -10,7 +10,7 @@ const ManagedSecurityServices = () => {
       title: "Antivirus",
       description:
         "Protects systems from common malware and malicious activity through continuous threat detection.",
-      link: "/antivirus",
+      link: "/security-service/antivirus-service",
       image: IMAGES.antivirus,
       col: "md:col-span-3",
     },
@@ -18,7 +18,7 @@ const ManagedSecurityServices = () => {
       title: "EDR",
       description:
         "Monitors endpoint activity to detect, investigate, and respond to advanced security threats.",
-      link: "/edr",
+      link: "/security-service/edr-service",
       image: IMAGES.edr,
       col: "md:col-span-1",
     },
@@ -26,7 +26,7 @@ const ManagedSecurityServices = () => {
       title: "Firewall",
       description:
         "Monitors endpoint activity to detect, investigate, and respond to advanced security threats.",
-      link: "/firewall",
+      link: "/security-service/firewall-service",
       image: IMAGES.firewall,
       col: "md:col-span-1",
     },
@@ -34,7 +34,7 @@ const ManagedSecurityServices = () => {
       title: "XDR",
       description:
         "Protects systems from common malware and malicious activity through continuous threat detection.",
-      link: "/xdr",
+      link: "/security-service/xdr-service",
       image: IMAGES.xdr,
       col: "md:col-span-3",
     },
@@ -42,7 +42,7 @@ const ManagedSecurityServices = () => {
       title: "SIEM",
       description:
         "Protects systems from common malware and malicious activity through continuous threat detection.",
-      link: "/siem",
+      link: "/security-service/siem-service",
       image: IMAGES.siem,
       col: "md:col-span-3",
     },
@@ -50,7 +50,7 @@ const ManagedSecurityServices = () => {
       title: "DLP",
       description:
         "Monitors endpoint activity to detect, investigate, and respond to advanced security threats.",
-      link: "/dlp",
+      link: "/security-service/dlp-service",
       image: IMAGES.dlp,
       col: "md:col-span-1",
     },
@@ -58,7 +58,7 @@ const ManagedSecurityServices = () => {
       title: "VAPT",
       description:
         "Protects systems from common malware and malicious activity through continuous threat detection.",
-      link: "/vapt",
+      link: "/security-service/vapt-service",
       image: IMAGES.vapt,
       col: "md:col-span-4",
     },

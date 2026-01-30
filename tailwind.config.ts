@@ -29,6 +29,7 @@ export default {
           90: "#253DAB05",
           95: "#D4D3D805",
           100: "#71AAFF",
+          110: "#0A6CFF",
         },
         secondary: {
           10: "#FF9900",
@@ -103,6 +104,10 @@ export default {
           "linear-gradient(270deg, #FFF -0.6%, #B2E0FF 99.23%);",
         "gradient-compliance-logo":
           "linear-gradient(96deg, #074CB3 0%, #010A18 100%);",
+        "gradient-dynamic-pages":
+          "linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.84) 50%);",
+        "gradient-border":
+          "linear-gradient(315deg, #FFF 0%, #064199 100%);",
       },
     },
   },

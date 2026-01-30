@@ -260,7 +260,9 @@ const Navbar = () => {
                 pathname !== "/payment-success" &&
                 pathname !== "/careers" &&
                 pathname !== "/about-us" &&
-                !pathname.startsWith("/security/") && (
+                !pathname.startsWith("/security/") &&
+                !pathname.startsWith("/security-service/") &&
+                 (
                   <>
                     <Link href={"/cart"} className="relative">
                       <Image
