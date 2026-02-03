@@ -56,7 +56,7 @@ const TrustAndResults = () => {
 
       <div className="">
         {[1, 2, 3]?.map((item, index) => (
-          <div key={index} className="h-[1024px] w-full relative">
+          <div key={index} className="relative w-full min-h-screen md:h-[1024px]">
             <Image
               src={IMAGES.linnerColorBg}
               alt=""
@@ -64,12 +64,12 @@ const TrustAndResults = () => {
             />
             <Container>
               <div className=" relative">
-                <section className="flex justify-between gap-6">
+                <section className="hidden xl:flex justify-between gap-6">
                   {featuresData.map((item, index) => {
                     const stagger = [
-                       "translate-y-0",
-                      "translate-y-32", // 2nd card → middle
-                      "translate-y-0",
+                      //  "translate-y-0",
+                      // "translate-y-32", // 2nd card → middle
+                      // "translate-y-0",
                       "lg:translate-y-60", // 1st card → LOWEST
                       "lg:translate-y-32", // 2nd card → middle
                       "lg:translate-y-0", // 3rd card → TOPPEST
@@ -85,6 +85,43 @@ const TrustAndResults = () => {
                     );
                   })}
                 </section>
+                <section className="hidden md:flex xl:hidden justify-between gap-6">
+                  {featuresData.map((item, index) => {
+                    const stagger = [
+                       "translate-y-0",
+                      "translate-y-[448px]", // 2nd card → middle
+                      "translate-y-0",
+                    ];
+
+                    return (
+                      <TrustAndResultCard
+                        key={index}
+                        title={item.title}
+                        description={item.description}
+                        classNames={stagger[index]}
+                      />
+                    );
+                  })}
+                </section>
+               <section className="flex md:hidden flex-col items-center gap-10">
+  {featuresData.map((item, index) => {
+    const stagger = [
+      "translate-y-0",
+      "translate-y-0",
+      "translate-y-0",
+    ];
+
+    return (
+      <TrustAndResultCard
+        key={index}
+        title={item.title}
+        description={item.description}
+        classNames={stagger[index]}
+      />
+    );
+  })}
+</section>
+
               </div>
             </Container>
           </div>

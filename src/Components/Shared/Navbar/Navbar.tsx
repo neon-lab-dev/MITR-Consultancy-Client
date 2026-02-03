@@ -14,6 +14,7 @@ import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
 import UserDropdown from "./UserDropdown";
 import { useCart } from "@/providers/CartProvider/CartProvider";
 import { motion, AnimatePresence } from "framer-motion";
+import { CgArrowTopRight } from 'react-icons/cg';
 
 export type TLoggedInUser = {
   _id: string;
@@ -142,8 +143,8 @@ const Navbar = () => {
   return (
     <div id="home">
       <div
-        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 py-2 ${
-          isScrolled ? "bg-neutral-40" : "backdrop-blur-sm bg-transparent"
+        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300  pb-2 ${
+          isScrolled ? "bg-neutral-40 pt-2" : "backdrop-blur-sm bg-transparent pt-14"
         }`}
       >
         <Container>
@@ -152,17 +153,21 @@ const Navbar = () => {
               <Image
                 src={IMAGES.MITRConsoltancyLogo}
                 alt="MITRA Consultancy"
-                className="xl:w-[134px] xl:h-[64px] md:w-[90px] md:h-[45px] h-[36px] w-[72px]"
+                className="xl:w-[124px] xl:h-[57px] md:w-[90px] md:h-[45px] h-[36px] w-[72px]"
               />
+              <p className="text-neutral-130 text-xs font-semibold pt-1">From code to <span className="text-primary-110">compliance</span></p>
             </Link>
             {/* Desktop Nav */}
-            <div className="hidden xl:flex items-center gap-10 relative">
+            
+
+            <div className="flex items-center gap-6">
+              <div className="hidden xl:flex items-center gap-10 relative">
               {navlinks.map((link, index) =>
                 link?.action ? (
                   <button
                     key={index}
                     onClick={link.action}
-                    className={`text-lg font-medium hover:text-primary-10 transition duration-300 ${
+                    className={`text-lg font-semibold hover:text-primary-10 transition duration-300 ${
                       isScrolled && "text-white"
                     } ${textColor}`}
                   >
@@ -172,7 +177,7 @@ const Navbar = () => {
                   <Link
                     key={index}
                     href={link.path}
-                    className={`text-lg font-medium hover:text-primary-10 transition duration-300 ${
+                    className={`text-lg font-semibold hover:text-primary-10 transition duration-300 ${
                       isScrolled && "text-white"
                     } ${textColor}`}
                   >
@@ -188,7 +193,7 @@ const Navbar = () => {
                 ref={dropdownRef}
               >
                 <button
-                  className={`flex items-center gap-1 text-lg font-medium hover:text-primary-10 transition duration-300 ${
+                  className={`flex items-center gap-1 text-lg font-semibold hover:text-primary-10 transition duration-300 ${
                     isScrolled ? "text-white" : textColor
                   }`}
                 >
@@ -245,8 +250,6 @@ const Navbar = () => {
                 </AnimatePresence>
               </div>
             </div>
-
-            <div className="flex items-center gap-6">
               {pathname !== "/" &&
                 pathname !== "/compliance-services" &&
                 pathname !== "/security-services" &&
@@ -297,16 +300,18 @@ const Navbar = () => {
                   <Button
                     handleClick={() => setIsContactUsModalOpen(true)}
                     variant="primary"
-                    title="Connect with Us"
-                    classNames="w-[198px] xl:h-[54px] md:h-[46px] hidden md:flex md:text-lg"
+                    title="Connect Us"
+                    classNames="w-[198px] xl:h-[54px] md:h-[46px] hidden xl:flex md:text-lg"
+                    icon={<CgArrowTopRight size={24} />}
+                    iconPosition="right"
                   />
                 )}
 
               {/* Hamburger Menu for Small Screens */}
-              <div className="xl:hidden flex items-center">
+              <div className="xl:hidden flex items-center bg-primary-110 p-3 rounded-xl">
                 <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                   <Image
-                    src={ICONS.hamburgerMenuBlue}
+                    src={ICONS.hamburgerMenu}
                     alt="menu icon"
                     className="size-7"
                   />
