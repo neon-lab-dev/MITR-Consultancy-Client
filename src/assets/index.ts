@@ -1,5 +1,5 @@
 import MITRConsoltancyLogo from "../assets/Images/mitr-consultancy.png";
-import heroImg from "../assets/Images/hero-image.png";
+import heroGif from "../assets/Images/hero-gif.gif";
 import internshipProgrammeBg from "../assets/Images/internshipProgrammeBg.png";
 import aboutUs from "../assets/Images/about-us.webp";
 import aboutUsBg from "../assets/Images/bg.png";
@@ -268,7 +268,7 @@ import alert from "../assets/Icons/alert-01.svg";
 
 export const IMAGES = {
   MITRConsoltancyLogo,
-  heroImg,
+  heroGif,
   internshipProgrammeBg,
   aboutUs,
   aboutUsBg,
