@@ -1,95 +1,122 @@
 "use client";
 import Container from "../../Shared/Container/Container";
-import Heading from "../../Reusable/Heading/Heading";
-import OurProjectCard from "./OurProjectCard";
 import Image from "next/image";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
 import React from "react";
-import { ICONS } from "../../../assets/index";
-import { ourProjectsContent } from "./ourProjectsContents";
+import { IMAGES } from "../../../assets/index";
+// import { ourProjectsContent } from "./ourProjectsContents";
 
 const OurProjects = () => {
   return (
-    <div id="portfolio" className="bg-white py-[128px]">
+    <div id="portfolio" className="bg-neutral-185 py-[128px] font-Satoshi">
       <Container>
+        {/* Heading */}
         <div>
-          <div className="flex justify-between">
-            <Heading
-              align="left"
-              subHeading="Projects"
-              heading="Our Latest Client Engagements"
-              description="Explore our curated collection of top-notch projects showcasing innovation and excellence."
+          <p className={`font-semibold text-primary-20`}>PROJECTS</p>
+          <h2
+            className={`font-extrabold text-white text-[30px] leading-normal capitalize mt-6`}
+          >
+            Selected <span className="text-primary-10">Work</span>
+          </h2>
+          <p className="text-sm mt-3 text-white">
+            A glimpse into how we help teams turn requirements into working
+            solutions.
+          </p>
+        </div>
+
+        <div className="mt-12 flex flex-col gap-6">
+          <div
+            className={`group relative rounded-xl overflow-hidden h-[564px]`}
+          >
+            {/* Background Image */}
+            <Image
+              src={IMAGES.aboutUs}
+              alt={""}
+              fill
+              className="object-cover transition-transform duration-500 lg:group-hover:scale-105"
             />
-            <div className="hidden lg:flex items-center gap-4">
-              <button
-                id="prevProjectButton"
-                className="p-2 rounded-lg bg-white border border-neutral-60 hover:bg-gray-100 transition duration-300"
-              >
-                <Image
-                  src={ICONS.rightArrowDark}
-                  alt=""
-                  className="size-6 rotate-180"
-                />
-              </button>
-              <button
-                id="nextProjectButton"
-                className="p-2 rounded-lg bg-primary-10 border border-primary-10 hover:bg-primary-10/80 transition duration-300"
-              >
-                <Image src={ICONS.rightArrow2} alt="" className="size-6" />
-              </button>
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/40" />
+
+            {/* Content Wrapper */}
+            <div className="absolute inset-0 p-6 md:p-8 lg:p-12 flex flex-col justify-end">
+              {/* Title */}
+              <h3 className="text-white font-extrabold text-[22px] md:text-[26px] lg:text-[30px]">
+                Students Tiffin
+              </h3>
+
+              <p className="text-neutral-130 font-medium mt-3">
+                Students Tiffin is a subscription-based meal delivery service
+                providing fresh, healthy, and affordable tiffin meals for
+                students. With reliable delivery and customizable options, it
+                supports daily nutrition while accommodating diverse dietary
+                preferences.
+              </p>
             </div>
           </div>
 
-          <Swiper
-            spaceBetween={20}
-            slidesPerView={1}
-            navigation={{
-              prevEl: "#prevProjectButton",
-              nextEl: "#nextProjectButton",
-            }}
-            modules={[Navigation, Pagination]}
-            pagination={{
-              clickable: true,
-            }}
-            breakpoints={{
-              360: { slidesPerView: 1 },
-              425: { slidesPerView: 1 },
-              640: { slidesPerView: 2 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 2 },
-              1366: { slidesPerView: 3 },
-            }}
-            className="w-full mt-10"
-          >
-            {ourProjectsContent?.map((project) => (
-              <SwiperSlide key={project._id} className="mb-16 w-full">
-                <OurProjectCard {...project} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          <div className="flex lg:hidden items-center justify-center gap-4 mt-7">
-            <button
-              id="prevProjectButton"
-              className="p-2 rounded-lg bg-white border border-neutral-60 hover:bg-gray-100 transition duration-300"
+          <div className="grid grid-cols-2 gap-6">
+            <div
+              className={`group relative rounded-xl overflow-hidden h-[564px]`}
             >
+              {/* Background Image */}
               <Image
-                src={ICONS.rightArrowDark}
-                alt=""
-                className="size-6 rotate-180"
+                src={IMAGES.letsTalkBgImg}
+                alt={""}
+                fill
+                className="object-cover transition-transform duration-500 lg:group-hover:scale-105"
               />
-            </button>
-            <button
-              id="nextProjectButton"
-              className="p-2 rounded-lg bg-primary-10 border border-primary-10 hover:bg-primary-10/80 transition duration-300"
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/40" />
+
+              {/* Content Wrapper */}
+              <div className="absolute inset-0 p-6 md:p-8 lg:p-12 flex flex-col justify-end">
+                {/* Title */}
+                <h3 className="text-white font-extrabold text-[22px] md:text-[26px] lg:text-[30px]">
+                  Students Tiffin
+                </h3>
+
+                <p className="text-neutral-130 font-medium mt-3">
+                  Students Tiffin is a subscription-based meal delivery service
+                  providing fresh, healthy, and affordable tiffin meals for
+                  students. With reliable delivery and customizable options, it
+                  supports daily nutrition while accommodating diverse dietary
+                  preferences.
+                </p>
+              </div>
+            </div>
+
+            <div
+              className={`group relative rounded-xl overflow-hidden h-[564px]`}
             >
-              <Image src={ICONS.rightArrow2} alt="" className="size-6" />
-            </button>
+              {/* Background Image */}
+              <Image
+                src={IMAGES.letsTalkBgImg}
+                alt={""}
+                fill
+                className="object-cover transition-transform duration-500 lg:group-hover:scale-105"
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/40" />
+
+              {/* Content Wrapper */}
+              <div className="absolute inset-0 p-6 md:p-8 lg:p-12 flex flex-col justify-end">
+                {/* Title */}
+                <h3 className="text-white font-extrabold text-[22px] md:text-[26px] lg:text-[30px]">
+                  Students Tiffin
+                </h3>
+
+                <p className="text-neutral-130 font-medium mt-3">
+                  Students Tiffin is a subscription-based meal delivery service
+                  providing fresh, healthy, and affordable tiffin meals for
+                  students. With reliable delivery and customizable options, it
+                  supports daily nutrition while accommodating diverse dietary
+                  preferences.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

@@ -10,7 +10,7 @@ const Hero = () => {
   const [isContactUsModalOpen, setIsContactUsModalOpen] =
     useState<boolean>(false);
   return (
-    <div className="font-Inter bg-neutral-185 text-white pt-40 relative h-[1024px]">
+    <div className="font-Satoshi bg-neutral-185 text-white pt-40 relative h-[1024px]">
       {/* Background Image */}
       {/* <div className="absolute inset-0 z-0">
         <Image

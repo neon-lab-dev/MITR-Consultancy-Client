@@ -30,6 +30,7 @@ export default {
           95: "#D4D3D805",
           100: "#71AAFF",
           110: "#0A6CFF",
+          115: "#9BC3FF",
         },
         secondary: {
           10: "#FF9900",
@@ -74,6 +75,7 @@ export default {
           185: "#0D0D0D",
           190: "#DEDEDE",
           195: "#757575",
+          196: "#ffffff3d",
         },
         error: {
           10: "#FC464663",

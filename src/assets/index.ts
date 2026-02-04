@@ -4,7 +4,7 @@ import internshipProgrammeBg from "../assets/Images/internshipProgrammeBg.png";
 import aboutUs from "../assets/Images/about-us.webp";
 import aboutUsBg from "../assets/Images/bg.png";
 import aboutUsHeroImg from "../assets/Images/about-us-hero.jpg";
-import gradientBg from "../assets/Images/gradient-bg.png";
+import gradientBg from "../assets/Images/gradient-bg.webp";
 import letsTalkBgImg from "../assets/Images/lets-talk-bg.png";
 import letsTalkBgImg2 from "../assets/Images/lets-talk-bg2.png";
 import contactUsBgImg from "../assets/Images/contact-us-bg.png";
