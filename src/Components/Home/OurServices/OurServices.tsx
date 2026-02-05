@@ -7,6 +7,7 @@ import { IMAGES } from "@/assets";
 import Container from "../../Shared/Container/Container";
 import Button from "@/Components/Reusable/Button/Button";
 import ContactUs from "../ContactUs/ContactUs";
+import { services } from "@/data/services";
 // At the top of your file
 // @ts-ignore
 // const mixitup = (await import("mixitup")).default;
@@ -46,90 +47,18 @@ const OurServices = () => {
   const [isContactUsModalOpen, setIsContactUsModalOpen] =
     useState<boolean>(false);
 
-  const [activeSecurityTab, setActiveSecurityTab] = useState("Compliance");
-  const cyberSecurityDetails = [
-    {
-      key: "Compliance",
-      image: IMAGES.aboutUsHeroImg,
-      description:
-        "Our compliance services help organizations meet regulatory requirements through structured assessments, audits, and ongoing risk monitoring. We identify gaps early, support audit readiness, and ensure compliance is maintained consistently over time.",
-    },
-    {
-      key: "Security",
-      image: IMAGES.security,
-      description:
-        "Our compliance services help organizations meet regulatory requirements through structured assessments, audits, and ongoing risk monitoring. We identify gaps early, support audit readiness, and ensure compliance is maintained consistently over time.",
-    },
-    {
-      key: "Email Security",
-      image: IMAGES.mailLock,
-      description:
-        "Our compliance services help organizations meet regulatory requirements through structured assessments, audits, and ongoing risk monitoring. We identify gaps early, support audit readiness, and ensure compliance is maintained consistently over time.",
-    },
-    {
-      key: "Endpoint Security",
-      image: IMAGES.endpointSecurity,
-      description:
-        "Our compliance services help organizations meet regulatory requirements through structured assessments, audits, and ongoing risk monitoring. We identify gaps early, support audit readiness, and ensure compliance is maintained consistently over time.",
-    },
-    {
-      key: "Network Security",
-      image: IMAGES.networkSecurity,
-      description:
-        "Our compliance services help organizations meet regulatory requirements through structured assessments, audits, and ongoing risk monitoring. We identify gaps early, support audit readiness, and ensure compliance is maintained consistently over time.",
-    },
-    {
-      key: "VAPT Security",
-      image: IMAGES.vaptSecurity,
-      description:
-        "Our compliance services help organizations meet regulatory requirements through structured assessments, audits, and ongoing risk monitoring. We identify gaps early, support audit readiness, and ensure compliance is maintained consistently over time.",
-    },
-  ];
-
-  const activeSecurityItem = cyberSecurityDetails.find(
-    (item) => item.key === activeSecurityTab,
+  const [activeTabs, setActiveTabs] = useState<Record<number, string>>(() =>
+    Object.fromEntries(
+      services.map((service) => [service.id, service.tabs[0]]),
+    ),
   );
 
-  const services = [
-    {
-      id: 2,
-      title: (
-        <h2
-          className={`font-extrabold text-neutral-185 text-[30px] leading-normal`}
-        >
-          2. Develop
-          <span className="text-primary-10">ment</span>
-        </h2>
-      ),
-      pointers: [
-        "Mobile App Development",
-        "Backend Development",
-        "Frontend Development",
-        "Full Stack Web Solutions",
-        "Web Development",
-        "Custom Software Solutions",
-      ],
-    },
-    {
-      id: 3,
-      title: (
-        <h2
-          className={`font-extrabold text-neutral-185 text-[30px] leading-normal`}
-        >
-          3. Des
-          <span className="text-primary-10">ign</span>
-        </h2>
-      ),
-      pointers: [
-        "UI/UX Design",
-        "Graphic Design",
-        "3D Design Walkthroughs",
-        "CGI Works",
-        "Brand Folios",
-        "Product Design",
-      ],
-    },
-  ];
+  const handleTabChange = (serviceId: number, tab: string) => {
+    setActiveTabs((prev) => ({
+      ...prev,
+      [serviceId]: tab,
+    }));
+  };
 
   return (
     <div
@@ -156,74 +85,66 @@ const OurServices = () => {
           </h2>
 
           <div className="max-w-full lg:max-w-[900px] mx-auto flex flex-col gap-6 mt-12">
-            <div className="rounded-xl border border-white bg-neutral-196 p-6 space-y-6">
-              <h2
-                className={`font-extrabold text-neutral-185 text-[30px] leading-normal capitalize`}
-              >
-                1. Cyber <span className="text-primary-10">Security</span>
-              </h2>
+            {services.map((service) => {
+              const activeItem = service.data.find(
+                (item) => item.key === activeTabs[service.id],
+              );
 
-              {/* tab buttons */}
-              <div className="flex items-center flex-wrap gap-6">
-                {cyberSecurityDetails?.map((item) => (
-                  <button
-                    key={item?.key}
-                    onClick={() => setActiveSecurityTab(item?.key)}
-                    className={`
-                px-6 py-3 rounded-3xl border border-primary-115 cursor-pointer hover:bg-primary-110 hover:text-white transition duration-300
+              return (
+                <div
+                  key={service.id}
+                  className="rounded-xl border border-white bg-neutral-196 p-6 space-y-6"
+                >
+                  {/* Title */}
+                  {service.title}
 
-                ${activeSecurityTab === item?.key ? "bg-primary-110 text-white" : "bg-neutral-180 text-primary-110"}
-                `}
-                  >
-                    {item?.key}
-                  </button>
-                ))}
-              </div>
+                  {/* Tabs */}
+                  <div className="flex items-center flex-wrap gap-6">
+                    {service.tabs.map((tab) => (
+                      <button
+                        key={tab}
+                        onClick={() => handleTabChange(service.id, tab)}
+                        className={`
+                px-6 py-3 rounded-3xl border border-primary-115 cursor-pointer
+                transition duration-300 hover:bg-primary-110 hover:text-white
+                ${
+                  activeTabs[service.id] === tab
+                    ? "bg-primary-110 text-white"
+                    : "bg-neutral-180 text-primary-110"
+                }
+              `}
+                      >
+                        {tab}
+                      </button>
+                    ))}
+                  </div>
 
-              <div ref={mixerRef} className="flex items-center gap-12">
-                <Image
-                  src={activeSecurityItem?.image}
-                  alt={activeSecurityItem?.key || "Security"}
-                  className="w-[284px] h-[159px] object-cover rounded-xl"
-                />
+                  {/* Active Content */}
+                  {activeItem && (
+                    <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+                      <Image
+                        src={activeItem.image}
+                        alt={activeItem.key}
+                        className="w-[284px] h-[159px] object-cover rounded-xl"
+                      />
 
-                <div>
-                  <p className="text-sm font-medium text-neutral-185 leading-normal max-w-[604px]">
-                    {activeSecurityItem?.description}
-                  </p>
+                      <div>
+                        <p className="text-sm font-medium text-neutral-185 leading-normal max-w-[604px]">
+                          {activeItem.description}
+                        </p>
 
-                  <Button
-                    handleClick={() => setIsContactUsModalOpen(true)}
-                    variant="primary"
-                    title="Talk To Our Team"
-                    classNames="w-[200px] bg-primary-110 text-white mt-3"
-                  />
+                        <Button
+                          handleClick={() => setIsContactUsModalOpen(true)}
+                          variant="primary"
+                          title="Talk To Our Team"
+                          classNames="w-[200px] bg-primary-110 text-white mt-3"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
-              </div>
-            </div>
-
-            {services?.map((service) => (
-              <div
-                key={service?.id}
-                className="rounded-xl border border-white bg-neutral-196 p-6 space-y-6"
-              >
-                {service?.title}
-
-                {/* tab buttons */}
-                <div className="flex items-center flex-wrap gap-6">
-                  {service?.pointers?.map((item) => (
-                    <button
-                      key={item}
-                      className={`
-                px-6 py-3 rounded-3xl border border-primary-115 cursor-pointer hover:bg-primary-110 hover:text-white transition duration-300
-                `}
-                    >
-                      {item}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </div>
