@@ -1,4 +1,6 @@
+import ComplianceAssessment from "@/Components/CybersecurityCompliance/ComplianceAssessment/ComplianceAssessment";
 import WhatYouGain from "@/Components/Home/WhatYouGain/WhatYouGain";
+import WhoWeAre from "@/Components/Home/WhoWeAre/WhoWeAre";
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("@/Components/Home/Hero/Hero"));
@@ -26,6 +28,9 @@ export default function Home() {
       <WhyTrustUs/>
       <Counters/>
       <WhatYouGain/>
+      <Testimonials/>
+      <WhoWeAre/>
+      <ComplianceAssessment />
       {/* <SessionAnnouncement /> */}
       <Testimonials />
       <FAQ />

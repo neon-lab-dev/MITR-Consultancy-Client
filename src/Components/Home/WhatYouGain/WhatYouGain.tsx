@@ -33,7 +33,7 @@ const WhatYouGain = () => {
       <Container>
         {/* Heading */}
         <div>
-          <p className={`font-semibold text-primary-20`}>WHAT YOU GAIN</p>
+          <p className={`font-black text-primary-20`}>WHAT YOU GAIN</p>
           <h2
             className={`font-extrabold text-white text-[30px] leading-normal capitalize my-6 `}
           >

@@ -110,6 +110,8 @@ export default {
           "linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.84) 50%);",
         "gradient-border":
           "linear-gradient(315deg, #FFF 0%, #064199 100%);",
+        "circular-gradient":
+          "linear-gradient(180deg, #074CB3 0%, #010A18 100%);",
       },
     },
   },
