@@ -7,7 +7,7 @@ import { IMAGES } from "../../../assets/index";
 
 const OurProjects = () => {
   return (
-    <div id="portfolio" className="bg-neutral-185 py-[128px] font-Satoshi">
+    <div id="portfolio" className="py-[128px] font-Satoshi">
       <Container>
         {/* Heading */}
         <div>

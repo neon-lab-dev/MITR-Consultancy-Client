@@ -1,23 +1,29 @@
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("@/Components/Home/Hero/Hero"));
-const OurServices = dynamic(() => import("@/Components/Home/OurServices/OurServices"));
-const AboutSecurityService = dynamic(() => import("@/Components/Home/AboutSecurityService/AboutSecurityService"));
-const OurProjects = dynamic(() => import("@/Components/Home/OurProjects/OurProjects"));
-const Technologies = dynamic(() => import("@/Components/Home/Technologies/Technologies"));
+const OurServices = dynamic(
+  () => import("@/Components/Home/OurServices/OurServices"),
+);
+const OurProjects = dynamic(
+  () => import("@/Components/Home/OurProjects/OurProjects"),
+);
 // const SessionAnnouncement = dynamic(() => import("@/Components/Shared/SessionAnnouncement/SessionAnnouncement"));
-const Testimonials = dynamic(() => import("@/Components/Home/Testimonials/Testimonials"));
+const Testimonials = dynamic(
+  () => import("@/Components/Home/Testimonials/Testimonials"),
+);
 const FAQ = dynamic(() => import("@/Components/Shared/FAQ/FAQ"));
 const LetsTalk = dynamic(() => import("@/Components/Home/LetsTalk/LetsTalk"));
+const WhyTrustUs = dynamic(() => import("@/Components/Home/WhyTrustUs/WhyTrustUs"));
+const Counters = dynamic(() => import("@/Components/Shared/Counters/Counters"));
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-neutral-185">
       <Hero />
       <OurServices />
       <OurProjects />
-      <AboutSecurityService />
-      <Technologies />
+      <WhyTrustUs/>
+      <Counters/>
       {/* <SessionAnnouncement /> */}
       <Testimonials />
       <FAQ />

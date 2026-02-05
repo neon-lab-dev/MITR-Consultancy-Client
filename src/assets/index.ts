@@ -18,6 +18,13 @@ import complianceServiceHero2 from "../assets/Images/compliance-service-hero2.we
 import complianceServiceHero3 from "../assets/Images/compliance-service-hero3.webp";
 import complianceServiceHero4 from "../assets/Images/compliance-service-hero4.webp";
 import secureCompliance from "../assets/Images/secure compliance-bg.webp";
+import predictableTimelines from "../assets/Images/predictable-timelines.webp";
+import experiencedIndustries from "../assets/Images/experienced-industries.webp";
+import securityDevelopment from "../assets/Images/security-development.webp";
+import vendors from "../assets/Images/vendors.webp";
+
+
+
 import featureIcon from "../assets/Icons/featureIcon.svg";
 import satisfied from "../assets/Icons/satisfied.svg";
 import medal from "../assets/Icons/medel.svg";
@@ -241,6 +248,7 @@ import antivirus from "../assets/Images/antivirus.webp";
 import dlp from "../assets/Images/dlp.webp";
 import edr from "../assets/Images/edr.webp";
 import firewall from "../assets/Images/firewall.webp";
+import counters from "../assets/Images/counters.gif";
 
 import shield from "../assets/Icons/microsoft-admin.svg";
 import clock from "../assets/Icons/clock-02.svg";
@@ -394,6 +402,11 @@ export const IMAGES = {
   edrReason4,
   edrReason5,
   edrReason6,
+  predictableTimelines,
+  experiencedIndustries,
+  securityDevelopment,
+  vendors,
+  counters,
 };
 
 export const ICONS = {
