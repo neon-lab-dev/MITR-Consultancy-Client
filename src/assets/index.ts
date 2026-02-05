@@ -22,6 +22,20 @@ import predictableTimelines from "../assets/Images/predictable-timelines.webp";
 import experiencedIndustries from "../assets/Images/experienced-industries.webp";
 import securityDevelopment from "../assets/Images/security-development.webp";
 import vendors from "../assets/Images/vendors.webp";
+import brandFolios from "../assets/Images/brand-folios.webp";
+import dataProtection from "../assets/Images/data-protection.webp";
+import edrXdr from "../assets/Images/EDR-XDR.webp";
+import emailSecurity from "../assets/Images/email-security.webp";
+import frontendDevelopmentImage from "../assets/Images/frontend-development.webp";
+import gdprDpdp from "../assets/Images/GDPRDPDP.webp";
+import iso27001Image from "../assets/Images/ISO-27001.webp";
+import mobileAppDevelopment from "../assets/Images/mobile-app-development.webp";
+import networkSecurityImage from "../assets/Images/network-security.webp";
+import securityAudits from "../assets/Images/security-audits.webp";
+import siemSoc from "../assets/Images/SIEM-SOC.webp";
+import uiUxDesign from "../assets/Images/ui-ux-design.webp";
+import vaptTesting from "../assets/Images/vapt-testing.webp";
+
 
 
 
@@ -410,7 +424,20 @@ export const IMAGES = {
   vendors,
   counters,
   whatYouGain,
-  aboutUsImage
+  aboutUsImage,
+   brandFolios,
+  dataProtection,
+  edrXdr,
+  emailSecurity,
+  frontendDevelopmentImage,
+  gdprDpdp,
+  iso27001Image,
+  mobileAppDevelopment,
+  networkSecurityImage,
+  securityAudits,
+  siemSoc,
+  uiUxDesign,
+  vaptTesting,
 };
 
 export const ICONS = {
