@@ -1,3 +1,4 @@
+import WhatYouGain from "@/Components/Home/WhatYouGain/WhatYouGain";
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("@/Components/Home/Hero/Hero"));
@@ -24,6 +25,7 @@ export default function Home() {
       <OurProjects />
       <WhyTrustUs/>
       <Counters/>
+      <WhatYouGain/>
       {/* <SessionAnnouncement /> */}
       <Testimonials />
       <FAQ />

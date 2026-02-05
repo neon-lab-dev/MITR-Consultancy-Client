@@ -5,6 +5,7 @@ import CyberSecurityTestimonials from "@/Components/CybersecurityCompliance/Cybe
 import SecureCompliance from "@/Components/CybersecurityCompliance/SecureCompliance/SecureCompliance";
 import TrustAndResults from "@/Components/CybersecurityCompliance/TrustAndResults/TrustAndResults";
 import Container from "@/Components/Shared/Container/Container";
+import Counters from "@/Components/Shared/Counters/Counters";
 import CTA from "@/Components/Shared/CTA/CTA";
 import Image from "next/image";
 
@@ -48,6 +49,7 @@ const CybersecurityCompliance = () => {
       </div>
       <SecureCompliance />
       <TrustAndResults />
+       <Counters/>
       <ComplianceAssessment />
       <CyberSecurityTestimonials />
       <CTA />

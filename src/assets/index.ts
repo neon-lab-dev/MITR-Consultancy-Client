@@ -249,6 +249,7 @@ import dlp from "../assets/Images/dlp.webp";
 import edr from "../assets/Images/edr.webp";
 import firewall from "../assets/Images/firewall.webp";
 import counters from "../assets/Images/counters.gif";
+import whatYouGain from "../assets/Images/what-you-gain-image.jpg";
 
 import shield from "../assets/Icons/microsoft-admin.svg";
 import clock from "../assets/Icons/clock-02.svg";
@@ -407,6 +408,7 @@ export const IMAGES = {
   securityDevelopment,
   vendors,
   counters,
+  whatYouGain
 };
 
 export const ICONS = {

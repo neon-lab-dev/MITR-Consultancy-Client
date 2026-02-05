@@ -112,6 +112,7 @@ const Navbar = () => {
     { label: "About Us", path: "/about-us" },
     // { label: "Portfolio", action: () => handleNavigation("portfolio") },
     { label: "Training Programmes", path: "/internship-programmes" },
+     { label: "Career", path: "/careers" },
   ];
 
   const dropdownVariants: any = {
