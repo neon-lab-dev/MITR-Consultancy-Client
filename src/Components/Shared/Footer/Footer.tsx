@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { ICONS, IMAGES } from "@/assets";
 import ContactUs from "@/Components/Home/ContactUs/ContactUs";
@@ -236,11 +237,11 @@ const Footer = () => {
                         {link.label}
                       </a>
                     ) : (
-                      <div className="flex gap-3">
+                      <div key={link?.label} className="flex gap-3">
                         {link?.icon && (
                           <Image src={link?.icon} alt="" className="size-5" />
                         )}
-                        <p key={link?.label}>{link.label}</p>
+                        <p>{link.label}</p>
                       </div>
                     ),
                   )}
