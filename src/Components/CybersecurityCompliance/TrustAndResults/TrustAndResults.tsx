@@ -12,7 +12,7 @@ const TrustAndResults = () => {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.35, // delay between cards
+        staggerChildren: 0.35,
       },
     },
   };

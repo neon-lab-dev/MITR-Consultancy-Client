@@ -14,7 +14,7 @@ import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
 import UserDropdown from "./UserDropdown";
 import { useCart } from "@/providers/CartProvider/CartProvider";
 import { motion, AnimatePresence } from "framer-motion";
-import { CgArrowTopRight } from 'react-icons/cg';
+import { CgArrowTopRight } from "react-icons/cg";
 
 export type TLoggedInUser = {
   _id: string;
@@ -31,7 +31,8 @@ const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { cartData } = useCart();
-  const [isSecurityDropdownOpen, setIsSecurityDropdownOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -52,7 +53,7 @@ const Navbar = () => {
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
       ) {
-        setIsSecurityDropdownOpen(false);
+        setActiveDropdown(null);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -106,15 +107,6 @@ const Navbar = () => {
     }
   };
 
-  const navlinks = [
-    { label: "Home", action: () => handleNavigation("home") },
-    { label: "Services", action: () => handleNavigation("services") },
-    { label: "About Us", path: "/about-us" },
-    // { label: "Portfolio", action: () => handleNavigation("portfolio") },
-    { label: "Training Programmes", path: "/internship-programmes" },
-     { label: "Career", path: "/careers" },
-  ];
-
   const dropdownVariants: any = {
     initial: {
       opacity: 0,
@@ -141,11 +133,92 @@ const Navbar = () => {
     },
   };
 
+  const newNavlinks = [
+    {
+      label: "Services",
+      links: [
+        {
+          label: "Compliance Services",
+          description: "ISO, DPDP, GDPR, SOC2",
+          path: "compliance-services",
+        },
+        {
+          label: "Cybersecurity Services",
+          description: "VAPT, Risk Assessment, Audits",
+          path: "security-services",
+        },
+        {
+          label: "Software Development",
+          description: "Secure Applications & Compliance-ready Systems",
+          pataction: () => handleNavigation("services"),
+        },
+        {
+          label: "UI/UX Design",
+          description: "Secure & user-friendly Application Interfaces",
+          action: () => handleNavigation("services"),
+        },
+        {
+          label: "Training Programs",
+          description: "Cybersecurity, Compliance & Awareness",
+          path: "training-programs",
+        },
+      ],
+    },
+    {
+      label: "Security Solutions",
+      links: [
+        {
+          label: "EDR / XDR / Antivirus",
+          path: "edr-xdr-antivirus",
+        },
+        {
+          label: "DLP & Email Security",
+          path: "dlp-email-security",
+        },
+        {
+          label: "Firewall & Network Security",
+          path: "firewall-network-security",
+        },
+        {
+          label: "SIEM",
+          path: "siem",
+        },
+      ],
+    },
+    {
+      label: "Company",
+      links: [
+        {
+          label: "About Us",
+          path: "about-us",
+        },
+        {
+          label: "Careers",
+          path: "careers",
+        },
+        {
+          label: "Privacy Policy",
+          path: "privacy-policy",
+        },
+        {
+          label: "Terms and Conditions",
+          path: "terms-and-conditions",
+        },
+        {
+          label: "Refund Policy",
+          path: "refund-policy",
+        },
+      ],
+    },
+  ];
+
   return (
     <div id="home">
       <div
         className={`fixed w-full h-fit top-0 z-50 transition-all duration-300  pb-2 ${
-          isScrolled ? "bg-neutral-40 pt-2" : "backdrop-blur-sm bg-transparent pt-14"
+          isScrolled
+            ? "bg-neutral-40 pt-2"
+            : "backdrop-blur-sm bg-transparent pt-14"
         }`}
       >
         <Container>
@@ -156,101 +229,115 @@ const Navbar = () => {
                 alt="MITRA Consultancy"
                 className="xl:w-[124px] xl:h-[57px] md:w-[90px] md:h-[45px] h-[36px] w-[72px]"
               />
-              <p className="text-neutral-130 text-xs font-semibold pt-1">From code to <span className="text-primary-110">compliance</span></p>
+              <p className="text-neutral-130 text-xs font-semibold pt-1">
+                From code to{" "}
+                <span className="text-primary-110">compliance</span>
+              </p>
             </Link>
             {/* Desktop Nav */}
-            
 
             <div className="flex items-center gap-6">
               <div className="hidden xl:flex items-center gap-10 relative">
-              {navlinks.map((link, index) =>
-                link?.action ? (
-                  <button
+                {newNavlinks?.map((item, index) => (
+                  <div
                     key={index}
-                    onClick={link.action}
-                    className={`text-lg font-semibold hover:text-primary-10 transition duration-300 ${
-                      isScrolled && "text-white"
-                    } ${textColor}`}
+                    className="relative"
+                    onMouseEnter={() => setActiveDropdown(item.label)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                    ref={dropdownRef}
                   >
-                    {link.label}
-                  </button>
-                ) : (
-                  <Link
-                    key={index}
-                    href={link.path}
-                    className={`text-lg font-semibold hover:text-primary-10 transition duration-300 ${
-                      isScrolled && "text-white"
-                    } ${textColor}`}
-                  >
-                    {link.label}
-                  </Link>
-                )
-              )}
-
-              <div
-                className="relative"
-                onMouseEnter={() => setIsSecurityDropdownOpen(true)}
-                onMouseLeave={() => setIsSecurityDropdownOpen(false)}
-                ref={dropdownRef}
-              >
-                <button
-                  className={`flex items-center gap-1 text-lg font-semibold hover:text-primary-10 transition duration-300 ${
-                    isScrolled ? "text-white" : textColor
-                  }`}
-                >
-                  Cyber Security Services
-                  <Image
-                    src={ICONS.downArrowWhite}
-                    alt="down arrow"
-                    className={`size-7 mt-1 transition-transform duration-300 ${
-                      isSecurityDropdownOpen ? "rotate-0" : "rotate-180"
-                    }`}
-                  />
-                </button>
-
-                <AnimatePresence>
-                  {isSecurityDropdownOpen && (
-                    <motion.div
-                      variants={dropdownVariants}
-                      initial="initial"
-                      animate="animate"
-                      exit="exit"
-                      className="absolute top-12 -left-20 2xl:-left-56 bg-neutral-80 shadow-lg rounded-lg w-[300px] 2xl:w-[620px] p-5 z-50 flex flex-col 2xl:flex-row gap-5"
+                    <button
+                      className={`flex items-center gap-1 text-lg font-semibold hover:text-primary-10 transition duration-300 ${
+                        isScrolled ? "text-white" : textColor
+                      }`}
                     >
-                      <div>
-                        <Link
-                          href="/compliance-services"
-                          onClick={() => setIsSecurityDropdownOpen(false)}
-                          className="text-neutral-50 hover:text-primary-20 hover:underline transition font-medium"
+                      {item?.label}
+                      <Image
+                        src={ICONS.downArrowWhite}
+                        alt="down arrow"
+                        className={`size-7 mt-1 transition-transform duration-300 ${
+                          activeDropdown === item.label
+                            ? "rotate-0"
+                            : "rotate-180"
+                        }`}
+                      />
+                    </button>
+
+                    <AnimatePresence>
+                      {activeDropdown === item.label && (
+                        <motion.div
+                          variants={dropdownVariants}
+                          initial="initial"
+                          animate="animate"
+                          exit="exit"
+                          className="absolute top-10 -left-0 bg-neutral-185 shadow-lg rounded-lg w-[280px] p-5 z-50 flex flex-col gap-5"
                         >
-                          Compliance Services
-                        </Link>
-                        <p className="text-neutral-25/90 text-xs mt-2 max-w-[300px]">
-                          Comprehensive solutions to meet industry regulations,
-                          including GDPR, HIPAA, and PCI DSS, ensuring data
-                          security and legal compliance.
-                        </p>
-                      </div>
-                      <div>
-                        <Link
-                          href="/security-services"
-                          onClick={() => setIsSecurityDropdownOpen(false)}
-                          className="text-neutral-50 hover:text-primary-20 hover:underline transition font-medium"
-                        >
-                          Security Services
-                        </Link>
-                        <p className="text-neutral-25/90 text-xs mt-2 max-w-[300px]">
-                          Advanced security offerings, including vulnerability
-                          assessments, penetration testing, and threat
-                          monitoring, to proactively identify and mitigate cyber
-                          threats.
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                          {item.links.map((link: any, index: number) => {
+                            if (link.action) {
+                              return (
+                                <button
+                                  key={index}
+                                  onClick={() => {
+                                    link.action();
+                                    setActiveDropdown(null);
+                                  }}
+                                  className={`text-lg font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start ${
+                                    isScrolled ? "text-white" : textColor
+                                  }`}
+                                >
+                                  <div className="flex items-center gap-3">
+                                    {link.label}
+                                  <Image
+                                    src={ICONS.rightArrow2}
+                                    alt="MITRA Consultancy"
+                                    className="size-5"
+                                  />
+                                  </div>
+                                  {
+                                    link?.description &&
+
+                                  <p className="text-neutral-175 text-sm">{link?.description}</p>
+                                  }
+                                </button>
+                              );
+                            }
+
+                            if (link.path) {
+                              return (
+                                <Link
+                                  key={index}
+                                  href={`/${link.path}`}
+                                  onClick={() => setActiveDropdown(null)}
+                                  className={`text-lg font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start ${
+                                    isScrolled ? "text-white" : textColor
+                                  }`}
+                                >
+                                  <div className="flex items-center gap-3">
+                                    {link.label}
+                                  <Image
+                                    src={ICONS.rightArrow2}
+                                    alt="MITRA Consultancy"
+                                    className="size-5"
+                                  />
+                                  </div>
+                                  {
+                                    link?.description &&
+
+                                  <p className="text-neutral-175 text-sm">{link?.description}</p>
+                                  }
+                                </Link>
+                              );
+                            }
+
+                            return null; // ✅ prevents crashes
+                          })}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
               </div>
-            </div>
+
               {pathname !== "/" &&
                 pathname !== "/compliance-services" &&
                 pathname !== "/security-services" &&
@@ -265,8 +352,7 @@ const Navbar = () => {
                 pathname !== "/careers" &&
                 pathname !== "/about-us" &&
                 !pathname.startsWith("/security/") &&
-                !pathname.startsWith("/security-service/") &&
-                 (
+                !pathname.startsWith("/security-service/") && (
                   <>
                     <Link href={"/cart"} className="relative">
                       <Image
