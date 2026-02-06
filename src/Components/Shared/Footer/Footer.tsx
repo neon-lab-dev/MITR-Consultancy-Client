@@ -162,7 +162,7 @@ const Footer = () => {
           icon: ICONS.locationWhite,
         },
         {
-          label: "Address 2",
+          label: "3rd Floor, Astha Building, Nageswar Colony, Boring Road, Chauraha, Patna 800008",
           path: "",
           icon: ICONS.locationWhite,
         },
