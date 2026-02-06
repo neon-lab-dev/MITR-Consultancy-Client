@@ -215,10 +215,10 @@ const Navbar = () => {
   return (
     <div id="home">
       <div
-        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300  pb-2 ${
+        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 pb-2 ${
           isScrolled
             ? "bg-neutral-40 pt-2"
-            : "backdrop-blur-sm bg-transparent pt-14"
+            : "backdrop-blur-sm bg-transparent pt-5"
         }`}
       >
         <Container>
@@ -227,7 +227,7 @@ const Navbar = () => {
               <Image
                 src={IMAGES.MITRConsoltancyLogo}
                 alt="MITRA Consultancy"
-                className="xl:w-[124px] xl:h-[57px] md:w-[90px] md:h-[45px] h-[36px] w-[72px]"
+                className="xl:w-[80px] xl:h-[40px] h-[36px] w-[72px]"
               />
               <p className="text-neutral-130 text-xs font-semibold pt-1">
                 From code to{" "}
@@ -247,7 +247,7 @@ const Navbar = () => {
                     ref={dropdownRef}
                   >
                     <button
-                      className={`flex items-center gap-1 text-lg font-semibold hover:text-primary-10 transition duration-300 ${
+                      className={`flex items-center gap-1 font-semibold hover:text-primary-10 transition duration-300 ${
                         isScrolled ? "text-white" : textColor
                       }`}
                     >
@@ -281,7 +281,7 @@ const Navbar = () => {
                                     link.action();
                                     setActiveDropdown(null);
                                   }}
-                                  className={`text-lg font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start ${
+                                  className={`font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start ${
                                     isScrolled ? "text-white" : textColor
                                   }`}
                                 >
@@ -308,7 +308,7 @@ const Navbar = () => {
                                   key={index}
                                   href={`/${link.path}`}
                                   onClick={() => setActiveDropdown(null)}
-                                  className={`text-lg font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start ${
+                                  className={` font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start ${
                                     isScrolled ? "text-white" : textColor
                                   }`}
                                 >
@@ -373,7 +373,7 @@ const Navbar = () => {
                         className="hidden md:block"
                       >
                         <button
-                          className={`border px-6 py-3 font-Inter text-lg font-medium rounded justify-center ${btnStyle}`}
+                          className={`border px-6 py-3 font-Inter font-medium rounded justify-center ${btnStyle}`}
                         >
                           Sign Up / Sign In
                         </button>
@@ -388,7 +388,7 @@ const Navbar = () => {
                     handleClick={() => setIsContactUsModalOpen(true)}
                     variant="primary"
                     title="Connect Us"
-                    classNames="w-[198px] xl:h-[54px] md:h-[46px] hidden xl:flex md:text-lg"
+                    classNames="w-[198px] xl:h-[54px] md:h-[46px] hidden xl:flex"
                     icon={<CgArrowTopRight size={24} />}
                     iconPosition="right"
                   />

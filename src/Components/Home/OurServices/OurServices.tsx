@@ -114,7 +114,7 @@ const OurServices = () => {
             OUR SERVICES
           </p>
 
-          <h2 className="font-extrabold text-neutral-185 text-[30px] leading-normal capitalize text-center max-w-[936px] mx-auto mt-6">
+          <h2 className="font-extrabold text-neutral-185 text-[30px] leading-normal capitalize text-center max-w-[936px] mx-auto mt-3">
             We focus on solving real business problems,{" "}
             <span className="text-primary-10">
               not just delivering services.

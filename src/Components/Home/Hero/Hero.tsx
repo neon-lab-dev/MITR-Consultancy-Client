@@ -89,7 +89,7 @@ const Hero = () => {
       ref={containerRef}
       initial="hidden"
       animate="visible"
-      className="font-Satoshi bg-neutral-185 text-white pt-40 relative h-[1000px] md:h-[1024px] overflow-hidden"
+      className="font-Satoshi bg-neutral-185 text-white pt-40 relative h-[1000px] md:h-[800px] 2xl:h-[1024px] overflow-hidden"
     >
       {/* Animated Background Overlay */}
       <motion.div
@@ -161,10 +161,10 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 h-full max-w-[1300px] w-full mx-auto px-5 md:px-7 2xl:px-0">
-        <div className="flex items-center justify-center h-full w-full">
+        <div className="flex justify-center h-full w-full">
           <motion.div
             variants={containerVariants}
-            className="flex flex-col w-full"
+            className="flex flex-col w-full mt-0 lg:mt-24"
           >
             <motion.div variants={itemVariants} className="overflow-hidden">
               <motion.h1
@@ -226,7 +226,7 @@ const Hero = () => {
             animate={floatingAnimation}
             className="relative hidden md:block"
           >
-            <div className="relative w-[350px] lg:w-[450px] h-[622px] lg:h-[800px]">
+            <div className="relative w-[350px] lg:w-[450px] h-[622px] md:h-[500px] 2xl:h-[800px]">
               <Image
                 src={IMAGES.heroGif}
                 alt="MITRA Consultancy"
