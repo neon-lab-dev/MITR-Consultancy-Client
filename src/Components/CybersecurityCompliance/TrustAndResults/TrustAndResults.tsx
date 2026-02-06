@@ -1,10 +1,39 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 import Container from "@/Components/Shared/Container/Container";
 import React from "react";
 import TrustAndResultCard from "./TrustAndResultCard";
 import Image from "next/image";
 import { IMAGES } from "@/assets";
+import { motion } from "framer-motion";
 
 const TrustAndResults = () => {
+  const containerVariants: any = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.35, // delay between cards
+      },
+    },
+  };
+
+  const cardVariants:any = {
+  hidden: {
+    opacity: 0,
+    y: 120,
+  },
+  show: (order: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.9,
+      delay: order * 0.35,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  }),
+};
+
+
   const featuresData = [
     {
       title: "Comprehensive Compliance Assistance",
@@ -56,7 +85,10 @@ const TrustAndResults = () => {
 
       <div className="">
         {[1, 2, 3]?.map((item, index) => (
-          <div key={index} className="relative w-full min-h-screen md:h-[1024px]">
+          <div
+            key={index}
+            className="relative w-full min-h-screen md:h-[1024px]"
+          >
             <Image
               src={IMAGES.linnerColorBg}
               alt=""
@@ -64,31 +96,43 @@ const TrustAndResults = () => {
             />
             <Container>
               <div className=" relative">
-                <section className="hidden xl:flex justify-between gap-6">
+                <motion.section
+                  className="hidden xl:flex justify-between gap-6"
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   {featuresData.map((item, index) => {
                     const stagger = [
-                      //  "translate-y-0",
-                      // "translate-y-32", // 2nd card → middle
-                      // "translate-y-0",
-                      "lg:translate-y-60", // 1st card → LOWEST
-                      "lg:translate-y-32", // 2nd card → middle
-                      "lg:translate-y-0", // 3rd card → TOPPEST
+                      "lg:translate-y-60", // bottom card
+                      "lg:translate-y-32", // middle card
+                      "lg:translate-y-0", // top card
                     ];
 
+                    // Reverse order animation (top appears first)
+                    const animationOrder = [2, 1, 0];
+
                     return (
-                      <TrustAndResultCard
+                      <motion.div
                         key={index}
-                        title={item.title}
-                        description={item.description}
-                        classNames={stagger[index]}
-                      />
+                        variants={cardVariants}
+                        custom={animationOrder[index]}
+                      >
+                        <TrustAndResultCard
+                          title={item.title}
+                          description={item.description}
+                          classNames={stagger[index]}
+                        />
+                      </motion.div>
                     );
                   })}
-                </section>
+                </motion.section>
+
                 <section className="hidden md:flex xl:hidden justify-between gap-6">
                   {featuresData.map((item, index) => {
                     const stagger = [
-                       "translate-y-0",
+                      "translate-y-0",
                       "translate-y-[448px]", // 2nd card → middle
                       "translate-y-0",
                     ];
@@ -103,25 +147,24 @@ const TrustAndResults = () => {
                     );
                   })}
                 </section>
-               <section className="flex md:hidden flex-col items-center gap-10">
-  {featuresData.map((item, index) => {
-    const stagger = [
-      "translate-y-0",
-      "translate-y-0",
-      "translate-y-0",
-    ];
+                <section className="flex md:hidden flex-col items-center gap-10">
+                  {featuresData.map((item, index) => {
+                    const stagger = [
+                      "translate-y-0",
+                      "translate-y-0",
+                      "translate-y-0",
+                    ];
 
-    return (
-      <TrustAndResultCard
-        key={index}
-        title={item.title}
-        description={item.description}
-        classNames={stagger[index]}
-      />
-    );
-  })}
-</section>
-
+                    return (
+                      <TrustAndResultCard
+                        key={index}
+                        title={item.title}
+                        description={item.description}
+                        classNames={stagger[index]}
+                      />
+                    );
+                  })}
+                </section>
               </div>
             </Container>
           </div>

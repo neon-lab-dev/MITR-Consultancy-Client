@@ -1,6 +1,7 @@
 import ComplianceAssessment from "@/Components/CybersecurityCompliance/ComplianceAssessment/ComplianceAssessment";
 import WhatYouGain from "@/Components/Home/WhatYouGain/WhatYouGain";
 import WhoWeAre from "@/Components/Home/WhoWeAre/WhoWeAre";
+import CTA from "@/Components/Shared/CTA/CTA";
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("@/Components/Home/Hero/Hero"));
@@ -15,7 +16,6 @@ const Testimonials = dynamic(
   () => import("@/Components/Home/Testimonials/Testimonials"),
 );
 const FAQ = dynamic(() => import("@/Components/Shared/FAQ/FAQ"));
-const LetsTalk = dynamic(() => import("@/Components/Home/LetsTalk/LetsTalk"));
 const WhyTrustUs = dynamic(() => import("@/Components/Home/WhyTrustUs/WhyTrustUs"));
 const Counters = dynamic(() => import("@/Components/Shared/Counters/Counters"));
 
@@ -32,9 +32,8 @@ export default function Home() {
       <WhoWeAre/>
       <ComplianceAssessment />
       {/* <SessionAnnouncement /> */}
-      <Testimonials />
       <FAQ />
-      <LetsTalk />
+      <CTA/>
     </div>
   );
 }
