@@ -4,27 +4,27 @@ import Image from "next/image";
 
 const WhyTrustUs = () => {
   const featureDetails = [
-  {
-    key: "predictableTimelines",
-    image: IMAGES.predictableTimelines,
-    title: "Predictable timelines",
-  },
-  {
-    key: "experiencedIndustries",
-    image: IMAGES.experiencedIndustries,
-    title: "Experienced across industries",
-  },
-  {
-    key: "securityDevelopment",
-    image: IMAGES.securityDevelopment,
-    title: "Security + development under one roof",
-  },
-  {
-    key: "vendors",
-    image: IMAGES.vendors,
-    title: "One partner instead of 4 vendors",
-  },
-];
+    {
+      key: "predictableTimelines",
+      image: IMAGES.predictableTimelines,
+      title: "Predictable timelines",
+    },
+    {
+      key: "experiencedIndustries",
+      image: IMAGES.experiencedIndustries,
+      title: "Experienced across industries",
+    },
+    {
+      key: "securityDevelopment",
+      image: IMAGES.securityDevelopment,
+      title: "Security + development under one roof",
+    },
+    {
+      key: "vendors",
+      image: IMAGES.vendors,
+      title: "One partner instead of 4 vendors",
+    },
+  ];
 
   return (
     <div className="font-Satoshi py-14">
@@ -40,13 +40,9 @@ const WhyTrustUs = () => {
           </h2>
         </div>
 
-        <div className="flex gap-6 w-full overflow-x-auto mt-12">
-          {
-            featureDetails?.map(detail => 
-              <div
-              key={detail?.key}
-              className={`relative rounded-xl`}
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full overflow-x-auto mt-12">
+          {featureDetails?.map((detail) => (
+            <div key={detail?.key} className={`relative rounded-xl`}>
               {/* Background Image */}
               <Image
                 src={detail.image}
@@ -65,8 +61,7 @@ const WhyTrustUs = () => {
                 </h3>
               </div>
             </div>
-            )
-          }
+          ))}
         </div>
       </Container>
     </div>

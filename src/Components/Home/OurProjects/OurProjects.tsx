@@ -55,9 +55,9 @@ const OurProjects = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div
-              className={`group relative rounded-xl overflow-hidden h-[564px]`}
+              className={`group relative rounded-xl overflow-hidden h-[390px] md:h-[564px]`}
             >
               {/* Background Image */}
               <Image
@@ -88,7 +88,7 @@ const OurProjects = () => {
             </div>
 
             <div
-              className={`group relative rounded-xl overflow-hidden h-[564px]`}
+              className={`group relative rounded-xl overflow-hidden h-[390px] md:h-[564px]`}
             >
               {/* Background Image */}
               <Image

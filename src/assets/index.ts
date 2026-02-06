@@ -298,6 +298,7 @@ import autoConversations from "../assets/Icons/auto-conversations.svg";
 import irisScan from "../assets/Icons/iris-scan.svg";
 import access from "../assets/Icons/access.svg";
 import alert from "../assets/Icons/alert-01.svg";
+import locationWhite from "../assets/Icons/location-white.svg";
 
 export const IMAGES = {
   MITRConsoltancyLogo,
@@ -598,4 +599,5 @@ export const ICONS = {
   irisScan,
   access,
   alert,
+  locationWhite,
 };

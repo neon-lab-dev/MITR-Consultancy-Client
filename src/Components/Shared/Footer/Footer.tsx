@@ -32,122 +32,32 @@ const Footer = () => {
     },
   ];
 
-  // const quickLinks = [
-  //   {
-  //     heading: "Quick Links",
-  //     links: [
-  //       {
-  //         label: "Home",
-  //         path: "/",
-  //       },
-  //       {
-  //         label: "About Us",
-  //         path: "/about-us",
-  //       },
-  //       {
-  //         label: "Terms and Conditions",
-  //         path: "/terms-and-conditions",
-  //       },
-  //       {
-  //         label: "Privacy Policy",
-  //         path: "/privacy-policy",
-  //       },
-  //       {
-  //         label: "Refund & Cancellation policy",
-  //         path: "/refund-cancellation-policy",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     heading: "Cyber Security Services",
-  //     links: [
-  //       {
-  //         label: "Compliance Services",
-  //         path: "/compliance-services",
-  //       },
-  //       {
-  //         label: "Security Services",
-  //         path: "/security-services",
-  //       },
-  //       {
-  //         label: "VAPT Security",
-  //         path: "/security/vapt-security",
-  //       },
-  //       {
-  //         label: "Email Security",
-  //         path: "/security/email-security",
-  //       },
-  //       {
-  //         label: "Cloud Security",
-  //         path: "/security/cloud-security",
-  //       },
-  //       {
-  //         label: "Network Security",
-  //         path: "/security/network-security",
-  //       },
-  //       {
-  //         label: "Endpoint Security",
-  //         path: "/security/endpoint-security",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     heading: "Industrial Training Programs",
-  //     links: [
-  //       {
-  //         label: "Full Stack Web Development",
-  //         path: "/internship-programmes/67a19b646269f19097fb2bfa",
-  //       },
-  //       {
-  //         label: "Frontend Development",
-  //         path: "/internship-programmes/67a19f7a7ce841729b59f52c",
-  //       },
-  //       {
-  //         label: "Backend Development",
-  //         path: "/internship-programmes/67a18b9b5f74e79df59625c1",
-  //       },
-  //       {
-  //         label: "App Development",
-  //         path: "/internship-programmes/68722c26e620583ce87f130d",
-  //       },
-  //       {
-  //         label: "Cyber Security Mastery Program",
-  //         path: "/internship-programmes/6864409a80f98f62637e7e04",
-  //       },
-  //       {
-  //         label: "UX/UI Design",
-  //         path: "/internship-programmes/67a1a75225335e95874bb562",
-  //       },
-  //     ],
-  //   },
-  // ];
-
-  const quickLinks = [
-    {
-      heading: "Quick Links",
-      links: [
-        {
-          label: "Home",
-          path: "/",
-        },
-        {
-          label: "About Us",
-          path: "/about-us",
-        },
-        {
-          label: "Terms and Conditions",
-          path: "/terms-and-conditions",
-        },
-        {
-          label: "Privacy Policy",
-          path: "/privacy-policy",
-        },
-        {
-          label: "Refund & Cancellation policy",
-          path: "/refund-cancellation-policy",
-        },
-      ],
-    },
+  const quickLinks:any = [
+    // {
+    //   heading: "Quick Links",
+    //   links: [
+    //     {
+    //       label: "Home",
+    //       path: "/",
+    //     },
+    //     {
+    //       label: "About Us",
+    //       path: "/about-us",
+    //     },
+    //     {
+    //       label: "Terms and Conditions",
+    //       path: "/terms-and-conditions",
+    //     },
+    //     {
+    //       label: "Privacy Policy",
+    //       path: "/privacy-policy",
+    //     },
+    //     {
+    //       label: "Refund & Cancellation policy",
+    //       path: "/refund-cancellation-policy",
+    //     },
+    //   ],
+    // },
     {
       heading: "Cybersecurity & Compliance Services",
       links: [
@@ -241,6 +151,32 @@ const Footer = () => {
         },
       ],
     },
+    {
+      heading: "Contact Details",
+      links: [
+        {
+          label:
+            "No: 1190/1, FD 94, 4th Floor, HSR Layout, Sector 3, 22nd Cross Road, Bengaluru 560102, Karnataka.",
+          path: "",
+          icon: ICONS.locationWhite,
+        },
+        {
+          label: "Address 2",
+          path: "",
+          icon: ICONS.locationWhite,
+        },
+        {
+          label: "+91 - 8210464851",
+          path: "tel:+91 - 8210464851",
+          icon: ICONS.phone,
+        },
+        {
+          label: "business@mitraconsultancy.co.in",
+          path: "mailto:business@mitraconsultancy.co.in",
+          icon: ICONS.email,
+        },
+      ],
+    },
   ];
 
   return (
@@ -282,22 +218,30 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row gap-14 lg:gap-0 justify-between w-full mt-8">
-            {quickLinks?.map((item) => (
+            {quickLinks?.map((item:any) => (
               <div key={item?.heading} className="max-w-[170px]">
                 <h1 className="font-semibold">{item?.heading}</h1>
 
                 <div className="mt-5 flex flex-col gap-4">
-                  {item?.links?.map((link) =>
+                  {item?.links?.map((link:any) =>
                     link?.path ? (
-                      <Link
+                      <a
                         key={link?.label}
                         href={link?.path}
-                        className="hover:underline"
+                        className="hover:underline flex gap-3"
                       >
+                        {link?.icon && (
+                          <Image src={link?.icon} alt="" className="size-5" />
+                        )}
                         {link.label}
-                      </Link>
+                      </a>
                     ) : (
-                      <p key={link?.label}>{link.label}</p>
+                      <div className="flex gap-3">
+                        {link?.icon && (
+                          <Image src={link?.icon} alt="" className="size-5" />
+                        )}
+                        <p key={link?.label}>{link.label}</p>
+                      </div>
                     ),
                   )}
                 </div>
@@ -306,26 +250,26 @@ const Footer = () => {
           </div>
 
           <hr className="border border-primary-10 my-4" />
-          <div className="flex flex-col lg:flex-row gap-5 lg:gap-0 items-start md:items-center justify-between">
+          <div className="flex flex-col lg:flex-row gap-5 items-start md:items-center justify-center">
             <p className="text-start md:text-center">
               © All Rights Reserved by MITRA Consultancy 2026{" "}
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 text-center">
-              <a
-                href="tel:+918210464851"
+              <Link
+                href="/privacy-policy"
                 className="flex items-center gap-2 hover:underline"
               >
-                <Image src={ICONS.phone} alt="" className="size-5" />
-                <p>+91 8210464851</p>
-              </a>
-              <a
-                href="mailto:business@mitraconsultancy.co.in"
+                <div className="size-1 rounded-full bg-white"></div>
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms-and-conditions"
                 className="flex items-center gap-2 hover:underline"
               >
-                <Image src={ICONS.email} alt="" className="size-5" />
-                <p>business@mitraconsultancy.co.in</p>
-              </a>
+                <div className="size-1 rounded-full bg-white"></div>
+                Terms ans Conditions
+              </Link>
             </div>
           </div>
 
