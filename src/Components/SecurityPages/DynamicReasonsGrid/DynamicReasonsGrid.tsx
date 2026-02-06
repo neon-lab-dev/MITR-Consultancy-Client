@@ -41,7 +41,7 @@ const DynamicReasonsGrid = ({
             <motion.div
               key={index}
               layout
-              initial={{ height: 420 }}
+              initial={{ height: 434 }}
               whileHover={{ height: 520 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
               className="bg-neutral-130 rounded-xl flex flex-col overflow-hidden cursor-pointer"
@@ -61,7 +61,7 @@ const DynamicReasonsGrid = ({
 
                 {/* Description */}
                 <motion.div
-                  initial={{ opacity: 0 }}
+                  initial={{ opacity: 1 }}
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.25 }}
                   className="mt-3"

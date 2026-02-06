@@ -50,8 +50,8 @@ const WhatYouGain = () => {
             icon={<CgArrowTopRight size={24} />}
           />
         </div>
-        <div className="flex justify-between items-center  gap-6 mt-12">
-          <div className="xl:w-[50%]">
+        <div className="flex flex-col xl:flex-row justify-between items-center  gap-6 mt-12">
+          <div className="w-full xl:w-[50%]">
             {gainDetails?.map((detail, index) => (
               <div key={index} className="p-6">
                 <h3 className="font-black text-neutral-130 text-[22px] mb-2">
@@ -63,7 +63,7 @@ const WhatYouGain = () => {
               </div>
             ))}
           </div>
-          <div className="xl:w-[50%]">
+          <div className="w-full xl:w-[50%]">
             <Image src={IMAGES.whatYouGain} alt="What You Gain" className="w-full h-full min-h-[448px] object-cover rounded-lg" />
           </div>
         </div>

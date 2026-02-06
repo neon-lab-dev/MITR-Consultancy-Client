@@ -13,7 +13,7 @@ const Counters = () => {
 ];
 
   return (
-    <section className="relative h-[448px] w-full overflow-hidden font-Satoshi">
+    <section className="relative h-[830px] sm:h-[448px] w-full overflow-hidden font-Satoshi p">
       {/* Background */}
       <Image
         src={IMAGES.counters}
@@ -26,8 +26,8 @@ const Counters = () => {
       <div className="absolute inset-0 bg-black/10" />
 
       <Container>
-        <div className="relative h-[448px] flex items-center">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 w-full text-center">
+        <div className="relative h-full sm:h-[448px] flex justify-center items-center py-[106px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 w-full text-center">
             {countersData.map(({ value, label }) => (
               <div key={label}>
                 <h3 className="text-white text-[52px] font-extrabold">

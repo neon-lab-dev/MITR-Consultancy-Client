@@ -28,12 +28,12 @@ const WhoWeAre = () => {
         </div>
 
         {/* Image */}
-        <div className="relative w-full h-[220px] md:h-[300px] rounded-xl overflow-hidden mt-[227px]">
+        <div className="relative w-full h-[220px] md:h-[300px] rounded-xl overflow-hidden xl:mt-[227px] md:mt-[160px] mt-[120px]">
           <Image
             src={IMAGES.aboutUsImage}
             alt="about section image"
             fill
-            className="object-cover w-full h-full md:w-[770px] md:h-[348px] 2xl:w-[1128px]"
+            className="object-cover w-full h-[484px]  md:w-[770px] md:h-[348px] 2xl:w-[1128px]"
           />
         </div>
       </Container>

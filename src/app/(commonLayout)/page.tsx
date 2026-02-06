@@ -32,7 +32,6 @@ export default function Home() {
       <WhoWeAre/>
       <ComplianceAssessment />
       {/* <SessionAnnouncement /> */}
-      <Testimonials />
       <FAQ />
       <CTA/>
     </div>

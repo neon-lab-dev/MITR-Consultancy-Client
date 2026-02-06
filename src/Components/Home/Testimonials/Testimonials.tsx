@@ -1,5 +1,6 @@
 "use client";
 
+import { ICONS } from "@/assets";
 import Container from "../../Shared/Container/Container";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -7,34 +8,62 @@ import { useEffect, useState } from "react";
 const testimonials = [
   {
     id: 1,
-    text: "MITRA helped us simplify security and compliance without adding complexity.",
-    author: "IT Manager, Technology Company",
-    avatar: "/images/testimonial-user.png",
+    text: "Fantastic service from MITRA Consultancy. We successfully launched our Domain-Hosting provider. Really appreciate this service.",
+    author: "Gobinath, Digital Solutions Expert",
+    avatar: ICONS.users,
   },
   {
     id: 2,
-    text: "Their compliance process was extremely structured and efficient.",
-    author: "Security Head, SaaS Company",
-    avatar: "/images/testimonial-user.png",
+    text: "Their support helped us enhance our dental clinic operations significantly. Highly professional and dedicated service.",
+    author: "Shashank, Dental Health Professional",
+     avatar: ICONS.users,
   },
   {
     id: 3,
-    text: "Professional, knowledgeable, and very responsive.",
-    author: "CTO, Fintech Startup",
-    avatar: "/images/testimonial-user.png",
+    text: "Innovative solutions improved our farming efficiency. The insights were incredibly valuable, and we are very satisfied with the results.",
+    author: "Gaurav, Agricultural Innovator",
+     avatar: ICONS.users,
+  },
+  {
+    id: 4,
+    text: "Amazing creativity and precision in our architectural projects. The space frame designs truly brought our vision to life. Highly recommend their expertise.",
+    author: "Lakshaya, Architectural Designer",
+     avatar: ICONS.users,
+  },
+  {
+    id: 5,
+    text: "The support for our student tiffin service was exceptional. Healthy, delicious meals delivered perfectly on time. Couldn’t ask for better service.",
+    author: "Mohit, Student Tiffin Provider",
+     avatar: ICONS.users,
+  },
+  {
+    id: 6,
+    text: "Top-notch service ensured all our business needs were met efficiently. Truly outstanding and reliable.",
+    author: "Siv Chidambaram, Business Leader",
+     avatar: ICONS.users,
+  },
+  {
+    id: 7,
+    text: "Med2HR solutions streamlined our healthcare recruitment process. The efficiency and results were outstanding. A game-changer for us.",
+    author: "Pragati Pangey, Med2HR Specialist",
+     avatar: ICONS.users,
   },
 ];
+
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [cardWidth, setCardWidth] = useState(740);
+  const [isMobile, setIsMobile] = useState(false);
 
-  /* ⭐ RESPONSIVE WIDTH */
+  /* ⭐ RESPONSIVE DETECTION */
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
+        setIsMobile(true);
         setCardWidth(540);
       } else {
+        setIsMobile(false);
         setCardWidth(740);
       }
     };
@@ -45,17 +74,20 @@ const Testimonials = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  /* ⭐ AUTOPLAY */
+  /* ⭐ AUTOPLAY ONLY FOR DESKTOP */
   useEffect(() => {
+    if (isMobile) return;
+
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % testimonials.length);
     }, 3500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isMobile]);
 
   return (
     <section className="bg-neutral-180 py-20 relative overflow-hidden font-Satoshi">
+      <div className="absolute -top-10 -left-[224px] w-[448px] h-[448px] rounded-full bg-[linear-gradient(180deg,#074CB3_0%,#010A18_100%)] blur-[224px]" />
 
       <Container>
         <div className="text-center mb-16">
@@ -68,16 +100,22 @@ const Testimonials = () => {
         </div>
       </Container>
 
-      {/* ⭐ SLIDER */}
+      {/* ⭐ SLIDER / STACK SWITCH */}
       <div className="relative w-full overflow-hidden">
 
         <div
-          className="flex transition-transform duration-700 ease-out"
-          style={{
-            transform: `translateX(calc(50% - ${
-              activeIndex * cardWidth
-            }px - ${cardWidth / 2}px))`,
-          }}
+          className={`flex ${
+            isMobile ? "flex-col items-center gap-10" : "flex-row"
+          } transition-transform duration-700 ease-out`}
+          style={
+            isMobile
+              ? {}
+              : {
+                  transform: `translateX(calc(50% - ${
+                    activeIndex * cardWidth
+                  }px - ${cardWidth / 2}px))`,
+                }
+          }
         >
           {testimonials.map((item, index) => {
             const isActive = index === activeIndex;
@@ -85,9 +123,11 @@ const Testimonials = () => {
             return (
               <div
                 key={item.id}
-                style={{ width: cardWidth }}
+                style={isMobile ? {} : { width: cardWidth }}
                 className={`px-6 shrink-0 transition-all duration-500 ${
-                  isActive
+                  isMobile
+                    ? "opacity-100 scale-100 w-full max-w-[540px]"
+                    : isActive
                     ? "opacity-100 scale-100"
                     : "opacity-40 scale-90"
                 }`}
@@ -95,7 +135,7 @@ const Testimonials = () => {
                 <div className="text-center">
 
                   <div className="flex justify-center mb-6 relative">
-                    <div className="w-16 h-16 rounded-full border border-primary-110 flex items-center justify-center text-primary-110 text-2xl">
+                    <div className="size-[84px] rounded-full border border-primary-110 flex items-center justify-center text-primary-110 text-[52px] bg-neutral-180">
                       “
                     </div>
 
@@ -103,8 +143,8 @@ const Testimonials = () => {
                       <Image
                         src={item.avatar}
                         alt="user"
-                        width={52}
-                        height={52}
+                        width={84}
+                        height={84}
                         className="rounded-full border-4 border-neutral-180"
                       />
                     </div>
