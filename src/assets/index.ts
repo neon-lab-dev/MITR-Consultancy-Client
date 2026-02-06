@@ -26,7 +26,6 @@ import brandFolios from "../assets/Images/brand-folios.webp";
 import dataProtection from "../assets/Images/data-protection.webp";
 import edrXdr from "../assets/Images/EDR-XDR.webp";
 import emailSecurity from "../assets/Images/email-security.webp";
-import frontendDevelopmentImage from "../assets/Images/frontend-development.webp";
 import gdprDpdp from "../assets/Images/GDPRDPDP.webp";
 import iso27001Image from "../assets/Images/ISO-27001.webp";
 import mobileAppDevelopment from "../assets/Images/mobile-app-development.webp";
@@ -35,6 +34,16 @@ import securityAudits from "../assets/Images/security-audits.webp";
 import siemSoc from "../assets/Images/SIEM-SOC.webp";
 import uiUxDesign from "../assets/Images/ui-ux-design.webp";
 import vaptTesting from "../assets/Images/vapt-testing.webp";
+import design3D from "../assets/Images/3d-design.webp";
+import backendDevelopmentImage from "../assets/Images/backend-development.webp";
+import cgiWorks from "../assets/Images/cgi-works.webp";
+import customSoftwareImage from "../assets/Images/custom-software.webp";
+import frontendDevelopmentImage from "../assets/Images/frontend-development.webp";
+import fullStackDevelopment from "../assets/Images/full-stack-development.webp";
+import graphicsDesign from "../assets/Images/graphics-design.webp";
+import productDesign from "../assets/Images/product-design.webp";
+import webDevelopmentImage from "../assets/Images/web-development.webp";
+
 
 
 
@@ -429,7 +438,6 @@ export const IMAGES = {
   dataProtection,
   edrXdr,
   emailSecurity,
-  frontendDevelopmentImage,
   gdprDpdp,
   iso27001Image,
   mobileAppDevelopment,
@@ -438,6 +446,15 @@ export const IMAGES = {
   siemSoc,
   uiUxDesign,
   vaptTesting,
+  design3D,
+  backendDevelopmentImage,
+  cgiWorks,
+  customSoftwareImage,
+  frontendDevelopmentImage,
+  fullStackDevelopment,
+  graphicsDesign,
+  productDesign,
+  webDevelopmentImage,
 };
 
 export const ICONS = {

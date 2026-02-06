@@ -103,13 +103,13 @@ export const services = [
       },
       {
         key: "Backend Development",
-        image: IMAGES.backendDevelopment,
+        image: IMAGES.backendDevelopmentImage,
         description:
           "Power your applications with secure, scalable backend systems. We design server-side architectures that handle growth without breaking.Reliable foundations for long-term success.",
       },
       {
         key: "Frontend Development",
-        image: IMAGES.frontendDevelopment,
+        image: IMAGES.frontendDevelopmentImage,
         description:
           "Create interfaces that feel intuitive, fast, and accessible. We focus on usability, performance, and clean interactions.Because great experiences drive conversions.",
       },
@@ -121,13 +121,13 @@ export const services = [
       },
       {
         key: "Web Development",
-        image: IMAGES.webDevelopment,
+        image: IMAGES.webDevelopmentImage,
         description:
           "Design and develop responsive websites aligned with business goals. Optimized for speed, usability, and clarity.Websites built to convert visitors into customers.",
       },
       {
         key: "Custom Software Solutions",
-        image: IMAGES.customSoftware,
+        image: IMAGES.customSoftwareImage,
         description:
           "Software built around your exact business needs. From SaaS platforms to internal tools, we tailor every solution.Flexible, scalable, and future-ready.",
       },
@@ -158,13 +158,13 @@ export const services = [
       },
       {
         key: "Graphic Design",
-        image: IMAGES.graphicDesign,
+        image: IMAGES.graphicsDesign,
         description:
           "Visuals that communicate clearly and elevate your brand. From identities to digital assets, we design with purpose.Design that supports trust and recognition.",
       },
       {
         key: "3D Design Walkthroughs",
-        image: IMAGES.threeDDesign,
+        image: IMAGES.design3D,
         description:
           "Bring concepts to life with immersive 3D experiences. Perfect for showcasing spaces, products, and ideas before execution.Clarity before commitment.",
       },
