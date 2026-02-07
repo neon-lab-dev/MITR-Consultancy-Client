@@ -456,9 +456,9 @@ const SecureCompliance = () => {
 
       <Container>
         <div className="z-10 relative py-[100px]">
-          <div className="flex w-full">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 w-full">
             {/* Left side */}
-            <div className="w-[40%]">
+            <div className="w-full lg:w-[40%]">
               <div className="max-w-[300px]">
                 <StyledHeading
                   align="left"
@@ -466,7 +466,7 @@ const SecureCompliance = () => {
                   stylesHeading="Simplified"
                 />
               </div>
-              <div className="flex flex-col items-start gap-12 mt-12">
+              <div className="flex flex-row flex-wrap lg:flex-col items-start gap-8 lg:gap-12 mt-12">
                 {tabButtons?.map((item) => (
                   <button
                     key={item}
@@ -482,7 +482,7 @@ const SecureCompliance = () => {
               </div>
             </div>
 
-            <div className="bg-neutral-190 border border-neutral-130 pl-14 pt-14 pb-[143px] flex flex-col gap-12 w-[60%]">
+            <div className="bg-neutral-190 border border-neutral-130 pl-5 lg:pl-14 pt-5 lg:pt-14 pb-6 lg:pb-[143px] flex flex-col gap-12 w-full lg:w-[60%]">
               {activeData?.map((item, index) => (
                 <div key={index} className="flex flex-col gap-6">
                   <div>
