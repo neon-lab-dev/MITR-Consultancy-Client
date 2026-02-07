@@ -131,7 +131,7 @@ const OurProjects = () => {
         >
           <p className={`font-semibold text-primary-20`}>PROJECTS</p>
           <h2
-            className={`font-extrabold text-white text-[30px] leading-normal capitalize mt-6`}
+            className={`font-extrabold text-white text-[30px] leading-normal capitalize mt-1`}
           >
             Selected{" "}
             <motion.span 
@@ -342,25 +342,6 @@ const OurProjects = () => {
               </motion.div>
             ))}
           </motion.div>
-        </motion.div>
-
-        {/* View More Button (Optional) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 flex justify-center"
-        >
-          <motion.button
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 10px 30px rgba(0, 153, 255, 0.3)"
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 rounded-full bg-gradient-to-r from-primary-10 to-primary-20 text-white font-medium"
-          >
-            View All Projects
-          </motion.button>
         </motion.div>
       </Container>
     </div>

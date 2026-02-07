@@ -65,7 +65,7 @@ const WhyTrustUs = () => {
         >
           <p className={`font-semibold text-primary-20`}>WHY TRUST US</p>
           <h2
-            className={`font-extrabold text-white text-[30px] leading-normal capitalize mt-6`}
+            className={`font-extrabold text-white text-[30px] leading-normal capitalize mt-3`}
           >
             Why Businesses Work with{" "}
             <motion.span 

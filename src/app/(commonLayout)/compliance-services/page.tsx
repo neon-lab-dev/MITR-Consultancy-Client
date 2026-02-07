@@ -1,7 +1,6 @@
 import { IMAGES } from "@/assets";
 import ComplianceAssessment from "@/Components/CybersecurityCompliance/ComplianceAssessment/ComplianceAssessment";
 import CybersecurityComplianceHero from "@/Components/CybersecurityCompliance/CybersecurityComplianceHero/CybersecurityComplianceHero";
-import CyberSecurityTestimonials from "@/Components/CybersecurityCompliance/CyberSecurityTestimonials/CyberSecurityTestimonials";
 import SecureCompliance from "@/Components/CybersecurityCompliance/SecureCompliance/SecureCompliance";
 import TrustAndResults from "@/Components/CybersecurityCompliance/TrustAndResults/TrustAndResults";
 import Container from "@/Components/Shared/Container/Container";
@@ -51,7 +50,7 @@ const CybersecurityCompliance = () => {
       <TrustAndResults />
        <Counters/>
       <ComplianceAssessment />
-      <CyberSecurityTestimonials />
+      {/* <CyberSecurityTestimonials /> */}
       <CTA />
     </div>
   );

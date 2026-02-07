@@ -67,7 +67,7 @@ const WhatYouGain = () => {
         >
           <p className={`font-black text-primary-20`}>WHAT YOU GAIN</p>
           <h2
-            className={`font-extrabold text-white text-[30px] leading-normal capitalize my-6 `}
+            className={`font-extrabold text-white text-[30px] leading-normal capitalize my-3`}
           >
             Working With us means{" "}
             <motion.span 

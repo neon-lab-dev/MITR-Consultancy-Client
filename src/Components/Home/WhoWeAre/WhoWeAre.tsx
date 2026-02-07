@@ -13,7 +13,7 @@ const WhoWeAre = () => {
           <div>
             <p className={`font-black text-primary-20`}>ABOUT US</p>
           <h2
-            className={`font-extrabold text-white text-[30px] leading-normal capitalize my-6 `}
+            className={`font-extrabold text-white text-[30px] leading-normal capitalize my-3`}
           >
             Who We {" "}
             <span className="text-primary-10">
@@ -28,7 +28,7 @@ const WhoWeAre = () => {
         </div>
 
         {/* Image */}
-        <div className="relative w-full h-[220px] md:h-[300px] rounded-xl overflow-hidden xl:mt-[227px] md:mt-[160px] mt-[120px]">
+        <div className="relative w-full h-[220px] md:h-[300px] rounded-xl overflow-hidden mt-12">
           <Image
             src={IMAGES.aboutUsImage}
             alt="about section image"

@@ -93,7 +93,7 @@ const Testimonials = () => {
         <div className="text-center mb-16">
           <p className="font-black text-primary-110">PROOFS</p>
 
-          <h2 className="font-extrabold text-neutral-185 text-[30px] mt-6">
+          <h2 className="font-extrabold text-neutral-185 text-[30px] mt-3">
             Trusted by Teams Who Value{" "}
             <span className="text-primary-110">Reliability</span>
           </h2>

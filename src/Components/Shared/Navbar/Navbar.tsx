@@ -160,7 +160,7 @@ const Navbar = () => {
         {
           label: "Training Programs",
           description: "Cybersecurity, Compliance & Awareness",
-          path: "training-programs",
+          path: "internship-programmes",
         },
       ],
     },
@@ -168,20 +168,39 @@ const Navbar = () => {
       label: "Security Solutions",
       links: [
         {
-          label: "EDR / XDR / Antivirus",
-          path: "edr-xdr-antivirus",
+          label: "Antivirus",
+          path: "security-service/antivirus-service",
+          description: "Malware threat protection",
         },
         {
-          label: "DLP & Email Security",
-          path: "dlp-email-security",
+          label: "EDR",
+          path: "security-service/edr-service",
+          description: "Endpoint threat detection",
         },
         {
-          label: "Firewall & Network Security",
-          path: "firewall-network-security",
+          label: "Firewall",
+          path: "security-service/firewall-service",
+          description: "Network traffic control",
+        },
+        {
+          label: "XDR",
+          path: "security-service/xdr-service",
+          description: "Extended threat response",
         },
         {
           label: "SIEM",
-          path: "siem",
+          path: "security-service/siem-service",
+          description: "Security event monitoring",
+        },
+        {
+          label: "DLP",
+          path: "security-service/dlp-service",
+          description: "Data loss prevention",
+        },
+        {
+          label: "VAPT",
+          path: "security-service/vapt-service",
+          description: "Vulnerability assessment testing",
         },
       ],
     },
@@ -287,17 +306,17 @@ const Navbar = () => {
                                 >
                                   <div className="flex items-center gap-3">
                                     {link.label}
-                                  <Image
-                                    src={ICONS.rightArrow2}
-                                    alt="MITRA Consultancy"
-                                    className="size-5"
-                                  />
+                                    <Image
+                                      src={ICONS.rightArrow2}
+                                      alt="MITRA Consultancy"
+                                      className="size-5"
+                                    />
                                   </div>
-                                  {
-                                    link?.description &&
-
-                                  <p className="text-neutral-175 text-sm">{link?.description}</p>
-                                  }
+                                  {link?.description && (
+                                    <p className="text-neutral-175 text-sm">
+                                      {link?.description}
+                                    </p>
+                                  )}
                                 </button>
                               );
                             }
@@ -314,17 +333,17 @@ const Navbar = () => {
                                 >
                                   <div className="flex items-center gap-3">
                                     {link.label}
-                                  <Image
-                                    src={ICONS.rightArrow2}
-                                    alt="MITRA Consultancy"
-                                    className="size-5"
-                                  />
+                                    <Image
+                                      src={ICONS.rightArrow2}
+                                      alt="MITRA Consultancy"
+                                      className="size-5"
+                                    />
                                   </div>
-                                  {
-                                    link?.description &&
-
-                                  <p className="text-neutral-175 text-sm">{link?.description}</p>
-                                  }
+                                  {link?.description && (
+                                    <p className="text-neutral-175 text-sm">
+                                      {link?.description}
+                                    </p>
+                                  )}
                                 </Link>
                               );
                             }
