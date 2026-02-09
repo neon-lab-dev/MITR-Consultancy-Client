@@ -246,7 +246,7 @@ const Navbar = () => {
               <Image
                 src={IMAGES.MITRConsoltancyLogo}
                 alt="MITRA Consultancy"
-                className="xl:w-[80px] xl:h-[40px] h-[36px] w-[72px]"
+                className="xl:w-[80px] w-[72px]"
               />
               <p className="text-neutral-130 text-xs font-semibold pt-1">
                 From code to{" "}
