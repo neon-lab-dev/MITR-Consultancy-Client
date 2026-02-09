@@ -14,7 +14,7 @@ const TrustAndResultCard = ({
   classNames
 }: TTrustAndResultCardProps) => {
   return (
-    <div className={`font-Satoshi relative w-[282px] h-[448px] ${classNames}`}>
+    <div className={`font-Satoshi relative w-[282px] md:w-[200px] lg:w-[282px] h-[448px] ${classNames}`}>
       <Image
         src={IMAGES.complianceSolutionCard}
         alt=""
