@@ -166,16 +166,12 @@ import optimizedSecuritySpending from "../assets/Icons/optimized-security-spendi
 import seamlessProtectionEcosystem from "../assets/Icons/seamless-protection-ecosystem.svg";
 import strongerBetterCompliance from "../assets/Icons/stronger-better-compliance.svg";
 
-import project1 from "../assets/Images/Projects/StudentTiffin.png";
-import project2 from "../assets/Images/Projects/spacefarm.png";
-import ndeWebsite from "../assets/Images/Projects/nde.png";
-import dental from "../assets/Images/Projects/dental.png";
-import javasports from "../assets/Images/Projects/javasports.png";
-import abhiramiProject from "../assets/Images/Projects/abhirami.png";
-import agri from "../assets/Images/Projects/agriculture.png";
-import careerHub from "../assets/Images/Projects/careerHub.png";
-import blogWebsite from "../assets/Images/Projects/blog.png";
-import bonhomie from "../assets/Images/Projects/bonhomie.png";
+// Projects
+import spaceframe from "../assets/Images/Projects/spaceframe.webp";
+import medhrplus from "../assets/Images/Projects/medhrplus.webp";
+import javasports from "../assets/Images/Projects/javasports.webp";
+import edubrain from "../assets/Images/Projects/edubrain.webp";
+import bonhomie from "../assets/Images/Projects/bonhomie.webp";
 
 // Clients
 import abhirami from "../assets/Images/Clients/Mask group.png";
@@ -368,15 +364,10 @@ export const IMAGES = {
   docker,
 
   // Projects
-  project1,
-  project2,
-  ndeWebsite,
-  dental,
+  spaceframe,
+  medhrplus,
+  edubrain,
   javasports,
-  abhiramiProject,
-  agri,
-  careerHub,
-  blogWebsite,
   bonhomie,
 
   backendDevelopmentImg,

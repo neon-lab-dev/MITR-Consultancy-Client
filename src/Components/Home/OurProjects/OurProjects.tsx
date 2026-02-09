@@ -116,6 +116,40 @@ const OurProjects = () => {
     }
   };
 
+  const ourProjects = [
+  {
+    image: IMAGES.spaceframe,
+    name: "Spaceframe - Interior Design",
+    description:
+      "Modern interior design platform showcasing creative spaces, project portfolios, and client collaboration tools."
+  },
+  {
+    image: IMAGES.medhrplus,
+    name: "MedHrPlus - Job Portal",
+    description:
+      "Healthcare focused job portal connecting medical professionals with hospitals and clinics efficiently."
+  },
+  {
+    image: IMAGES.edubrain,
+    name: "Edubrain - LMS",
+    description:
+      "Interactive learning management system offering courses, progress tracking, and seamless student engagement."
+  },
+  {
+    image: IMAGES.javasports,
+    name: "Java Sports - eCommerce",
+    description:
+      "Online sports store providing quality equipment, smooth checkout, and reliable nationwide delivery."
+  },
+  {
+    image: IMAGES.bonhomie,
+    name: "Bonhomie - eCommerce",
+    description:
+      "Lifestyle ecommerce platform featuring curated products, secure payments, and user friendly shopping experience."
+  }
+];
+
+
   return (
     <div 
       id="portfolio" 
@@ -180,7 +214,7 @@ const OurProjects = () => {
               className="absolute inset-0"
             >
               <Image
-                src={IMAGES.aboutUs}
+                src={ourProjects[0]?.image}
                 alt="Students Tiffin Project"
                 fill
                 className="object-cover"
@@ -216,7 +250,7 @@ const OurProjects = () => {
               {/* Title with animated underline */}
               <div className="relative">
                 <h3 className="text-white font-extrabold text-[22px] md:text-[26px] lg:text-[30px]">
-                  Students Tiffin
+                  {ourProjects[0]?.name}
                 </h3>
                 <motion.div
                   initial={{ width: 0 }}
@@ -232,11 +266,7 @@ const OurProjects = () => {
                 transition={{ delay: 0.3 }}
                 className="text-neutral-130 font-medium mt-3"
               >
-                Students Tiffin is a subscription-based meal delivery service
-                providing fresh, healthy, and affordable tiffin meals for
-                students. With reliable delivery and customizable options, it
-                supports daily nutrition while accommodating diverse dietary
-                preferences.
+                {ourProjects[0]?.description}
               </motion.p>
             </motion.div>
 
@@ -256,9 +286,9 @@ const OurProjects = () => {
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
           >
-            {[1, 2].map((item) => (
+            {ourProjects?.slice(1,5)?.map((item) => (
               <motion.div
-                key={item}
+                key={item?.name}
                 variants={itemVariants}
                 custom={item}
                 whileHover="hover"
@@ -270,7 +300,7 @@ const OurProjects = () => {
                   className="absolute inset-0"
                 >
                   <Image
-                    src={IMAGES.letsTalkBgImg}
+                    src={item?.image}
                     alt={`Project ${item}`}
                     fill
                     className="object-cover"
@@ -306,7 +336,7 @@ const OurProjects = () => {
                   {/* Title with animated underline */}
                   <div className="relative">
                     <h3 className="text-white font-extrabold text-[22px] md:text-[26px] lg:text-[30px]">
-                      Students Tiffin
+                      {item?.name}
                     </h3>
                     <motion.div
                       initial={{ width: 0 }}
@@ -322,11 +352,7 @@ const OurProjects = () => {
                     transition={{ delay: 0.3 }}
                     className="text-neutral-130 font-medium mt-3"
                   >
-                    Students Tiffin is a subscription-based meal delivery service
-                    providing fresh, healthy, and affordable tiffin meals for
-                    students. With reliable delivery and customizable options, it
-                    supports daily nutrition while accommodating diverse dietary
-                    preferences.
+                    {item?.description}
                   </motion.p>
                 </motion.div>
 
