@@ -1,87 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url("https://fonts.cdnfonts.com/css/satoshi");
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.section-heading {
-  @apply text-neutral-10 text-lg md:text-2xl lg:text-[36px] text-center font-bold leading-[28px] md:leading-[38px] lg:leading-[57px] capitalize
-}
-
-.details-section-heading {
-  @apply text-neutral-10 text-lg md:text-2xl xl:text-[30px] font-semibold leading-normal xl:leading-[48px]
-}
-.details-section-subHeading {
-  @apply text-neutral-90 text-sm md:text-base xl:text-xl font-semibold leading-normal xl:leading-8
-}
-.details-section-paragraph {
-  @apply text-neutral-90 font-semibold text-xs md:text-sm leading-6
-}
-
-
-::-webkit-scrollbar {
-    width: 6px; /* Set the width of the scrollbar */
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background-color: #08578b; /* Set the color of the scrollbar handle */
-    border-radius: 3px; /* Set border radius */
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background-color: transparent; /* Set the background color of the scrollbar track */
-  }
-  
-  
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 3px;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #222661;
-    border-radius: 3px;
-  }
-  
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-
-  /* global.css */
-
-.custom-section-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #a3a3a3 transparent; /* gray thumb, transparent track */
-}
-
-.custom-section-scrollbar::-webkit-scrollbar {
-  width: 4px;
-  height: 4px; /* for horizontal scroll */
-}
-
-.custom-section-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #a3a3a3; /* gray thumb */
-  border-radius: 10px;
-}
-
-.custom-section-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.custom-shape {
-  clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 80%);
-}
-
-.animation {
-  slide-left: 'slide-left 20s linear infinite',
-}
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/satoshi/Satoshi-Regular.otf") format("opentype");
+  src: url("/fonts/Satoshi-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -89,7 +12,7 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/satoshi/Satoshi-Medium.otf") format("opentype");
+  src: url("/fonts/Satoshi-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -97,15 +20,7 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/satoshi/Satoshi-Semibold.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("/fonts/satoshi/Satoshi-Bold.otf") format("opentype");
+  src: url("/fonts/Satoshi-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -113,21 +28,180 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/satoshi/Satoshi-Black.otf") format("opentype");
+  src: url("/fonts/Satoshi-Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
-
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+@font-face {
+  font-family: "GeneralSans";
+  src: url("/fonts/GeneralSans-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: "GeneralSans";
+  src: url("/fonts/GeneralSans-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GeneralSans";
+  src: url("/fonts/GeneralSans-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GeneralSans";
+  src: url("/fonts/GeneralSans-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@theme {
+  /* ============================= */
+  /* Fonts */
+  /* ============================= */
+
+  --font-inter: "Inter", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
+  --font-general-sans: "GeneralSans", sans-serif;
+
+
+  /* ============================= */
+  /* Colors */
+  /* ============================= */
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-white: #FFF;
+  --color-black: #000;
+
+  /* Primary */
+  --color-primary-10: #0A6CFF;
+  --color-primary-20: #09F;
+  --color-primary-30: #ECF6FE;
+  --color-primary-40: #F5FBFF;
+  --color-primary-50: #F7FBFD;
+  --color-primary-60: #C9E9FF;
+  --color-primary-65: #97D6FB;
+  --color-primary-70: #8298A7;
+  --color-primary-75: #E0F3FF;
+  --color-primary-80: #BFE5FF;
+  --color-primary-85: #DBEAFE;
+  --color-primary-90: #253DAB05;
+  --color-primary-95: #D4D3D805;
+  --color-primary-100: #71AAFF;
+  --color-primary-110: #0A6CFF;
+  --color-primary-115: #9BC3FF;
+
+  /* Secondary */
+  --color-secondary-10: #FF9900;
+  --color-secondary-15: #FFB45C;
+  --color-secondary-20: #253DAB;
+
+  /* Neutral */
+  --color-neutral-5: #000000;
+  --color-neutral-10: #333;
+  --color-neutral-20: #494949;
+  --color-neutral-25: #717179;
+  --color-neutral-30: #2B2B2B;
+  --color-neutral-35: #D9D9D9;
+  --color-neutral-40: #03253B;
+  --color-neutral-45: #071540;
+  --color-neutral-50: #022740;
+  --color-neutral-55: #484848;
+  --color-neutral-60: #393939de;
+  --color-neutral-65: #D4D3D8;
+  --color-neutral-70: #F0F1F3;
+  --color-neutral-80: #F9F9F9;
+  --color-neutral-85: #384152;
+  --color-neutral-90: #303141;
+  --color-neutral-95: #595C73;
+  --color-neutral-100: #E4E3E8;
+  --color-neutral-105: #5F5F65;
+  --color-neutral-110: #253258;
+  --color-neutral-115: #81818A;
+  --color-neutral-120: #f4f5fa;
+  --color-neutral-125: #F0F0F0;
+  --color-neutral-130: #F5F5F5;
+  --color-neutral-135: #fafbfd;
+  --color-neutral-140: #F4F4F4;
+  --color-neutral-145: #111;
+  --color-neutral-150: #f2f3f5;
+  --color-neutral-155: #f4f5f5;
+  --color-neutral-160: #71717B;
+  --color-neutral-165: #111111BF;
+  --color-neutral-170: #253DAB40;
+  --color-neutral-175: #ffffff99;
+  --color-neutral-180: #E7F0FF;
+  --color-neutral-185: #0D0D0D;
+  --color-neutral-190: #DEDEDE;
+  --color-neutral-195: #757575;
+  --color-neutral-196: #ffffff3d;
+
+  /* Error */
+  --color-error-10: #FC464663;
+
+  /* ============================= */
+  /* Shadows */
+  /* ============================= */
+
+  --shadow-service-card: 0px 0px 65px 0px rgba(0, 153, 255, 0.12);
+  --shadow-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
+  --shadow-faq-box-shadow: 0px 10px 20px 0px rgba(164, 217, 253, 0.15);
+  --shadow-training-card: 0px 10px 20px 0px rgba(164, 217, 253, 0.15);
+  --shadow-course-details: 0px 0px 70px 0px rgba(164, 217, 253, 0.20);
+
+  /* ============================= */
+  /* Background Gradients */
+  /* ============================= */
+
+  --bg-gradient-counters:
+    linear-gradient(180deg, rgba(219, 234, 254, 0.27) 0%, rgba(131, 140, 152, 0.00) 100%);
+
+  --bg-gradient-threats:
+    linear-gradient(180deg, #FFF5F3 0%, #FFF 100%);
+
+  --bg-gradient-threats-card:
+    linear-gradient(270deg, #FFF -0.6%, #FFB2B2 99.23%);
+
+  --bg-gradient-key-features:
+    linear-gradient(180deg, #F0FAF4 0%, #FFF 100%);
+
+  --bg-gradient-compliance:
+    linear-gradient(180deg, #FCF9F2 0%, #FFF 100%);
+
+  --bg-gradient-compliance-card:
+    linear-gradient(270deg, #FFF -0.6%, #B2E0FF 99.23%);
+
+  --bg-gradient-compliance-logo:
+    linear-gradient(96deg, #074CB3 0%, #010A18 100%);
+
+  --bg-gradient-dynamic-pages:
+    linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.84) 50%);
+
+  --bg-gradient-border:
+    linear-gradient(315deg, #FFF 0%, #064199 100%);
+
+  --bg-circular-gradient:
+    linear-gradient(180deg, #074CB3 0%, #010A18 100%);
+
+  --bg-hero-blur:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.84) 100%);
+}
+
+
 
 @keyframes marquee-left {
   0% {
@@ -154,5 +228,3 @@
 .marquee-right {
   animation: marquee-right 25s linear infinite;
 }
-
-

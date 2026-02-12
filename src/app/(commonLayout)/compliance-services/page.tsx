@@ -27,10 +27,20 @@ const CybersecurityCompliance = () => {
     <div>
       <CybersecurityComplianceHero />
       {/* Images */}
-      <div className="w-full bg-gradient-compliance-logo py-[150px]">
+      <div className="w-full relative py-[150px]">
+        {/* Background */}
+      <Image
+        src={IMAGES.counters}
+        alt="Counters background"
+        fill
+        priority
+        className="object-cover"
+      />
+
+      <div className="absolute inset-0 bg-black/10" />
         <Container>
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 items-center justify-between">
-            <h1 className="font-Inter text-white leading-8 md:leading-[48px] text-[24px] md:text-[38px] font-extrabold max-w-full md:max-w-[360px]">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 items-center justify-between z-10">
+            <h1 className="font-satoshi text-white text-[32px] lg:text-[64px] font-extrabold max-w-full lg:max-w-[628px] z-10">
               Trusted by compliance-driven organizations
             </h1>
             <div className="flex justify-between items-center gap-12 z-10">

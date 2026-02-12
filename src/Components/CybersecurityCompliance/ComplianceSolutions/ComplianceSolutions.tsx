@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
+import Marquee from "react-fast-marquee";
 import { ICONS } from "@/assets";
 import StyledHeading from "@/Components/Reusable/StyledHeading/StyledHeading";
 import Container from "@/Components/Shared/Container/Container";
@@ -14,7 +15,7 @@ const complianceSolutions = [
   { icon: ICONS.logistics, title: "Logistics" },
   { icon: ICONS.manufacturing, title: "Manufacturing" },
   { icon: ICONS.marketplace, title: "Marketplace" },
-  { icon: ICONS.b2c, title: "B2C" },  
+  { icon: ICONS.b2c, title: "B2C" },
   { icon: ICONS.d2c, title: "D2C" },
   { icon: ICONS.realEstate, title: "Real Estate" },
   { icon: ICONS.retailEcom, title: "Retail & E-com" },
@@ -22,7 +23,7 @@ const complianceSolutions = [
 ];
 
 const Card = ({ icon, title }: { icon: any; title: string }) => (
-  <div className="min-w-[200px] min-h-[120px] px-5 py-4 rounded-[35px] border flex items-center flex-col justify-center bg-white border-neutral-125">
+  <div className="mx-3 min-w-[200px] min-h-[120px] px-5 py-4 rounded-[35px] border flex items-center flex-col justify-center bg-white border-neutral-125">
     <div className="flex items-center justify-center size-10 bg-neutral-120 rounded-full">
       <Image src={icon} alt={title} className="size-8" />
     </div>
@@ -32,10 +33,10 @@ const Card = ({ icon, title }: { icon: any; title: string }) => (
 
 const ComplianceSolutions = () => {
   const firstRow = complianceSolutions.slice(0, 6);
-  const secondRow = complianceSolutions.slice(6, 12);
+  const secondRow = complianceSolutions.slice(6);
 
   return (
-    <div className="py-[100px] font-Inter bg-neutral-185 overflow-hidden">
+    <div className="py-[100px] font-Inter bg-neutral-185">
       <Container>
         <StyledHeading
           heading="Compliance Solutions Across"
@@ -43,21 +44,27 @@ const ComplianceSolutions = () => {
         />
       </Container>
 
-      {/* ROW 1 → RIGHT */}
-      <div className="mt-[60px] overflow-hidden">
-        <div className="flex gap-5 w-max marquee-right">
-          {[...firstRow, ...firstRow].map((item, index) => (
+      <div className="mt-[60px]">
+        {/* Row 1 → Right */}
+        <Marquee speed={50} gradient={false} pauseOnHover autoFill>
+          {firstRow.map((item, index) => (
             <Card key={`row1-${index}`} {...item} />
           ))}
-        </div>
-      </div>
+        </Marquee>
 
-      {/* ROW 2 ← LEFT */}
-      <div className="mt-5 overflow-hidden">
-        <div className="flex gap-5 w-max marquee-left">
-          {[...secondRow, ...secondRow].map((item, index) => (
-            <Card key={`row2-${index}`} {...item} />
-          ))}
+        {/* Row 2 ← Left */}
+        <div className="mt-5">
+          <Marquee
+            speed={50}
+            gradient={false}
+            direction="right"
+            pauseOnHover
+            autoFill
+          >
+            {secondRow.map((item, index) => (
+              <Card key={`row2-${index}`} {...item} />
+            ))}
+          </Marquee>
         </div>
       </div>
     </div>

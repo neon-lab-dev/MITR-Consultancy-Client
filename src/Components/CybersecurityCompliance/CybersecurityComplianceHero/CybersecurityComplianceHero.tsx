@@ -101,7 +101,7 @@ const CybersecurityComplianceHero = () => {
   };
 
   return (
-    <div className="font-Inter relative h-[1100px] xl:h-[850px] 2xl:h-[890px] overflow-hidden">
+    <div className="relative h-[1100px] xl:h-[850px] 2xl:h-[890px] overflow-hidden">
       {/* Animated Background Images Carousel */}
       <motion.div
         className="absolute inset-0 z-0 flex"
@@ -135,13 +135,7 @@ const CybersecurityComplianceHero = () => {
         ))}
       </motion.div>
 
-      {/* Animated Overlay */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
-        transition={{ duration: 1 }}
-        className="absolute inset-0 bg-neutral-5 bg-opacity-50 z-10"
-      />
+       <div className="absolute inset-0 bg-neutral-185/80 blur-[6px] z-10"></div>
 
       {/* Content */}
       <Container>
@@ -150,26 +144,23 @@ const CybersecurityComplianceHero = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-[552px]"
+            className="max-w-[755px]"
           >
             <motion.h1 
               variants={itemVariants}
-              className="text-white text-center xl:text-start leading-8 md:leading-[48px] xl:leading-[70px] text-[24px] md:text-[40px] xl:text-[56px] font-bold max-w-[344px] md:max-w-[1071px] lg:max-w-[800px]"
+              className="text-white font-satoshi text-center xl:text-start leading-8 md:leading-[48px] xl:leading-[70px] text-[24px] md:text-[40px] xl:text-[56px] font-extrabold"
             >
-              <motion.span 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-primary-20"
+              <span 
+                className="text-primary-10"
               >
                 Compliance Made Simple
-              </motion.span>{" "}
+              </span>{" "}
               for Your Business
             </motion.h1>
             
             <motion.p 
               variants={itemVariants}
-              className="text-white text-center xl:text-start text-[11px] md:text-sm xl:text-lg leading-[18px] xl:leading-7 max-w-full md_maw-w-[850px] lg:max-w-[1071px] mt-5 xl:mt-6"
+              className="text-white font-general-sans text-center xl:text-start text-sm mt-3"
             >
               Mitra Consultancy helps businesses manage ISO, SOC, DPDP, GDPR,
               and other regulatory compliances—reducing risk, simplifying
@@ -205,7 +196,7 @@ const CybersecurityComplianceHero = () => {
                 <Button
                   handleClick={() => setIsContactUsModalOpen(true)}
                   variant="primary"
-                  title="Talk to an Expert"
+                  title="Speak With An Expert"
                   classNames="w-full sm:w-auto"
                 />
               </motion.div>

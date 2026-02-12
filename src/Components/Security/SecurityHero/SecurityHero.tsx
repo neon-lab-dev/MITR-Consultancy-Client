@@ -21,21 +21,27 @@ const SecurityHero = () => {
           objectFit="cover"
           priority
         />
+        
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-neutral-50 bg-opacity-50 z-10 font-Satoshi"></div>
-
+      <div className="absolute inset-0 bg-neutral-185/70 blur-[6px] z-10"></div>
+<Image
+          src={IMAGES.securityHeroIcons}
+          alt="MITRA Consultancy"
+          className="absolute top-32 bottom-0 left-0 right-0 z-20 max-w-full xl:max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0 w-auto 2xl:w-full"
+        />
       {/* Content */}
       <Container>
         <div className="flex flex-col gap-8 xl:gap-20 items-center justify-center absolute top-0 bottom-0 z-20 max-w-full xl:max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0 w-auto 2xl:w-full">
+          
           <div>
-            <h1 className="text-white text-center leading-8 md:leading-[48px] xl:leading-[67px] text-[24px] md:text-[40px] xl:text-[56px] font-bold max-w-[1000px] mx-auto">
+            <h1 className="text-white text-center leading-8 md:leading-[48px] xl:leading-[67px] text-[24px] md:text-[40px] xl:text-[56px] font-bold max-w-[873px] mx-auto">
               End-to-End{" "}
               <span className="text-primary-20">Security Solutions</span> for
               All Industries
             </h1>
-            <p className="text-white text-center text-[11px] md:text-sm xl:text-lg leading-[18px] xl:leading-7 max-w-full lg:max-w-[1128px] mt-5 xl:mt-6">
+            <p className="text-white font-general-sans text-center text-sm max-w-full lg:max-w-[873px] mt-3">
               MITRA Consultancy delivers end-to-end cybersecurity solutions —
               from risk assessments to incident response — helping your business
               stay secure, compliant, and resilient in a dynamic digital

@@ -46,6 +46,7 @@ const CommonThreats: React.FC<TCommonThreats> = ({
               alt="Common Threats"
               className="w-full md:w-[60%] lg:w-[45%] xl:w-[37%] 2xl:w-[45%] mx-auto h-full sticky top-32"
             />
+            
             <div ref={scrollRef} className="w-full lg:w-[55%]">
               {pointers.map((item, i) => (
                 <div

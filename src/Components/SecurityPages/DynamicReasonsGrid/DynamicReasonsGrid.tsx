@@ -25,7 +25,6 @@ const DynamicReasonsGrid = ({
   return (
     <section className="bg-neutral-185 font-Satoshi h-full py-20">
       <Container>
-
         {/* Heading */}
         <h2 className="text-center text-white text-2xl md:text-3xl font-black mb-12">
           {heading}{" "}
@@ -36,41 +35,52 @@ const DynamicReasonsGrid = ({
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
-
           {cards.map((item, index) => (
             <motion.div
               key={index}
-              layout
-              initial={{ height: 434 }}
-              whileHover={{ height: 520 }}
-              transition={{ duration: 0.35, ease: "easeOut" }}
-              className="bg-neutral-130 rounded-xl flex flex-col overflow-hidden cursor-pointer"
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              className="relative h-[460px] rounded-xl overflow-hidden cursor-pointer group"
             >
               {/* Image */}
               <Image
                 src={item.image}
                 alt={item.title}
-                className="object-cover h-[360px] w-full"
+                fill
+                className="object-cover"
               />
 
-              {/* Content */}
-              <div className="p-6 flex flex-col justify-start">
+              {/* White Expanding Panel */}
+              <motion.div
+                variants={{
+                  rest: { y: "40%" },
+                  hover: { y: "0%" },
+                }}
+                transition={{
+                  duration: 0.45,
+                  ease: [0.4, 0, 0.2, 1],
+                }}
+                className="
+    absolute bottom-0 left-0 w-full
+    bg-neutral-130
+    p-6"
+              >
                 <p className="text-[22px] font-black text-neutral-185">
                   {item.title}
                 </p>
 
-                {/* Description */}
-                <motion.div
-                  initial={{ opacity: 1 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.25 }}
-                  className="mt-3"
+                <motion.p
+                  variants={{
+                    rest: { opacity: 0, y: 20 },
+                    hover: { opacity: 1, y: 0 },
+                  }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                  className="text-sm font-general-sans text-neutral-185 mt-3"
                 >
-                  <p className="text-[18px] font-medium text-neutral-185">
-                    {item.description}
-                  </p>
-                </motion.div>
-              </div>
+                  {item.description}
+                </motion.p>
+              </motion.div>
             </motion.div>
           ))}
         </div>
