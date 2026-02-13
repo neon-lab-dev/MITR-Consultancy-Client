@@ -178,11 +178,6 @@ const Footer = () => {
       heading: "Contact Details",
       links: [
         {
-          label: "3rd Floor, Astha Building, Nageswar Colony, Boring Road, Chauraha, Patna 800008",
-          path: "",
-          icon: ICONS.locationWhite,
-        },
-        {
           label: "+91 - 8210464851",
           path: "tel:+91 - 8210464851",
           icon: ICONS.phone,

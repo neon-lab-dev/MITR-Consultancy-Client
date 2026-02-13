@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/refs */
 "use client";
 import { useRef, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -58,7 +59,7 @@ const ComplianceAssessmentForm = () => {
   };
 
   const baseInputClass =
-    "w-full rounded-md px-4 py-3 transition duration-300 border border-neutral-10 bg-neutral-10 focus:outline-none focus:border focus:border-primary-10";
+    "w-full rounded-md px-4 py-3 transition duration-300 border border-neutral-10 bg-neutral-10 focus:outline-none focus:border focus:border-primary-10 text-neutral-65";
   const getInputClass = (hasError: boolean) =>
     `${baseInputClass} ${hasError && "border border-red-500"}`;
 

@@ -406,8 +406,8 @@ const Navbar = () => {
                   <Button
                     handleClick={() => setIsContactUsModalOpen(true)}
                     variant="primary"
-                    title="Connect Us"
-                    classNames="w-[198px] xl:h-[54px] md:h-[46px] hidden xl:flex"
+                    title="Contact Us"
+                    classNames="hidden xl:flex"
                     icon={<CgArrowTopRight size={24} />}
                     iconPosition="right"
                   />
