@@ -1,7 +1,6 @@
 "use client";
 import { ICONS } from "@/assets";
 import Image from "next/image";
-import StarRatings from "react-star-ratings";
 
 type TTestimonialCard = {
   rating: number;
@@ -18,14 +17,6 @@ const TestimonialCard: React.FC<TTestimonialCard> = ({
 }) => {
   return (
     <div className="bg-white shadow-box-shadow p-8 rounded flex flex-col gap-6 w-full md:w-full xl:w-[416px] h-[247px]">
-      <StarRatings
-        rating={rating}
-        starRatedColor="#0099FF"
-        numberOfStars={5}
-        name="rating"
-        starDimension="22px"
-        starSpacing="2px"
-      />
 
       <p className={`text-neutral-20 md:text-sm text-xs `}>{`"${review}"`}</p>
 

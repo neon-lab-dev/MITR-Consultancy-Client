@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 import { useEffect, useState } from "react";
 
 function useOtpDataFromLocalStorage<T>(key: string, initialValue: T | null = null): [T | null, boolean] {

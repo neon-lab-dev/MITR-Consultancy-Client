@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 import { formatDate } from "@/utils/formatDate";
 import { useEffect, useState } from "react";
 

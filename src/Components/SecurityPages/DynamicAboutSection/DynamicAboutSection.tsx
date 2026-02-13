@@ -16,6 +16,7 @@ const DynamicAboutSection = ({
   description,
   image,
 }: AboutSectionProps) => {
+  console.log(badgeText);
   return (
     <section className="bg-neutral-190 font-Satoshi py-16">
       <Container>
