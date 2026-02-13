@@ -15,7 +15,7 @@ const OurProjects = dynamic(
 const Testimonials = dynamic(
   () => import("@/Components/Home/Testimonials/Testimonials"),
 );
-const FAQ = dynamic(() => import("@/Components/Shared/FAQ/FAQ"));
+// const FAQ = dynamic(() => import("@/Components/Shared/FAQ/FAQ"));
 const WhyTrustUs = dynamic(() => import("@/Components/Home/WhyTrustUs/WhyTrustUs"));
 const Counters = dynamic(() => import("@/Components/Shared/Counters/Counters"));
 
@@ -32,7 +32,7 @@ export default function Home() {
       <WhoWeAre/>
       <ComplianceAssessment />
       {/* <SessionAnnouncement /> */}
-      <FAQ />
+      {/* <FAQ /> */}
       <CTA/>
     </div>
   );

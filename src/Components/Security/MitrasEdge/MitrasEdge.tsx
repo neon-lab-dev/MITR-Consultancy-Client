@@ -83,18 +83,17 @@ const MitrasEdge = () => {
           </div>
         </div>
       </Container>
-      <div className="relative pt-28 pb-28 mt-10 w-screen overflow-hidden ">
-        <div className="   absolute bottom-0">
+      <div className="relative pt-28 pb-28 mt-10 overflow-hidden">
+        <div className="absolute bottom-0">
           <Marquee
             className="
    
-      font-black text-neutral-20
+      font-black text-neutral-70
       text-[80px] md:text-[160px] xl:text-[220px]
       z-0
       pointer-events-none
       select-none
       opacity-15
-      leading-1
       whitespace-nowrap
     "
           >
