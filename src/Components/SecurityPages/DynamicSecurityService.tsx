@@ -18,7 +18,7 @@ const DynamicSecurityServicePage = () => {
   const content = slug ? allSecurityData[slug] : undefined;
 
   if (!content) {
-    notFound(); // or return null / fallback UI
+    notFound();
   }
 
   return (

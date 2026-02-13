@@ -24,7 +24,7 @@ const DynamicAboutSection = ({
           {/* Top Content */}
         <div>
             <h1
-              className={`font-Satoshi font-bold text-neutral-185 text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px]  capitalize max-w-[600px]`}
+              className={`font-Satoshi font-bold text-neutral-185 text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize max-w-[600px]`}
             >
               <span className="text-primary-10">About</span> {title}
             </h1>

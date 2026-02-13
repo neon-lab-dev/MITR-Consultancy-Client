@@ -33,14 +33,14 @@ const DynamicHero = ({
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-dynamic-pages" />
+      <div className="absolute inset-0 bg-neutral-185/80 blur-[6px] z-10"></div>
 
       {/* Content */}
       <div className="relative z-10 min-h-screen flex items-center ">
         <Container>
           <div className="w-screen">
             <div
-              className={`max-w-2xl 
+              className={` max-w-[700px]
             `}
             >
               {badgeText && (
@@ -49,7 +49,7 @@ const DynamicHero = ({
                 </p>
               )}
 
-              <h1 className="text-white text-3xl font-black leading-tight">
+              <h1 className="font-Satoshi font-bold text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize">
                 {title}{" "}
                 {highlightWord && (
                   <span className="text-primary-110">{highlightWord}</span>
