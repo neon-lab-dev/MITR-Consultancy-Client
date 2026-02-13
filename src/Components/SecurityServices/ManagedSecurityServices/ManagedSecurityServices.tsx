@@ -65,7 +65,7 @@ const ManagedSecurityServices = () => {
   ];
 
   return (
-    <div className="bg-neutral-190 py-14 font-Satoshi">
+    <div className="bg-neutral-190 py-14 font-satoshi">
       <Container>
         <h1
           className={`font-bold text-neutral-185 text-lg md:text-2xl xl:text-[40px] 2xl:text-[52px] 

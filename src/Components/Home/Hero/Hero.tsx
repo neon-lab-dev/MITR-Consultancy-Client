@@ -90,7 +90,7 @@ const Hero = () => {
       ref={containerRef}
       initial="hidden"
       animate="visible"
-      className="font-Satoshi bg-neutral-185 text-white pt-40 relative h-[800px] 2xl:h-[1024px] overflow-hidden"
+      className="font-satoshi bg-neutral-185 text-white pt-40 relative h-[800px] 2xl:h-[1024px] overflow-hidden"
     >
       {/* Animated Background Overlay */}
       <motion.div

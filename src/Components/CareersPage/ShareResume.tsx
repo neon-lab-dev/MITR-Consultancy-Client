@@ -7,7 +7,7 @@ import { CgArrowTopRight } from "react-icons/cg";
 
 const ShareResume = () => {
   return (
-    <div className="font-Satoshi relative min-h-screen">
+    <div className="font-satoshi relative min-h-screen">
       <Container>
         <div className="w-full md:w-[80%] xl:[50%] py-14">
           <h1 className="text-neutral-185 font-black text-[30px] pb-3">

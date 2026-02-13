@@ -18,13 +18,13 @@ const DynamicAboutSection = ({
 }: AboutSectionProps) => {
   console.log(badgeText);
   return (
-    <section className="bg-neutral-190 font-Satoshi py-16">
+    <section className="bg-neutral-190 font-satoshi py-16">
       <Container>
         <div className="flex items-center justify-center gap-12">
           {/* Top Content */}
         <div>
             <h1
-              className={`font-Satoshi font-bold text-neutral-185 text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize max-w-[600px]`}
+              className={`font-satoshi font-bold text-neutral-185 text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize max-w-[600px]`}
             >
               <span className="text-primary-10">About</span> {title}
             </h1>

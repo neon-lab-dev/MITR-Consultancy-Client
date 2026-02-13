@@ -21,7 +21,7 @@ const TrustAndResultCard = ({
         className="w-full h-full absolute z-0"
       />
       <div className="relative flex flex-col items-center justify-center gap-6 text-white pt-12 px-[29px] h-full">
-        <h3 className="font-bold font-Satoshi text-[22px]">{title}</h3>
+        <h3 className="font-bold font-satoshi text-[22px]">{title}</h3>
         <p className="font-general-sans text-sm">{description}</p>
       </div>
     </div>

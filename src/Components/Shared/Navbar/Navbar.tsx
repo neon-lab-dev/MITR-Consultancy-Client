@@ -149,8 +149,8 @@ const Navbar = () => {
         },
         {
           label: "Software Development",
-          description: "Secure Applications & Compliance-ready Systems",
-          pataction: () => handleNavigation("services"),
+          description: "Web, App and custom software Development",
+          action: () => handleNavigation("services"),
         },
         {
           label: "UI/UX Design",

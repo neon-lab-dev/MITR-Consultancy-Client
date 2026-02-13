@@ -13,7 +13,7 @@ const StyledTitle = ({
   stylesTitle: string;
 }) => {
   return (
-    <h2 className="font-Satoshi text-neutral-185 font-extrabold text-lg">
+    <h2 className="font-satoshi text-neutral-185 font-extrabold text-lg">
       {title} <span className="text-primary-10">{stylesTitle}</span>
     </h2>
   );
@@ -486,7 +486,7 @@ const SecureCompliance = () => {
               {activeData?.map((item, index) => (
                 <div key={index} className="flex flex-col gap-6">
                   <div>
-                    <h1 className="text-neutral-185 text-[38px] font-Satoshi font-extrabold">
+                    <h1 className="text-neutral-185 text-[38px] font-satoshi font-extrabold">
                       {item?.key}
                     </h1>
                     <div className="w-[124px] h-1 bg-primary-10 rounded-3xl"></div>
@@ -520,7 +520,7 @@ const SecureCompliance = () => {
                   <div className="flex gap-20">
                     {item?.industriesAndGeographies?.map((info, idx) => (
                       <div key={idx}>
-                        <h2 className="font-Satoshi text-neutral-185 font-extrabold text-lg">
+                        <h2 className="font-satoshi text-neutral-185 font-extrabold text-lg">
                           {info?.title}
                         </h2>
                         <div className="space-y-3 mt-3">

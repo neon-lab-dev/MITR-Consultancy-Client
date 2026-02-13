@@ -6,7 +6,7 @@ const ComplianceAssessment = () => {
   return (
     <div
       id="complianceAssessment"
-      className="font-Satoshi bg-neutral-185 py-[100px]"
+      className="font-satoshi bg-neutral-185 py-[100px]"
     >
       <Container>
         <StyledHeading heading="Talk To Us" stylesHeading="Today" />

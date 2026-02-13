@@ -6,7 +6,7 @@ import React from "react";
 
 const WhoWeAre = () => {
   return (
-    <section className="bg-neutral-185 font-Satoshi pt-16">
+    <section className="bg-neutral-185 font-satoshi pt-16">
       <Container>
         {/* Top Content */}
         <div className="flex flex-col xl:flex-row justify-between gap-6">

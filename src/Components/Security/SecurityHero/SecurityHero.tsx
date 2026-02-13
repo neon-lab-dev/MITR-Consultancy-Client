@@ -29,7 +29,7 @@ const SecurityHero = () => {
 <Image
           src={IMAGES.securityHeroIcons}
           alt="MITRA Consultancy"
-          className="top-32 bottom-0 left-0 right-0 z-20 max-w-full xl:max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0 w-auto 2xl:w-full hidden lg:absolute"
+          className="top-32 bottom-0 left-0 right-0 z-20 max-w-full xl:max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0 w-auto 2xl:w-full absolute"
         />
       {/* Content */}
       <Container>

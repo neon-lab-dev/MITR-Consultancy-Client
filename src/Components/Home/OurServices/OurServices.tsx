@@ -100,7 +100,7 @@ const OurServices = () => {
   return (
     <div
       id="services"
-      className="relative bg-white section h-full font-Satoshi"
+      className="relative bg-white section h-full font-satoshi"
     >
       <Image
         src={IMAGES.gradientBg}

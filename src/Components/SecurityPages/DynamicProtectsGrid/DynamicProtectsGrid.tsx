@@ -1,6 +1,7 @@
 import Container from "@/Components/Shared/Container/Container";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 type ProtectsCard = {
   title: string;
@@ -20,10 +21,10 @@ const DynamicProtectsGrid = ({
   cards,
 }: DynamicProtectsGridProps) => {
   return (
-    <section className="bg-neutral-190 font-Satoshi py-20">
+    <section className="bg-neutral-190 font-satoshi py-20">
       <Container>
         {/* Heading */}
-        <h2 className="text-center text-neutral-185 text-2xl md:text-3xl font-black mb-12">
+        <h2 className="text-center text-neutral-185 font-satoshi font-bold text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize mb-12">
           {heading}<br/>
           {highlightWord && (
             <span className="text-primary-110">{highlightWord}</span>
@@ -33,26 +34,52 @@ const DynamicProtectsGrid = ({
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-neutral-130 rounded-xl flex flex-col overflow-hidden
-                         transition-shadow duration-300 hover:shadow-lg group"
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              className="relative h-[360px] rounded-xl overflow-hidden cursor-pointer group"
             >
               {/* Image */}
               <Image
                 src={item.image}
                 alt={item.title}
-                className="object-cover h-[252px] w-full"
+                fill
+                className="object-cover"
               />
 
-              {/* Content */}
-              <div className="p-6">
-                <p className="text-[22px] font-black text-neutral-185">
+              {/* White Expanding Panel */}
+              <motion.div
+                variants={{
+                  rest: { y: "40%" },
+                  hover: { y: "0%" },
+                }}
+                transition={{
+                  duration: 0.45,
+                  ease: [0.4, 0, 0.2, 1],
+                }}
+                className="
+    absolute bottom-0 left-0 w-full
+    bg-neutral-197
+    p-6"
+              >
+                <p className="text-[22px] font-black text-neutral-185 font-satoshi">
                   {item.title}
                 </p>
 
-              </div>
-            </div>
+                <motion.p
+                  variants={{
+                    rest: { opacity: 0, y: 20 },
+                    hover: { opacity: 1, y: 0 },
+                  }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                  className="text-sm font-general-sans text-neutral-185 mt-3"
+                >
+                  {item.description}
+                </motion.p>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </Container>

@@ -29,7 +29,7 @@ const MitrasEdge = () => {
     },
   ];
   return (
-    <div className="pt-[100px] bg-neutral-185 font-Satoshi z-0 overflow-hidden">
+    <div className="pt-[100px] bg-neutral-185 font-satoshi z-0 overflow-hidden">
       <div className="relative py-20 overflow-hidden">
         {/* BACKGROUND TEXT */}
         <h2

@@ -13,7 +13,7 @@ const Counters = () => {
 ];
 
   return (
-    <section className="relative h-[830px] sm:h-[448px] w-full overflow-hidden font-Satoshi p">
+    <section className="relative h-[830px] sm:h-[448px] w-full overflow-hidden font-satoshi p">
       {/* Background */}
       <Image
         src={IMAGES.counters}

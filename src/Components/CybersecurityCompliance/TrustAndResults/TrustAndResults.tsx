@@ -90,7 +90,7 @@ const TrustAndResults = () => {
   ];
 
   return (
-    <div className="font-Satoshi bg-[#000203] relative">
+    <div className="font-satoshi bg-[#000203] relative">
       <Container>
         <motion.h1
           variants={titleVariants}

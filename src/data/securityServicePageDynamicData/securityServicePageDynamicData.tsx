@@ -111,24 +111,28 @@ export const allSecurityData: Partial<Record<SecuritySlug, any>> = {
         },
       ],
     },
-    protectionSection: {
-      heading: "How MITRA Fortifies",
-      highlightWord: "Your Digital Devices",
-      cards: [
-        {
-          title: "Proactive Threat Detection & Prevention",
-          image: IMAGES.edrReason1,
-        },
-        {
-          title: "Timely Threat Removal & Ongoing Updates",
-          image: IMAGES.edrReason2,
-        },
-        {
-          title: "Comprehensive Protection of Digital Assets",
-          image: IMAGES.edrReason3,
-        },
-      ],
+   protectionSection: {
+  heading: "How MITRA Fortifies",
+  highlightWord: "Your Digital Devices",
+  cards: [
+    {
+      title: "Proactive Threat Detection & Prevention",
+      image: IMAGES.edrReason1,
+      description: "Identifies and blocks threats before they damage systems.",
     },
+    {
+      title: "Timely Threat Removal & Ongoing Updates",
+      image: IMAGES.edrReason2,
+      description: "Removes malware quickly with continuous security updates.",
+    },
+    {
+      title: "Comprehensive Protection of Digital Assets",
+      image: IMAGES.edrReason3,
+      description: "Safeguards devices, data, networks, and sensitive information.",
+    },
+  ],
+},
+
   },
   "siem-service": {
     heroDetails: {

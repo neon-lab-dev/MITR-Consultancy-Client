@@ -60,24 +60,29 @@ const Footer = () => {
       ],
     },
     {
-      heading: "Cybersecurity & Compliance Services",
+      heading: "Services",
       links: [
         {
-          label: "Managed Security Services (MSSP)",
+          label: "Compliance Services",
           path: "/compliance-services",
         },
         {
-          label: "VAPT Services",
-          path: "/security/vapt-security",
+          label: "Cybersecurity Services",
+          path: "/security-services",
         },
         {
-          label: "GRC & Compliance (ISO 27001, SOC 2)",
-          path: "/security/email-security",
+          label: "Software Development",
+          path: "",
         },
         {
           label:
-            "Cloud & Infrastructure Security, Risk Assessment & Gap Analysis",
-          path: "/security/cloud-security",
+            "UI/UX Design",
+          path: "",
+        },
+        {
+          label:
+            "Training Programs",
+          path: "internship-programmes",
         },
       ],
     },
@@ -86,19 +91,23 @@ const Footer = () => {
       links: [
         {
           label: "Endpoint Detection & Response (EDR)",
-          path: "/compliance-services",
+          path: "security-service/edr-service ",
         },
         {
           label: "Data Loss Prevention (DLP)",
-          path: "/security/vapt-security",
+          path: "security-service/dlp-service",
+        },
+        {
+          label: "Network Traffic Control (Firewall)",
+          path: "security-service/firewall-service",
         },
         {
           label: "SIEM & SOC Monitoring",
-          path: "/security/email-security",
+          path: "security-service/siem-service",
         },
         {
-          label: "Identity & Access Managment",
-          path: "/security/cloud-security",
+          label: " Vulnerability Assessment and Penetration Testing (VAPT)",
+          path: "security-service/vapt-service",
         },
       ],
     },
@@ -107,27 +116,27 @@ const Footer = () => {
       links: [
         {
           label: "Full Stack Web Development",
-          path: "/internship-programmes/67a19b646269f19097fb2bfa",
+          path: "",
         },
         {
           label: "Frontend Development",
-          path: "/internship-programmes/67a19f7a7ce841729b59f52c",
+          path: "",
         },
         {
           label: "Backend Development",
-          path: "/internship-programmes/67a18b9b5f74e79df59625c1",
+          path: "",
         },
         {
           label: "App Development",
-          path: "/internship-programmes/68722c26e620583ce87f130d",
+          path: "",
         },
         {
           label: "Cyber Security Mastery Program",
-          path: "/internship-programmes/6864409a80f98f62637e7e04",
+          path: "",
         },
         {
           label: "UX/UI Design",
-          path: "/internship-programmes/67a1a75225335e95874bb562",
+          path: "",
         },
       ],
     },
@@ -183,8 +192,8 @@ const Footer = () => {
           icon: ICONS.phone,
         },
         {
-          label: "business@mitraconsultancy.co.in",
-          path: "mailto:business@mitraconsultancy.co.in",
+          label: "rishiraj@mitra-consultancy.co.in",
+          path: "mailto:rishiraj@mitra-consultancy.co.in",
           icon: ICONS.email,
         },
       ],

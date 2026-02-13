@@ -22,7 +22,7 @@ const DynamicHero = ({
   image,
 }: DynamicHeroProps) => {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden font-Satoshi">
+    <div className="relative w-full min-h-screen overflow-hidden font-satoshi">
       {/* Background Image */}
       <Image
         src={image}
@@ -49,7 +49,7 @@ const DynamicHero = ({
                 </p>
               )}
 
-              <h1 className="font-Satoshi font-bold text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize">
+              <h1 className="font-satoshi font-bold text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize">
                 {title}{" "}
                 {highlightWord && (
                   <span className="text-primary-110">{highlightWord}</span>

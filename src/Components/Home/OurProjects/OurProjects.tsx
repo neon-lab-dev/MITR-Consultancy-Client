@@ -154,7 +154,7 @@ const OurProjects = () => {
     <div 
       id="portfolio" 
       ref={containerRef}
-      className="py-[128px] font-Satoshi overflow-hidden"
+      className="py-[128px] font-satoshi overflow-hidden"
     >
       <Container>
         {/* Heading */}

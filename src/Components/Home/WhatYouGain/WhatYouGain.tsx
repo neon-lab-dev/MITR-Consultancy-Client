@@ -57,7 +57,7 @@ const WhatYouGain = () => {
   };
 
   return (
-    <div ref={containerRef} className="font-Satoshi py-14">
+    <div ref={containerRef} className="font-satoshi py-14">
       <Container>
         {/* Heading */}
         <motion.div

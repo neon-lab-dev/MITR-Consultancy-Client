@@ -86,7 +86,7 @@ const Testimonials = () => {
   }, [isMobile]);
 
   return (
-    <section className="bg-neutral-180 py-20 relative overflow-hidden font-Satoshi">
+    <section className="bg-neutral-180 py-20 relative overflow-hidden font-satoshi">
       <div className="absolute -top-10 -left-[224px] w-[448px] h-[448px] rounded-full bg-[linear-gradient(180deg,#074CB3_0%,#010A18_100%)] blur-[224px]" />
 
       <Container>

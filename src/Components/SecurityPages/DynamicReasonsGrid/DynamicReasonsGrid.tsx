@@ -23,10 +23,10 @@ const DynamicReasonsGrid = ({
   cards,
 }: DynamicReasonsGridProps) => {
   return (
-    <section className="bg-neutral-185 font-Satoshi h-full py-20">
+    <section className="bg-neutral-185 font-satoshi h-full py-20">
       <Container>
         {/* Heading */}
-        <h2 className="text-center text-white text-2xl md:text-3xl font-black mb-12">
+        <h2 className="font-satoshi font-bold text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize text-center mb-12">
           {heading}{" "}
           {highlightWord && (
             <span className="text-primary-110">{highlightWord}</span>
