@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 
 const CommonLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div>
+    <div className="bg-neutral-185">
       <SmoothScroll>
       <Navbar />
       {children}

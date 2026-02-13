@@ -43,6 +43,18 @@ import fullStackDevelopment from "../assets/Images/full-stack-development.webp";
 import graphicsDesign from "../assets/Images/graphics-design.webp";
 import productDesign from "../assets/Images/product-design.webp";
 import webDevelopmentImage from "../assets/Images/web-development.webp";
+import careerTrainingProgram from "../assets/Images/career-training-program.webp";
+import corporateTrainingProgram from "../assets/Images/corporate-training-program.webp";
+import whyMitraTraining from "../assets/Images/why-mitra-training.webp";
+import onlineProgramDelivery from "../assets/Images/online-program-delivery.webp";
+import definedDuration from "../assets/Images/defined-duration.webp";
+import practice from "../assets/Images/practice.webp";
+import instructorLedSessions from "../assets/Images/instructor-led-sessions.webp";
+import workingProfessionals from "../assets/Images/working-professionals.webp";
+import graduates from "../assets/Images/graduates.webp";
+import individuals from "../assets/Images/individual.webp";
+import organizationTeam from "../assets/Images/organization-team.webp";
+import certificateSample from "../assets/Images/certificate-sample.webp";
 
 
 
@@ -296,6 +308,9 @@ import irisScan from "../assets/Icons/iris-scan.svg";
 import access from "../assets/Icons/access.svg";
 import alert from "../assets/Icons/alert-01.svg";
 import locationWhite from "../assets/Icons/location-white.svg";
+import book from "../assets/Icons/book.svg";
+import starRating from "../assets/Icons/star-rating.svg";
+import industryAlignedCourses from "../assets/Icons/industry-aligned-courses.svg";
 
 export const IMAGES = {
   MITRConsoltancyLogo,
@@ -449,6 +464,18 @@ export const IMAGES = {
   graphicsDesign,
   productDesign,
   webDevelopmentImage,
+  careerTrainingProgram,
+  corporateTrainingProgram,
+  whyMitraTraining,
+  onlineProgramDelivery,
+  definedDuration,
+  practice,
+  instructorLedSessions,
+  workingProfessionals,
+  graduates,
+  individuals,
+  organizationTeam,
+  certificateSample,
 };
 
 export const ICONS = {
@@ -593,4 +620,7 @@ export const ICONS = {
   access,
   alert,
   locationWhite,
+   book,
+  starRating,
+  industryAlignedCourses,
 };

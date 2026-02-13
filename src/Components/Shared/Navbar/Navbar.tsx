@@ -160,7 +160,7 @@ const Navbar = () => {
         {
           label: "Training Programs",
           description: "Cybersecurity, Compliance & Awareness",
-          path: "internship-programmes",
+          path: "training-programmes",
         },
       ],
     },
@@ -266,7 +266,7 @@ const Navbar = () => {
                     ref={dropdownRef}
                   >
                     <button
-                      className={`flex items-center gap-1 font-semibold hover:text-primary-10 transition duration-300 ${
+                      className={`flex items-center gap-1 font-semibold hover:text-primary-10 transition duration-300 cursor-pointer ${
                         isScrolled ? "text-white" : textColor
                       }`}
                     >

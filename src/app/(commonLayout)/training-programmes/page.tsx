@@ -1,14 +1,15 @@
-import ComplianceAssessment from "@/Components/CybersecurityCompliance/ComplianceAssessment/ComplianceAssessment";
-import ComplianceSolutions from "@/Components/CybersecurityCompliance/ComplianceSolutions/ComplianceSolutions";
-import MitrasEdge from "@/Components/Security/MitrasEdge/MitrasEdge";
-import SecurityFaq from "@/Components/Security/SecurityFaq/SecurityFaq";
-import SecurityHero from "@/Components/Security/SecurityHero/SecurityHero";
-import ManagedSecurityServices from "@/Components/SecurityServices/ManagedSecurityServices/ManagedSecurityServices";
-import CTA from "@/Components/Shared/CTA/CTA";
-import { FAQ } from '@/Components/Shared/FAQ/FAQ';
+import ProgramCompletion from "@/Components/TrainingProgrammes/ProgramCompletion/ProgramCompletion";
+import ProgramStructure from "@/Components/TrainingProgrammes/ProgramStructure/ProgramStructure";
+import TrainingCategories from "@/Components/TrainingProgrammes/TrainingCategories/TrainingCategories";
+import TrainingDomains from "@/Components/TrainingProgrammes/TrainingDomains/TrainingDomains";
+import TrainingProgrammesHero from "@/Components/TrainingProgrammes/TrainingProgrammesHero/TrainingProgrammesHero";
+import WhoItsFor from "@/Components/TrainingProgrammes/WhoItsFor/WhoItsFor";
+import WhyMitraTraining from "@/Components/TrainingProgrammes/WhyMitraTraining/WhyMitraTraining";
+import CTA from './../../../Components/Shared/CTA/CTA';
+import FAQ from '@/Components/Shared/FAQ/FAQ';
 
-const SecurityPage = () => {
-  const faqsData: FAQItem[] = [
+const TrainingProgrammes = () => {
+    const faqsData: FAQItem[] = [
     {
       question:
         "What are the common types of cyber threats that businesses face?",
@@ -52,17 +53,19 @@ const SecurityPage = () => {
         "Yes, our team provides 24/7 incident response support, including threat containment, forensic analysis, and system recovery, ensuring business continuity.",
     },
   ];
-  return (
-    <div>
-      <SecurityHero />
-      <ComplianceSolutions />
-      <ManagedSecurityServices />
-      <ComplianceAssessment />
-      <MitrasEdge />
+    return (
+        <div>
+           <TrainingProgrammesHero />
+      <TrainingDomains />
+      <TrainingCategories />
+      <WhyMitraTraining />
+      <ProgramStructure />
+      <WhoItsFor />
+      <ProgramCompletion />
+      <CTA/>
       <FAQ faqsData={faqsData} />
-      <CTA />
-    </div>
-  );
+        </div>
+    );
 };
 
-export default SecurityPage;
+export default TrainingProgrammes;
