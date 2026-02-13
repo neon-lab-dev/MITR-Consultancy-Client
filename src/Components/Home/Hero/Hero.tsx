@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/purity */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { IMAGES } from "@/assets";
@@ -89,7 +90,7 @@ const Hero = () => {
       ref={containerRef}
       initial="hidden"
       animate="visible"
-      className="font-Satoshi bg-neutral-185 text-white pt-40 relative h-[1000px] md:h-[800px] 2xl:h-[1024px] overflow-hidden"
+      className="font-Satoshi bg-neutral-185 text-white pt-40 relative h-[800px] 2xl:h-[1024px] overflow-hidden"
     >
       {/* Animated Background Overlay */}
       <motion.div
@@ -128,7 +129,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
           transition={{ duration: 1.5 }}
-          className="absolute inset-0 bg-neutral-5/50"
+          className="absolute inset-0 bg-neutral-185"
         />
       </motion.div>
 

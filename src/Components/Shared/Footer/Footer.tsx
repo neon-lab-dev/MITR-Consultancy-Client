@@ -34,31 +34,31 @@ const Footer = () => {
   ];
 
   const quickLinks:any = [
-    // {
-    //   heading: "Quick Links",
-    //   links: [
-    //     {
-    //       label: "Home",
-    //       path: "/",
-    //     },
-    //     {
-    //       label: "About Us",
-    //       path: "/about-us",
-    //     },
-    //     {
-    //       label: "Terms and Conditions",
-    //       path: "/terms-and-conditions",
-    //     },
-    //     {
-    //       label: "Privacy Policy",
-    //       path: "/privacy-policy",
-    //     },
-    //     {
-    //       label: "Refund & Cancellation policy",
-    //       path: "/refund-cancellation-policy",
-    //     },
-    //   ],
-    // },
+    {
+      heading: "Quick Links",
+      links: [
+        {
+          label: "Home",
+          path: "/",
+        },
+        {
+          label: "About Us",
+          path: "/about-us",
+        },
+        {
+          label: "Terms and Conditions",
+          path: "/terms-and-conditions",
+        },
+        {
+          label: "Privacy Policy",
+          path: "/privacy-policy",
+        },
+        {
+          label: "Refund & Cancellation policy",
+          path: "/refund-cancellation-policy",
+        },
+      ],
+    },
     {
       heading: "Cybersecurity & Compliance Services",
       links: [
@@ -131,29 +131,29 @@ const Footer = () => {
         },
       ],
     },
+    // {
+    //   heading: "Technology & Development",
+    //   links: [
+    //     {
+    //       label: "Website Development",
+    //       path: "",
+    //     },
+    //     {
+    //       label: "Mobile App Development",
+    //       path: "",
+    //     },
+    //     {
+    //       label: "UX/UI Design",
+    //       path: "",
+    //     },
+    //     {
+    //       label: "Custom Software Development",
+    //       path: "",
+    //     },
+    //   ],
+    // },
     {
-      heading: "Technology & Development",
-      links: [
-        {
-          label: "Website Development",
-          path: "",
-        },
-        {
-          label: "Mobile App Development",
-          path: "",
-        },
-        {
-          label: "UX/UI Design",
-          path: "",
-        },
-        {
-          label: "Custom Software Development",
-          path: "",
-        },
-      ],
-    },
-    {
-      heading: "Contact Details",
+      heading: "Office Address 1",
       links: [
         {
           label:
@@ -161,6 +161,22 @@ const Footer = () => {
           path: "",
           icon: ICONS.locationWhite,
         },
+      ],
+    },
+    {
+      heading: "Office Address 2",
+      links: [
+        {
+          label:
+            "3rd Floor, Astha Building, Nageswar Colony, Boring Road, Chauraha, Patna 800008",
+          path: "",
+          icon: ICONS.locationWhite,
+        },
+      ],
+    },
+    {
+      heading: "Contact Details",
+      links: [
         {
           label: "3rd Floor, Astha Building, Nageswar Colony, Boring Road, Chauraha, Patna 800008",
           path: "",
@@ -186,7 +202,7 @@ const Footer = () => {
         {/* mt-[151px] */}
         <div className="flex flex-col gap-6 font-Inter py-10 text-neutral-130">
           {/* Company info and social links */}
-          <div className="flex flex-col gap-9 max-w-[350px]">
+          <div className="flex flex-col gap-9">
             <div>
               <Link href="/">
                 <Image
@@ -218,9 +234,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-14 lg:gap-0 justify-between w-full mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-14 justify-between w-full mt-8">
             {quickLinks?.map((item:any) => (
-              <div key={item?.heading} className="max-w-[170px]">
+              <div key={item?.heading} className="">
                 <h1 className="font-semibold">{item?.heading}</h1>
 
                 <div className="mt-5 flex flex-col gap-4">
