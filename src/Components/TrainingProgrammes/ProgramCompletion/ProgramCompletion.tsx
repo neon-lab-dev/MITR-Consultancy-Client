@@ -6,7 +6,7 @@ const ProgramCompletion = () => {
   return (
     <div className="font-satoshi py-14">
       <Container>
-        <h2 className="font-black text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize">
+        <h2 className="font-black text-white text-[32px] xl:text-[40px] 2xl:text-[64px] capitalize">
           Program <span className="text-primary-110">Completion</span>
         </h2>
 

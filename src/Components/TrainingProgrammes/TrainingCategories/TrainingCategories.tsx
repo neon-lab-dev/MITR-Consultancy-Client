@@ -34,7 +34,7 @@ const TrainingCategories = () => {
   return (
     <div className="font-satoshi py-14 bg-neutral-190">
       <Container>
-        <h2 className="font-black text-neutral-185 text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize">
+        <h2 className="font-black text-neutral-185 text-[32px] xl:text-[40px] 2xl:text-[64px] capitalize">
           Training <span className="text-primary-110">Categories</span>
         </h2>
 
@@ -44,7 +44,7 @@ const TrainingCategories = () => {
           industry relevance.
         </p>
 
-        <div className="grid grid-cols-2 gap-6 mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12">
           {trainingCategoriesDetails?.map((detail) => (
             <div key={detail?.title} className="rounded-xl bg-neutral-130">
               <Image src={detail?.image} alt="" className="rounded-t-xl" />

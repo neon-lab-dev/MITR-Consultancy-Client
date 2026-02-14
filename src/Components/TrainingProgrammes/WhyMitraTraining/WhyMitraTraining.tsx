@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from 'next/image';
 import { IMAGES } from '@/assets';
-import Container from "../../shared/Container/Container";
+import Container from './../../Shared/Container/Container';
 
 const WhyMitraTraining = () => {
   const containerRef = useRef(null);
@@ -62,12 +62,12 @@ const WhyMitraTraining = () => {
       <div className="sticky top-0 h-screen overflow-hidden">
         <Container>
           <div className="font-satoshi py-14 h-screen flex flex-col">
-            <h2 className="font-black text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize">
+            <h2 className="font-black text-white text-[32px] xl:text-[40px] 2xl:text-[64px] capitalize">
               Why MITRA <span className="text-primary-110">Training</span>
             </h2>
 
             <div className="mt-12 flex gap-12 flex-1">
-              <div ref={cardsContainerRef} className="flex flex-col gap-10 relative w-1/2">
+              <div ref={cardsContainerRef} className="flex flex-col gap-10 relative w-full lg:w-1/2">
                 {whyMitraTrainings.map((detail, index) => {
                   // Select the appropriate progress based on index
                   const progress = 
@@ -99,7 +99,7 @@ const WhyMitraTraining = () => {
                 })}
               </div>
 
-              <div className="w-1/2 flex items-center">
+              <div className="w-1/2 hidden lg:flex items-center">
                 <Image 
                   src={IMAGES.whyMitraTraining} 
                   alt="" 
