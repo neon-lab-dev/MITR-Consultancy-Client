@@ -24,15 +24,15 @@ const WhatYouWillLearn = () => {
     <div className="bg-neutral-190 font-satoshi pt-36 pb-14">
       <Container>
         <div className="flex flex-col gap-12 items-center justify-center">
-          <h2 className="font-black text-neutral-185 text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize text-center">
+          <h2 className="font-black text-neutral-185 text-[32px] xl:text-[40px] 2xl:text-[64px] capitalize text-center">
             What You’ll Learn in this{" "}
             <span className="text-primary-110">Webinar</span>
           </h2>
 
-          <div className="grid grid-cols-2 gap-6 mx-auto max-w-4xl w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto max-w-4xl w-full">
             {learnItems.map((item) => (
               <div key={item.number} className="max-w-90">
-                <h3 className="font-black text-neutral-198 text-lg md:text-2xl xl:text-[40px] 2xl:text-[56px]">
+                <h3 className="font-black text-neutral-198 text-[32px] xl:text-[40px] 2xl:text-[56px]">
                   {item.number}
                 </h3>
 

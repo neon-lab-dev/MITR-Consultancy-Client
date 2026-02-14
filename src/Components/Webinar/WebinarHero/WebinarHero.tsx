@@ -11,10 +11,10 @@ const WebinarHero = () => {
   ];
 
   return (
-    <div className="bg-neutral-185 font-satoshi pt-40 pb-80 relative">
+    <div className="bg-neutral-185 font-satoshi pt-40 pb-40 xl:pb-80 relative">
       <Container>
         <div className="flex flex-col items-center text-center">
-          <h2 className="font-black text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize max-w-274 mx-auto">
+          <h2 className="font-black text-white text-[32px] xl:text-[40px] 2xl:text-[64px] capitalize max-w-274 mx-auto">
             Understand Digital Product Design & UX -{" "}
             <span className="text-primary-110">Clearly & Practically</span>
           </h2>
@@ -24,7 +24,7 @@ const WebinarHero = () => {
             are designed, and how UX thinking actually works in the industry.
           </p>
 
-          <div className="flex items-center gap-10 my-10">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-10 my-10">
             <div className="flex items-center gap-2">
               <Image src={ICONS.calender} alt="" className="size-6" />
               <p className="font-general-sans text-white">28th February 2026</p>
@@ -53,7 +53,7 @@ const WebinarHero = () => {
         </div>
 
 
-        <Image src={IMAGES.webinarHero} alt="" className="mx-auto absolute -bottom-28 left-0 right-0" />
+        <Image src={IMAGES.webinarHero} alt="" className="mx-auto absolute -bottom-28 left-0 right-0 w-[80%] h-[200px] xl:w-full object-cover rounded-xl" />
       </Container>
     </div>
   );

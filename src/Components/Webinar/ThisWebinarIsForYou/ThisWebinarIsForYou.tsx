@@ -30,12 +30,12 @@ const ThisWebinarIsForYou = () => {
   return (
     <div className="font-satoshi py-14">
       <Container>
-        <h2 className="font-black text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize text-center">
+        <h2 className="font-black text-white text-[32px] xl:text-[40px] 2xl:text-[64px] capitalize text-center">
           This Webinar is For You -{" "}
           <span className="text-primary-110">if You are....</span>
         </h2>
 
-        <div className="grid grid-cols-2 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
           {webinarAudience?.map((item) => (
             <div key={item?.title} className="w-full relative">
               <Image src={item?.image} alt="h-full w-full" />

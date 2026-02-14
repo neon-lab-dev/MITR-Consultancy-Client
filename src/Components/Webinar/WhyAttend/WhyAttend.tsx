@@ -14,7 +14,7 @@ const WhyAttend = () => {
     <div className="bg-neutral-190 font-satoshi py-14">
       <Container>
         <div className="flex flex-col items-center">
-          <h2 className="font-black text-neutral-185 text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize text-center">
+          <h2 className="font-black text-neutral-185 text-[32px] xl:text-[40px] 2xl:text-[64px] capitalize text-center">
             Why Attend This <span className="text-primary-110">Webinar?</span>
           </h2>
 
@@ -23,7 +23,7 @@ const WhyAttend = () => {
             {whyAttendData.slice(0, 3).map((item, index) => (
               <p
                 key={index}
-                className="text-neutral-185 font-general-sans max-w-82"
+                className="text-neutral-185 font-general-sans max-w-82 pl-4 lg:pl-0 border-l-4 lg:border-none border-primary-10"
               >
                 {item}
               </p>
@@ -31,11 +31,11 @@ const WhyAttend = () => {
           </div>
 
           {/* Bottom 2 - Centered */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8 my-12">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-0 lg:mt-12 mb-12">
             {whyAttendData.slice(3).map((item, index) => (
               <p
                 key={index}
-                className="text-neutral-185 font-general-sans max-w-82"
+                className="text-neutral-185 font-general-sans max-w-82 pl-4 lg:pl-0 border-l-4 lg:border-none border-primary-10"
               >
                 {item}
               </p>
