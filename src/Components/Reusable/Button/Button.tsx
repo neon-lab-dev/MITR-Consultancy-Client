@@ -1,10 +1,10 @@
-import React, { ReactNode } from "react";
+import type { ReactNode } from "react";
+import { ICONS } from "../../../assets";
 import Image from "next/image";
-import { ICONS } from "@/assets";
 
 type ButtonProps = {
   title: string;
-  variant: "primary" | "secondary";
+  variant: "primary" | "secondary" | "accent";
   classNames?: string;
   handleClick?: () => void;
   icon?: ReactNode;
@@ -14,24 +14,30 @@ type ButtonProps = {
 const Button = ({
   title,
   variant,
-  classNames,
+  classNames = "",
   handleClick,
   icon,
   iconPosition = "left",
 }: ButtonProps) => {
-  const isPrimary = variant === "primary";
+  const variantClasses = {
+    primary: "bg-neutral-180 text-primary-10",
+    accent: "bg-primary-120 text-neutral-190",
+    secondary:
+      "text-white border hover:border-primary-10 hover:bg-primary-20",
+  };
+
+  // Only primary gets default arrow
+  const showDefaultArrow = variant === "primary";
+
+  // Accent never allows any icon
+  const allowCustomIcon = variant !== "accent";
 
   return (
     <button
       onClick={handleClick}
-      className={`${
-        isPrimary
-          ? "bg-neutral-180 text-primary-10"
-          : "text-white border hover:border-primary-10 hover:bg-primary-20"
-      } transition duration-300 px-6 py-3 font-Inter font-medium rounded-xl flex items-center justify-center gap-2 cursor-pointer ${classNames}`}
+      className={`${variantClasses[variant]} transition duration-300 px-6 py-3 font-Inter font-medium rounded-xl flex items-center justify-center gap-2 cursor-pointer ${classNames}`}
     >
-      {/* If primary → always show rightArrow */}
-      {isPrimary ? (
+      {showDefaultArrow ? (
         <>
           <span>{title}</span>
           <Image
@@ -42,9 +48,13 @@ const Button = ({
         </>
       ) : (
         <>
-          {icon && iconPosition === "left" && <span>{icon}</span>}
+          {allowCustomIcon && icon && iconPosition === "left" && (
+            <span>{icon}</span>
+          )}
           <span>{title}</span>
-          {icon && iconPosition === "right" && <span>{icon}</span>}
+          {allowCustomIcon && icon && iconPosition === "right" && (
+            <span>{icon}</span>
+          )}
         </>
       )}
     </button>

@@ -104,6 +104,7 @@
   --color-primary-100: #71AAFF;
   --color-primary-110: #0A6CFF;
   --color-primary-115: #9BC3FF;
+  --color-primary-120: #2240AC;
 
   /* Secondary */
   --color-secondary-10: #FF9900;
@@ -150,6 +151,8 @@
   --color-neutral-195: #757575;
   --color-neutral-196: #ffffff3d;
   --color-neutral-197: #f5f5f58f;
+  --color-neutral-198: #B0B0B0;
+  --color-neutral-199: #0000007a;
 
   /* Error */
   --color-error-10: #FC464663;

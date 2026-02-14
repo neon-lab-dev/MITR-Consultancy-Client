@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import ProgramCompletion from "@/Components/TrainingProgrammes/ProgramCompletion/ProgramCompletion";
 import ProgramStructure from "@/Components/TrainingProgrammes/ProgramStructure/ProgramStructure";
 import TrainingCategories from "@/Components/TrainingProgrammes/TrainingCategories/TrainingCategories";
@@ -9,7 +10,7 @@ import CTA from './../../../Components/Shared/CTA/CTA';
 import FAQ from '@/Components/Shared/FAQ/FAQ';
 
 const TrainingProgrammes = () => {
-    const faqsData: FAQItem[] = [
+    const faqsData: any[] = [
     {
       question:
         "What are the common types of cyber threats that businesses face?",

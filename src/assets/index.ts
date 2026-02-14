@@ -55,6 +55,12 @@ import graduates from "../assets/Images/graduates.webp";
 import individuals from "../assets/Images/individual.webp";
 import organizationTeam from "../assets/Images/organization-team.webp";
 import certificateSample from "../assets/Images/certificate-sample.webp";
+import webinarHero from "../assets/Images/webinar-hero.webp";
+import restartCareer from "../assets/Images/restart-career.webp";
+import freshGraduate from "../assets/Images/fresh-graduate.webp";
+import workingProfessional from "../assets/Images/working-professional.webp";
+import curiousStudent from "../assets/Images/curious-student.webp";
+import host from "../assets/Images/host.webp";
 
 
 
@@ -311,6 +317,8 @@ import locationWhite from "../assets/Icons/location-white.svg";
 import book from "../assets/Icons/book.svg";
 import starRating from "../assets/Icons/star-rating.svg";
 import industryAlignedCourses from "../assets/Icons/industry-aligned-courses.svg";
+import calender from "../assets/Icons/calender.svg";
+import timer from "../assets/Icons/timer.svg";
 
 export const IMAGES = {
   MITRConsoltancyLogo,
@@ -476,6 +484,12 @@ export const IMAGES = {
   individuals,
   organizationTeam,
   certificateSample,
+   webinarHero,
+  restartCareer,
+  freshGraduate,
+  workingProfessional,
+  curiousStudent,
+  host,
 };
 
 export const ICONS = {
@@ -623,4 +637,6 @@ export const ICONS = {
    book,
   starRating,
   industryAlignedCourses,
+  calender,
+  timer,
 };
