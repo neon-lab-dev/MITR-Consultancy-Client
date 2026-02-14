@@ -1,14 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import ComplianceAssessment from "@/Components/CybersecurityCompliance/ComplianceAssessment/ComplianceAssessment";
 import ComplianceSolutions from "@/Components/CybersecurityCompliance/ComplianceSolutions/ComplianceSolutions";
 import MitrasEdge from "@/Components/Security/MitrasEdge/MitrasEdge";
-import SecurityFaq from "@/Components/Security/SecurityFaq/SecurityFaq";
 import SecurityHero from "@/Components/Security/SecurityHero/SecurityHero";
 import ManagedSecurityServices from "@/Components/SecurityServices/ManagedSecurityServices/ManagedSecurityServices";
 import CTA from "@/Components/Shared/CTA/CTA";
-import { FAQ } from '@/Components/Shared/FAQ/FAQ';
+import FAQ from '@/Components/Shared/FAQ/FAQ';
 
 const SecurityPage = () => {
-  const faqsData: FAQItem[] = [
+  const faqsData: any[] = [
     {
       question:
         "What are the common types of cyber threats that businesses face?",

@@ -1,5 +1,5 @@
 import { IMAGES } from '@/assets';
-import Container from "../../shared/Container/Container";
+import Container from '@/Components/Shared/Container/Container';
 import Image from 'next/image';
 
 const TrainingCategories = () => {

@@ -2,7 +2,7 @@
 import CartItem from "@/Components/Cart/CartItem/CartItem";
 /* eslint-disable react/no-unescaped-entities */
 import ProceedToPay from "@/Components/Cart/ProceedToPay/ProceedToPay";
-import InterestedTrainings from "@/Components/ProgrammeDetails/InterestedTrainings/InterestedTrainings";
+// import InterestedTrainings from "@/Components/ProgrammeDetails/InterestedTrainings/InterestedTrainings";
 import Container from "@/Components/Shared/Container/Container";
 import { useCart } from "@/providers/CartProvider/CartProvider";
 
@@ -28,7 +28,7 @@ const Cart = () => {
                     </div>
                     <ProceedToPay cartTotal={cartData} />
                 </div>
-                <InterestedTrainings id={""} />
+                {/* <InterestedTrainings id={""} /> */}
             </div>
         </Container>
     );

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { IMAGES } from '@/assets';
-import Container from "../../shared/Container/Container";
+import Container from '@/Components/Shared/Container/Container';
 
 const ProgramStructure = () => {
   const trainingFeatures = [

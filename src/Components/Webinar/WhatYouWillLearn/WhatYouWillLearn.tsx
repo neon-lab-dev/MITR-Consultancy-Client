@@ -1,4 +1,4 @@
-import Container from "../../shared/Container/Container";
+import Container from "@/Components/Shared/Container/Container";
 
 const WhatYouWillLearn = () => {
   const learnItems = [

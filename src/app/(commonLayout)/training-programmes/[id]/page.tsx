@@ -1,7 +1,7 @@
 "use client";
 import Certification from "@/Components/ProgrammeDetails/Certifications/Certification";
 import Evaluation from "@/Components/ProgrammeDetails/Evaluation/Evaluation";
-import InterestedTrainings from "@/Components/ProgrammeDetails/InterestedTrainings/InterestedTrainings";
+// import InterestedTrainings from "@/Components/ProgrammeDetails/InterestedTrainings/InterestedTrainings";
 import ProgrammeDetailsHero from "@/Components/ProgrammeDetails/ProgrammeDetailsHero/ProgrammeDetailsHero";
 import ProgrammeDuration from "@/Components/ProgrammeDetails/ProgrammeDuration/ProgrammeDuration";
 import ProgrammeStructure from "@/Components/ProgrammeDetails/ProgrammeStructure/ProgrammeStructure";
@@ -29,7 +29,7 @@ const ProgrammeDetailsPage = () => {
                     <Evaluation />
                     <Certification />
                 </div>
-                <InterestedTrainings id={data?.course?._id} />
+                {/* <InterestedTrainings id={data?.course?._id} /> */}
                 <FAQ />
             </Container>
         </div>
