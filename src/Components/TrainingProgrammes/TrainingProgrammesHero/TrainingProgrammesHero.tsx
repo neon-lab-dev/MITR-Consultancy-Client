@@ -24,7 +24,7 @@ const TrainingProgrammesHero = () => {
   return (
     <div className="bg-neutral-185 font-satoshi pt-40 pb-12">
       <Container>
-        <h2 className="font-black text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize ">
+        <h2 className="font-black text-white text-[32px] xl:text-[40px] 2xl:text-[64px] capitalize">
           Professional Training Programs for{" "}
           <span className="text-primary-110">Students and Organizations.</span>
         </h2>
@@ -37,7 +37,7 @@ const TrainingProgrammesHero = () => {
 
         <Button variant="primary" title="Explore Programs" />
 
-        <div className="grid grid-cols-3 gap-6 mt-21">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-21">
           {stats?.map((stat) => (
             <div
               key={stat?.title}
