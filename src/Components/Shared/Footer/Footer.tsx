@@ -91,23 +91,23 @@ const Footer = () => {
       links: [
         {
           label: "Endpoint Detection & Response (EDR)",
-          path: "security-service/edr-service ",
+          path: "/security-service/edr-service ",
         },
         {
           label: "Data Loss Prevention (DLP)",
-          path: "security-service/dlp-service",
+          path: "/security-service/dlp-service",
         },
         {
           label: "Network Traffic Control (Firewall)",
-          path: "security-service/firewall-service",
+          path: "/security-service/firewall-service",
         },
         {
           label: "SIEM & SOC Monitoring",
-          path: "security-service/siem-service",
+          path: "/security-service/siem-service",
         },
         {
           label: " Vulnerability Assessment and Penetration Testing (VAPT)",
-          path: "security-service/vapt-service",
+          path: "/security-service/vapt-service",
         },
       ],
     },
