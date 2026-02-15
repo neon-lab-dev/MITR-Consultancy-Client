@@ -2,16 +2,16 @@ import AboutUsHero from './../../../Components/AboutUs/AboutUsHero/AboutUsHero';
 import FAQ from '@/Components/Shared/FAQ/FAQ';
 import AllAboutMitra from '@/Components/AboutUs/AllAboutMitra/AllAboutMitra';
 import Services from '@/Components/AboutUs/Services/Services';
-import LetsTalk from '@/Components/Home/LetsTalk/LetsTalk';
+import CTA from '@/Components/Shared/CTA/CTA';
 
 const AboutUsPage = () => {
     return (
-        <div>
+        <div className="bg-white">
             <AboutUsHero/>
             <AllAboutMitra/>
             <Services/>
             <FAQ/>
-            <LetsTalk/>
+            <CTA/>
         </div>
     );
 };

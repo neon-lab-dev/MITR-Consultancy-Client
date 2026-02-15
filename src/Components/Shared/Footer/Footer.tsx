@@ -82,7 +82,7 @@ const Footer = () => {
         {
           label:
             "Training Programs",
-          path: "internship-programmes",
+          path: "/internship-programmes",
         },
       ],
     },
@@ -192,8 +192,8 @@ const Footer = () => {
           icon: ICONS.phone,
         },
         {
-          label: "rishiraj@mitra-consultancy.co.in",
-          path: "mailto:rishiraj@mitra-consultancy.co.in",
+          label: "contact@mitra-consultancy.co.in",
+          path: "mailto:contact@mitra-consultancy.co.in",
           icon: ICONS.email,
         },
       ],

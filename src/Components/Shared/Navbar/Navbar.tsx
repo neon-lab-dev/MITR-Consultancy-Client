@@ -72,12 +72,12 @@ const Navbar = () => {
     "/payment-success",
   ];
 
-  const textColor =
-    neutralPages.includes(pathname) ||
-    pathname.startsWith("/internship-programmes/") ||
-    pathname.startsWith("/auth/")
-      ? "text-neutral-85"
-      : "text-white";
+  // const textColor =
+  //   neutralPages.includes(pathname) ||
+  //   pathname.startsWith("/internship-programmes/") ||
+  //   pathname.startsWith("/auth/")
+  //     ? "text-neutral-85"
+  //     : "text-white";
 
   const btnStyle =
     neutralPages.includes(pathname) ||
@@ -140,12 +140,12 @@ const Navbar = () => {
         {
           label: "Compliance Services",
           description: "ISO, DPDP, GDPR, SOC2",
-          path: "compliance-services",
+          path: "/compliance-services",
         },
         {
           label: "Cybersecurity Services",
           description: "VAPT, Risk Assessment, Audits",
-          path: "security-services",
+          path: "/security-services",
         },
         {
           label: "Software Development",
@@ -160,7 +160,7 @@ const Navbar = () => {
         {
           label: "Training Programs",
           description: "Cybersecurity, Compliance & Awareness",
-          path: "training-programmes",
+          path: "/training-programmes",
         },
       ],
     },
@@ -169,37 +169,37 @@ const Navbar = () => {
       links: [
         {
           label: "Antivirus",
-          path: "security-service/antivirus-service",
+          path: "/security-service/antivirus-service",
           description: "Malware threat protection",
         },
         {
           label: "EDR",
-          path: "security-service/edr-service",
+          path: "/security-service/edr-service",
           description: "Endpoint threat detection",
         },
         {
           label: "Firewall",
-          path: "security-service/firewall-service",
+          path: "/security-service/firewall-service",
           description: "Network traffic control",
         },
         {
           label: "XDR",
-          path: "security-service/xdr-service",
+          path: "/security-service/xdr-service",
           description: "Extended threat response",
         },
         {
           label: "SIEM",
-          path: "security-service/siem-service",
+          path: "/security-service/siem-service",
           description: "Security event monitoring",
         },
         {
           label: "DLP",
-          path: "security-service/dlp-service",
+          path: "/security-service/dlp-service",
           description: "Data loss prevention",
         },
         {
           label: "VAPT",
-          path: "security-service/vapt-service",
+          path: "/security-service/vapt-service",
           description: "Vulnerability assessment testing",
         },
       ],
@@ -209,23 +209,23 @@ const Navbar = () => {
       links: [
         {
           label: "About Us",
-          path: "about-us",
+          path: "/about-us",
         },
         {
           label: "Careers",
-          path: "careers",
+          path: "/careers",
         },
         {
           label: "Privacy Policy",
-          path: "privacy-policy",
+          path: "/privacy-policy",
         },
         {
           label: "Terms and Conditions",
-          path: "terms-and-conditions",
+          path: "/terms-and-conditions",
         },
         {
           label: "Refund Policy",
-          path: "refund-policy",
+          path: "/refund-policy",
         },
       ],
     },
@@ -234,11 +234,7 @@ const Navbar = () => {
   return (
     <div id="home">
       <div
-        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 pb-2 ${
-          isScrolled
-            ? "bg-neutral-40 pt-2"
-            : "backdrop-blur-sm bg-transparent pt-5"
-        }`}
+        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 pb-2 pt-5`}
       >
         <Container>
           <div className="flex w-full justify-between items-center font-Inter">
@@ -266,9 +262,7 @@ const Navbar = () => {
                     ref={dropdownRef}
                   >
                     <button
-                      className={`flex items-center gap-1 font-semibold hover:text-primary-10 transition duration-300 cursor-pointer ${
-                        isScrolled ? "text-white" : textColor
-                      }`}
+                      className={`flex items-center gap-1 font-semibold hover:text-primary-10 transition duration-300 cursor-pointer text-white`}
                     >
                       {item?.label}
                       <Image
@@ -300,9 +294,7 @@ const Navbar = () => {
                                     link.action();
                                     setActiveDropdown(null);
                                   }}
-                                  className={`font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start ${
-                                    isScrolled ? "text-white" : textColor
-                                  }`}
+                                  className={`font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start text-white`}
                                 >
                                   <div className="flex items-center gap-3">
                                     {link.label}
@@ -325,11 +317,9 @@ const Navbar = () => {
                               return (
                                 <Link
                                   key={index}
-                                  href={`/${link.path}`}
+                                  href={link.path}
                                   onClick={() => setActiveDropdown(null)}
-                                  className={` font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start ${
-                                    isScrolled ? "text-white" : textColor
-                                  }`}
+                                  className={` font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start text-white`}
                                 >
                                   <div className="flex items-center gap-3">
                                     {link.label}

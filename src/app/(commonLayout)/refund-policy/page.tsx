@@ -3,7 +3,7 @@ import Container from "@/Components/Shared/Container/Container";
 
 const RefundPolicy = () => {
     return (
-        <div>
+        <div className="bg-white">
             <PrivacyPolicyHero title="Refund Policy" />
             <Container>
                 <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 mt-10">
