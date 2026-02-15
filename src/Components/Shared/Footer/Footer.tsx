@@ -13,7 +13,7 @@ const Footer = () => {
   const socialLinks = [
     {
       name: "facebook",
-      link: "https://www.facebook.com/MITR-Consultancy-100190372261098",
+      link: "https://www.facebook.com/profile.php?id=61573035404795",
       icon: ICONS.facebook,
     },
     {
@@ -28,7 +28,7 @@ const Footer = () => {
     // },
     {
       name: "instagram",
-      link: "https://www.instagram.com/_mitr_consultancy/?hl=en",
+      link: "https://www.instagram.com/_mitra_consultancy",
       icon: ICONS.instagram,
     },
   ];
