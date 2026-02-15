@@ -231,6 +231,7 @@ const Footer = () => {
                     <Image
                       src={item.icon}
                       alt={`MITRA Consultancy - ${item?.name}`}
+                      className=""
                     />
                   </a>
                 ))}
@@ -252,14 +253,14 @@ const Footer = () => {
                         className="hover:underline flex gap-3"
                       >
                         {link?.icon && (
-                          <Image src={link?.icon} alt="" className="size-5" />
+                          <Image src={link?.icon} alt="" className="size-5 mt-1" />
                         )}
                         {link.label}
                       </a>
                     ) : (
                       <div key={link?.label} className="flex gap-3">
                         {link?.icon && (
-                          <Image src={link?.icon} alt="" className="size-5" />
+                          <Image src={link?.icon} alt="" className="size-5 mt-1" />
                         )}
                         <p>{link.label}</p>
                       </div>

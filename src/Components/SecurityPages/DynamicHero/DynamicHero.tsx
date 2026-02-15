@@ -1,7 +1,10 @@
+"use client";
 import Button from "@/Components/Reusable/Button/Button";
 import Container from "@/Components/Shared/Container/Container";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
+import ContactUs from "@/Components/Home/ContactUs/ContactUs";
+import { useState } from "react";
 
 type DynamicHeroProps = {
   badgeText?: string;
@@ -21,6 +24,8 @@ const DynamicHero = ({
   description,
   image,
 }: DynamicHeroProps) => {
+  const [isContactUsModalOpen, setIsContactUsModalOpen] =
+    useState<boolean>(false);
   return (
     <div className="relative w-full min-h-screen overflow-hidden font-satoshi">
       {/* Background Image */}
@@ -64,11 +69,17 @@ const DynamicHero = ({
             title="Book a Demo"
             variant="primary"
             iconPosition="right"
+            handleClick={() => setIsContactUsModalOpen(true)}
           />
             </div>
           </div>
         </Container>
       </div>
+
+      <ContactUs
+                    isContactUsModalOpen={isContactUsModalOpen}
+                    setIsContactUsModalOpen={setIsContactUsModalOpen}
+                  />
     </div>
   );
 };
