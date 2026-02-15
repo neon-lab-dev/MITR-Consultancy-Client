@@ -1,5 +1,5 @@
 import AboutUsHero from './../../../Components/AboutUs/AboutUsHero/AboutUsHero';
-import FAQ from '@/Components/Shared/FAQ/FAQ';
+// import FAQ from '@/Components/Shared/FAQ/FAQ';
 import AllAboutMitra from '@/Components/AboutUs/AllAboutMitra/AllAboutMitra';
 import Services from '@/Components/AboutUs/Services/Services';
 import CTA from '@/Components/Shared/CTA/CTA';
@@ -10,7 +10,7 @@ const AboutUsPage = () => {
             <AboutUsHero/>
             <AllAboutMitra/>
             <Services/>
-            <FAQ/>
+            {/* <FAQ/> */}
             <CTA/>
         </div>
     );
