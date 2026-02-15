@@ -5,7 +5,7 @@ import Image from "next/image";
 const PrivacyPolicyHero = ({title} : {title:string}) => {
     return (
         
-        <div className="font-Inter relative h-[300px] mt-20">
+        <div className="font-Inter relative h-[300px]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
             <Image

@@ -23,7 +23,7 @@ const AboutUsHero = () => {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-neutral-50 bg-opacity-80 z-10"></div>
+      <div className="absolute inset-0 bg-neutral-50/60 bg-opacity-80 z-10"></div>
 
       {/* Content */}
       {/* <Container> */}

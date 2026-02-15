@@ -82,7 +82,7 @@ const Footer = () => {
         {
           label:
             "Training Programs",
-          path: "/internship-programmes",
+          path: "/training-programmes",
         },
       ],
     },

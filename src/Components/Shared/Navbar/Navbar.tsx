@@ -234,7 +234,7 @@ const Navbar = () => {
   return (
     <div id="home">
       <div
-        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 pb-2 pt-5 ${isScrolled ? "bg-neutral-185" : "bg-neutral-185"}`}
+        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 pb-2 pt-5`}
       >
         <Container>
           <div className="flex w-full justify-between items-center font-Inter">
