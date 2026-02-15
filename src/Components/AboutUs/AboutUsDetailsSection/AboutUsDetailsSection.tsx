@@ -17,27 +17,27 @@ const AboutUsDetailsSection: React.FC<AboutUsDetailsSectionProps> = ({
 }) => {
   return (
     <section>
-      <h1 className="font-bold text-neutral-10 text-lg md:text-2xl xl:text-[36px] leading-6 md:leading-[49.68px] capitalize mt-10">
+      <h1 className="font-bold text-white text-lg md:text-2xl xl:text-[36px] leading-6 md:leading-[49.68px] capitalize mt-10">
         {title}
       </h1>
-      <p className="text-neutral-20 mt-3 text-justify">{description}</p>
+      <p className="text-white/80 mt-3 text-justify">{description}</p>
 
       {
         subTitle &&
-        <h2 className="font-bold text-xl text-neutral-20 mt-3 text-justify capitalize">
+        <h2 className="font-bold text-xl text-white/80 mt-3 text-justify capitalize">
         {subTitle} :
       </h2>
       }
       <div className="flex flex-col gap-3 mt-3">
         {features.map((feature, index) => (
           <div key={index} className="flex items-center gap-1">
-            <p className="text-neutral-20 mt-3">{feature}</p>
+            <p className="text-white/80 mt-3">{feature}</p>
           </div>
         ))}
       </div>
 
       {footerText && (
-        <p className="text-neutral-20 mt-5 text-justify italic font-medium">
+        <p className="text-white/80 mt-5 text-justify italic font-medium">
           {footerText}
         </p>
       )}

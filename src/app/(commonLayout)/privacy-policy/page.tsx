@@ -40,10 +40,10 @@ const PrivacyPolicy = () => {
     ];
 
     return (
-        <div className="bg-white">
+        <div>
             <PrivacyPolicyHero title="Privacy policy" />
             <Container>
-                <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 mt-10">
+                <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 py-14 text-white">
 
                     <p className="font-normal text-lg mt-2">MITRA Consultancy (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates <a href="https://mitraconsultancy.co.in/" className="font-semibold text-primary-20">https://mitraconsultancy.co.in/</a> (the &quot;Website&quot;).
                         This Privacy Policy explains how we collect, use, and protect your personal information when
@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
                     {
                         privacyPolicyContent?.map(content =>
                             <div key={content?.title}>
-                                <h1 className="font-bold text-3xl text-neutral-10">
+                                <h1 className="font-bold text-3xl">
                                     {content?.title}
                                 </h1>
                                 {
@@ -65,8 +65,8 @@ const PrivacyPolicy = () => {
                                             {
                                                 content?.pointers?.map((pointer, index) =>
                                                     <div key={index} className="flex items-center gap-3">
-                                                        <div className="size-2 rounded-full bg-neutral-10"></div>
-                                                        <p className="font-normal text-lg text-neutral-10">{pointer}</p>
+                                                        <div className="size-2 rounded-full bg-white/80"></div>
+                                                        <p className="font-normal text-lg text-white/80">{pointer}</p>
                                                     </div>
                                                 )
                                             }

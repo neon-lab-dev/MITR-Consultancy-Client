@@ -104,16 +104,16 @@ const Services = () => {
           features={whyChooseFeatures}
         />
 
-        <h1 className="font-bold text-neutral-10 text-lg md:text-2xl xl:text-[36px] leading-6 md:leading-[49.68px] capitalize mt-10">
+        <h1 className="font-bold text-white text-lg md:text-2xl xl:text-[36px] leading-6 md:leading-[49.68px] capitalize mt-10">
           Get Started Today
         </h1>
-        <p className="text-neutral-20 mt-3 text-justify">
+        <p className="text-white/80 mt-3 text-justify">
           Whether you're looking to build a secure digital product, gain
           job-ready skills, or protect your business from growing cyber threats,
           MITRA Consultancy is here to support your vision. We develop. We
           train. We secure. And we do it with precision.
         </p>
-        <p className="text-neutral-20 mt-5 text-justify font-bold">
+        <p className="text-white/80 mt-5 text-justify font-bold">
           Let’s build something meaningful — and secure — together.
         </p>
       </div>

@@ -3,10 +3,10 @@ import Container from "@/Components/Shared/Container/Container";
 
 const RefundPolicy = () => {
     return (
-        <div className="bg-white">
+        <div>
             <PrivacyPolicyHero title="Refund Policy" />
             <Container>
-                <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 mt-10">
+                <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 py-14 text-white">
                     <p className="font-normal text-lg">
                         At MITRA Consultancy, we follow a <strong>No Refund Policy</strong> for our training programmes. Once payment is made, no cancellations or refunds will be processed. We encourage users to carefully review the program details before making a payment.
                     </p>

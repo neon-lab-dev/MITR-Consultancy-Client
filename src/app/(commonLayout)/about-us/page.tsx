@@ -6,7 +6,7 @@ import CTA from '@/Components/Shared/CTA/CTA';
 
 const AboutUsPage = () => {
     return (
-        <div className="bg-white">
+        <div>
             <AboutUsHero/>
             <AllAboutMitra/>
             <Services/>

@@ -47,20 +47,20 @@ const TermsAndConditions = () => {
     ];
 
     return (
-        <div className="bg-white">
+        <div>
             <PrivacyPolicyHero title="Terms and conditions" />
             <Container>
-                <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 mt-10">
+                <div className="font-Inter w-full max-w-[1100px] mx-auto flex flex-col gap-8 py-14 text-white">
                     <p className="font-normal text-lg mt-2">Welcome to MITRA Consultancy. By using our website and services, you agree to comply with the following terms.</p>
                     {
                         termsAndConditionsContent?.map(content =>
                             <div key={content?.title}>
-                                <h1 className="font-bold text-3xl text-neutral-10">
+                                <h1 className="font-bold text-3xl">
                                     {content?.title}
                                 </h1>
                                 {
                                     content?.description &&
-                                    <p className="font-normal text-lg mt-2">{content?.description}</p>
+                                    <p className="font-normal text-lg mt-2 text-white/80">{content?.description}</p>
                                 }
 
                                 {
@@ -69,8 +69,8 @@ const TermsAndConditions = () => {
                                             {
                                                 content?.pointers?.map((pointer, index) =>
                                                     <div key={index} className="flex items-center gap-3">
-                                                        <div className="size-2 rounded-full bg-neutral-10"></div>
-                                                        <p className="font-normal text-lg text-neutral-10">{pointer}</p>
+                                                        <div className="size-2 rounded-full bg-neutral-10 bg-white/80"></div>
+                                                        <p className="font-normal text-lg text-white/80">{pointer}</p>
                                                     </div>
                                                 )
                                             }

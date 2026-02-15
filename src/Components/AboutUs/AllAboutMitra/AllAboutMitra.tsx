@@ -5,10 +5,10 @@ const AllAboutMitra = () => {
   return (
     <Container>
       <div className="pt-5 xl:pt-20">
-        <h1 className="font-bold text-neutral-10 text-lg md:text-2xl xl:text-[36px] leading-6 md:leading-[49.68px] capitalize mt-10">
+        <h1 className="font-bold text-white text-lg md:text-2xl xl:text-[36px] leading-6 md:leading-[49.68px] capitalize mt-10">
           About Us
         </h1>
-        <p className={`text-neutral-20 mt-6 text-justify`}>
+        <p className={`text-white/80 mt-6 text-justify`}>
           At MITRA Consultancy, we combine innovation, practicality, and
           performance to empower businesses and learners in the digital world.
           We specialize in delivering end-to-end technology solutions, smart

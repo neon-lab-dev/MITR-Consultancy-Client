@@ -18,7 +18,7 @@ const PrivacyPolicyHero = ({title} : {title:string}) => {
         </div>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-neutral-50 bg-opacity-50 z-10"></div>
+        <div className="absolute inset-0 bg-neutral-50/30 bg-opacity-50 z-10"></div>
 
         {/* Content */}
         <Container>
