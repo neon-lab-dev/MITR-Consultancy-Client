@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ICONS, IMAGES } from "@/assets";
 import Button from "@/Components/Reusable/Button/Button";
 import { useCurrentUser } from "@/redux/Features/Auth/authSlice";
@@ -7,6 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { TLoggedInUser } from "./Navbar";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface HamburgerMenuProps {
   isSidebarOpen: boolean;
@@ -23,7 +25,6 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
   const router = useRouter();
   const pathname = usePathname();
   const sidebarRef = useRef<HTMLDivElement>(null);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     const storedSection = sessionStorage.getItem("scrollToSection");
@@ -49,36 +50,104 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
     }
   };
 
-  const navlinks = [
-    { label: "Home", action: () => handleNavigation("home") },
-    { label: "About Us", path: "/about-us" },
-    { label: "Portfolio", action: () => handleNavigation("portfolio") },
-    { label: "Training Programmes", path: "/internship-programmes" },
-  ];
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-  const serviceDropdownLinks = [
-    { label: "Compliance Services", path: "/compliance-services" },
-    { label: "Security Services", path: "/security-services" },
+  const navlinks = [
     {
-      label: "Website Development",
-      action: () => handleNavigation("services"),
+      label: "Services",
+      links: [
+        {
+          label: "Compliance Services",
+          description: "ISO, DPDP, GDPR, SOC2",
+          path: "/compliance-services",
+        },
+        {
+          label: "Cybersecurity Services",
+          description: "VAPT, Risk Assessment, Audits",
+          path: "/security-services",
+        },
+        {
+          label: "Software Development",
+          description: "Web, App and custom software Development",
+          action: () => handleNavigation("services"),
+        },
+        {
+          label: "UI/UX Design",
+          description: "Secure & user-friendly Application Interfaces",
+          action: () => handleNavigation("services"),
+        },
+        {
+          label: "Training Programs",
+          description: "Cybersecurity, Compliance & Awareness",
+          path: "/training-programmes",
+        },
+      ],
     },
     {
-      label: "Mobile App Development",
-      action: () => handleNavigation("services"),
+      label: "Security Solutions",
+      links: [
+        {
+          label: "Antivirus",
+          path: "/security-service/antivirus-service",
+          description: "Malware threat protection",
+        },
+        {
+          label: "EDR",
+          path: "/security-service/edr-service",
+          description: "Endpoint threat detection",
+        },
+        {
+          label: "Firewall",
+          path: "/security-service/firewall-service",
+          description: "Network traffic control",
+        },
+        {
+          label: "XDR",
+          path: "/security-service/xdr-service",
+          description: "Extended threat response",
+        },
+        {
+          label: "SIEM",
+          path: "/security-service/siem-service",
+          description: "Security event monitoring",
+        },
+        {
+          label: "DLP",
+          path: "/security-service/dlp-service",
+          description: "Data loss prevention",
+        },
+        {
+          label: "VAPT",
+          path: "/security-service/vapt-service",
+          description: "Vulnerability assessment testing",
+        },
+      ],
     },
-    { label: "UI/UX Design", action: () => handleNavigation("services") },
     {
-      label: "Frontend Development",
-      action: () => handleNavigation("services"),
-    },
-    {
-      label: "Backend Development",
-      action: () => handleNavigation("services"),
-    },
-    {
-      label: "Full Stack Development",
-      action: () => handleNavigation("services"),
+      label: "Company",
+      links: [
+        {
+          label: "About Us",
+          path: "/about-us",
+        },
+        {
+          label: "Careers",
+          path: "/careers",
+        },
+        {
+          label: "Privacy Policy",
+          path: "/privacy-policy",
+        },
+        {
+          label: "Terms and Conditions",
+          path: "/terms-and-conditions",
+        },
+        {
+          label: "Refund Policy",
+          path: "/refund-policy",
+        },
+      ],
     },
   ];
 
@@ -97,17 +166,64 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isSidebarOpen]);
 
+  useEffect(() => {
+  const handleClickOutsideDropdown = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setActiveDropdown(null);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutsideDropdown);
+
+  return () =>
+    document.removeEventListener(
+      "mousedown",
+      handleClickOutsideDropdown
+    );
+}, []);
+
+
+
+  const dropdownVariants: any = {
+    initial: {
+      opacity: 0,
+      y: -15,
+      scale: 0.95,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -15,
+      scale: 0.95,
+      transition: {
+        duration: 0.15,
+        ease: "easeIn",
+      },
+    },
+  };
+
   return (
     <div
       className={`fixed inset-0 z-50 ${
         isSidebarOpen ? "visible" : "invisible"
       }`}
     >
-      <div className="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"></div>
+      <div className="fixed inset-0 bg-neutral-185/50 transition-opacity duration-300"></div>
 
       <div
         ref={sidebarRef}
-        className={`fixed top-0 right-0 h-full w-2/3 max-w-[250px] bg-neutral-40 text-white z-50 shadow-lg transform transition-transform duration-500 ${
+        className={`fixed top-0 right-0 h-full w-full max-w-[290px] bg-neutral-40 text-white z-50 shadow-lg transform transition-transform duration-500 ${
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -126,72 +242,105 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
             </button>
           </div>
 
-          <div className="flex flex-col gap-6 p-4 mt-3">
-            {navlinks.map((link, index) =>
-              link.action ? (
-                <button
-                  key={index}
-                  onClick={link.action}
-                  className="text-start text-lg font-medium hover:text-primary-10 transition duration-300"
-                >
-                  {link.label}
-                </button>
-              ) : (
-                <Link
-                  key={index}
-                  href={link.path}
-                  className="text-lg font-medium hover:text-primary-10 transition duration-300"
-                  onClick={() => setIsSidebarOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
+           <div ref={dropdownRef} className="flex flex-col gap-8 relative p-4 mt-5">
+                {navlinks?.map((item, index) => (
+                  <div
+                    key={index}
+                    className="relative"
+                    onClick={() =>
+  setActiveDropdown((prev) =>
+    prev === item.label ? null : item.label
+  )
+}
 
-            {/* Dropdown */}
-            <div>
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="text-start text-lg font-medium hover:text-primary-10 transition duration-300 w-full flex items-center justify-between"
-              >
-                Services
-                <Image
-                  src={ICONS.downArrowWhite}
-                  alt=""
-                  className={`${
-                    isDropdownOpen ? "rotate-0" : "rotate-180"
-                  } transition-all duration-300`}
-                />
-              </button>
-
-              <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  isDropdownOpen ? "max-h-56 opacity-100" : "max-h-0 opacity-0"
-                } flex flex-col pl-4 gap-6 mt-4 text-sm overflow-y-scroll custom-section-scrollbar`}
-              >
-                {serviceDropdownLinks.map((item, idx) =>
-                  item?.action ? (
+                    
+                  >
                     <button
-                      key={idx}
-                      onClick={item.action}
-                      className="font-normal hover:text-primary-10 transition duration-300 text-start"
+                      className={`flex items-center gap-1 font-semibold hover:text-primary-10 transition duration-300 cursor-pointer text-white`}
                     >
-                      {item.label}
+                      {item?.label}
+                      <Image
+                        src={ICONS.downArrowWhite}
+                        alt="down arrow"
+                        className={`size-7 mt-1 transition-transform duration-300 ${
+                          activeDropdown === item.label
+                            ? "rotate-0"
+                            : "rotate-180"
+                        }`}
+                      />
                     </button>
-                  ) : (
-                    <Link
-                      key={idx}
-                      href={item.path}
-                      onClick={() => setIsSidebarOpen(false)}
-                      className="font-normal hover:text-primary-10 transition duration-300"
-                    >
-                      {item.label}
-                    </Link>
-                  )
-                )}
+
+                    <AnimatePresence>
+                      {activeDropdown === item.label && (
+                        <motion.div
+                          variants={dropdownVariants}
+                          initial="initial"
+                          animate="animate"
+                          exit="exit"
+                          className="absolute top-10 -left-0 bg-neutral-185 shadow-lg rounded-lg w-full p-5 z-50 flex flex-col gap-5"
+                        >
+                          {item.links.map((link: any, index: number) => {
+                            if (link.action) {
+                              return (
+                                <button
+                                  key={index}
+                                  onClick={() => {
+                                    link.action();
+                                    setActiveDropdown(null);
+                                    setIsSidebarOpen(false)
+                                  }}
+                                  className={`font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start text-white`}
+                                >
+                                  <div className="flex items-center gap-3">
+                                    {link.label}
+                                    <Image
+                                      src={ICONS.rightArrow2}
+                                      alt="MITRA Consultancy"
+                                      className="size-5"
+                                    />
+                                  </div>
+                                  {link?.description && (
+                                    <p className="text-neutral-175 text-sm">
+                                      {link?.description}
+                                    </p>
+                                  )}
+                                </button>
+                              );
+                            }
+
+                            if (link.path) {
+                              return (
+                                <Link
+                                  key={index}
+                                  href={link.path}
+                                  onClick={() => {setActiveDropdown(null); setIsSidebarOpen(false)}}
+                                  className={` font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start text-white`}
+                                >
+                                  <div className="flex items-center gap-3">
+                                    {link.label}
+                                    <Image
+                                      src={ICONS.rightArrow2}
+                                      alt="MITRA Consultancy"
+                                      className="size-5"
+                                    />
+                                  </div>
+                                  {link?.description && (
+                                    <p className="text-neutral-175 text-sm">
+                                      {link?.description}
+                                    </p>
+                                  )}
+                                </Link>
+                              );
+                            }
+
+                            return null; // ✅ prevents crashes
+                          })}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
               </div>
-            </div>
-          </div>
 
           <div className="mt-auto p-4 flex flex-col gap-3">
             {!user && (

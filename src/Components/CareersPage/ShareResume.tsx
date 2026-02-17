@@ -7,7 +7,7 @@ import { CgArrowTopRight } from "react-icons/cg";
 
 const ShareResume = () => {
   return (
-    <div className="font-satoshi relative min-h-screen">
+    <div className="font-satoshi relative min-h-screen bg-white">
       <Container>
         <div className="w-full md:w-[80%] xl:[50%] py-14">
           <h1 className="text-neutral-185 font-black text-[30px] pb-3">
@@ -23,12 +23,17 @@ const ShareResume = () => {
             and contact you when a suitable opportunity arises.
           </p>
 
-          <Button
-            title="Share Resume"
-            variant="primary"
-            iconPosition="right"
-            icon={<CgArrowTopRight size={18} />}
-          />
+          <a
+  href="mailto:contact@mitra-consultancy.co.in?subject=Resume Submission&body=Hi MITRA Team,%0D%0A%0D%0APlease find my resume attached.%0D%0A%0D%0ARegards,"
+>
+  <Button
+    title="Share Resume"
+    variant="primary"
+    iconPosition="right"
+    icon={<CgArrowTopRight size={18} />}
+  />
+</a>
+
           <Image
         src={IMAGES.shareResume}
         alt=""

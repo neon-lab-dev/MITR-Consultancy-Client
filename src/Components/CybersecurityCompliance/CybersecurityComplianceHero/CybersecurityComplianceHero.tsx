@@ -208,7 +208,7 @@ const CybersecurityComplianceHero = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-12 z-10 max-w-fit"
+            className="grid grid-cols-2 xl:grid-cols-4 gap-6 mt-12 z-10 max-w-fit"
           >
             {features?.map((feature, index) => (
               <motion.div 

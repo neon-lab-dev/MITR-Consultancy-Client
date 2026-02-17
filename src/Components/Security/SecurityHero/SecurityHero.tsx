@@ -29,11 +29,11 @@ const SecurityHero = () => {
 <Image
           src={IMAGES.securityHeroIcons}
           alt="MITRA Consultancy"
-          className="top-32 bottom-0 left-0 right-0 z-20 max-w-full xl:max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0 w-auto 2xl:w-full absolute"
+          className="top-32 bottom-0 left-0 right-0 z-20 max-w-full xl:max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0 w-auto 2xl:w-full hidden lg:absolute"
         />
       {/* Content */}
       <Container>
-        <div className="flex flex-col gap-8 xl:gap-20 items-center justify-center absolute top-0 bottom-0 z-20 max-w-full 2xl:max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0 w-full 2xl:w-full">
+        <div className="flex flex-col gap-8 xl:gap-20 items-center justify-center absolute top-0 bottom-0  z-20 max-w-[350px] lg:max-w-full 2xl:max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0 w-full 2xl:w-full">
           
           <div>
             <h1 className="text-white text-center leading-8 md:leading-[48px] xl:leading-[67px] text-[24px] md:text-[40px] xl:text-[56px] font-bold max-w-[873px] mx-auto">

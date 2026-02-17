@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const CareersHero = () => {
   return (
-    <div className="bg-neutral-185  font-Inter relative  overflow-hidden">
+    <div className="bg-neutral-185 font-Inter relative overflow-hidden pt-40">
       <Container>
-        <div className="pt-80 max-w-[344px] md:max-w-[1071px] lg:max-w-[800px] mx-auto">
+        <div className=" max-w-[344px] md:max-w-[1071px] lg:max-w-[800px] mx-auto">
           <h1 className="text-white text-center leading-8 mx-auto py-3 md:leading-[48px] xl:leading-[70px] text-[24px] md:text-[40px] xl:text-[56px] font-bold max-w-[344px] md:max-w-[1071px] lg:max-w-[700px] ">
             Grow Your Career at <span className="text-primary-20">MITRA</span>
           </h1>

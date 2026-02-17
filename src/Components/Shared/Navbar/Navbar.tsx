@@ -252,7 +252,7 @@ const Navbar = () => {
             {/* Desktop Nav */}
 
             <div className="flex items-center gap-6">
-              <div className="hidden xl:flex items-center gap-10 relative">
+              <div className="hidden lg:flex items-center gap-10 relative">
                 {newNavlinks?.map((item, index) => (
                   <div
                     key={index}
