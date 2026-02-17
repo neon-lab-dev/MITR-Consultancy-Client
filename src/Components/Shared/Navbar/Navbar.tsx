@@ -305,7 +305,7 @@ const Navbar = () => {
 
                             if (link.path) {
                               return (
-                                <Link
+                                <a
                                   key={index}
                                   href={link.path}
                                   onClick={() => setActiveDropdown(null)}
@@ -324,7 +324,7 @@ const Navbar = () => {
                                       {link?.description}
                                     </p>
                                   )}
-                                </Link>
+                                </a>
                               );
                             }
 
