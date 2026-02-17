@@ -135,6 +135,31 @@ const Navbar = () => {
 
   const newNavlinks = [
     {
+      label: "Company",
+      links: [
+        {
+          label: "About Us",
+          path: "/about-us",
+        },
+        {
+          label: "Careers",
+          path: "/careers",
+        },
+        {
+          label: "Privacy Policy",
+          path: "/privacy-policy",
+        },
+        {
+          label: "Terms and Conditions",
+          path: "/terms-and-conditions",
+        },
+        {
+          label: "Refund Policy",
+          path: "/refund-policy",
+        },
+      ],
+    },
+    {
       label: "Services",
       links: [
         {
@@ -146,16 +171,6 @@ const Navbar = () => {
           label: "Cybersecurity Services",
           description: "VAPT, Risk Assessment, Audits",
           path: "/security-services",
-        },
-        {
-          label: "Software Development",
-          description: "Web, App and custom software Development",
-          action: () => handleNavigation("services"),
-        },
-        {
-          label: "UI/UX Design",
-          description: "Secure & user-friendly Application Interfaces",
-          action: () => handleNavigation("services"),
         },
         {
           label: "Training Programs",
@@ -204,31 +219,7 @@ const Navbar = () => {
         },
       ],
     },
-    {
-      label: "Company",
-      links: [
-        {
-          label: "About Us",
-          path: "/about-us",
-        },
-        {
-          label: "Careers",
-          path: "/careers",
-        },
-        {
-          label: "Privacy Policy",
-          path: "/privacy-policy",
-        },
-        {
-          label: "Terms and Conditions",
-          path: "/terms-and-conditions",
-        },
-        {
-          label: "Refund Policy",
-          path: "/refund-policy",
-        },
-      ],
-    },
+    
   ];
 
   return (
@@ -258,7 +249,6 @@ const Navbar = () => {
                     key={index}
                     className="relative"
                     onMouseEnter={() => setActiveDropdown(item.label)}
-                    onMouseLeave={() => setActiveDropdown(null)}
                     ref={dropdownRef}
                   >
                     <button
