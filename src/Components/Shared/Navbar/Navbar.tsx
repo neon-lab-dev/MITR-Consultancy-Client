@@ -173,6 +173,16 @@ const Navbar = () => {
           path: "/security-services",
         },
         {
+          label: "Software Development",
+          description: "Web, App and custom software Development",
+          action: () => handleNavigation("services"),
+        },
+        {
+          label: "UI/UX Design",
+          description: "Secure & user-friendly Application Interfaces",
+          action: () => handleNavigation("services"),
+        },
+        {
           label: "Training Programs",
           description: "Cybersecurity, Compliance & Awareness",
           path: "/training-programmes",
@@ -309,7 +319,7 @@ const Navbar = () => {
                                   key={index}
                                   href={link.path}
                                   onClick={() => setActiveDropdown(null)}
-                                  className={` font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start text-white`}
+                                  className={`font-semibold hover:text-primary-10 transition duration-300 w-fit space-y-3 text-start text-white`}
                                 >
                                   <div className="flex items-center gap-3">
                                     {link.label}
