@@ -134,31 +134,7 @@ const Navbar = () => {
   };
 
   const newNavlinks = [
-    {
-      label: "Company",
-      links: [
-        {
-          label: "About Us",
-          path: "/about-us",
-        },
-        {
-          label: "Careers",
-          path: "/careers",
-        },
-        {
-          label: "Privacy Policy",
-          path: "/privacy-policy",
-        },
-        {
-          label: "Terms and Conditions",
-          path: "/terms-and-conditions",
-        },
-        {
-          label: "Refund Policy",
-          path: "/refund-policy",
-        },
-      ],
-    },
+   
     {
       label: "Services",
       links: [
@@ -229,6 +205,31 @@ const Navbar = () => {
         },
       ],
     },
+     {
+      label: "Company",
+      links: [
+        {
+          label: "About Us",
+          path: "/about-us",
+        },
+        {
+          label: "Careers",
+          path: "/careers",
+        },
+        {
+          label: "Privacy Policy",
+          path: "/privacy-policy",
+        },
+        {
+          label: "Terms and Conditions",
+          path: "/terms-and-conditions",
+        },
+        {
+          label: "Refund Policy",
+          path: "/refund-policy",
+        },
+      ],
+    },
     
   ];
 
@@ -259,7 +260,7 @@ const Navbar = () => {
                     key={index}
                     className="relative"
                     onMouseEnter={() => setActiveDropdown(item.label)}
-                    ref={dropdownRef}
+                    
                   >
                     <button
                       className={`flex items-center gap-1 font-semibold hover:text-primary-10 transition duration-300 cursor-pointer text-white`}
@@ -279,6 +280,7 @@ const Navbar = () => {
                     <AnimatePresence>
                       {activeDropdown === item.label && (
                         <motion.div
+                        ref={dropdownRef}
                           variants={dropdownVariants}
                           initial="initial"
                           animate="animate"
