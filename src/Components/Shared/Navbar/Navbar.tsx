@@ -262,6 +262,8 @@ const Navbar = () => {
                     key={index}
                     className="relative"
                     onMouseEnter={() => setActiveDropdown(item.label)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+
                     
                   >
                     <button

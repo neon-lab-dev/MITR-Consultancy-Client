@@ -24,7 +24,7 @@ const DynamicProtectsGrid = ({
     <section className="bg-neutral-190 font-satoshi py-20">
       <Container>
         {/* Heading */}
-        <h2 className="text-center text-neutral-185 font-satoshi font-bold text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize mb-12">
+        <h2 className="text-center text-neutral-185 font-satoshi font-extrabold text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize mb-12">
           {heading}<br/>
           {highlightWord && (
             <span className="text-primary-110">{highlightWord}</span>

@@ -15,7 +15,7 @@ const CTA = () => {
       <Image src={IMAGES.ctaBg} alt="" className="w-full h-full absolute z-0" />
 
       <div className="flex flex-col lg:flex-row justify-center items-start lg:justify-between lg:items-center  w-full h-full z-10 relative max-w-[1300px] mx-auto px-5 md:px-7 2xl:px-0 gap-6">
-        <h2 className="text-white font-satoshi font-bold text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize max-w-[900px]">
+        <h2 className="text-white font-satoshi font-extrabold text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize max-w-[900px]">
           From Code to Compliance — Where Innovation Meets Security.
         </h2>
         <Button

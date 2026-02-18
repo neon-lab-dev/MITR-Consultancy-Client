@@ -41,7 +41,7 @@ const ProgramStructure = () => {
                 alt=""
                 className="rounded-t-xl absolute top-0"
               />
-              <h3 className="font-black text-white text-[22px] capitalize absolute bottom-22 left-6">
+              <h3 className="font-black text-white text-[22px] capitalize absolute bottom-16 md:bottom-10 lg:bottom-5 xl:bottom-29 2xl:bottom-22 left-6">
                 {feature?.title}
               </h3>
             </div>

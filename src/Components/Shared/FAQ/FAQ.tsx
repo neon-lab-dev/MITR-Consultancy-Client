@@ -17,14 +17,11 @@ const FAQ = ({ faqsData }: { faqsData?: FAQItem[] }) => {
     setIsAccordionOpen((prevIndex) => (prevIndex === index ? -1 : index));
 
   return (
-     <div className="bg-neutral-190 pb-[80px] font-Inter">
-      <h1
-        className={`font-bold text-neutral-185 text-[52px] md:text-[140px] 2xl:text-[248px]  
-        }`}
-      >
-        FAQs
-      </h1>
-      <p className="text-base md:text-lg">Frequently Asked Questions</p>
+     <div className="bg-neutral-190 pb-[80px] font-inter py-14">
+      <h2 className="font-black text-neutral-185 text-[32px] xl:text-[40px] 2xl:text-[64px] capitalize text-center">
+              Freequently Asked{" "}
+              <span className="text-primary-110">Questions</span>
+            </h2>
       <Container>
         <div className="mt-20">
           <div className="flex gap-6 flex-col items-center justify-center w-full mt-9 md:mt-10 xl:mt-20">

@@ -17,7 +17,7 @@ const StyledHeading = ({
 }) => {
   return (
     <h1
-      className={`font-Inter font-bold text-neutral-130 text-lg md:text-2xl xl:text-[40px] 2xl:text-[52px] 
+      className={`font-satoshi font-black text-neutral-130 text-lg md:text-2xl xl:text-[40px] 2xl:text-[52px] 
       leading-6 md:leading-[60px] capitalize max-w-[720px] mx-auto
       ${alignClasses[align]}`}
     >

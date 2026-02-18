@@ -299,7 +299,7 @@ const Footer = () => {
         </div>
       </Container>
       <Marquee speed={60} gradient={false} pauseOnHover>
-        <h2 className="text-white text-3xl md:text-5xl font-extrabold whitespace-nowrap">
+        <h2 className="text-white text-3xl md:text-5xl font-extrabold whitespace-nowrap overflow-hidden">
           Code To Compliance * Code To Compliance * Code To Compliance * Code To
           Compliance * Code To Compliance * Code To Compliance * Code To
           Compliance * Code To Compliance

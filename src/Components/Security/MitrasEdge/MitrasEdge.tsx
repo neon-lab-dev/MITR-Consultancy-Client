@@ -36,7 +36,7 @@ const MitrasEdge = () => {
           className="
       absolute inset-0
       flex items-center justify-center
-      font-black text-neutral-20
+      font-bold text-neutral-20
       text-[120px] md:text-[200px] xl:text-[248px]
       z-0
       pointer-events-none
@@ -51,8 +51,8 @@ const MitrasEdge = () => {
         <h2
           className="
       relative z-10
-      font-bold text-neutral-130
-      text-lg md:text-2xl xl:text-[40px] 2xl:text-[48px]
+      text-neutral-130
+      text-[24px] md:text-[40px] xl:text-[56px] font-extrabold
       leading-6 md:leading-[65px]
       max-w-[740px] mx-auto text-center
     "

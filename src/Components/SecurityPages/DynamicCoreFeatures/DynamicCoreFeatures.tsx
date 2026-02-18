@@ -24,7 +24,7 @@ const DynamicCoreFeatures = ({
     <section className="bg-neutral-185 font-satoshi py-20">
       <Container>
         {/* Heading */}
-        <h2 className="text-center font-satoshi font-bold text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize mb-16">
+        <h2 className="text-center font-satoshi font-extrabold text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize mb-16">
           {heading}{" "}
           {highlightWord && (
             <span className="text-primary-110">{highlightWord}</span>

@@ -54,7 +54,7 @@ const DynamicHero = ({
                 </p>
               )}
 
-              <h1 className="font-satoshi font-bold text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize">
+              <h1 className="font-satoshi font-extrabold text-white text-lg md:text-2xl xl:text-[40px] 2xl:text-[64px] capitalize">
                 {title}{" "}
                 {highlightWord && (
                   <span className="text-primary-110">{highlightWord}</span>
