@@ -1,7 +1,6 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// import TrainingCard from "@/Components/InternshipProgrammes/StartTraining/TrainingCard";
 import ProgrammeCardLoader from "@/Components/Loaders/ProgrammeCardLoader";
+import TrainingCard from "@/Components/Myprofile/StartTraining/TrainingCard";
 import { useGetMyPurchasedCoursesQuery } from "@/redux/Features/User/userApi";
 
 const EnrolledCourse = () => {
@@ -9,7 +8,7 @@ const EnrolledCourse = () => {
 
     return (
         <div>
-            {/* {
+            {
                 isLoading ?
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 mt-9">
                         {
@@ -27,7 +26,7 @@ const EnrolledCourse = () => {
                         </div>
                         :
                         <p className="mt-5">Not enrolled in any course yet.</p>
-            } */}
+            }
         </div>
     );
 };

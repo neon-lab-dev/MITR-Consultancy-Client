@@ -27,7 +27,7 @@ const MyProfile = () => {
     }, [router, user, isNewUser]);
     
     return (
-        <div className="">
+        <div className="bg-white pb-20 min-h-[80vh]">
             <MyProfileHero name={data?.user?.full_name} />
             <Container>
                 <div className="flex flex-col lg:flex-row gap-10 relative">

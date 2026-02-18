@@ -9,8 +9,9 @@ import { useCart } from "@/providers/CartProvider/CartProvider";
 const Cart = () => {
     const { cartData } = useCart();
     return (
-        <Container>
-            <div className="font-Inter mt-36">
+        <div className="bg-white py-14 mt-40">
+            <Container>
+            <div className="font-Inter">
                 <h1 className="text-neutral-45 text-xl md:text-[36px] font-bold leading-normal">
                     Programmes You've Added
                 </h1>
@@ -31,6 +32,7 @@ const Cart = () => {
                 {/* <InterestedTrainings id={""} /> */}
             </div>
         </Container>
+        </div>
     );
 };
 

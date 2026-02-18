@@ -21,7 +21,7 @@ const Button2 = ({
         variant === "primary"
           ? "bg-primary-20 border-primary-20 text-white"
           : "text-white border-white"
-      } border px-6 py-3 font-Inter text-lg font-medium rounded items-center justify-center flex ${classNames}`}
+      } border px-6 py-3 font-Inter text-lg font-medium rounded items-center justify-center flex cursor-pointer ${classNames}`}
     >
       {children}
     </button>

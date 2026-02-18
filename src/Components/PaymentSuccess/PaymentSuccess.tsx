@@ -56,7 +56,7 @@ const PaymentSuccess = () => {
 
     if (loading) {
         return (
-            <div className="flex flex-col items-center text-center mt-32">
+            <div className="flex flex-col items-center text-center mt-40 bg-white min-h-[60vh]">
                 <p className="text-neutral-10 text-lg">Processing your payment...</p>
             </div>
 
@@ -64,7 +64,7 @@ const PaymentSuccess = () => {
     }
 
     return success ? (
-        <div className="flex flex-col items-center text-center mt-36">
+        <div className="flex flex-col items-center text-center mt-36 bg-white min-h-[80vh]">
             <Image
                 src={ICONS.paymentSuccess}
                 alt="Payment Success"
@@ -86,7 +86,7 @@ const PaymentSuccess = () => {
             </Link>
         </div>
     ) : (
-        <div className="flex flex-col items-center text-center mt-32">
+        <div className="flex flex-col items-center text-center mt-32 bg-white min-h-[80vh]">
             <p className="text-red-500 text-lg">Failed to process your order. Please try again.</p>
         </div>
 

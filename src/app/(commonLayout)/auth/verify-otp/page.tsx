@@ -96,8 +96,9 @@ const VerifyOtp = () => {
 
 
     return (
-        <Container>
-            <div className="p-8 bg-white rounded-2xl shadow-course-details font-Inter mt-36 w-full max-w-[650px] mx-auto">
+        <div className="bg-white py-14 mt-40">
+            <Container>
+            <div className="p-8 bg-white rounded-2xl shadow-course-details font-Inter w-full max-w-[650px] mx-auto">
                 <AuthHeading
                     align="center"
                     heading="Verify OTP"
@@ -127,6 +128,7 @@ const VerifyOtp = () => {
                 </form>
             </div>
         </Container>
+        </div>
 
     );
 };

@@ -5,8 +5,9 @@ import Container from "@/Components/Shared/Container/Container";
 
 const GetStared = () => {
     return (
-        <Container>
-            <div className="flex flex-col lg:flex-row items-center gap-10 mt-36 h-[530px]">
+        <div className="bg-white py-14 mt-40">
+            <Container>
+            <div className="flex flex-col lg:flex-row items-center gap-10 h-[530px]">
                 <AuthBanner/>
                 <div className="font-Inter w-full max-w-[650px] mx-auto">
                     <AuthHeading
@@ -18,7 +19,8 @@ const GetStared = () => {
                 </div>
             </div>
         </Container>
+        </div>
     );
 };
 
-export default GetStared;
+export default GetStared

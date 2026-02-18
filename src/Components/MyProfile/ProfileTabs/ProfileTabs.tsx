@@ -40,7 +40,7 @@ const ProfileTabs: React.FC<TProfileTabsProps> = ({ isEditEnabled, setIsEditEnab
                     <button
                         key={btn}
                         onClick={() => setSelectedTab(btn)}
-                        className="text-neutral-45 text-base md:text-xl xl:text-2xl font-semibold leading-9 relative pb-2 text-nowrap"
+                        className="text-neutral-45 text-base md:text-xl xl:text-2xl font-semibold leading-9 relative pb-2 text-nowrap cursor-pointer"
                     >
                         {btn}
                     </button>

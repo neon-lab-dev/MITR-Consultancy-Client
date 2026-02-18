@@ -23,8 +23,9 @@ const Checkout = () => {
     }, [router, user])
     
     return (
+        <div className="bg-white py-14 mt-40 font-Inter">
         <Container>
-            <div className="font-Inter mt-36">
+            <div className="font-Inter">
                 <h1 className="text-neutral-45 text-xl md:text-[36px] font-bold leading-normal">
                 Checkout
                 </h1>
@@ -38,6 +39,7 @@ const Checkout = () => {
                 </div>
             </div>
         </Container>
+        </div>
     );
 };
 

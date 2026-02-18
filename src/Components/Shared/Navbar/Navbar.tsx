@@ -63,7 +63,8 @@ const Navbar = () => {
   const neutralPages = [
     "/cart",
     "/checkout",
-    "/get-started",
+    "/auth/get-started",
+    "/auth/verify-otp",
     "/profile",
     "/my-profile",
     "/privacy-policy",
@@ -71,6 +72,7 @@ const Navbar = () => {
     "/refund-policy",
     "/payment-success",
   ];
+
 
   // const textColor =
   //   neutralPages.includes(pathname) ||
@@ -236,7 +238,7 @@ const Navbar = () => {
   return (
     <div id="home">
       <div
-        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 pb-2 pt-5 ${isScrolled ? "bg-neutral-185" : ""}`}
+        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 pb-2 pt-5 ${neutralPages.includes(pathname) ? "bg-neutral-185" : ""} ${isScrolled ? "bg-neutral-185" : ""}`}
       >
         <Container>
           <div className="flex w-full justify-between items-center font-Inter">
