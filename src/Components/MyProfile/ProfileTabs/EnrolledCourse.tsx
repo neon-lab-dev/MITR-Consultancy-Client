@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import ProgrammeCardLoader from "@/Components/Loaders/ProgrammeCardLoader";
-import TrainingCard from "@/Components/Myprofile/StartTraining/TrainingCard";
+import TrainingCard from "@/Components/MyProfile/StartTraining/TrainingCard";
 import { useGetMyPurchasedCoursesQuery } from "@/redux/Features/User/userApi";
 
 const EnrolledCourse = () => {
