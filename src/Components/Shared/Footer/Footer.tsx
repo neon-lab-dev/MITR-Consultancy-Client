@@ -187,8 +187,8 @@ const Footer = () => {
       heading: "Contact Details",
       links: [
         {
-          label: "+91 - 8210464851",
-          path: "tel:+91 - 8210464851",
+          label: "+91-7479697250",
+          path: "tel:+917479697250",
           icon: ICONS.phone,
         },
         {
