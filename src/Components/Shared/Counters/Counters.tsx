@@ -6,7 +6,7 @@ import { AnimatedCounter } from "./AnimatedCounter";
 
 const Counters = () => {
     const countersData = [
-  { value: 5, label: "Years in business" },
+  { value: 2, label: "Years in business" },
   { value: 20, label: "Industries Served" },
   { value: 150, label: "Organizations Supported" },
   { value: 75, label: "Active Engagements" },
