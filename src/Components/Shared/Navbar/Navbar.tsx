@@ -15,6 +15,7 @@ import UserDropdown from "./UserDropdown";
 import { useCart } from "@/providers/CartProvider/CartProvider";
 import { motion, AnimatePresence } from "framer-motion";
 import { CgArrowTopRight } from "react-icons/cg";
+import Marquee from "react-fast-marquee";
 
 export type TLoggedInUser = {
   _id: string;
@@ -237,9 +238,19 @@ const Navbar = () => {
 
   return (
     <div id="home">
+      
       <div
         className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 pb-2 pt-5 ${neutralPages.includes(pathname) ? "bg-neutral-185" : ""} ${isScrolled ? "bg-neutral-185" : ""}`}
       >
+        <div className="py-3 overflow-hiddnen">
+        <Marquee speed={80} gradient={false} pauseOnHover>
+  <h2
+    className="text-[xlpx] font-extrabold leading-none uppercase pr-20 text-white"
+  >
+    SEBI CSCRF & DPDP Act Compliance – Get Audit-Ready and Stay Secure with Mitra Consultancy
+  </h2>
+</Marquee>
+      </div>
         <Container>
           <div className="flex w-full justify-between items-center font-Inter">
             <Link href={"/"}>

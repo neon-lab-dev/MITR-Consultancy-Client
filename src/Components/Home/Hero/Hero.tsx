@@ -260,14 +260,14 @@ const Hero = () => {
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-0 w-full z-10 overflow-hidden"
       >
-        <Marquee speed={140} gradient={false} pauseOnHover>
+        {/* <Marquee speed={140} gradient={false} pauseOnHover>
   <motion.h2
     whileHover={{ scale: 1.02 }}
     className="text-[100px] font-extrabold leading-none uppercase pr-20"
   >
     SEBI CSCRF & DPDP Act Compliance – Get Audit-Ready and Stay Secure with Mitra Consultancy
   </motion.h2>
-</Marquee>
+</Marquee> */}
       </motion.div>
 
       {/* Contact Us Modal with animation */}
