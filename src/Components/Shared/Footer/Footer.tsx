@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Container from "../Container/Container";
-import Marquee from "react-fast-marquee";
+// import Marquee from "react-fast-marquee";
 
 const Footer = () => {
   const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
@@ -298,13 +298,13 @@ const Footer = () => {
           {/* Contact Us Modal */}
         </div>
       </Container>
-      <Marquee speed={60} gradient={false} pauseOnHover>
+      {/* <Marquee speed={60} gradient={false} pauseOnHover>
         <h2 className="text-white text-3xl md:text-5xl font-extrabold whitespace-nowrap overflow-hidden">
           Code To Compliance * Code To Compliance * Code To Compliance * Code To
           Compliance * Code To Compliance * Code To Compliance * Code To
           Compliance * Code To Compliance
         </h2>
-      </Marquee>
+      </Marquee> */}
       <ContactUs
         isContactUsModalOpen={isContactUsModalOpen}
         setIsContactUsModalOpen={setIsContactUsModalOpen}

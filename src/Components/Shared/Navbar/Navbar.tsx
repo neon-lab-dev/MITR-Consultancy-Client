@@ -240,19 +240,19 @@ const Navbar = () => {
     <div id="home">
       
       <div
-        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 pb-2 pt-5 ${neutralPages.includes(pathname) ? "bg-neutral-185" : ""} ${isScrolled ? "bg-neutral-185" : ""}`}
+        className={`fixed w-full h-fit top-0 z-50 transition-all duration-300 pb-2 ${neutralPages.includes(pathname) ? "bg-neutral-185" : ""} ${isScrolled ? "bg-neutral-185" : ""}`}
       >
-        <div className="py-3 overflow-hiddnen">
+        <div className="py-3 overflow-y-hidden scrollbar-none bg-primary-10">
         <Marquee speed={80} gradient={false} pauseOnHover>
   <h2
-    className="text-[xlpx] font-extrabold leading-none uppercase pr-20 text-white"
+    className="text-[xl] font-bold uppercase pr-20 text-white"
   >
     SEBI CSCRF & DPDP Act Compliance – Get Audit-Ready and Stay Secure with Mitra Consultancy
   </h2>
 </Marquee>
       </div>
         <Container>
-          <div className="flex w-full justify-between items-center font-Inter">
+          <div className="flex w-full justify-between items-center font-Inter pt-5">
             <Link href={"/"}>
               <Image
                 src={IMAGES.MITRConsoltancyLogo}
